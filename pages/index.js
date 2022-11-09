@@ -1,6 +1,7 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
 import Image from 'next/image'
+import Script from 'next/script'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import animationShowreel from '../public/assets/images/Showreel1.png'
@@ -15,6 +16,10 @@ import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
 import styles from '../styles/Home.module.css'
 
 // OVERVIEW ============================================================================= // 
+
+// SCRIPTS ============================================================================= // 
+
+
 /* 
 Name: Home page
 Collaborators: Logan Trundle, 
@@ -26,7 +31,9 @@ Description:
 - Show recent social media posts
 */
 
+
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -121,10 +128,11 @@ export default function Home() {
       <h3 className='text-4xl heading center-align'>See more on our social media</h3>
       <h5 className='text-med2 regular center-align'>@curtindesign</h5>
 
-
         <div className={styles.social_images}>
+          <div id="instafeed-container" className={styles.instaContain}></div>
         </div>
       </section>
     </div>
+
   )
 }
