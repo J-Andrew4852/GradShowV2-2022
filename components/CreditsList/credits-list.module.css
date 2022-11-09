@@ -1,0 +1,30 @@
+.container {
+    width: 230px;
+    vertical-align: top;
+    text-align: left;
+    margin-bottom: 2em;
+    margin-inline: 0.5em;
+}
+
+.container h3 {
+    width: min-content;
+}
+
+.container li {
+    list-style: none;
+    line-height: 200%;
+}
+
+@media (max-width: 680px) {
+    .container {
+        width: 100%;
+        vertical-align: top;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+    .container h3 {
+        width: unset;
+        text-align: center;
+    }
+}

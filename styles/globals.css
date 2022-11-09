@@ -1,0 +1,202 @@
+:root {
+  /* formatting */
+  --nav-height: 70px;
+  --footer-height: 110px; 
+  --max-width: 1400px; 
+
+  /* colours */
+  --digex-teal: #00A6A6;
+  --agd-yellow: #E2C044;
+  --grfx-orange: #ED7D3A;
+
+  --green-gradient: linear-gradient(108deg, var(--off-white) 0%, var(--main-green) 100%);
+  --digex-gradient: linear-gradient(108deg, var(--off-white) 0%, var(--digex-teal) 100%);
+  --agd-gradient: linear-gradient(108deg, var(--off-white) 0%, var(--agd-yellow) 100%);
+  --grfx-gradient: linear-gradient(108deg, var(--off-white) 0%, var(--grfx-orange) 100%);
+
+  --main-green: #606C38;
+  --dark-green: #283618;
+  --pale-green: #ECF1C5;
+
+  --light-grey: #C1CAD6;
+  --med-grey: #BCBCBE;
+  --off-white: #F7F5F4;
+  --off-white-transparent: #f7f5f400;
+  --off-black: #141414;
+
+  --neon-green: #39ff14;
+  --neon-orange: #ff8c06;
+  --neon-yellow: #cfff00;
+  --neon-blue: #6fe8ff;
+
+}
+
+/* BASE STYLING ======================================================================== */
+html,
+body {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--off-black);
+  line-height: 150%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* FONT STYLING ======================================================================== */
+.heading, .subheading {
+  font-family: 'Noto Serif Telugu', serif;
+  letter-spacing: -2px;
+  line-height: 100%;
+  margin: 0;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.semi-bold {
+  font-weight:600;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.body-copy {
+  line-height: 150%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.caption {
+  font-weight: 700;
+  color: var(--med-grey);
+}
+
+.text-xs {font-size: 0.75rem;}
+
+.text-small {font-size: 0.875rem;}
+
+.text-reg {font-size: 1rem;}
+
+.text-med {font-size: 1.125rem;}
+
+.text-med2 {font-size: 1.25rem;}
+
+.text-large {font-size: 1.50rem;} 
+
+.text-xl {font-size: 1.7rem;}
+
+.text-2xl {font-size: 2.5rem;}
+
+.text-3xl {font-size: 3rem;}
+
+.text-4xl {font-size: 3.125rem;}
+
+.text-5xl {font-size: 3.75rem;}
+
+.text-6xl {font-size: 4.5rem;}
+
+.text-7xl {font-size: 6.5rem;}
+
+.text-8xl {font-size: 8rem;}
+
+.color-green {
+  color: var(--main-green)
+}
+
+
+/* LINK STYLING ======================================================================== */
+.link {
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: 0px;
+  left: 0;
+  background-color: var(--off-black);
+  transition: width 0.4s ease;
+}
+
+.link:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0px;
+  left: 0;
+  background-color: var(--off-black);
+  transition: width 0.4s ease;
+}
+
+.link.active {
+  color: var(--main-green);
+  position: relative;
+  font-weight: 700;
+}
+
+.link.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0px;
+  left: 0;
+  background-color: var(--main-green);
+}
+
+/* INPUTS STYLING ======================================================================== */
+/* placeholder */
+input, select {
+  border: 1.5px solid var(--off-black);
+  min-height: 50px;
+  padding-inline: 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 1em;
+  text-overflow: ellipsis;
+  min-width: 200px;
+  border-radius: 0;
+}
+
+select {
+  cursor: pointer;
+}
+
+input {
+  min-width: 300px;
+  text-overflow: unset;
+}

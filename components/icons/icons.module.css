@@ -1,0 +1,75 @@
+/* ARROW ICON ===================================================== */
+.pointLeft {
+    transform: rotate(180deg);
+}
+
+/* ROCKET ICON ===================================================== */
+#initialRocket,
+.speedLine, 
+#speedLines,
+#endRocket {
+    fill: var(--off-white);
+    transition: all 0.8s ;
+}
+
+#speedLines {
+    transform: translate(100%);
+    opacity: 0;
+}
+
+#endRocket {
+    transform: translate(200%);
+    opacity: 0;
+}
+
+.animate #initialRocket {
+    animation-name: firstRocketUp;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(.47,1.64,.41,0.8);
+}
+
+.animate #speedLines {
+    animation-name: speedLinesUp;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(.47,1.64,.41,0.8);
+}
+
+.animate #endRocket {
+    animation-name: secondRocketUp;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(.47,1.64,.41,0.8);
+}
+
+@keyframes firstRocketUp{
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {        
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes speedLinesUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {        
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes secondRocketUp {
+    0% {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+    100% {        
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

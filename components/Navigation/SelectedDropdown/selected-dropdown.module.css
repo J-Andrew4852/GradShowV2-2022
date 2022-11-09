@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown {
+    background-color: var(--off-white);
+    min-height: 100px;
+    max-height: 500px;
+    overflow-y: auto;
+    width: 300px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    border: 1.5px solid var(--off-black);
+    display: flex;
+    flex-direction: column;
+}
+
+.student {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 1em;
+    align-items: center;
+    border-bottom: 0.5px solid var(--med-grey);
+}
+
+.student_data {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.student:hover {
+    background-color: var(--light-grey);
+}
+
+.student_image {
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 70px;
+    overflow: hidden;
+}

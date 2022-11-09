@@ -1,0 +1,92 @@
+.graduateContent {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - var(--nav-height));
+    padding: 10vh 8vw 0 9vw;
+}
+.leftSplit {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gradImageContainer {
+    display: relative;
+    height: auto;
+    width: 53vh;
+    background-color: black;
+}
+.portfolioBtn {
+    margin-left: auto;
+    background-color: black;
+    color: white;
+    padding: 10px 50px 10px 50px;
+}
+.linksBar {
+    margin-top: auto;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    padding: 2vh 0 0 0;
+}
+.rightSplit {
+    width: 60%;
+    height: 100%;
+    padding: 1vh 0 0 3vw;
+    color: var(--off-black);
+    display: flex;
+    flex-direction: column;
+}
+.hero_title {
+    font-size: 1.8em;
+}
+.hero_subtitle {
+    font-size: 0.6em;
+    margin: 5px 0 0 0;
+}
+.shortBio {
+    padding: 2vh 0 3vh 0;
+}
+.description {
+    font-size: 0.7em;
+}
+.socialLinks {
+    display: flex;
+    width: 100%;
+}
+.socialLinks > a {
+    margin-right: auto;
+    padding: 20px 20px 20px 20px;
+    background-color: black;
+}
+
+/* ============= Image Grid ============= */
+.graduateImageGrid {
+    height: 100vh;
+    width: 100%;
+    padding: 10vh 8vw 0 8vw;
+}
+.graduateImages {
+    background-color: var(--off-black);
+    height: 100%;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .graduateContent {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .gradImageContainer {
+        width: 100%;
+    }
+    .leftSplit {
+        width: 100%;
+    }
+    .rightSplit {
+        width: 100%;
+    }
+}

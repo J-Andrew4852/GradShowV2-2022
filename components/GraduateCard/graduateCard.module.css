@@ -1,0 +1,125 @@
+/* GRADUATE LIST =================================================== */
+.listContainer {
+    width: 100%;
+    border-bottom: 1.5px solid var(--off-black);
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1em;
+    cursor: pointer;
+    transition: width 0.2s cubic-bezier(.47, 1.64, .41, 1.2);
+    align-items: center;
+}
+
+.listContainer:hover {
+    width: 97%;
+}
+
+.listContainer .leftGroup {
+    display: flex;
+}
+
+.leftGroup .placeholder_headshot {
+    height: 50px;
+    width: 40px;
+}
+
+.rightGroup {
+    display: flex;
+    gap: 50px;
+}
+
+.rightGroup .icons {
+    gap: 20px;
+}
+
+
+/* GRADUATE CARD =================================================== */
+.cardContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 60px 250px 50px;
+    gap: 15px;
+    padding: 10px;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header_subcontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    grid-area: 3 / 1 / 4 / -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons {
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.icons * {
+    cursor: pointer;
+}
+
+.placeholder_headshot {
+    width: 50px;
+    height: 100%;
+    background-color: lightgrey;
+}
+
+.placeholder_icon,
+.placeholder_quickviewicon {
+    width: 30px;
+    height: 30px;
+    background-color: lightgrey;
+}
+
+.student_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.reset_font {
+    margin: 0;
+}
+
+@media only screen and (max-width: 1346px) {
+    .cardContainer {
+        grid-template-rows: 60px clamp(25vw, 10vw, 360px) 50px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .icons > *:first-child {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 885px) {
+    .cardContainer {
+        grid-template-rows: 60px clamp(53vw, 10vw, 325px) 50px;
+    }
+
+}
+
+@media only screen and (max-height: 650px) {
+    .icons > *:first-child {
+        display: none;
+    }
+}

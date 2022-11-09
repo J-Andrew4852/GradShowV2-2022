@@ -1,0 +1,138 @@
+.container {
+    max-width: 600px;
+    min-width: 400px;
+    width: 100%;
+    height: 100vh;
+    /* height: 100%; */
+    display: flex;
+    position: sticky;
+    right: 0;
+    top: var(--nav-height);
+    z-index: 5;
+    border-left: 1.5px solid var(--off-black);
+    border-right: 1.5px solid var(--off-black);
+    background-color: var(--off-white);
+}
+
+.folderContent {
+    background-color: var(--off-white);
+    width: 100%;
+    height: 100%;
+}
+
+.closeArrow {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%);
+    top: 1em;
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 100px;
+    outline: 1px solid var(--off-black);
+}
+
+/* GRADUATE CONTENT ===================================== */
+/* This section here might work better as a grid layout ?  */
+.graduateContent {
+    display: flex;
+    width: 100%;
+    padding-inline: 3em;
+    padding-block: 2em;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+
+.details {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+    height: 250px;
+}
+
+.shortBio {
+    margin-top: -100px;
+}
+
+/* GRADUATE PHOTO ===================================== */
+.graduate_photo {
+    max-width: 200px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* GRADUATE DETAILS ===================================== */
+.linksBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* SOCIALS BAR ===================================== */
+.socialsBar {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3em;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    background-color: var(--off-black);
+    cursor: pointer;
+}
+
+/* ============= Image Grid ============= */
+.graduateImageGrid {
+    width: 100%;
+    height: 100%;
+    padding: 2em 3em;
+    padding-bottom: 2em;
+}
+.graduateImages {
+    background-color: var(--off-black);
+    height: 450px;
+    width: 100%;
+}
+
+
+@media (max-width: 1300px) {
+    .sideFolder {
+        display: none;
+    }
+
+    .graduate_photo {
+        display: none;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .graduateContent, .details {
+        min-height: 250px;
+    }
+
+    .shortBio {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        display: none;
+    }
+}
+@media (max-height: 650px) {
+    .container {
+        display: none;
+    }
+}
