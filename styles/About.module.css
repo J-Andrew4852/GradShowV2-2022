@@ -5,35 +5,86 @@
     font-size: 16px;
 }
 
-/* 01 Introduction ------------------------------------------------------------ */
+/* 01 THE MISSION ------------------------------------------------------------ */
 .about{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-inline: 4em;
-    padding-block: 10em 18em;
+    height: 100vh;
+    width: 100%;
 }
-
-.about_group {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
+.section_heading{
+    width: 100%;
+    height: 40vh;
 }
-
-.about_introCopy {
-    width: 50%;
-    padding: 1em 2em;
-    max-width: 500px;
-    z-index: 1;
+.forward{
+    padding-top: 10%;
+    width: 35%;
+    margin: auto;
+    text-align: center;
 }
+.forward p strong{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 103.6%;
+    color: #283618;
+}
+.forward p{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
 
-.about_img {
-    margin-top: 40px;
-    z-index: 0;
-    width: 450px;
-    height: 300px;
+    color: #283618;
+}
+.elements{
+    padding: 10%;
+    height: 40vh;
+}
+.elements h2{
     position: relative;
+    top: 100px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 103.6%;
+    letter-spacing: 0.135em;
+    color: #606C37;
+}
+.elements h1{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 137px;
+    /* identical to box height */
+    
+    letter-spacing: -0.05em;
+    
+    color: #606C37;
+}
+.elements span{
+    left: -40px;
+    position: relative;
+    top: -350px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 222px;
+    
+    color: #606C37;
+    
+    opacity: 0.2;
+}
+.about_signature{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
 }
 
 .imageFooter {
