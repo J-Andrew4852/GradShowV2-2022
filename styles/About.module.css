@@ -5,7 +5,7 @@
     font-size: 16px;
 }
 
-/* 01 THE MISSION ------------------------------------------------------------ */
+/* 01 MAKING HISTORY ------------------------------------------------------------ */
 .about{
     height: 100vh;
     width: 100%;
@@ -86,144 +86,67 @@
     justify-content: center;
     margin-left: 50%;
 }
-
-.imageFooter {
-    position: absolute;
-    bottom: 30px;
-    background-color: var(--off-white);
-    border-bottom: 1.5px solid var(--med-grey);
-    width: 100%;
-    min-height: 40px;
-    padding: 0.5em 1em;
+/* 02 WHO WE ARE------------------------------------------------------------ */
+.whoweare_content{
+    gap: 200px;
     display: flex;
     align-items: center;
-}
-
-.imageFooter p {
-    margin: 0;
-    line-height: 120%;
-}
-
-/* 02 What makes us what we are ------------------------------------------------------------ */
-.values {
-    width: 100%;
-    padding-bottom: 14em;
-}
-
-.whoweare {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding-inline: 4em;
+    flex-direction: row;
 }
-
-.values_group{
-    padding-top: 4%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5%;
-}
-
-.value_group {
-    display: flex;
-    background-color: grey;
-    margin-top: 20px;
-    min-height: 177px;
-    text-align: left;
-}
-/* .values_group_1{
-    background-blend-mode:lighten;
-    background: linear-gradient(to right, var(--off-white) 40%, var(--digex-teal) 60%), url(https://grainy-gradients.vercel.app/noise.svg);
-}
-
-.values_group_2{
-    background-blend-mode:lighten;
-    background: linear-gradient(to right, var(--off-white) 48%, var(  --agd-yellow) 68%), url(https://grainy-gradients.vercel.app/noise.svg);
-}
-.values_group_3{
-    background-blend-mode:lighten;
-    background: linear-gradient(to right, var(--off-white) 56%, var(--grfx-orange) 74%), url(https://grainy-gradients.vercel.app/noise.svg);
-} */
-/* .value1 p, .value1 h2{
-    
-    margin-left: 18%;
-}
-.value2 p, .value2 h2{
-    margin-left: 26%;
-}
-.value3 p, .value3 h2{
-    margin-left: 32%;
-}
-
-.value3 p, .value2 p, .value1 p{
+.whoweare_text{
     width: 40%;
-    margin-top: -0.5%;
 }
-.value1 h2, .value2 h2, .value3 h2{
-    margin-top: 2.5%;
-}  */
-
-/* 03 The team behind it all ------------------------------------------------------------ */
-.credits.behinditall {
-    padding-inline: 5em;
-    padding-block: 10em 15em;
+.whoweare_heading{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
 }
-
-.behinditall {
+.whoweare_polaroids{
+    top: -100px;
     position: relative;
-    overflow: hidden;
-    z-index: 1;
+}
+.whoweare_icon{
+    width: 30px;
+    height: 30px;
+}
+.whoweare_polaroids{
+    height: 10vh;
+    width: 40%;
+}
+.space_photo{
+    position: relative;
+}
+.team_photo{
+    position: relative;
+    top: -160px;
+    right: 60px;
 }
 
-.creditsContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+
+
+.frontline{
+    height: 100vh;
 }
 
-.creditsSubContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.badge1 {
+    position: relative;
+    background-image: url('/assets/images/GRFX-badge.png');
+    width: 233px;
+    height: 233px;
 }
-
-.behinditall_subContainer, .credits_subContainer {
-    max-width: var(--max-width);
-    margin-inline: auto;
-}
-
-section.behinditall.credits, section.thanksto.credits {
-    max-width: unset;
-    width: 100%;
-}
-
-.chromeball {
+.badge1 {
     position: absolute;
-    background-image: url('/assets/images/Chrome/chrome-ball.png');
+    background-image: url('/assets/images/GRFX-badge.png');
     background-repeat: no-repeat;
     width: 233px;
     height: 233px;
     z-index: -1;
-}
-
-.chromeball_one {
     top: 250px;
     right: 80%;
     background-size: 80%;
 }
-
-.chromeball_two {
-    bottom: 450px;
-    left: 80%;
-}
-
-.chromeball_three {
-    bottom: 180px;
-    left: 76%;
-    background-size: 60%;
-}
-
 /* 04 Special thanks to ------------------------------------------------------------ */
 .credits.thanksto {
     padding-inline: 3em;

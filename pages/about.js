@@ -67,50 +67,40 @@ export default function About() {
 
             <div className={styles.whoweare_text}>
               <div className={styles.whoweare_first}>
-                <div className={styles.whoweare_heading}><Image src={sparkle} lassName={styles.signature} alt="Sparkle" /><h1>First Value</h1></div>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={sparkle} alt="Sparkle" /></div><h1>First Value</h1></div>
                 <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
               </div>
 
               <div className={styles.whoweare_second}>
-                <div className={styles.whoweare_heading}><Image src={eye} lassName={styles.signature} alt="Eye" /><h1>First Value</h1></div>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={eye} alt="Eye" /></div><h1>First Value</h1></div>
                 <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
               </div>
 
               <div className={styles.whoweare_third}>
-                <div className={styles.whoweare_heading}><Image src={world} lassName={styles.signature} alt="World" /><h1>First Value</h1></div>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={world} alt="World" /></div><h1>First Value</h1></div>
                 <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
               </div>
             </div>
 
             <div className={styles.whoweare_polaroids}>
-              <Image src={space} lassName={styles.signature} alt="Space" />
-              <Image src={team} lassName={styles.signature} alt="Team" />
+              <div className={styles.space_photo}><Image src={space} alt="Space" /></div>
+              <div className={styles.team_photo}><Image src={team} alt="Team" /></div>
             </div>
-
-            
           </div>
-
       </section>
 
 
-      {/* THE TEAM BEHIND IT ALL */}
-      <section className={`${styles.behinditall} ${styles.credits}`}>
+      {/* ON THE FRONTLINES */}
+      <section className={styles.frontline}>
 
-        <figure className={`${styles.chromeball} ${styles.chromeball_one}`}></figure>
-        <figure className={`${styles.chromeball} ${styles.chromeball_two}`}></figure>
-        <figure className={`${styles.chromeball} ${styles.chromeball_three}`}></figure>
-        <div className={styles.behinditall_subContainer}>
+        <div className={styles.badge1}></div>
+        <div className={styles.badge2}></div>
+        <div className={`${styles.badge3}`}></div>
 
-          <StyledHeader lineOneText="The team" lineTwoText="behind it all" sectionNumber='03' />
-
-          <div className={styles.creditsContainer}>
-            <div className={styles.creditsSubContainer}>
-
-              {committeesData.map(committee => (
-                <CreditsList key={committee.id} title={committee.name} members={committee.members} />
-              ))}
-            </div>
-          </div>
+        <div className={styles.elements}>
+            <h2>THE CREW</h2>
+            <h1>ON THE FRONTLINES</h1>
+            <span>03</span>
         </div>
       </section>
 
