@@ -6,7 +6,6 @@ import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js" strategy='beforeInteractive'/>
     <Head>
       <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon_package_v0.16/apple-touch-icon.png"/>
       <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon_package_v0.16/favicon-32x32.png"/>

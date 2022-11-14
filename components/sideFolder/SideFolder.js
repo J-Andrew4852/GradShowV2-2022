@@ -70,7 +70,7 @@ export const GradFolder = ({ data, onClose }) => {
 
                         <div className={styles.linksBar}>
                             <OutlineBtn external text="portfolio" height="thin" major={data.major[0].toLowerCase()}/>
-                            <TextBtn text='Expand' linkTo={`/graduates/${data._id}`}/>
+                            <TextBtn text='Expand' linkTo={`/graduates/${data._id}`} external/>
                         </div>
                     </div>
 

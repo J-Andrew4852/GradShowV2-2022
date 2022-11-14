@@ -11,6 +11,7 @@ import grfxBadge from '../public/assets/images/Badges/grfx_badge.png'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
+import { Instagram } from '../components/InstaFeed/Instagram'
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
@@ -31,23 +32,10 @@ Description:
 - Show recent social media posts
 */
 
-
 export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Script id='instafeed-script' strategy='afterInteractive'>
-        {`
-          var userFeed = new Instafeed({
-            get: 'user',
-            target: "instafeed-container",
-              resolution: 'low_resolution',
-            accessToken: 'IGQVJWUTNFTXE0M3Q4bUFwNC1qbjlfLVI2TWl3elprT2tNS2pVZAmExZA1VSamh0Ymd0SDYzVDFwd1d2Rlg1R1lteWZAvMHJreVNiaW5rai1FdUUwWEV2MUpENFA1cjVzNVlyN1lmSmNTY0Mwc0FjVHdkdwZDZD',
-                limit: 3,
-          });
-          userFeed.run();
-        `}
-      </Script>
       <Head>
         <title>Exhibition Space || 2022 Curtin Grad Show</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -141,7 +129,8 @@ export default function Home() {
       <h5 className='text-med2 regular center-align'>@curtindesign</h5>
 
         <div className={styles.social_images}>
-          <div id="instafeed-container" className={styles.instaContain}></div>
+          {/* <div id="instafeed-container" className={styles.instaContain}></div> */}
+          <Instagram/>
         </div>
       </section>
     </div>
