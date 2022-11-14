@@ -6,7 +6,6 @@
     position: sticky;
     display: flex;
     flex-direction: column;
-    /* right: 0; */
     top: var(--nav-height);
     z-index: 5;
     border-left: 1.5px solid var(--off-black);
@@ -14,12 +13,6 @@
     background-color: var(--off-white);
     margin-left: 3em;
 }
-
-/* .folderContent {
-    background-color: var(--off-white);
-    width: 100%;
-    height: 100%;
-} */
 
 .closeArrow {
     position: absolute;
@@ -33,18 +26,15 @@
 }
 
 /* GRADUATE CONTENT ===================================== */
-/* This section here might work better as a grid layout ?  */
 .graduateContent {
     display: grid;
     grid-template-columns: 35% 65%;
-    grid-template-rows: max-content;
-    /* justify-content: space-around; */
-    /* align-items: center; */
+    /* grid-template-rows: max-content; */
     width: 100%;
     padding-left: calc(3em + 10px);
-    padding-block: calc(0.5em + 10px);
-    min-height: 40%;
-    max-height: 46vh;
+    padding-top: calc(3em + 10px);
+    /* min-height: 40%;
+    max-height: 46vh; */
     align-content: center;
 }
 
@@ -57,12 +47,13 @@
 }
 
 .shortBio {
-    min-height: 150px;
+    min-height: 180px;
     width: 100%;
 }
 
 .details h1 {
     font-size: 2.2em;
+    padding-top: 5px;
 }
 
 .details h3 {
@@ -95,6 +86,7 @@
     justify-content: space-between;
     align-items: center;
     padding-left: calc(3em + 10px);
+    margin-top: 1.5em;
 }
 
 .icon {
@@ -119,15 +111,28 @@
 }
 
 
-@media only screen and (max-width: 1300px) {
-    /* .graduate_photo {
-        width: 150px;
-    } */
-}
-
 @media (max-width: 1200px) {
     .container {
         display: none;
+    }
+}
+
+@media (max-height: 1000px) {
+    .graduateContent {
+        padding-top: 3vh;
+    }
+
+    .shortBio {
+        font-size: 0.8em;
+        min-height: 150px;
+    }
+
+    .socialsBar {
+        margin-top: 2vh;
+    }
+
+    .graduateImageGrid {
+        margin: 2vh 0 ;
     }
 }
 

@@ -75,7 +75,7 @@
 
 .sidebarOff {
     /* margin-inline: -3em; */
-    padding-inline: calc(3em - 10px);
+    /* padding-inline: calc(3em - 10px); */
     max-width: 1800px;
     width: 100%;
 }

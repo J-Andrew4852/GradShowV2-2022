@@ -64,7 +64,8 @@ export const GradFolder = ({ data, onClose }) => {
                         </div>
 
                         <div className={styles.shortBio}>
-                            {data.bio}
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                            {/* {data.bio} */}
                         </div>
 
                         <div className={styles.linksBar}>
