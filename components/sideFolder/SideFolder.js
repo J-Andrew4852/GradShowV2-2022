@@ -54,7 +54,7 @@ export const GradFolder = ({ data, onClose }) => {
                 <div className={styles.graduateContent}>
 
                     <div className={styles.graduate_photo}>
-                        <Image className={styles.graduateImage} src={gradImage} alt={`Headshot photo of ${data.preferredName} ${data.lastName}`} width={783} height={1175} layout="responsive" placeholder="blur" blurDataURL={gradImage} />
+                        <Image className={styles.graduateImage} src={gradImage} alt={`Headshot photo of ${data.preferredName} ${data.lastName}`} width={783} height={1175} layout="fill" objectFit="cover" placeholder="blur" blurDataURL={gradImage} />
                     </div>
 
                     <div className={styles.details}>
@@ -63,7 +63,11 @@ export const GradFolder = ({ data, onClose }) => {
                             <h3 className={`regular text-reg`}>{data.major[0]} {data.major[1]}</h3>
                         </div>
 
-                        <div className={styles.shortBio}>{data.bio}</div>
+                        <div className={styles.shortBio}>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+
+                            {/* {data.bio} */}
+                        </div>
 
                         <div className={styles.linksBar}>
                             <OutlineBtn external text="portfolio" height="thin" major={data.major[0].toLowerCase()}/>

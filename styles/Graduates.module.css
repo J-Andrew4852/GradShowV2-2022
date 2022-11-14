@@ -65,48 +65,49 @@
 /* GRADUATE SECTION ------------------------------------------------------------ */
 
 .sidebarOn {
-    padding-inline: 3em;
+    /* margin-inline: -3em; */
+    /* padding-left: calc(3em - 10px);
+    padding-right: calc(3em - 10px); */
     max-width: 1800px;
     display: grid;
     grid-template-columns: auto max-content;
 }
 
 .sidebarOff {
-    padding-inline: 3em;
+    /* margin-inline: -3em; */
+    padding-inline: calc(3em - 10px);
     max-width: 1800px;
+    width: 100%;
 }
 
 .graduate_grid {
     margin-top: 3em;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 2em ;
 }
 
 .graduate_list {
     width: 100%;
-    max-width: var(--max-width);
     margin-inline: auto;
     display: flex;
     flex-direction: column;
-    padding: 3em;
-}
-
-.sidebarOff {
-    width: 100%;
-}
-
-
-@media only screen and (max-width: 1400px) {
-    .graduate_grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2em;
-    }
-
+    padding: 3em 0;
 }
 
 /* HIDES SIDEBAR -------------------------------- */
+
+@media (max-width: 1500px) {
+    .sidebarOn {
+        padding-inline: calc(3em - 10px);
+    }
+
+    .sidebarOff {
+        padding-inline: calc(3em - 10px);
+    }
+}
+
 @media (max-width: 1200px) {
     .sidebarOn {
         width: 100%;

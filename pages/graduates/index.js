@@ -122,8 +122,8 @@ export default function Graduates({ graduates }) {
               ))}
           </div>
 
-        </div>
         {selectedGraduate && <GradFolder data={selectedGraduate} onClose={closeGradFolder} />}
+        </div>
       </section>
 
     </div>

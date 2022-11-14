@@ -76,8 +76,8 @@ export const GraduateCard = ({ data, list, handleClick }) => {
             <Star />
           </div>
         </header>
-
-        <Image alt="Example of graduate's work" src={placeholder} layout="responsive" placeholder="blur" blurDataURL={placeholder}/>
+        
+        <Image alt="Example of graduate's work" src={placeholder} layout="responsive" objectFit="cover" placeholder="blur" blurDataURL={placeholder}/>
 
         <footer className={styles.footer}>
           { /* replace with button styling when available */}
