@@ -50,12 +50,10 @@ export const GraduateCard = ({ data, list, handleClick }) => {
 
           <div className={styles.rightGroup}>
             <div className={styles.icons}>
-              <SidebarIcon  onClick={() => handleClick(data)} />
+              <SidebarIcon onClick={() => handleClick(data)} />
               <Star />
             </div>
-            <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">
-              <OutlineBtn height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
-            </a>
+            <TextBtn text='view' linkTo={`/graduates/${data._id}`}/>
           </div>
 
         </article>

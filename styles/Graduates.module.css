@@ -39,7 +39,7 @@
     padding-inline: 3em;
     padding-block: 0.5em;
     margin-inline: auto;
-    max-width: 1800px;
+    max-width: 1500px;
     width: 100%;
 
     display: flex;
@@ -84,8 +84,9 @@
     margin-top: 3em;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2em ;
+    margin-bottom: 50px;
 }
 
 .graduate_list {
@@ -118,4 +119,22 @@
     .sidebarOn {
         width: 100%;
     }
+}
+
+@media (max-width: 600px) {
+    .filterBar .filterBar_subContainer {
+        padding-inline: 2em;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sidebarOn, .sidebarOff {
+        padding-inline: 1em ;
+    }
+
+    .graduate_grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
 }

@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.listContainer .student_details {
+    padding-top: 5px;
+}
+
 .listContainer:hover {
     width: 97%;
 }
@@ -25,7 +29,7 @@
 
 .rightGroup {
     display: flex;
-    gap: 50px;
+    gap: 30px;
 }
 
 .rightGroup .icons {
@@ -113,5 +117,13 @@
 @media only screen and (max-height: 750px) {
     .icons > *:first-child {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .rightGroup {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
     }
 }
