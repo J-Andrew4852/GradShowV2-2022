@@ -119,7 +119,7 @@
     }
 }
 
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 700px) {
     .icons > *:first-child {
         display: none;
     }

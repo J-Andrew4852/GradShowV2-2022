@@ -4,7 +4,8 @@
     width: calc(30vw - 3em);
     height: calc(100vh - var(--nav-height));
     position: sticky;
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
     /* right: 0; */
     top: var(--nav-height);
     z-index: 5;
@@ -37,29 +38,31 @@
     display: grid;
     grid-template-columns: 35% 65%;
     grid-template-rows: max-content;
-    justify-content: space-around;
-    align-items: center;
+    /* justify-content: space-around; */
+    /* align-items: center; */
     width: 100%;
     padding-left: calc(3em + 10px);
-    padding-block: calc(3em + 10px);
+    padding-block: calc(0.5em + 10px);
+    min-height: 40%;
+    max-height: 46vh;
+    align-content: center;
 }
 
 .details {
     display: grid;
     align-content: stretch;
     padding-left: 30px;
-    gap: 30px;
+    gap: 15px;
     width: 100%;
 }
 
 .shortBio {
-    min-height: 170px;
+    min-height: 150px;
     width: 100%;
 }
 
 .details h1 {
     font-size: 2.2em;
-    margin-top: 10px;
 }
 
 .details h3 {
@@ -106,7 +109,7 @@
     width: 100%;
     height: 100%;
     padding-left: calc(3em + 10px);
-    margin: 2em 0;
+    margin: 1.5em 0;
 }
 
 .graduateImages {
@@ -122,14 +125,14 @@
     } */
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
     .container {
         display: none;
     }
 }
 
 
-@media (max-height: 750px) {
+@media (max-height: 700px) {
     .container {
         display: none;
     }
