@@ -71,7 +71,6 @@ export const GraduateCard = ({ data, list, handleClick }) => {
 
           <div className={styles.icons}>
             <SidebarIcon onClick={() => handleClick(data)}/>
-            <Star />
           </div>
         </header>
         
