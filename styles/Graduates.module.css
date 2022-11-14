@@ -63,19 +63,25 @@
 }
 
 /* GRADUATE SECTION ------------------------------------------------------------ */
-section.gradsSection {
+
+.sidebarOn {
+    padding-inline: 3em;
     max-width: 1800px;
-    position: relative;
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: auto max-content;
+}
+
+.sidebarOff {
+    padding-inline: 3em;
+    max-width: 1800px;
 }
 
 .graduate_grid {
-    width: 100%;
+    margin-top: 3em;
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
-    gap: 40px 50px ;
-    padding: 5em 3em;  
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    gap: 2em ;
 }
 
 .graduate_list {
@@ -91,23 +97,23 @@ section.gradsSection {
     width: 100%;
 }
 
-.sidebarOn {
-    width: 55%;
-}
 
-@media only screen and (max-width: 900px) {
-    .graduatesMainFolder {
-        width: 100%;
+@media only screen and (max-width: 1400px) {
+    .graduate_grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2em;
     }
+
 }
 
+/* HIDES SIDEBAR -------------------------------- */
 @media (max-width: 1200px) {
     .sidebarOn {
         width: 100%;
     }
 }
 
-@media (max-height: 650px) {
+@media (max-height: 750px) {
     .sidebarOn {
         width: 100%;
     }
