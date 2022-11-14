@@ -73,7 +73,12 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 3px;
+}
+
+.icons svg:first-of-type {
+    margin-top: 2px;
 }
 
 .icons * {
