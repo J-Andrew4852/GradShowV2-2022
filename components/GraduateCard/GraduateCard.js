@@ -50,12 +50,10 @@ export const GraduateCard = ({ data, list, handleClick }) => {
 
           <div className={styles.rightGroup}>
             <div className={styles.icons}>
-              <SidebarIcon  onClick={() => handleClick(data)} />
+              <SidebarIcon onClick={() => handleClick(data)} />
               <Star />
             </div>
-            <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">
-              <OutlineBtn height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
-            </a>
+            <TextBtn text='view' linkTo={`/graduates/${data._id}`}/>
           </div>
 
         </article>
@@ -73,11 +71,10 @@ export const GraduateCard = ({ data, list, handleClick }) => {
 
           <div className={styles.icons}>
             <SidebarIcon onClick={() => handleClick(data)}/>
-            <Star />
           </div>
         </header>
-
-        <Image alt="Example of graduate's work" src={placeholder} layout="responsive" placeholder="blur" blurDataURL={placeholder}/>
+        
+        <Image alt="Example of graduate's work" src={placeholder} layout="responsive" objectFit="cover" placeholder="blur" blurDataURL={placeholder}/>
 
         <footer className={styles.footer}>
           { /* replace with button styling when available */}

@@ -36,6 +36,18 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Script id='instafeed-script' strategy='afterInteractive'>
+        {`
+          var userFeed = new Instafeed({
+            get: 'user',
+            target: "instafeed-container",
+              resolution: 'low_resolution',
+            accessToken: 'IGQVJWUTNFTXE0M3Q4bUFwNC1qbjlfLVI2TWl3elprT2tNS2pVZAmExZA1VSamh0Ymd0SDYzVDFwd1d2Rlg1R1lteWZAvMHJreVNiaW5rai1FdUUwWEV2MUpENFA1cjVzNVlyN1lmSmNTY0Mwc0FjVHdkdwZDZD',
+                limit: 3,
+          });
+          userFeed.run();
+        `}
+      </Script>
       <Head>
         <title>Exhibition Space || 2022 Curtin Grad Show</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
