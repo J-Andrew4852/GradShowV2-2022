@@ -19,6 +19,7 @@
 
 .graduate_photo {
     grid-area: 1 / 1 / -1 / 2 ;
+    position: relative;
 }
 
 .graduate_photo_small {
@@ -27,16 +28,27 @@
 
 .graduate_title {
     display: grid;
-    grid-template-columns: 1fr max-content;
+    grid-template-columns: max-content 1fr;
 }
 
-.graduate_title svg {
-    grid-area: 1 / 2 / -1 / -1 ;
+.graduate_major_patch {
+    grid-row: span 2;
+    width: 90px;
+    margin-right: 2em;
+}
+
+.graduate_name {
+    grid-area: 1 / 2 / 2 / -2 ;
+}
+
+.graduate_major {
+    grid-area: 2 / 2 / 3 / -2 ;
 }
 
 .graduate_bio {
     grid-area: 3 / 1 / 4 / -1 ;
-    margin: 20px 0 50px 0;
+    /* margin: 20px 0 50px 0; */
+    margin: 2em 0 3em 0 ;
 }
 
 .graduate_details {
@@ -45,6 +57,10 @@
 
 .graduate_description {
     margin-bottom: 50px;
+}
+
+.graduate_bio::first-letter, .graduate_description::first-letter {
+    text-transform: capitalize;
 }
 
 .graduate_links {
@@ -77,32 +93,7 @@
 }
 
 
-@media only screen and (max-width: 1000px) {
-
-    .graduate_content { 
-        grid-template-columns: 167px 1fr;
-        grid-template-rows: 250px max-content;
-        padding: 50px 50px 0 50px ;
-        column-gap: 50px;
-    }
-
-    .graduate_photo { display: none; }
-    .graduate_photo_small { 
-        display: block;
-        grid-area: 1 / 1 / 2 / 2 ; 
-    }
-
-    .graduate_title { 
-        grid-area: 1 / 2 / 2 / -1 ; 
-    }
-
-    .graduate_details { 
-        grid-area: 3 / 1 / 4 / -1 ;
-        margin-top: 50px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
 
     .arrow {
         margin-top: 20px;
@@ -111,14 +102,21 @@
 
     .graduate_content {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, max-content);
+        grid-template-rows: 350px repeat(2, max-content);
         row-gap: 50px;
         padding: 20px 50px 0 50px ;
     }
 
-    .graduate_photo_small {
-        grid-area: 1 / 1 / 2 / -1 ;
-        justify-self: center;
+    .graduate_photo { display: none; }
+
+    .graduate_photo_small { 
+        grid-area: 1 / 1 / 2 / 2 ; 
+        display: block;
+        position: relative;
+    }
+
+    .graduate_photo_small img {
+        object-position: top;
     }
 
     .graduate_title {
@@ -126,13 +124,21 @@
     }
 
     .graduate_bio {
-        margin: 20px 0 0 0;
+        margin: 2rem 0 0 0;
     }
 
-    .graduate_details {
+    .graduate_details { 
         grid-area: 3 / 1 / 4 / -1 ;
         margin-top: 0;
     }
+}
+
+@media only screen and (max-width: 900px) {
+
+
+
+
+
 }
 
 @media only screen and (max-width: 500px) {
