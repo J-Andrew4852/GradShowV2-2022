@@ -43,19 +43,19 @@ export default function Home() {
 
       {/* HERO */}
       <section className={`${styles.hero} center-align `}>
-        <div className={styles.heading_group}>
-          <h3 className={`regular ${styles.hero_subtitle}`}>2022 Curtin Design Showcase</h3>
-
-          {/* TODO: replace with logo svg when it has been created */}
-          <div className={`${styles.hero_title}`}>
-            <h1 className='heading bold'>Exhibition <span className='italic regular'>Space</span></h1>
+        <div className={styles.space}>
+          <div className={styles.glare} />
+          <div className={styles.hero_text}>
+            <p>ES22 | B-DES - AGD, DIGEX, GRFX<br/>
+            MANAGING AGENT: CURTIN UNIVERSITY</p>
           </div>
-        </div>
-
-        <div className={styles.hero_info}>
-          <div className={styles.countdown}></div>
-          <p className='text-med'>25.09.2022 | 16:00 - 20:00</p>
-          <p className='text-med body-copy'>Building 202, Curtin University</p>
+          <div className={styles.title} />
+          <div className={styles.title_blurred} />
+          
+            <div className={styles.markers}>
+                  <div className={styles.marker1}><div className={styles.arrow1} /></div>
+                  <div className={styles.marker2}><div className={styles.arrow1} /></div>
+            </div>    
         </div>
       </section>
 
