@@ -63,9 +63,10 @@ export default function Home() {
   
       {/* APPROVED IMAGE */}
       <div className={styles.approved}>
-        <div className={styles.approved_image} />
+        <div className={styles.approved_image}></div>
+        <p>More mission details &nbsp;&nbsp;→</p>
       </div>
-      <p>More mission details &nbsp;&nbsp;→</p>
+      
 
 
       {/* SHOWREELS */}

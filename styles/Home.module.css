@@ -113,28 +113,31 @@
 }
 
 /* APROVED ------------------------------------------------------------ */
-.approved p{
-  text-decoration: underline;
-}
-/* .approved{
-  border: solid red 3px;
+.approved{
   width: 100vw;
-  height: 40vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-} */
+  flex-direction: column;
+}
+.approved p{
+  text-decoration: underline;
+  position: relative;
+  top: -100px;
+  margin-left: 43%;
+}
 .approved_image{
   border: solid red 3px;
-  margin: auto;
   background: url('../public/assets/images/Home/approved.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 10rem;
+  position: relative;
   width: 100%;
-  background-size: 40%;
+  height: 100%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 
 /* SHOWREELS ------------------------------------------------------------ */
 .showreels {
