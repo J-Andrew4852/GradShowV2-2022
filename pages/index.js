@@ -42,7 +42,7 @@ export default function Home() {
       </Head>
 
       {/* HERO */}
-      <section className={`${styles.hero} center-align `}>
+      <section className={`${styles.hero}`}>
         <div className={styles.space}>
           <div className={styles.glare} />
           <div className={styles.hero_text}>
@@ -61,13 +61,11 @@ export default function Home() {
 
       <CountdownBanner />
   
-      {/* ABOUT */}
-      <section className={styles.about}>
-        <div className={`${styles.about_subcontainer} body-copy text-reg right-align `}>
-          <p className={`${styles.section2_text} left-align`}>Brief Introduction about the gradshow goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper ligula ac odio tincidunt, sodales aliquet dui mollis. Duis sodales tempor nibh. Nullam ullamcorper mi in tortor venenatis ornare. </p>
-          <button className={styles.section2_button}>Button</button>
-        </div>
-      </section>
+      {/* APPROVED IMAGE */}
+      <div className={styles.approved}>
+        <div className={styles.approved_image} />
+      </div>
+      <p>More mission details &nbsp;&nbsp;→</p>
 
 
       {/* SHOWREELS */}

@@ -1,6 +1,6 @@
 /* BASE ------------------------------------------------------------ */
 .container section {
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   margin-inline: auto;
   width: 100%;
   font-size: 16px;
@@ -13,15 +13,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding-inline: 4em;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* .hero_title {
   font-size: clamp(3rem, 7vw, 8rem); 
 } */
 .space{
+  /* overflow-y: hidden; */
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url('../public/assets/images/Home/space.png');
   background-size: cover;
@@ -109,18 +112,28 @@
   margin-bottom: 2em;
 }
 
-/* ABOUT ------------------------------------------------------------ */
-.about {
-  padding: 15em 8em;
+/* APROVED ------------------------------------------------------------ */
+.approved p{
+  text-decoration: underline;
 }
-
-.about_subcontainer {
-  max-width: 530px;
-  margin-inline: auto 0;
-}
-
-.about_subcontainer p {
-  margin-bottom: 50px;
+/* .approved{
+  border: solid red 3px;
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
+.approved_image{
+  border: solid red 3px;
+  margin: auto;
+  background: url('../public/assets/images/Home/approved.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 10rem;
+  width: 100%;
+  background-size: 40%;
 }
 
 /* SHOWREELS ------------------------------------------------------------ */
