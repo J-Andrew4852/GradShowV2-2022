@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import animationShowreel from '../public/assets/images/Showreel1.png'
@@ -20,6 +21,7 @@ import styles from '../styles/Home.module.css'
 
 // SCRIPTS ============================================================================= // 
 
+// const Instagram = dynamic(() => import("../components/InstaFeed/Instagram").then(mod => mod.Instagram), { ssr: false });
 
 /* 
 Name: Home page
