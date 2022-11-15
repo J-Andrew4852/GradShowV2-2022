@@ -8,6 +8,8 @@ import eye from '../public/assets/images/About/eye.png'
 import world from '../public/assets/images/About/world.png'
 import space from '../public/assets/images/About/space.png'
 import team from '../public/assets/images/About/team.png'
+import crew from '../public/assets/images/About/crew.png'
+import supplies from '../public/assets/images/About/supplies.png'
 import { committeesData, acknowledgementsData } from '../Utils/creditsData'
 
 // COMPONENT IMPORTS ==================================================================== // 
@@ -103,6 +105,11 @@ export default function About() {
             <h2 className={`regular text-xl`}>THE CREW</h2>
             <h1 className={`bold text-7xl`}>ON THE FRONT<p/>LINES</h1>
             <span className={`regular text-9xl`}>03</span>
+        </div>
+
+        <div className={styles.crew_images}>
+          <div className={styles.crew}><Image src={crew} alt="Crew" /></div>
+          <div className={styles.supplies}><Image src={supplies} alt="Graduation show supplies" /></div>
         </div>
 
         <div className={styles.creditsContainer}>

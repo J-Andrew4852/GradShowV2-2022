@@ -134,6 +134,23 @@
 }
 
 /* 03 FRONTLINE ---------------------------------------------------------------------- */
+.crew{
+    width: 60%;
+    position: relative;
+    top: 200px;
+}
+.crew_images{
+    margin-top: -20%;
+    height: 75vh;
+    width: 100%;
+    padding-inline: 50px;
+}
+.supplies{
+    position: relative;
+    width: 60%;
+    top: -170px;
+    left: 43%;
+}
 
 
 /* 04 Special thanks to ------------------------------------------------------------ */
