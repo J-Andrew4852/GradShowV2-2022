@@ -105,12 +105,16 @@ export default function About() {
       </section>
 
 
-      {/* SPECIAL THANKS TO*/}
+      {/* BEHIND THE SCENES*/}
       <section className={`${styles.thanksto} ${styles.credits}`}>
         <div className={styles.credits_subContainer}>
 
-          <StyledHeader lineOneText="Special thanks to" lineTwoText="everyone involved" sectionNumber='03' />
-
+        <div className={styles.elements}>
+            <h2>THE CREW</h2>
+            <h1>BEHIND THE SCENES</h1>
+            <span>04</span>
+        </div>
+          
           <div className={styles.creditsContainer}>
             <div className={`${styles.creditsSubContainer} ${styles.acknowledgements}`}>
 

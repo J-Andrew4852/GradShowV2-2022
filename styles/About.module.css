@@ -3,6 +3,7 @@
     margin-inline: auto;
     width: 100%;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 /* 01 MAKING HISTORY ------------------------------------------------------------ */
@@ -88,6 +89,10 @@
 }
 /* 02 WHO WE ARE------------------------------------------------------------ */
 .whoweare_content{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     gap: 200px;
     display: flex;
     align-items: center;
@@ -95,7 +100,7 @@
     flex-direction: row;
 }
 .whoweare_text{
-    width: 40%;
+    min-width: 500px;
 }
 .whoweare_heading{
     display: flex;
@@ -113,7 +118,7 @@
 }
 .whoweare_polaroids{
     height: 10vh;
-    width: 40%;
+    width: 100%;
 }
 .space_photo{
     position: relative;
