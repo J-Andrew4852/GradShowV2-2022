@@ -2,9 +2,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import gradImage from '../../public/assets/images/graduate_image_placeholder.JPG'
+
 
 // STYLES =============================================================================== // 
 import styles from '../../styles/SingleGraduate.module.css'
@@ -19,9 +21,9 @@ Description:
 - Showcase images of student work
 */
 
+const MasonryJS = dynamic(() => import("../../components/MasonryJS/Masonry").then(mod => mod.MasonryJS), { ssr: false });
 
 export default function GraduatemDetail({ graduate }) {
-    
 
     return (
         <div className={styles.graduatePageContainer}>
@@ -57,7 +59,9 @@ export default function GraduatemDetail({ graduate }) {
                 </div>
             </div>
             <div className={styles.graduateImageGrid}>
-                <div className={styles.graduateImages}></div>
+                <div className={styles.graduateImages}>
+                    <MasonryJS />
+                </div>
             </div>
         </div>
     )

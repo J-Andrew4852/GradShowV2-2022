@@ -63,7 +63,7 @@
 
 /* ============= Image Grid ============= */
 .graduateImageGrid {
-    height: 100vh;
+    height: auto;
     width: 100%;
     padding: 10vh 8vw 0 8vw;
 }
