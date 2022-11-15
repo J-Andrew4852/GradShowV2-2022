@@ -40,10 +40,11 @@ export default function About() {
       {/* INTRODUCTION */}
       <section className={`${styles.about}`}>
         <div className={styles.section_heading}>
-          <div className={styles.elements}>
-            <h2>THE MISSION</h2>
-            <h1>MAKING HISTORY</h1>
-            <span>01</span>
+
+          <div className={`${styles.aboutTitle} color-green`}>
+            <h2 className={`regular text-xl`}>THE MISSION</h2>
+            <h1 className={`bold text-7xl`}>MAKING HISTORY</h1>
+            <span className={`regular text-9xl`}>01</span>
           </div>
 
           <div className={styles.forward}>
@@ -57,11 +58,17 @@ export default function About() {
 
       {/* WHO WE ARE */}
       <section className={`${styles.whoweare}`}>
-        <div className={styles.elements}>
+        {/* <div className={styles.elements}>
             <h2>WHAT MAKES US</h2>
             <h1>WHO WE ARE</h1>
             <span>02</span>
-          </div>
+          </div> */}
+
+        <div className={`${styles.aboutTitle} color-green`}>
+            <h2 className={`regular text-xl`}>WHAT MAKES US</h2>
+            <h1 className={`bold text-7xl`}>WHO WE ARE</h1>
+            <span className={`regular text-9xl`}>02</span>
+        </div>
 
           <div className={styles.whoweare_content}>
 
@@ -92,36 +99,38 @@ export default function About() {
 
       {/* ON THE FRONTLINES */}
       <section className={styles.frontline}>
-
-        <div className={styles.badge1}></div>
-        <div className={styles.badge2}></div>
-        <div className={`${styles.badge3}`}></div>
-
-        <div className={styles.elements}>
-            <h2>THE CREW</h2>
-            <h1>ON THE FRONTLINES</h1>
-            <span>03</span>
+        <div className={`${styles.aboutTitle} color-green`}>
+            <h2 className={`regular text-xl`}>THE CREW</h2>
+            <h1 className={`bold text-7xl`}>ON THE FRONT<p/>LINES</h1>
+            <span className={`regular text-9xl`}>03</span>
         </div>
+
+        <div className={styles.creditsContainer}>
+
+              {acknowledgementsData.map(committee => (
+                <CreditsList key={committee.id} title={committee.name} members={committee.members} />
+              ))}
+
+          </div>
       </section>
 
 
       {/* BEHIND THE SCENES*/}
       <section className={`${styles.thanksto} ${styles.credits}`}>
         <div className={styles.credits_subContainer}>
-
-        <div className={styles.elements}>
-            <h2>THE CREW</h2>
-            <h1>BEHIND THE SCENES</h1>
-            <span>04</span>
-        </div>
+        
+          <div className={`${styles.aboutTitle} color-green`}>
+              <h2 className={`regular text-xl`}>THE CREW</h2>
+              <h1 className={`bold text-7xl`}>BEHIND THE SCENES</h1>
+              <span className={`regular text-9xl`}>04</span>
+          </div>  
           
           <div className={styles.creditsContainer}>
-            <div className={`${styles.creditsSubContainer} ${styles.acknowledgements}`}>
 
               {acknowledgementsData.map(committee => (
                 <CreditsList key={committee.id} title={committee.name} members={committee.members} />
               ))}
-            </div>
+              
           </div>
         </div>
       </section>

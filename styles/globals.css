@@ -136,6 +136,8 @@ a {
 
 .text-8xl {font-size: 8rem;}
 
+.text-9xl {font-size: 9rem;}
+
 .color-green {
   color: var(--main-green)
 }
