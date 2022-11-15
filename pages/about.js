@@ -50,10 +50,10 @@ export default function About() {
           </div>
 
           <div className={styles.forward}>
-            <p><strong>FOREWARD</strong></p>
+            <p className={`text-small`}><strong>FOREWORD</strong></p>
             <p>Such a great show wow we have so much to talk about including this this and that, and that ofcourse. Come see our work and meet great design students from digital design, animation game design and graphic design. A lot more text will go here, I hope someone actually replaces this with relevant information because it’d be quite embarrassing to have this on our website</p>
-          </div>
           <div className={styles.about_signature}><Image src={signature} lassName={styles.signature} alt="2022 Design Graduates Signature" /></div>
+          </div>
           
         </div>
       </section>
@@ -81,19 +81,23 @@ export default function About() {
               </div>
 
               <div className={styles.whoweare_second}>
-                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={eye} alt="Eye" /></div><h1>First Value</h1></div>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={eye} alt="Eye" /></div><h1>Second Value</h1></div>
                 <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
               </div>
 
               <div className={styles.whoweare_third}>
-                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={world} alt="World" /></div><h1>First Value</h1></div>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={world} alt="World" /></div><h1>Third Value</h1></div>
                 <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
               </div>
             </div>
 
             <div className={styles.whoweare_polaroids}>
-              <div className={styles.space_photo}><Image src={space} alt="Space" /></div>
-              <div className={styles.team_photo}><Image src={team} alt="Team" /></div>
+              <div className={styles.space_photo}>
+                <Image src={space} layout={'fill'} objectFit={'contain'} alt="An image of space with lots of stars and a green overlay" />
+                </div>
+              <div className={styles.team_photo}>
+                <Image src={team} layout={'fill'} objectFit={'contain'} alt="A photo of the grad show team working together" />
+                </div>
             </div>
           </div>
       </section>
@@ -107,13 +111,29 @@ export default function About() {
             <span className={`regular text-9xl`}>03</span>
         </div>
 
+        {/* <div className={styles.whoweare_polaroids}>
+              <div className={styles.space_photo}>
+                <Image src={space} layout={'fill'} objectFit={'contain'} alt="An image of space with lots of stars and a green overlay" />
+                </div>
+              <div className={styles.team_photo}>
+                <Image src={team} layout={'fill'} objectFit={'contain'} alt="A photo of the grad show team working together" />
+                </div>
+            </div> */}
+
         <div className={styles.crew_images}>
-          <div className={styles.crew}><Image src={crew} alt="Crew" /></div>
-          <div className={styles.supplies}><Image src={supplies} alt="Graduation show supplies" /></div>
+          <div className={styles.crew}>
+            <Image src={crew} layout={'fill'} objectFit={'contain'} alt="A photo of all the student commitee leaders" />
+          </div>
+          <div className={styles.supplies}>
+            <Image src={supplies} layout={'fill'} objectFit={'contain'} alt="A stylised checklist of supplies required for the checklist" />
+          </div>
         </div>
 
         <div className={styles.creditsContainer}>
 
+              {acknowledgementsData.map(committee => (
+                <CreditsList key={committee.id} title={committee.name} members={committee.members} />
+              ))}
               {acknowledgementsData.map(committee => (
                 <CreditsList key={committee.id} title={committee.name} members={committee.members} />
               ))}
@@ -128,7 +148,7 @@ export default function About() {
         
           <div className={`${styles.aboutTitle} color-green`}>
               <h2 className={`regular text-xl`}>THE CREW</h2>
-              <h1 className={`bold text-7xl`}>BEHIND THE SCENES</h1>
+              <h1 className={`bold text-7xl`}>BEHIND THE SCREENS</h1>
               <span className={`regular text-9xl`}>04</span>
           </div>  
           

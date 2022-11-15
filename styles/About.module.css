@@ -1,17 +1,15 @@
 .container section {
     max-width: var(--max-width);
     margin-inline: auto;
-    margin-top: 10em;
-    width: 100%;
-    font-size: 16px;
-    overflow-x: hidden;
+    margin-top: 10vh;
+    /* overflow-x: hidden; */
 }
 
 .aboutTitle {
     display: grid;
     grid-template-columns: 75px 1fr;
     grid-template-rows: 50px 1.5em max-content;
-    margin-bottom: 8em;
+    margin-bottom: 5em;
 }
 
 .aboutTitle h1 {
@@ -45,112 +43,114 @@
 
 .creditsContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 30%));
+    justify-content: center;
+    gap: 2em;
     padding-inline: 3em;
     margin-bottom: 10em;
 }
 
 /* 01 MAKING HISTORY ------------------------------------------------------------ */
 .about{
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
 }
-.section_heading{
+/* .section_heading{
     width: 100%;
     height: 40vh;
-}
-.forward{
-    padding-top: 10%;
-    width: 35%;
-    margin: auto;
-    text-align: center;
-}
-.forward p strong{
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 103.6%;
-    color: #283618;
-}
-.forward p{
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
+} */
 
+.forward{
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 10%; */
+    /* width: 35%; */
+    text-align: center;
     color: #283618;
+}
+
+.forward p {
+    font-family: 'Space Mono';
+    align-self: center;
+    max-width: 470px;
+    margin-inline: 3em;
 }
 
 .about_signature{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 50%;
+    margin-top: 4em;
+    align-self: flex-end;
+    margin-right: 5em;
 }
+
 /* 02 WHO WE ARE------------------------------------------------------------ */
 .whoweare_content{
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    gap: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    padding: 3em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
 }
+
 .whoweare_text{
-    min-width: 500px;
+    max-width: 600px;
 }
+
 .whoweare_heading{
     display: flex;
     align-items: center;
     justify-content: left;
     gap: 10px;
 }
-.whoweare_polaroids{
-    top: -100px;
-    position: relative;
-}
+
 .whoweare_icon{
     width: 30px;
     height: 30px;
 }
+
 .whoweare_polaroids{
-    height: 10vh;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 80px 1fr 50px;
+    grid-template-rows: 80px repeat(3, 1fr);
+    height: 600px;
+    max-height: 700px;
+    width: 50vw;
+    max-width: 600px;
 }
+
 .space_photo{
     position: relative;
+    grid-area: 1 / 2 / 4 / -1 ;
 }
+
 .team_photo{
     position: relative;
-    top: -160px;
-    right: 60px;
+    grid-area: 2 / 1 / -1 / 3 ;
+
+    /* top: -160px;
+    right: 60px; */
 }
 
 /* 03 FRONTLINE ---------------------------------------------------------------------- */
-.crew{
-    width: 60%;
-    position: relative;
-    top: 200px;
-}
-.crew_images{
-    margin-top: -20%;
-    height: 75vh;
+
+.crew_images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px 1fr 80px;
+    height: 500px;
+    max-height: 800px;
     width: 100%;
-    padding-inline: 50px;
+    margin-bottom: 3em;
 }
-.supplies{
+
+.crew {
     position: relative;
-    width: 60%;
-    top: -170px;
-    left: 43%;
+    grid-area: 1 / 1 / 3 / 4 ;
 }
+
+.supplies {
+    position: relative;
+    grid-area: 2 / 3 / -1 / -1 ;
+}
+
 
 
 /* 04 Special thanks to ------------------------------------------------------------ */
@@ -163,11 +163,93 @@
     .aboutTitle {
         margin-inline: 2em;
     }
+
+    .whoweare_content {
+        margin-inline: 3em;
+    }
+
+    .about_signature{
+        margin-inline: 3em;
+    }
+
+    .crew_images {
+        padding: 0 1em 0 2em;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .whoweare .aboutTitle {
+        margin-bottom: 2em;
+    }
+
+    .whoweare_content {
+        grid-template-columns: 1fr;
+    }
+
+    .whoweare_polaroids{
+        grid-row: 1 / 2 ;
+        display: grid;
+        grid-template-columns: 15vw 1fr 3vw;
+        grid-template-rows: 10vw repeat(3, 1fr);
+        height: 60vw;
+        /* max-height: 700px; */
+        width: 90vw;
+        max-width: 80vw;
+
+        justify-self: center;
+    }
+
+    .whoweare_text {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 100%;
+        gap: 2em;
+    }
+
+    .whoweare_first {
+        grid-column: 1 / 4 ;
+    }
+
+    .whoweare_second {
+        grid-column: 2 / 5 ;
+    }
+
+    .whoweare_third {
+        grid-column: 3 / 6 ;
+    }
+
+
+    .crew {
+        grid-area: 1 / 1 / 3 / 5 ;
+        z-index: 2;
+    }
+    
+    .supplies {
+        grid-area: 2 / 3 / -1 / -1 ;
+        z-index: 1;
+    }
+
 }
 
 @media (max-width: 800px) {
     .aboutTitle h1 {
         font-size: 5em;
+    }
+
+    .crew_images {
+        grid-template-rows: repeat(3, 1fr);
+        padding: 2em;
+        height: 85vw;
+    }
+
+    .crew {
+        grid-area: 1 / 1 / 3 / -1 ;
+    }
+    
+    .supplies {
+        grid-area: 2 / 1 / -1 / -1 ;
+        z-index: 3;
     }
 }
 
@@ -177,6 +259,20 @@
         margin: 0;
         padding: 0;
     }
+
+    .whoweare_text {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .whoweare_first, .whoweare_second,.whoweare_third {
+        grid-column: 1 / -1 ;
+    }
+
+    .creditsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(230px, 30%));
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -191,6 +287,16 @@
 
     .aboutTitle h1 {
         font-size: 4.5em;
+    }
+
+    .about_signature{
+        align-self: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .aboutTitle h1 {
+        font-size: 4em;
     }
 }
 
@@ -238,10 +344,6 @@
     .credits.behinditall {
         padding-inline: 1em;
     }
-}
-
-@media (max-width: 680px) {
-
 }
 
 @media (max-width: 550px) {
