@@ -2,6 +2,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import introImage from '../public/assets/images/About/intro-image.jpg'
+import signature from '../public/assets/images/About/signature.png'
+import sparkle from '../public/assets/images/About/sparkle.png'
+import eye from '../public/assets/images/About/eye.png'
+import world from '../public/assets/images/About/world.png'
+import space from '../public/assets/images/About/space.png'
+import team from '../public/assets/images/About/team.png'
+import crew from '../public/assets/images/About/crew.png'
+import supplies from '../public/assets/images/About/supplies.png'
 import { committeesData, acknowledgementsData } from '../Utils/creditsData'
 
 // COMPONENT IMPORTS ==================================================================== // 
@@ -14,7 +22,7 @@ import styles from '../styles/About.module.css'
 // OVERVIEW ============================================================================= // 
 /* 
 Name: About page
-Collaborators: Logan Trundle, James Kang
+Collaborators: Logan Trundle, James Kang, Rachael Moriconi
 
 Description: 
 - Introduce the grad show and us graduates
@@ -33,79 +41,109 @@ export default function About() {
 
       {/* INTRODUCTION */}
       <section className={`${styles.about}`}>
-        <StyledHeader lineOneText="An exhibition" lineTwoText="to remember" sectionNumber='01' />
+        <div className={styles.section_heading}>
 
-        <div className={styles.about_group}>
-          <div className={styles.about_introCopy}>
-            <p className={`text-reg left-align body-copy`}>
-              Such a great show wow we have so much to talk about including this this and that, and let’s not forget that. Come see our work and meet great design students from digital design, animation game design and graphic design.
-            </p>
-            <p>
-              More text can go in here that we can break up.Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus ullamcorper ligula ac odio
-            </p>
+          <div className={`${styles.aboutTitle} color-green`}>
+            <h2 className={`regular text-xl`}>THE MISSION</h2>
+            <h1 className={`bold text-7xl`}>MAKING HISTORY</h1>
+            <span className={`regular text-9xl`}>01</span>
           </div>
 
-          <div className={styles.about_img}>
-            <Image src={introImage} alt="Logistics Meeting Team" layout='responsive' priority={true} placeholder='blur' width={450} height={300} />
-            <div className={styles.imageFooter}>
-              <p className='caption'>12-10-22 : Fun kind spacey(?) themed caption to go here </p>
-            </div>
+          <div className={styles.forward}>
+            <p className={`text-small`}><strong>FOREWORD</strong></p>
+            <p>Such a great show wow we have so much to talk about including this this and that, and that ofcourse. Come see our work and meet great design students from digital design, animation game design and graphic design. A lot more text will go here, I hope someone actually replaces this with relevant information because it’d be quite embarrassing to have this on our website</p>
+          <div className={styles.about_signature}><Image src={signature} lassName={styles.signature} alt="2022 Design Graduates Signature" /></div>
           </div>
+          
         </div>
       </section>
 
-      {/* WHAT MAKES US WHO WE ARE */}
+      {/* WHO WE ARE */}
       <section className={`${styles.whoweare}`}>
-        <StyledHeader lineOneText="What makes us" lineTwoText="who we are" sectionNumber='02' />
-      </section>
 
-      <div className={styles.values}>
-        <div className={styles.value_group}>
+        <div className={`${styles.aboutTitle} color-green`}>
+            <h2 className={`regular text-xl`}>WHAT MAKES US</h2>
+            <h1 className={`bold text-7xl`}>WHO WE ARE</h1>
+            <span className={`regular text-9xl`}>02</span>
         </div>
 
-        <div className={styles.value_group}>
-        </div>
+          <div className={styles.whoweare_content}>
 
-        <div className={styles.value_group}>
-        </div>
-      </div>
+            <div className={styles.whoweare_text}>
+              <div className={styles.whoweare_first}>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={sparkle} alt="Sparkle" /></div><h1>First Value</h1></div>
+                <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
+              </div>
 
+              <div className={styles.whoweare_second}>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={eye} alt="Eye" /></div><h1>Second Value</h1></div>
+                <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
+              </div>
 
-      {/* THE TEAM BEHIND IT ALL */}
-      <section className={`${styles.behinditall} ${styles.credits}`}>
+              <div className={styles.whoweare_third}>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={world} alt="World" /></div><h1>Third Value</h1></div>
+                <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
+              </div>
+            </div>
 
-        <figure className={`${styles.chromeball} ${styles.chromeball_one}`}></figure>
-        <figure className={`${styles.chromeball} ${styles.chromeball_two}`}></figure>
-        <figure className={`${styles.chromeball} ${styles.chromeball_three}`}></figure>
-        <div className={styles.behinditall_subContainer}>
-
-          <StyledHeader lineOneText="The team" lineTwoText="behind it all" sectionNumber='03' />
-
-          <div className={styles.creditsContainer}>
-            <div className={styles.creditsSubContainer}>
-
-              {committeesData.map(committee => (
-                <CreditsList key={committee.id} title={committee.name} members={committee.members} />
-              ))}
+            <div className={styles.whoweare_polaroids}>
+              <div className={styles.space_photo}>
+                <Image src={space} layout={'fill'} objectFit={'contain'} alt="An image of space with lots of stars and a green overlay" />
+                </div>
+              <div className={styles.team_photo}>
+                <Image src={team} layout={'fill'} objectFit={'contain'} alt="A photo of the grad show team working together" />
+                </div>
             </div>
           </div>
+      </section>
+
+
+      {/* ON THE FRONTLINES */}
+      <section className={styles.frontline}>
+        <div className={`${styles.aboutTitle} color-green`}>
+            <h2 className={`regular text-xl`}>THE CREW</h2>
+            <h1 className={`bold text-7xl`}>ON THE FRONT<p/>LINES</h1>
+            <span className={`regular text-9xl`}>03</span>
+        </div>
+
+        <div className={styles.crew_images}>
+          <div className={styles.crew}>
+            <Image src={crew} layout={'fill'} objectFit={'contain'} alt="A photo of all the student commitee leaders" />
+          </div>
+          <div className={styles.supplies}>
+            <Image src={supplies} layout={'fill'} objectFit={'contain'} alt="A stylised checklist of supplies required for the checklist" />
+          </div>
+        </div>
+
+        <div className={styles.creditsContainer}>
+
+          {acknowledgementsData.map(committee => (
+            <CreditsList key={committee.id} title={committee.name} members={committee.members} />
+          ))}
+          {acknowledgementsData.map(committee => (
+            <CreditsList key={committee.id} title={committee.name} members={committee.members} />
+          ))}
+
         </div>
       </section>
 
 
-      {/* SPECIAL THANKS TO*/}
+      {/* BEHIND THE SCENES*/}
       <section className={`${styles.thanksto} ${styles.credits}`}>
         <div className={styles.credits_subContainer}>
-
-          <StyledHeader lineOneText="Special thanks to" lineTwoText="everyone involved" sectionNumber='03' />
-
+        
+          <div className={`${styles.aboutTitle} color-green`}>
+            <h2 className={`regular text-xl`}>THE CREW</h2>
+            <h1 className={`bold text-7xl`}>BEHIND THE SCREENS</h1>
+            <span className={`regular text-9xl`}>04</span>
+          </div>  
+          
           <div className={styles.creditsContainer}>
-            <div className={`${styles.creditsSubContainer} ${styles.acknowledgements}`}>
 
-              {acknowledgementsData.map(committee => (
-                <CreditsList key={committee.id} title={committee.name} members={committee.members} />
-              ))}
-            </div>
+            {acknowledgementsData.map(committee => (
+              <CreditsList key={committee.id} title={committee.name} members={committee.members} />
+            ))}
+              
           </div>
         </div>
       </section>

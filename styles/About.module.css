@@ -1,191 +1,288 @@
 .container section {
     max-width: var(--max-width);
     margin-inline: auto;
-    width: 100%;
-    font-size: 16px;
+    margin-top: 10vh;
 }
 
-/* 01 Introduction ------------------------------------------------------------ */
-.about{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-inline: 4em;
-    padding-block: 10em 18em;
+.aboutTitle {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 50px 1.5em max-content;
+    margin-bottom: 5em;
 }
 
-.about_group {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-.about_introCopy {
-    width: 50%;
-    padding: 1em 2em;
-    max-width: 500px;
-    z-index: 1;
-}
-
-.about_img {
-    margin-top: 40px;
-    z-index: 0;
-    width: 450px;
-    height: 300px;
-    position: relative;
-}
-
-.imageFooter {
-    position: absolute;
-    bottom: 30px;
-    background-color: var(--off-white);
-    border-bottom: 1.5px solid var(--med-grey);
-    width: 100%;
-    min-height: 40px;
-    padding: 0.5em 1em;
-    display: flex;
-    align-items: center;
-}
-
-.imageFooter p {
+.aboutTitle h1 {
+    grid-column: 2 / -1 ;
+    grid-row: 3 / 4 ;
+    font-family: 'Avenir';
+    font-style: normal;
+    line-height: 1em;
     margin: 0;
-    line-height: 120%;
 }
 
-/* 02 What makes us what we are ------------------------------------------------------------ */
-.values {
-    width: 100%;
-    padding-bottom: 14em;
+.aboutTitle h2 {
+    grid-column: 2 / -1 ;
+    grid-row: 2 / 3 ;
+    font-family: 'Space Mono';
+    font-style: normal;
+    margin: 0;
 }
 
-.whoweare {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-inline: 4em;
+.aboutTitle span {
+    grid-column: 1 / -1 ;
+    grid-row: 1 / 3;
+    align-self: flex-start;
+    opacity: 0.2;
+    line-height: 1em;
 }
 
-.values_group{
-    padding-top: 4%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5%;
-}
-
-.value_group {
-    display: flex;
-    background-color: grey;
-    margin-top: 20px;
-    min-height: 177px;
-    text-align: left;
-}
-/* .values_group_1{
-    background-blend-mode:lighten;
-    background: linear-gradient(to right, var(--off-white) 40%, var(--digex-teal) 60%), url(https://grainy-gradients.vercel.app/noise.svg);
-}
-
-.values_group_2{
-    background-blend-mode:lighten;
-    background: linear-gradient(to right, var(--off-white) 48%, var(  --agd-yellow) 68%), url(https://grainy-gradients.vercel.app/noise.svg);
-}
-.values_group_3{
-    background-blend-mode:lighten;
-    background: linear-gradient(to right, var(--off-white) 56%, var(--grfx-orange) 74%), url(https://grainy-gradients.vercel.app/noise.svg);
-} */
-/* .value1 p, .value1 h2{
-    
-    margin-left: 18%;
-}
-.value2 p, .value2 h2{
-    margin-left: 26%;
-}
-.value3 p, .value3 h2{
-    margin-left: 32%;
-}
-
-.value3 p, .value2 p, .value1 p{
-    width: 40%;
-    margin-top: -0.5%;
-}
-.value1 h2, .value2 h2, .value3 h2{
-    margin-top: 2.5%;
-}  */
-
-/* 03 The team behind it all ------------------------------------------------------------ */
-.credits.behinditall {
-    padding-inline: 5em;
-    padding-block: 10em 15em;
-}
-
-.behinditall {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+.aboutTitle p {
+    display: none;
 }
 
 .creditsContainer {
-    width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 30%));
     justify-content: center;
+    gap: 2em;
+    padding-inline: 3em;
+    margin-bottom: 10em;
 }
 
-.creditsSubContainer {
+/* 01 MAKING HISTORY ------------------------------------------------------------ */
+.forward{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    color: #283618;
 }
 
-.behinditall_subContainer, .credits_subContainer {
-    max-width: var(--max-width);
-    margin-inline: auto;
+.forward p {
+    font-family: 'Space Mono';
+    align-self: center;
+    max-width: 470px;
+    margin-inline: 3em;
 }
 
-section.behinditall.credits, section.thanksto.credits {
-    max-width: unset;
+.about_signature{
+    margin-top: 4em;
+    align-self: flex-end;
+    margin-right: 5em;
+}
+
+/* 02 WHO WE ARE------------------------------------------------------------ */
+.whoweare_content{
+    padding: 3em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+}
+
+.whoweare_text{
+    max-width: 600px;
+}
+
+.whoweare_heading{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+.whoweare_icon{
+    width: 30px;
+    height: 30px;
+}
+
+.whoweare_polaroids{
+    display: grid;
+    grid-template-columns: 80px 1fr 50px;
+    grid-template-rows: 80px repeat(3, 1fr);
+    height: 600px;
+    max-height: 700px;
+    width: 50vw;
+    max-width: 600px;
+}
+
+.space_photo{
+    position: relative;
+    grid-area: 1 / 2 / 4 / -1 ;
+}
+
+.team_photo{
+    position: relative;
+    grid-area: 2 / 1 / -1 / 3 ;
+}
+
+/* 03 FRONTLINE ---------------------------------------------------------------------- */
+
+.crew_images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px 1fr 80px;
+    height: 500px;
+    max-height: 800px;
     width: 100%;
+    margin-bottom: 3em;
 }
 
-.chromeball {
-    position: absolute;
-    background-image: url('/assets/images/Chrome/chrome-ball.png');
-    background-repeat: no-repeat;
-    width: 233px;
-    height: 233px;
-    z-index: -1;
+.crew {
+    position: relative;
+    grid-area: 1 / 1 / 3 / 4 ;
+    z-index: 2;
 }
 
-.chromeball_one {
-    top: 250px;
-    right: 80%;
-    background-size: 80%;
+.supplies {
+    position: relative;
+    grid-area: 2 / 3 / -1 / -1 ;
 }
 
-.chromeball_two {
-    bottom: 450px;
-    left: 80%;
-}
 
-.chromeball_three {
-    bottom: 180px;
-    left: 76%;
-    background-size: 60%;
-}
 
 /* 04 Special thanks to ------------------------------------------------------------ */
-.credits.thanksto {
-    padding-inline: 3em;
-}
-
-.thanksto .creditsContainer {
-    width: fit-content;
-    margin-inline: auto 0;
-}
 
 
 
 /* 04 Responsive ------------------------------------------------------------ */
+
+@media (max-width: 1500px) {
+    .aboutTitle {
+        margin-inline: 2em;
+    }
+
+    .whoweare_content {
+        margin-inline: 3em;
+    }
+
+    .about_signature{
+        margin-inline: 3em;
+    }
+
+    .crew_images {
+        padding: 0 1em 0 2em;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .whoweare .aboutTitle {
+        margin-bottom: 2em;
+    }
+
+    .whoweare_content {
+        grid-template-columns: 1fr;
+    }
+
+    .whoweare_polaroids{
+        grid-row: 1 / 2 ;
+        display: grid;
+        grid-template-columns: 15vw 1fr 3vw;
+        grid-template-rows: 10vw repeat(3, 1fr);
+        height: 60vw;
+        /* max-height: 700px; */
+        width: 90vw;
+        max-width: 80vw;
+
+        justify-self: center;
+    }
+
+    .whoweare_text {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 100%;
+        gap: 2em;
+    }
+
+    .whoweare_first {
+        grid-column: 1 / 4 ;
+    }
+
+    .whoweare_second {
+        grid-column: 2 / 5 ;
+    }
+
+    .whoweare_third {
+        grid-column: 3 / 6 ;
+    }
+
+
+    .crew {
+        grid-area: 1 / 1 / 3 / 5 ;
+    }
+    
+    .supplies {
+        grid-area: 2 / 3 / -1 / -1 ;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .aboutTitle h1 {
+        font-size: 5em;
+    }
+
+    .crew_images {
+        grid-template-rows: repeat(3, 1fr);
+        padding: 2em;
+        height: 85vw;
+    }
+
+    .crew {
+        grid-area: 1 / 1 / 3 / -1 ;
+    }
+    
+    .supplies {
+        grid-area: 2 / 1 / -1 / -1 ;
+    }
+}
+
+@media (max-width: 700px) {
+    .aboutTitle p {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .whoweare_text {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .whoweare_first, .whoweare_second,.whoweare_third {
+        grid-column: 1 / -1 ;
+    }
+
+    .creditsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(230px, 30%));
+    }
+
+}
+
+@media (max-width: 500px) {
+    .aboutTitle {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1.5em max-content;
+    }
+
+    .aboutTitle h1, .aboutTitle h2 {
+        grid-column: 1 / -1 ;
+    }
+
+    .aboutTitle h1 {
+        font-size: 4.5em;
+    }
+
+    .about_signature{
+        align-self: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .aboutTitle h1 {
+        font-size: 4em;
+    }
+}
+
 @media (max-width: 1000px) {
     .about_group {
         display: flex;
@@ -230,10 +327,6 @@ section.behinditall.credits, section.thanksto.credits {
     .credits.behinditall {
         padding-inline: 1em;
     }
-}
-
-@media (max-width: 680px) {
-
 }
 
 @media (max-width: 550px) {
