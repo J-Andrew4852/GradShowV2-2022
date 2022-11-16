@@ -1,6 +1,6 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
-import { useEffect } from 'react'
+import {useEffect} from 'react'
 import Image from 'next/image'
 
 // COMPONENT IMPORTS ==================================================================== // 
@@ -45,40 +45,25 @@ export const MasonryJS = () => {
     },
   ]
 
-  window.onload = function () {
-    var grid = document.querySelector('.grid');
-    console.log(grid)
-    if (grid) {
-      var msnry = new Masonry(grid);
-    }
-  }
-  
 
-    return (
+  useEffect(()=>{
+    var elem = document.querySelector('.grid');
+    new Masonry(elem, {
+      itemSelector: '.grid-item',
+      columnWidth: 50
+    });
+    }, []);
+
+
+  return (
       <div className={styles.container}>
-        {/* <Script>
-          {`
-          var elem = document.querySelector('.grid');
-          var msnry = new Masonry( elem, {
-            // options
-            itemSelector: '.grid-item',
-            columnWidth: 200
-          });
-          
-          // element argument can be a selector string
-          //   for an individual element
-          var msnry = new Masonry( '.grid', {
-            // options
-          });
-          `}
-        </Script> */}
-        <div className={styles.grid}>
-          {images.map((image, i) => (
-            <div className={styles.porjectImages} key={i}>
-              <Image className={`styles.projectImage${image.id}`} src={image.imgSrc} blurDataURL={image.imgSrc}/>
-            </div>
-          ))}
-        </div>
+          <div className='grid'>
+            {images.map((image, i) => (
+                <div className='grid-item' key={i}>
+                  <Image src={image.imgSrc} blurDataURL={image.imgSrc}/>
+                </div>
+            ))}
+          </div>
       </div>
     )
 }
