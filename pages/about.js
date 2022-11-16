@@ -22,7 +22,7 @@ import styles from '../styles/About.module.css'
 // OVERVIEW ============================================================================= // 
 /* 
 Name: About page
-Collaborators: Logan Trundle, James Kang
+Collaborators: Logan Trundle, James Kang, Rachael Moriconi
 
 Description: 
 - Introduce the grad show and us graduates
@@ -60,11 +60,6 @@ export default function About() {
 
       {/* WHO WE ARE */}
       <section className={`${styles.whoweare}`}>
-        {/* <div className={styles.elements}>
-            <h2>WHAT MAKES US</h2>
-            <h1>WHO WE ARE</h1>
-            <span>02</span>
-          </div> */}
 
         <div className={`${styles.aboutTitle} color-green`}>
             <h2 className={`regular text-xl`}>WHAT MAKES US</h2>
@@ -111,15 +106,6 @@ export default function About() {
             <span className={`regular text-9xl`}>03</span>
         </div>
 
-        {/* <div className={styles.whoweare_polaroids}>
-              <div className={styles.space_photo}>
-                <Image src={space} layout={'fill'} objectFit={'contain'} alt="An image of space with lots of stars and a green overlay" />
-                </div>
-              <div className={styles.team_photo}>
-                <Image src={team} layout={'fill'} objectFit={'contain'} alt="A photo of the grad show team working together" />
-                </div>
-            </div> */}
-
         <div className={styles.crew_images}>
           <div className={styles.crew}>
             <Image src={crew} layout={'fill'} objectFit={'contain'} alt="A photo of all the student commitee leaders" />
@@ -131,14 +117,14 @@ export default function About() {
 
         <div className={styles.creditsContainer}>
 
-              {acknowledgementsData.map(committee => (
-                <CreditsList key={committee.id} title={committee.name} members={committee.members} />
-              ))}
-              {acknowledgementsData.map(committee => (
-                <CreditsList key={committee.id} title={committee.name} members={committee.members} />
-              ))}
+          {acknowledgementsData.map(committee => (
+            <CreditsList key={committee.id} title={committee.name} members={committee.members} />
+          ))}
+          {acknowledgementsData.map(committee => (
+            <CreditsList key={committee.id} title={committee.name} members={committee.members} />
+          ))}
 
-          </div>
+        </div>
       </section>
 
 
@@ -147,16 +133,16 @@ export default function About() {
         <div className={styles.credits_subContainer}>
         
           <div className={`${styles.aboutTitle} color-green`}>
-              <h2 className={`regular text-xl`}>THE CREW</h2>
-              <h1 className={`bold text-7xl`}>BEHIND THE SCREENS</h1>
-              <span className={`regular text-9xl`}>04</span>
+            <h2 className={`regular text-xl`}>THE CREW</h2>
+            <h1 className={`bold text-7xl`}>BEHIND THE SCREENS</h1>
+            <span className={`regular text-9xl`}>04</span>
           </div>  
           
           <div className={styles.creditsContainer}>
 
-              {acknowledgementsData.map(committee => (
-                <CreditsList key={committee.id} title={committee.name} members={committee.members} />
-              ))}
+            {acknowledgementsData.map(committee => (
+              <CreditsList key={committee.id} title={committee.name} members={committee.members} />
+            ))}
               
           </div>
         </div>
