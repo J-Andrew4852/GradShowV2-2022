@@ -8,6 +8,8 @@ import gradImage from '../../public/assets/images/graduate_image_placeholder.JPG
 import gradPatch from '../../public/assets/images/Badges/digex_patch.png'
 import { OutlineBtn } from "../../components/Buttons/Button";
 import { Star, Arrow } from "../../components/icons/Icons";
+import { MasonryComp } from '../../components/Masonry/Masonry'
+// import gradHero from 'https://drive.google.com/uc?export=view&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk'
 
 // STYLES =============================================================================== // 
 import styles from '../../styles/SingleGraduate.module.css'
@@ -74,7 +76,12 @@ export default function GraduatemDetail({ graduate, data }) {
                 </section>
 
                 <div className={styles.graduateImageGrid}>
-                    <div className={styles.graduateImages}></div>
+                    <div className={styles.graduateImages}>
+                        <div className={styles.gradHero}>
+                            <Image className={styles.gradHero} src={'https://drive.google.com/uc?export=view&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk'} layout='fill' objectFit='contain' />
+                        </div>
+                        <MasonryComp/>
+                    </div>
                 </div>
 
         </div>

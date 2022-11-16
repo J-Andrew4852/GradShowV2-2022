@@ -81,15 +81,22 @@
 
 /* ============= Image Grid ============= */
 .graduateImageGrid {
-    height: 100vh;
+    height: auto;
     width: 100%;
     padding: 10vh 8vw 0 8vw;
 }
 
 .graduateImages {
-    background-color: var(--off-black);
+    /* background-color: var(--off-black); */
     height: 100%;
     width: 100%;
+}
+
+.gradHero {
+    position: relative;
+    width: 100%;
+    height: 60vw;
+    margin-bottom: 20px;
 }
 
 
