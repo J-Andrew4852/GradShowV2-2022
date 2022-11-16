@@ -9,12 +9,12 @@ import styles from './instagram.module.css'
 
 // OVERVIEW ============================================================================= // 
 /* 
-Name: Example component
-Author: Logan Trundle
+Name: Instagram Component
+Author: James Andrew
 Collaborators: 
 
 Description: 
-- Example component to illustrate file structure.
+- Instagram component that will need to change
 */
 
 // const SSR = typeof window === 'undefined'

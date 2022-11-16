@@ -23,7 +23,7 @@ import styles from '../styles/Home.module.css'
 
 /* 
 Name: Home page
-Collaborators: Logan Trundle, 
+Collaborators: Logan Trundle, James Andrew
 
 Description: 
 - Introduce the grad show (theme, what it is, graduates, etc)
@@ -129,7 +129,7 @@ export default function Home() {
 
         <div className={styles.social_images}>
           {/* <div id="instafeed-container" className={styles.instaContain}></div> */}
-          <Instagram/>
+          {/* <Instagram/> */}
         </div>
       </section>
     </div>
