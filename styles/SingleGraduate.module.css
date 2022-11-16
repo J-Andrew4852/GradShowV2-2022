@@ -1,65 +1,83 @@
-.graduateContent {
-    display: flex;
-    width: 100vw;
-    height: calc(100vh - var(--nav-height));
-    padding: 10vh 8vw 0 9vw;
+.graduatePageContainer {
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
-.leftSplit {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.arrow {
+    margin-top: 50px;
+    margin-left: 47px;
 }
-.gradImageContainer {
-    display: relative;
-    height: auto;
-    width: 53vh;
-    background-color: black;
-}
-.portfolioBtn {
-    margin-left: auto;
-    background-color: black;
-    color: white;
-    padding: 10px 50px 10px 50px;
-}
-.linksBar {
-    margin-top: auto;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    padding: 2vh 0 0 0;
-}
-.rightSplit {
-    width: 60%;
-    height: 100%;
-    padding: 1vh 0 0 3vw;
+
+.graduate_content {
+    display: grid;
+    grid-template-columns: 37.5% 57.5%;
+    grid-template-rows: max-content 1fr;
+    column-gap: 5%;
+    padding: 50px 100px 0 100px ;
     color: var(--off-black);
+}
+
+.graduate_photo {
+    grid-area: 1 / 1 / -1 / 2 ;
+    position: relative;
+}
+
+.graduate_photo_small {
+    display: none;
+}
+
+.graduate_title {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+.graduate_major_patch {
+    grid-row: span 2;
+    width: 90px;
+    margin-right: 2em;
+}
+
+.graduate_name {
+    grid-area: 1 / 2 / 2 / -2 ;
+}
+
+.graduate_major {
+    grid-area: 2 / 2 / 3 / -2 ;
+}
+
+.graduate_bio {
+    grid-area: 3 / 1 / 4 / -1 ;
+    /* margin: 20px 0 50px 0; */
+    margin: 2em 0 3em 0 ;
+}
+
+.graduate_details {
+    align-self: end;
+}
+
+.graduate_description {
+    margin-bottom: 50px;
+}
+
+.graduate_bio::first-letter, .graduate_description::first-letter {
+    text-transform: capitalize;
+}
+
+.graduate_links {
     display: flex;
-    flex-direction: column;
-}
-.hero_title {
-    font-size: 1.8em;
-}
-.hero_subtitle {
-    font-size: 0.6em;
-    margin: 5px 0 0 0;
-}
-.shortBio {
-    padding: 2vh 0 3vh 0;
-}
-.description {
-    font-size: 0.7em;
-}
-.socialLinks {
-    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 }
-.socialLinks > a {
-    margin-right: auto;
-    padding: 20px 20px 20px 20px;
+
+.placeholder_social {
+    height: 20px;
+    width: 20px;    
     background-color: black;
 }
+
+
 
 /* ============= Image Grid ============= */
 .graduateImageGrid {
@@ -67,6 +85,7 @@
     width: 100%;
     padding: 10vh 8vw 0 8vw;
 }
+
 .graduateImages {
     background-color: var(--off-black);
     height: 100%;
@@ -75,18 +94,71 @@
 
 
 @media only screen and (max-width: 900px) {
-    .graduateContent {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
+
+    .arrow {
+        margin-top: 20px;
+        margin-left: 28px;
     }
-    .gradImageContainer {
-        width: 100%;
+
+    .graduate_content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px repeat(2, max-content);
+        row-gap: 50px;
+        padding: 20px 50px 0 50px ;
     }
-    .leftSplit {
-        width: 100%;
+
+    .graduate_photo { display: none; }
+
+    .graduate_photo_small { 
+        grid-area: 1 / 1 / 2 / 2 ; 
+        display: block;
+        position: relative;
     }
-    .rightSplit {
-        width: 100%;
+
+    .graduate_photo_small img {
+        object-position: top;
+    }
+
+    .graduate_title {
+        grid-area: 2 / 1 / 3 / -1 ;
+    }
+
+    .graduate_bio {
+        margin: 2rem 0 0 0;
+    }
+
+    .graduate_details { 
+        grid-area: 3 / 1 / 4 / -1 ;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+
+
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .graduate_links {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(4, 20px);
+        justify-content: space-between;
+        row-gap: 30px;
+    }
+
+    .placeholder_social {
+        grid-row: 1 / 2 ;
+        justify-self: center;
+    }
+
+    .portfolio_link {
+        grid-row: 2 / 3 ;
+        grid-column: 1 / -1 ;
+        justify-self: center;
     }
 }

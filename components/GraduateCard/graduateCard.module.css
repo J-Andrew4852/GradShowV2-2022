@@ -77,6 +77,10 @@
     padding-top: 3px;
 }
 
+.rightGroup .icons {
+    align-items: center;
+}
+
 .icons svg:first-of-type {
     margin-top: 2px;
 }

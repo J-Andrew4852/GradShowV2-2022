@@ -51,7 +51,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
           <div className={styles.rightGroup}>
             <div className={styles.icons}>
               <SidebarIcon onClick={() => handleClick(data)} />
-              <Star />
+              {/* <Star /> */}
             </div>
             <TextBtn text='view' linkTo={`/graduates/${data._id}`}/>
           </div>
@@ -71,6 +71,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
 
           <div className={styles.icons}>
             <SidebarIcon onClick={() => handleClick(data)}/>
+
           </div>
         </header>
         
