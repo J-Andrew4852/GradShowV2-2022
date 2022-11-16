@@ -90,3 +90,16 @@
         width: 100%;
     }
 }
+
+.masonryGrid {
+    display: flex;
+}
+
+.masonryGridColumn {
+    padding-left: 3px; /* gutter size */
+    background-clip: padding-box;
+}
+
+.masonryGridColumn span {
+    width: 100% !important;
+}

@@ -3,9 +3,16 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
+import Masonry from 'react-masonry-css';
+
 
 // COMPONENT IMPORTS ==================================================================== // 
 import gradImage from '../../public/assets/images/graduate_image_placeholder.JPG'
+
+import  Image1  from '../../public/assets/images/Griddy/Image1.jpg'
+import  Image2  from '../../public/assets/images/Griddy/Image2.jpg'
+import  Image3  from '../../public/assets/images/Griddy/Image3.jpg'
+import  Image4  from '../../public/assets/images/Griddy/Image4.jpg'
 
 
 // STYLES =============================================================================== // 
@@ -21,9 +28,26 @@ Description:
 - Showcase images of student work
 */
 
-const MasonryJS = dynamic(() => import("../../components/MasonryJS/Masonry").then(mod => mod.MasonryJS), { ssr: false });
-
 export default function GraduatemDetail({ graduate }) {
+
+    const images = [
+        {
+            id: 1,
+            imgSrc: Image1,
+        },
+        {
+            id: 2,
+            imgSrc: Image2,
+        },
+        {
+            id: 3,
+            imgSrc: Image3,
+        },
+        {
+            id: 4,
+            imgSrc: Image4,
+        },
+    ]
 
     return (
         <div className={styles.graduatePageContainer}>
@@ -59,9 +83,19 @@ export default function GraduatemDetail({ graduate }) {
                 </div>
             </div>
             <div className={styles.graduateImageGrid}>
-                <div className={styles.graduateImages}>
-                    <MasonryJS />
-                </div>
+                    <Masonry
+                        breakpointCols={3}
+                        className={styles.masonryGrid}
+                        columnClassName={styles.masonryColumn}
+                    >
+                    {images.map((image, i) => (
+                        <div className={styles.projectImages} key={i}>
+                            <Image className={`styles.projectImage${image.id}`} src={image.imgSrc}
+                                   blurDataURL={image.imgSrc}/>
+                        </div>
+                    ))}
+                    </Masonry>
+
             </div>
         </div>
     )
