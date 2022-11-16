@@ -11,6 +11,7 @@ import grfxBadge from '../public/assets/images/Badges/grfx_badge.png'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
+import { Instagram } from '../components/InstaFeed/Instagram'
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
@@ -31,7 +32,6 @@ Description:
 - Show recent social media posts
 */
 
-
 export default function Home() {
 
   return (
@@ -42,32 +42,31 @@ export default function Home() {
       </Head>
 
       {/* HERO */}
-      <section className={`${styles.hero} center-align `}>
-        <div className={styles.heading_group}>
-          <h3 className={`regular ${styles.hero_subtitle}`}>2022 Curtin Design Showcase</h3>
-
-          {/* TODO: replace with logo svg when it has been created */}
-          <div className={`${styles.hero_title}`}>
-            <h1 className='heading bold'>Exhibition <span className='italic regular'>Space</span></h1>
+      <section className={`${styles.hero}`}>
+        <div className={styles.space}>
+          <div className={styles.glare} />
+          <div className={styles.hero_text}>
+            <p>ES22 | B-DES - AGD, DIGEX, GRFX<br/>
+            MANAGING AGENT: CURTIN UNIVERSITY</p>
           </div>
-        </div>
-
-        <div className={styles.hero_info}>
-          <div className={styles.countdown}></div>
-          <p className='text-med'>25.09.2022 | 16:00 - 20:00</p>
-          <p className='text-med body-copy'>Building 202, Curtin University</p>
+          <div className={styles.title} />
+          <div className={styles.title_blurred} />
+          
+            <div className={styles.markers}>
+                  <div className={styles.marker1}><div className={styles.arrow1} /></div>
+                  <div className={styles.marker2}><div className={styles.arrow1} /></div>
+            </div>    
         </div>
       </section>
 
       <CountdownBanner />
   
-      {/* ABOUT */}
-      <section className={styles.about}>
-        <div className={`${styles.about_subcontainer} body-copy text-reg right-align `}>
-          <p className={`${styles.section2_text} left-align`}>Brief Introduction about the gradshow goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper ligula ac odio tincidunt, sodales aliquet dui mollis. Duis sodales tempor nibh. Nullam ullamcorper mi in tortor venenatis ornare. </p>
-          <button className={styles.section2_button}>Button</button>
-        </div>
-      </section>
+      {/* APPROVED IMAGE */}
+      <div className={styles.approved}>
+        <div className={styles.approved_image}></div>
+        <p>More mission details &nbsp;&nbsp;→</p>
+      </div>
+      
 
 
       {/* SHOWREELS */}
@@ -129,7 +128,8 @@ export default function Home() {
       <h5 className='text-med2 regular center-align'>@curtindesign</h5>
 
         <div className={styles.social_images}>
-          <div id="instafeed-container" className={styles.instaContain}></div>
+          {/* <div id="instafeed-container" className={styles.instaContain}></div> */}
+          <Instagram/>
         </div>
       </section>
     </div>

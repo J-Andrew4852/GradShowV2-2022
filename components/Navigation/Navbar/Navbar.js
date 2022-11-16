@@ -47,9 +47,7 @@ export const Navbar = () => {
           <Link href={'/graduates'}>
             <a className={router.pathname.startsWith('/graduates') ? `link active` : `link`}>Graduates</a>
           </Link>
-          <SelectedDropdown />
         </div>
-
       </div>
     </nav>
   )

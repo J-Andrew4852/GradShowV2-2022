@@ -71,7 +71,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
 
           <div className={styles.icons}>
             <SidebarIcon onClick={() => handleClick(data)}/>
-            {/* <Star /> */}
+
           </div>
         </header>
         
@@ -83,7 +83,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
             <OutlineBtn external height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
           </a>
 
-          <TextBtn text='view' linkTo={`/graduates/${data._id}`}/>
+          <TextBtn text='view' linkTo={`/graduates/${data._id}`} external/>
         </footer>
       </article>
   )

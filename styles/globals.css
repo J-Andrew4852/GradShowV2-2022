@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("/public/fonts/avenir_ff/") format("truetype");
+  }
+
 :root {
   /* formatting */
   --nav-height: 70px;
@@ -130,6 +135,8 @@ a {
 .text-7xl {font-size: 6.5rem;}
 
 .text-8xl {font-size: 8rem;}
+
+.text-9xl {font-size: 9rem;}
 
 .color-green {
   color: var(--main-green)
