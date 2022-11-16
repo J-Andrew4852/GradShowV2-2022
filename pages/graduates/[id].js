@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import gradImage from '../../public/assets/images/graduate_image_placeholder.JPG'
+import Masonry from 'masonry-layout'
 
 
 // STYLES =============================================================================== // 
@@ -34,7 +35,7 @@ export default function GraduatemDetail({ graduate }) {
             <div className={styles.graduateContent}>
                 <div className={styles.leftSplit}>
                     <div className={styles.gradImageContainer}>
-                        <Image className={styles.graduateImage} src={gradImage} alt="Graduate Image" layout={'responsive'} width={783} height={1175}/>
+                        <Image className={styles.graduateImage} src={gradImage} alt="Graduate Image" layout={'responsive'}/>
                     </div>
                 </div>
                 <div className={styles.rightSplit}>

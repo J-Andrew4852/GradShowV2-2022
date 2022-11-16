@@ -113,7 +113,7 @@ export default function Graduates({ graduates }) {
             {graduates.map((graduate) => (
                 <div key={graduate._id}>
                   <GraduateCard handleClick={() => {
-                    if (selectedGraduate?._id !== graduate._id) {
+                  if (selectedGraduate?._id !== graduate._id) {
                     openGradFolder(graduate);
                   } else {
                     closeGradFolder();

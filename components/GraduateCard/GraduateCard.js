@@ -75,7 +75,6 @@ export const GraduateCard = ({ data, list, handleClick }) => {
         </header>
         
         <Image alt="Example of graduate's work" src={placeholder} layout="responsive" objectFit="cover" placeholder="blur" blurDataURL={placeholder}/>
-
         <footer className={styles.footer}>
           { /* replace with button styling when available */}
           <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">

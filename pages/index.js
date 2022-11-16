@@ -16,6 +16,8 @@ import { Instagram } from '../components/InstaFeed/Instagram'
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
+import { useEffect, useState } from 'react'
+import { render } from 'react-dom'
 
 // OVERVIEW ============================================================================= // 
 
@@ -36,8 +38,19 @@ Description:
 
 export default function Home() {
 
+  // Uninitialised state will cause Child to error out
+  const [instaFeed, setInstaFeed] = useState(false);
+
+  // Data doesn't start loading until after Parent is mounted
+  useEffect(() => {
+    setInstaFeed(true)
+    console.log('usedeffect')
+  }, []);
+
+
   return (
     <div className={styles.container}>
+      <Script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js" strategy='beforeInteractive'/>
       <Head>
         <title>Exhibition Space || 2022 Curtin Grad Show</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -132,7 +145,9 @@ export default function Home() {
 
         <div className={styles.social_images}>
           {/* <div id="instafeed-container" className={styles.instaContain}></div> */}
-          <Instagram/>
+          { instaFeed && <Instagram instaFeed={true}/>}
+          {/* <Instagram/> */}
+          <div id="instafeed-container" className={styles.instaContain}></div>
         </div>
       </section>
     </div>
