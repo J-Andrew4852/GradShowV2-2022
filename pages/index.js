@@ -8,6 +8,9 @@ import animationShowreel from '../public/assets/images/Showreel1.png'
 import agdBadge from '../public/assets/images/Badges/agd_badge.png'
 import digexBadge from '../public/assets/images/Badges/digex_badge.png'
 import grfxBadge from '../public/assets/images/Badges/grfx_badge.png'
+import AGD from '../public/assets/images/Home/AGD-CARD.png'
+import DD from '../public/assets/images/Home/DIGEX-CARD.png'
+import GD from '../public/assets/images/Home/GRAPHIC-DESIGN-CARD.png'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
@@ -66,6 +69,28 @@ export default function Home() {
         <div className={styles.approved_image}></div>
         <p>More mission details &nbsp;&nbsp;→</p>
       </div>
+
+      {/* A GLIMPSE INTO OUR SPACE */}
+      <section className={styles.into_our_space}>
+        <div className={styles.section_heading}>
+            <div className={styles.elements}>
+              <h2>A GLIMPSE</h2>
+              <h1>INTO OUR SPACE</h1>
+          </div>
+        </div>
+
+        <div className={styles.card_holder}>
+          <a href="">
+            <Image src={AGD} alt="Animation and Game Design Card" />
+          </a>
+          <a href="">
+            <Image src={DD} alt="Digital Design Card" />
+          </a>
+          <a href="">
+            <Image src={GD} alt="Graphic Design Card" />
+          </a>
+        </div>
+      </section>
       
 
 
