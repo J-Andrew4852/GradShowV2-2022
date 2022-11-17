@@ -143,10 +143,9 @@
 /* INTO OUR SPACE */
 .section_heading{
   width: 100%;
-  padding: 0% 10% 0% 10%;
+  padding: 0% 10% 0% 17%;
 }
 .elements{
-  border: solid red 3px;
   height: auto;
 }
 .elements h2{
@@ -163,7 +162,7 @@
 .elements h1{
   font-family: 'Avenir';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 100px;
   line-height: 1em;
   font-size: clamp(4.5rem, 30px, 5.5rem);
@@ -196,6 +195,7 @@
 
 /* SHOWREELS ------------------------------------------------------------ */
 .showreels {
+  padding: 20% 0% 20% 0%;
   padding-inline: 4em;
 }
 
@@ -208,6 +208,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 4em;
 }
 
@@ -295,10 +296,11 @@
 }
 
 .social_images {
-  background-color: var(--light-grey);
-  width: 100%;
+  /* background-color: var(--light-grey); */
+  width: 65%;
   height: 300px;
-  margin-top: 48px;
+  margin: auto;
+  /* margin-top: 48px; */
 }
 
 #instafeed-container {
@@ -314,13 +316,13 @@
 }
 
 .instaContain > a {
-  margin: 0 1vw 0 1vw;
+  margin: 0 .5vw 0 0vw;
 }
 .instaContain {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .instaContain > a > img {
@@ -328,4 +330,10 @@
   height: 300px;
   object-fit: cover;
   overflow: hidden;
+}
+.acknowledgement{
+  padding: 10% 0 25% 0;
+  width: 56%;
+  text-align: center;
+  margin: auto;
 }
