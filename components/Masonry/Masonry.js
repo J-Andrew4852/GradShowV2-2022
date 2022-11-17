@@ -11,6 +11,7 @@ import  Image4  from '../../public/assets/images/Griddy/Image4.jpg'
 // STYLES =============================================================================== // 
 import styles from './masonry.module.css'
 import Masonry from 'react-masonry-css'
+import Script from 'next/script'
 
 // OVERVIEW ============================================================================= // 
 /* 
@@ -22,38 +23,55 @@ Description:
 - Masonry grid of student work images.
 */
 
-export const MasonryComp = () => {
+export const MasonryComp = (data) => {
+  let images = data.data.workExamples
+  console.log(images)
+  let sauce = []
+  images.forEach((i) => {
+        // console.log("workimage " + i)
+        var splitWork = i.split('id=')
+        // console.log("split " + splitWork[1])
+        var source = `https://drive.google.com/uc?export=view&id=${splitWork[1]}`
+        // console.log('src  ' + source)
+        sauce.push(source)
+        console.log(sauce)
+  });
+  // console.log("sauce   " + sauce)
 
-  let images = [
-    {
-      id: 1,
-      imgSrc: Image1,
-    },
-    {
-      id: 2,
-      imgSrc: Image2,
-    },
-    {
-      id: 3,
-      imgSrc: Image3,
-    },
-    {
-      id: 4,
-      imgSrc: Image4,
-    },
-    {
-      id: 5,
-      imgSrc: Image1,
-    },
-    {
-      id: 6,
-      imgSrc: Image2,
-    },
-    // {
-    //   id: 9,
-    //   imgSrc: 'https://drive.google.com/u/2/open?usp=forms_web&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk',
-    // }
-  ]
+  console.log(sauce)
+  // let images = [data.workExamples]
+
+
+  // let images = [
+  //   {
+  //     id: 1,
+  //     imgSrc: Image1,
+  //   },
+  //   {
+  //     id: 2,
+  //     imgSrc: Image2,
+  //   },
+  //   {
+  //     id: 3,
+  //     imgSrc: Image3,
+  //   },
+  //   {
+  //     id: 4,
+  //     imgSrc: Image4,
+  //   },
+  //   {
+  //     id: 5,
+  //     imgSrc: Image1,
+  //   },
+  //   {
+  //     id: 6,
+  //     imgSrc: Image2,
+  //   },
+  //   // {
+  //   //   id: 9,
+  //   //   imgSrc: 'https://drive.google.com/u/2/open?usp=forms_web&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk',
+  //   // }
+  // ]
 
   function getCols() {
     if ( images.length == 1 ) {
@@ -85,9 +103,15 @@ export const MasonryComp = () => {
         className={styles.masonryGrid}
         columnClassName={styles.masonryGridCol}>
         {/* array of JSX items */}
-        {images.map((image, i) => (
-          <div className={styles.porjectImages} key={i}>
-            <Image className={`styles.projectImage${image.id}`} src={image.imgSrc} blurDataURL={image.imgSrc}/>
+        {sauce.map(image => (
+          <div className={styles.projectImages} key={image}>
+            <div className={styles.imageContainer}>
+              <picture>
+                <source srcSet={image} type="image/png, image/jpg" />
+                <img src={image} alt="Landscape picture" />
+              </picture>
+              {/* <Image className={styles.projectImage} src={image} layout='fill' objectFit='container'/> */}
+            </div>
           </div>
         ))}
       </Masonry>

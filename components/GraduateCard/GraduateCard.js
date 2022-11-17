@@ -27,10 +27,32 @@ When being called it takes in a prop (data) which is a Graduate object.
     }
 */
 
-
 export const GraduateCard = ({ data, list, handleClick }) => {
 
   // VARIABLES ============================================================================== // 
+  function spliter(heroImage) {
+    // console.log("heroimage " + heroImage)
+    var splitHero = heroImage.split('id=')
+    // console.log("split " + splitHero[1])
+    // let slicedHero = splitHero.slice(0, 33)
+    // console.log("sliced data " + slicedHero)
+    let sauceHero = `https://drive.google.com/uc?export=view&id=${splitHero[1]}`
+    console.log("hero sauce " + sauceHero)
+    return sauceHero
+  }
+  var sauceHero = spliter(data.heroImage)
+
+  // function slicer() {
+  //   var hero = 'https://drive.google.com/file/d/102DhDeowwOoReVS--oT2mD9MKcchvNCk/view'
+  //   var splitHero = hero.split('/d/')
+  //   console.log("split " + splitHero[1])
+  //   let slicedHero = splitHero[1].slice(0, 33)
+  //   console.log("slice " + slicedHero)
+  //   let sauceHero = `https://drive.google.com/uc?export=view&id=${slicedHero}`
+  //   console.log("sauce " + sauceHero)
+  //   return sauceHero
+  // }
+  // var sauceHero = slicer()
 
   // COMPONENT INIT ========================================================================= // 
 
@@ -74,8 +96,9 @@ export const GraduateCard = ({ data, list, handleClick }) => {
 
           </div>
         </header>
-        
-        <Image alt="Example of graduate's work" src={placeholder} layout="responsive" objectFit="cover" placeholder="blur" blurDataURL={placeholder}/>
+        <div className={styles.heroImageContainer}>
+          <Image alt="Example of graduate's work" src={sauceHero} layout="fill" objectFit="contain" />
+        </div>
 
         <footer className={styles.footer}>
           { /* replace with button styling when available */}
