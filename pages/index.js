@@ -110,7 +110,7 @@ export default function Home() {
 
 
       {/* SOCIALS */}
-      <section className={styles.into_our_space}>
+      <section className={styles.socials}>
         <div className={styles.section_heading}>
             <div className={styles.elements}>
               <h2>GAZE THROUGH OUR INSTAGRAM</h2>
