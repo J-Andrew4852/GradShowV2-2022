@@ -83,7 +83,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
             <OutlineBtn external height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
           </a> */}
 
-          <TextBtn text='view' linkTo={`/graduates/${data._id}`} external/>
+          <OutlineBtn text='view' linkTo={`/graduates/${data._id}`} height="thin" major={data.major[0].toLowerCase()}/>
         </footer>
       </article>
   )
