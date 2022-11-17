@@ -3,14 +3,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 // COMPONENT IMPORTS ==================================================================== // 
-import  Image1  from '../../public/assets/images/Griddy/Image1.jpg'
-import  Image2  from '../../public/assets/images/Griddy/Image2.jpg'
-import  Image3  from '../../public/assets/images/Griddy/Image3.jpg'
-import  Image4  from '../../public/assets/images/Griddy/Image4.jpg'
+
 
 // STYLES =============================================================================== // 
 import styles from './masonry.module.css'
-import Masonry from 'react-masonry-css'
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 // OVERVIEW ============================================================================= // 
 /* 
@@ -22,32 +19,32 @@ Description:
 - Masonry grid of student work images.
 */
 
-export const MasonryComp = () => {
+export const MasonryComp = (data) => {
 
   let images = [
     {
       id: 1,
-      imgSrc: Image1,
+      imgSrc: '/assets/images/Griddy/Image1.jpg',
     },
     {
       id: 2,
-      imgSrc: Image2,
+      imgSrc: '/assets/images/Griddy/Image2.jpg',
     },
     {
       id: 3,
-      imgSrc: Image3,
+      imgSrc: '/assets/images/Griddy/Image3.jpg',
     },
     {
       id: 4,
-      imgSrc: Image4,
+      imgSrc: '/assets/images/Griddy/Image4.jpg',
     },
     {
       id: 5,
-      imgSrc: Image1,
+      imgSrc: '/assets/images/Griddy/Image1.jpg',
     },
     {
       id: 6,
-      imgSrc: Image2,
+      imgSrc: '/assets/images/Griddy/Image2.jpg',
     },
     // {
     //   id: 9,
@@ -72,25 +69,32 @@ export const MasonryComp = () => {
   }
   let cols = getCols()
 
-  const breakpointColumnsObj = {
-    default: cols,
-    1100: 2,
-    700: 1
-  };
+  // const breakpointColumnsObj = {
+  //   default: cols,
+  //   1100: 2,
+  //   700: 1
+  // };
 
+  const items = images.map( (item) => {
+    return(
+      <img src={item.imgSrc} key={item.id} />
+    )
+  })
+  console.log(cols)
   return (
     <div className={styles.container}>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className={styles.masonryGrid}
-        columnClassName={styles.masonryGridCol}>
-        {/* array of JSX items */}
-        {images.map((image, i) => (
-          <div className={styles.porjectImages} key={i}>
-            <Image className={`styles.projectImage${image.id}`} src={image.imgSrc} blurDataURL={image.imgSrc}/>
-          </div>
-        ))}
-      </Masonry>
+      <ResponsiveMasonry 
+        columnsCountBreakPoints={{600: 1, 900: 2, 900: cols}}
+      >
+
+        <Masonry
+          className={styles.masonryGrid}
+          gutter={'20px'}
+        >
+          {/* array of JSX items */}
+          {items}
+        </Masonry>
+      </ResponsiveMasonry>
     </div>
   )
 }
