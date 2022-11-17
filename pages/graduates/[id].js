@@ -36,6 +36,37 @@ function slicer() {
 }
 var sauceHero = slicer()
 
+var social1 = 'https://twitter.com/JamesADigital'
+var social2 = 'https://github.com/J-Andrew4852'
+var social3 = 'https://www.instagram.com/james.andrew4852/'
+var social4 = 'https://badverynotgoodlink'
+
+var socials = [social1, social2, social3, social4]
+
+
+socials.forEach(linkToIcon)
+
+function linkToIcon(item) {
+    if (item.match("twitter") !== null) {
+        console.log("selected twitter")
+    }
+    else if (item.match("github") !== null) {
+        console.log("selected github")
+    }
+    else if (item.match("instagram") !== null) {
+        console.log("selected instagram")
+    }
+    else {
+        console.log("selected global")
+    }
+    // console.log(item.match("twitter"));
+    // console.log(item.match("github"));
+    // console.log(item.match("instagram"));
+}
+
+
+// console.log(social1.search(regexT), );
+
 export default function GraduatemDetail({ graduate, data }) {
     
     return (
