@@ -79,9 +79,9 @@ export const GraduateCard = ({ data, list, handleClick }) => {
 
         <footer className={styles.footer}>
           { /* replace with button styling when available */}
-          <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">
+          {/* <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">
             <OutlineBtn external height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
-          </a>
+          </a> */}
 
           <TextBtn text='view' linkTo={`/graduates/${data._id}`} external/>
         </footer>
