@@ -9,6 +9,7 @@ import gradPatch from '../../public/assets/images/Badges/digex_patch.png'
 import { OutlineBtn } from "../../components/Buttons/Button";
 import { Star, Arrow } from "../../components/icons/Icons";
 import { MasonryComp } from '../../components/Masonry/Masonry'
+import { Socials } from '../../components/Socials/Socials'
 // import gradHero from 'https://drive.google.com/uc?export=view&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk'
 
 // STYLES =============================================================================== // 
@@ -102,10 +103,9 @@ export default function GraduatemDetail({ graduate, data }) {
                     <div className={styles.graduate_details}>
                         <div className={styles.graduate_description}>after a short career in mechanical engineering I came to the realisation that what I truly loved about physics was the beauty of fluid, dynamic motion. It’s part of the reason I’ve been obsessed with birds all my life, and the reason I finally decided to follow my passion for animating. Having studied motion graphics, 3D animation and even dabbled in stop-motion, my particular passion is still based in 2D hand drawn animation. I love the creative freedom and insanity of using unrealistic lines, gestural shapes and tactile mediums to elicit authentic emotional responses. My dream going forward is to learn from and work with other animators and creators to tell wild and passionate stories of small things. My favourite projects are those where art, music and science meet, and people of multiple disciplines come together more  lines, gestural shapes and tactile mediums to elicit.lines, gestural shapes and tactile mediums </div>
                         <div className={styles.graduate_links}>
-                            <div className={styles.placeholder_social}></div>
-                            <div className={styles.placeholder_social}></div>
-                            <div className={styles.placeholder_social}></div>
-                            <div className={styles.placeholder_social}></div>
+                            <div className={styles.socialLinks}>
+                                <Socials key={graduate._id} data={graduate}/>
+                            </div>
                             { /* UPDATE BUTTON WITH MAJOR INFORMATION AND LINK TO PORTFOLIO SITE */}
                             <div className={styles.portfolio_link}>
                                 <OutlineBtn external height="thin" text='Portfolio'/>

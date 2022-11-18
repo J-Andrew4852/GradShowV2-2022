@@ -12,7 +12,7 @@ import styles from './countdownBanner.module.css'
 /* 
 Name: CountdownBanner
 Author: Ben Crook
-Collaborators: 
+Collaborators: Logan Trundle
 
 Description: 
 - 
