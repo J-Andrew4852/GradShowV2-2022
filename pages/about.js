@@ -123,7 +123,7 @@ export default function About() {
           {acknowledgementsData.map(committee => (
             <CreditsList key={committee.id} title={committee.name} members={committee.members} />
           ))} */}
-          
+
           <div className={styles.column1}> {/* ---COLUMN1--- */}
             <ul className={styles.front_line_team}>
                 <h1>Brand Identity</h1>
@@ -258,11 +258,36 @@ export default function About() {
             <span className={`regular text-9xl`}>04</span>
           </div>  
           
-          <div className={styles.creditsContainer}>
+          <div className={styles.creditsContainer2}>
 
-            {acknowledgementsData.map(committee => (
+            {/* {acknowledgementsData.map(committee => (
               <CreditsList key={committee.id} title={committee.name} members={committee.members} />
-            ))}
+            ))} */}
+              <ul className={styles.front_line_team}>
+                <h1>Teaching Staff</h1>
+                <li>Harriet Perryer - DigEx Coordinator</li>
+                <li>Jonathan Pillai - AGD Coordinator</li>
+                <li>Lee Ingram - GRFX Coordinator</li>
+                <li>Dan Mckeating - GRFX Coordinator</li>
+              </ul>
+              <ul className={styles.front_line_team}>
+                <h1>Volunteers</h1>
+                <li>John Simpson</li>
+                <li>Lauren Gatto</li>
+                <li>Diala Majrouh</li>
+                <li>Benjamin Sixsmith</li>
+                <li>Annie O’Halloran</li>
+                <li>Miguel Calimpon</li>
+                <li>Tamara Barron</li>
+                <li>Heidi Kay Sze Choo</li>
+                <li>Tannisa Hermansyah</li>
+                <li>Isa Thanyathip Limpanyalers</li>
+              </ul>
+              <ul className={styles.front_line_team}>
+                <h1>Technicians</h1>
+                <li>Ian Williams - Workshop Technician</li>
+                <li>Adrian Reeve - Workshop Technician</li>
+              </ul>
               
           </div>
         </div>

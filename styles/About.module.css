@@ -36,11 +36,16 @@
     line-height: 1em;
 }
 
-.aboutTitle p {
-    display: none;
-}
-
 .creditsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 30%));
+    justify-content: center;
+    gap: 2em;
+    padding-inline: 3em;
+    margin-bottom: 10em;
+}
+.creditsContainer2 {
+    width: 50%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 30%));
     justify-content: center;
@@ -115,7 +120,7 @@
 }
 
 /* 03 FRONTLINE ---------------------------------------------------------------------- */
-.creditsContainer li{
+.creditsContainer li, .creditsContainer2 li {
     list-style: none;
 }
 .front_line_team{
