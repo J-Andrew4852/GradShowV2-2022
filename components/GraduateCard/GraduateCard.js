@@ -82,8 +82,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
           {/* <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">
             <OutlineBtn external height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
           </a> */}
-
-          <OutlineBtn text='view' linkTo={`/graduates/${data._id}`} height="thin" major={data.major[0].toLowerCase()}/>
+          <OutlineBtn linkers text='view' linkTo={`/graduates/${data._id}`} height="thin" major={data.major[0].toLowerCase()} external/>
         </footer>
       </article>
   )

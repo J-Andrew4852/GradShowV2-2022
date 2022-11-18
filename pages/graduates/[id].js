@@ -9,6 +9,7 @@ import gradPatch from '../../public/assets/images/Badges/digex_patch.png'
 import { OutlineBtn } from "../../components/Buttons/Button";
 import { Star, Arrow } from "../../components/icons/Icons";
 import { MasonryComp } from '../../components/Masonry/Masonry'
+import { Socials } from '../../components/Socials/Socials'
 // import gradHero from 'https://drive.google.com/uc?export=view&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk'
 
 // STYLES =============================================================================== // 
@@ -36,36 +37,8 @@ function slicer() {
 }
 var sauceHero = slicer()
 
-var social1 = 'https://twitter.com/JamesADigital'
-var social2 = 'https://github.com/J-Andrew4852'
-var social3 = 'https://www.instagram.com/james.andrew4852/'
-var social4 = 'https://badverynotgoodlink'
-
-var socials = [social1, social2, social3, social4]
 
 
-socials.forEach(linkToIcon)
-
-function linkToIcon(item) {
-    if (item.match("twitter") !== null) {
-        console.log("selected twitter")
-    }
-    else if (item.match("github") !== null) {
-        console.log("selected github")
-    }
-    else if (item.match("instagram") !== null) {
-        console.log("selected instagram")
-    }
-    else {
-        console.log("selected global")
-    }
-    // console.log(item.match("twitter"));
-    // console.log(item.match("github"));
-    // console.log(item.match("instagram"));
-}
-
-
-// console.log(social1.search(regexT), );
 
 export default function GraduatemDetail({ graduate, data }) {
     
@@ -102,13 +75,12 @@ export default function GraduatemDetail({ graduate, data }) {
                     <div className={styles.graduate_details}>
                         <div className={styles.graduate_description}>after a short career in mechanical engineering I came to the realisation that what I truly loved about physics was the beauty of fluid, dynamic motion. It’s part of the reason I’ve been obsessed with birds all my life, and the reason I finally decided to follow my passion for animating. Having studied motion graphics, 3D animation and even dabbled in stop-motion, my particular passion is still based in 2D hand drawn animation. I love the creative freedom and insanity of using unrealistic lines, gestural shapes and tactile mediums to elicit authentic emotional responses. My dream going forward is to learn from and work with other animators and creators to tell wild and passionate stories of small things. My favourite projects are those where art, music and science meet, and people of multiple disciplines come together more  lines, gestural shapes and tactile mediums to elicit.lines, gestural shapes and tactile mediums </div>
                         <div className={styles.graduate_links}>
-                            <div className={styles.placeholder_social}></div>
-                            <div className={styles.placeholder_social}></div>
-                            <div className={styles.placeholder_social}></div>
-                            <div className={styles.placeholder_social}></div>
-                            { /* UPDATE BUTTON WITH MAJOR INFORMATION AND LINK TO PORTFOLIO SITE */}
+                            <div className={styles.socialLinks}>
+                                <Socials key={graduate._id} data={graduate}/>
+                            </div>
                             <div className={styles.portfolio_link}>
                                 <OutlineBtn external height="thin" text='Portfolio'/>
+                            { /* UPDATE BUTTON WITH MAJOR INFORMATION AND LINK TO PORTFOLIO SITE */}
                             </div>
                         </div>
                     </div>
