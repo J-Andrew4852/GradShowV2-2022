@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
+import { version } from 'react'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import animationShowreel from '../public/assets/images/Showreel1.png'
@@ -33,7 +34,7 @@ Description:
 */
 
 export default function Home() {
-
+  console.log(version)
   return (
     <div className={styles.container}>
       <Head>
