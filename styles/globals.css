@@ -210,7 +210,6 @@ select {
   background: url("../public/assets/images/Dropdown.svg") no-repeat 100% 50%;
   -moz-appearance: none;
  -webkit-appearance: none;
- -webkit-border-radius: 0px;
  appearance: none;
  outline-width: 0;
 }
