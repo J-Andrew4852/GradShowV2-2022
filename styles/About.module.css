@@ -115,7 +115,12 @@
 }
 
 /* 03 FRONTLINE ---------------------------------------------------------------------- */
-
+.creditsContainer li{
+    list-style: none;
+}
+.front_line_team{
+    padding-bottom: 5%;
+}
 .crew_images {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -146,6 +151,7 @@
 /* 04 Responsive ------------------------------------------------------------ */
 
 @media (max-width: 1500px) {
+
     .aboutTitle {
         margin-inline: 2em;
     }
