@@ -117,7 +117,7 @@ export default function GraduatemDetail({ graduate, data }) {
                 <div className={styles.graduateImageGrid}>
                     <div className={styles.graduateImages}>
                         <div className={styles.gradHero}>
-                            <Image className={styles.gradHero} src={sauceHero} layout='fill' objectFit='contain' />
+                            <Image src={sauceHero} layout='fill' objectFit='contain' />
                         </div>
                         <MasonryComp/>
                     </div>
