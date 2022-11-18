@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
+import { version } from 'react'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import animationShowreel from '../public/assets/images/Showreel1.png'
@@ -11,7 +12,7 @@ import grfxBadge from '../public/assets/images/Badges/grfx_badge.png'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
-import { Instagram } from '../components/InstaFeed/Instagram'
+import { IGFeed } from '../components/IGFeed/IGFeed'
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
@@ -33,7 +34,7 @@ Description:
 */
 
 export default function Home() {
-
+  console.log(version)
   return (
     <div className={styles.container}>
       <Head>
@@ -130,6 +131,7 @@ export default function Home() {
         <div className={styles.social_images}>
           {/* <div id="instafeed-container" className={styles.instaContain}></div> */}
           {/* <Instagram/> */}
+          <IGFeed />
         </div>
       </section>
     </div>

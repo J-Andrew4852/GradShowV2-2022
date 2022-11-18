@@ -22,7 +22,7 @@ import styles from '../styles/About.module.css'
 // OVERVIEW ============================================================================= // 
 /* 
 Name: About page
-Collaborators: Logan Trundle, James Kang, Rachael Moriconi
+Collaborators: Logan Trundle, James Kang, Rachael Moriconi, James Andrew
 
 Description: 
 - Introduce the grad show and us graduates
@@ -52,7 +52,7 @@ export default function About() {
           <div className={styles.forward}>
             <p className={`text-small`}><strong>FOREWORD</strong></p>
             <p>Such a great show wow we have so much to talk about including this this and that, and that ofcourse. Come see our work and meet great design students from digital design, animation game design and graphic design. A lot more text will go here, I hope someone actually replaces this with relevant information because it’d be quite embarrassing to have this on our website</p>
-          <div className={styles.about_signature}><Image src={signature} lassName={styles.signature} alt="2022 Design Graduates Signature" /></div>
+          <div className={styles.about_signature}><Image src={signature} className={styles.signature} alt="2022 Design Graduates Signature" /></div>
           </div>
           
         </div>

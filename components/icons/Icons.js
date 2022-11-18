@@ -80,27 +80,17 @@ export const RocketShipIcon = ({ animate, size = "51"}) => {
   )
 }
 
-// Socials Icons ========================================================
-
-// export const other = ({ linkTo }) => {
-//   return(
-
-//   )
-// }
-
-export const sockLoader = ({ name, linkTo }) => {
-  if (name == 'artstation') { return <Artstation href={linkTo} /> }
-  else if (name == 'behance') { return <Behance href={linkTo} /> }
-  else if (name == 'codepen') { return <Codepen href={linkTo} /> }
-  else if (name == 'dribble') { return <Dribble href={linkTo} /> }
-  else if (name == 'facebook') { return <Facebook href={linkTo} /> }
-  else if (name == 'github') { return <Github href={linkTo} /> }
-  else if (name == 'instagram') { return <Instagram href={linkTo} /> }
-  else if (name == 'linkedin') { return <Linkedin href={linkTo} /> }
-  else if (name == 'twitter') { return <Twitter href={linkTo} /> }
-  else if (name == 'youtube') { return <Youtube href={linkTo} /> }
-  else { return <Other href={linkTo} /> }
+export const AlienIcon = () =>{
+  return(
+    <svg width="78" height="69" viewBox="0 0 78 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M68.8889 34.4445V43.0555H60.2778V34.4445H68.8889V25.8333H60.2778V8.61115H51.6667V0H25.8333V8.61115H17.2222V25.8333H8.6111V34.4445H17.2222V43.0555H8.6111V34.4445H0V51.6667H17.2222V60.2778H25.8333V51.6667H34.4445V68.8889H43.0555V51.6667H51.6667V60.2778H60.2778V51.6667H77.5V34.4445H68.8889ZM25.8333 17.2222H34.4445V8.61115H43.0555V17.2222H51.6667V25.8333H25.8333V17.2222ZM25.8333 43.0555V34.4445H34.4445V43.0555H25.8333ZM43.0555 43.0555V34.4445H51.6667V43.0555H43.0555Z" fill="var(--dark-green)"/>
+      <path d="M68.8894 60.2698H60.2783V68.8809H68.8894V60.2698Z" fill="var(--dark-green)"/>
+      <path d="M17.2225 60.2698H8.61133V68.8809H17.2225V60.2698Z" fill="var(--dark-green)"/>
+    </svg>
+  )
 }
+
+// Socials Icons ========================================================
 
 export const Artstation = ({ linkTo }) => {
   return(
