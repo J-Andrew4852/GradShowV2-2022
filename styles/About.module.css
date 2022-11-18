@@ -36,22 +36,84 @@
     line-height: 1em;
 }
 
+.aboutTitle p {
+    display: none;
+}
+
 .creditsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 30%));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     justify-content: center;
     gap: 2em;
     padding-inline: 3em;
     margin-bottom: 10em;
 }
-.creditsContainer2 {
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 30%));
-    justify-content: center;
-    gap: 2em;
-    padding-inline: 3em;
-    margin-bottom: 10em;
+
+.creditsContainer ul {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 5em;
+    padding: 0;
+}
+
+.creditsContainer h1 {
+    line-height: 1.2em;
+}
+
+.creditsContainer p {
+    font-weight: 800;
+}
+
+.creditsContainer li {
+    margin: 8px 0;
+    line-height: 1.2em;
+}
+
+/* Here, nth-child(n+2) targets all <p> tags EXCEPT the first one */
+.creditsContainer p:nth-child(n+2) {
+    margin-top: 1.5em;
+}
+
+.creditsContainer span {
+    font-size: 0.8em;
+    /* font-style: italic; */
+}
+
+.showreel_2d_dev {
+    grid-column: 3 / -1 ;
+}
+
+.showreel_3d_dev {
+    grid-column: 3 / -1 ;
+}
+
+@media (max-width: 836px ) {
+    .credits_flex {
+        margin-top: 0;
+        grid-column: 1 / -1 ;
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 584px) {
+    .credits_flex {
+        flex-direction: column;
+        gap: unset;
+        justify-content: unset;
+    }
+
+    .credits_flex ul {
+        margin-bottom: 2em;
+
+    }
+
+    .creditsContainer div ul:last-of-type {
+        margin: 0;
+        padding: 0
+    }
 }
 
 /* 01 MAKING HISTORY ------------------------------------------------------------ */
@@ -120,12 +182,7 @@
 }
 
 /* 03 FRONTLINE ---------------------------------------------------------------------- */
-.creditsContainer li, .creditsContainer2 li {
-    list-style: none;
-}
-.front_line_team{
-    padding-bottom: 5%;
-}
+
 .crew_images {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -190,7 +247,6 @@
         grid-template-columns: 15vw 1fr 3vw;
         grid-template-rows: 10vw repeat(3, 1fr);
         height: 60vw;
-        /* max-height: 700px; */
         width: 90vw;
         max-width: 80vw;
 
@@ -261,10 +317,6 @@
 
     .whoweare_first, .whoweare_second,.whoweare_third {
         grid-column: 1 / -1 ;
-    }
-
-    .creditsContainer {
-        grid-template-columns: repeat(auto-fit, minmax(230px, 30%));
     }
 
 }
