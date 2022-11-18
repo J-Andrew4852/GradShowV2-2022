@@ -6,6 +6,7 @@
     font-size: 16px;
 }
 
+
 .hero{
     min-height: 330px;
     display: flex;
@@ -15,6 +16,12 @@
     padding-inline: 2em;
     gap: 30px;
     padding-block: 2em;
+    text-transform: uppercase;
+}
+
+.hero h3{
+    letter-spacing: .135em;
+    color: var(--main-green);
 }
 
 /* SHOWREEL SECTION ------------------------------------------------------------ */
@@ -29,11 +36,12 @@
 .filterBar {
     /* position: sticky; */
     /* top: var(--nav-height); */
-    background-color: white;
-    border-bottom: 1.5px solid var(--off-black);
+    background-color: var(--off-white);
+    border-bottom: 1.5px solid var(--dark-green);
     width: 100%;
     z-index: 10;
 }
+
 
 .filterBar .filterBar_subContainer {
     padding-inline: 3em;
@@ -41,7 +49,6 @@
     margin-inline: auto;
     max-width: 1500px;
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;

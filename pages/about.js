@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import introImage from '../public/assets/images/About/intro-image.jpg'
-import signature from '../public/assets/images/About/signature.png'
+import signature from '../public/assets/images/About/signature.svg'
 import sparkle from '../public/assets/images/About/sparkle.png'
 import eye from '../public/assets/images/About/eye.png'
 import world from '../public/assets/images/About/world.png'
@@ -51,7 +51,7 @@ export default function About() {
 
           <div className={styles.forward}>
             <p className={`text-small`}><strong>FOREWORD</strong></p>
-            <p>Such a great show wow we have so much to talk about including this this and that, and that ofcourse. Come see our work and meet great design students from digital design, animation game design and graphic design. A lot more text will go here, I hope someone actually replaces this with relevant information because it’d be quite embarrassing to have this on our website</p>
+            <p>We are over the moon to present to you <em>Exhibition Space</em> – a semester-long operation that our team of space cadets have been tirelessly working on. Meet us at Curtin Design Headquarters: Building 202, Curtin University on <strong>25.11.2022</strong> to witness an extraordinary display of work from our Animation and Game Design, Digital Design, and Graphic Design teams. Join us on our launch day to celebrate our ground-breaking expedition. </p>
           <div className={styles.about_signature}><Image src={signature} className={styles.signature} alt="2022 Design Graduates Signature" /></div>
           </div>
           
@@ -197,7 +197,6 @@ export default function About() {
                 <li>Rachael Moriconi</li>
                 <li>James Kang</li>
                 <li>Jade Mitchell</li>
-                <li>Ben Crook</li>
                 <li>Salma Jarrar</li>
                 
                 <p>Backend Developers</p>

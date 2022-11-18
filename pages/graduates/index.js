@@ -48,8 +48,8 @@ export default function Graduates({ graduates }) {
       {/* HEADING SECTION */}
       <section className={`${styles.hero} center-align `}>
         <div className={styles.heading_group}>
-          <h3 className={`regular text-med2`}>viewing:</h3>
-          <h1 className='heading bold text-4xl'>{selectedMajor}</h1>
+          <h3 className={`regular text-reg`}>GRADUATES</h3>
+          <h1 className='heading text-4xl black'>{selectedMajor}</h1>
         </div>
 
         <select onChange={(e) => { setSelectedMajor(e.target.value) }} name="majors" id="majors">
