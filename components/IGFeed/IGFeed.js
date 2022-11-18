@@ -20,8 +20,8 @@ Description:
 
 export const IGFeed = () => {
   return (
-    <div className={styles.container}>
-      <InstagramFeed token="IGQVJYVVlJdG40bU9FRzFKNkdlOVJmZAXpSYnVnLW9UMlVxcWpId3hIY2RIa19zbWkzNjlORDZAaampXd0hLVDBoWjdvOWduZAllTWTZAGclk2YUdkNU5FNWROdThxYXNBeHpKeC1rRzliTV9ycXUwbHcxagZDZD"  counter="6"/>
+    <div className={styles.container} >
+      <InstagramFeed token="IGQVJYVVlJdG40bU9FRzFKNkdlOVJmZAXpSYnVnLW9UMlVxcWpId3hIY2RIa19zbWkzNjlORDZAaampXd0hLVDBoWjdvOWduZAllTWTZAGclk2YUdkNU5FNWROdThxYXNBeHpKeC1rRzliTV9ycXUwbHcxagZDZD"  counter="3"/>
     </div>
   )
 }
