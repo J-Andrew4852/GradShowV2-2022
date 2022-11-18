@@ -35,7 +35,7 @@ Description:
 */
 
 export default function Home() {
-console.log(version)
+
   return (
     <div className={styles.container}>
       <Head>
