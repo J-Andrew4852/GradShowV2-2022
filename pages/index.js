@@ -16,6 +16,7 @@ import { IGFeed } from '../components/IGFeed/IGFeed'
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
+import react from 'react'
 
 // OVERVIEW ============================================================================= // 
 
@@ -34,7 +35,7 @@ Description:
 */
 
 export default function Home() {
-  console.log(version)
+
   return (
     <div className={styles.container}>
       <Head>

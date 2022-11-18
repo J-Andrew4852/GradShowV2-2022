@@ -240,37 +240,9 @@
 }
 
 .social_images {
-  background-color: var(--light-grey);
   width: 100%;
-  height: 300px;
-  margin-top: 48px;
+  margin-top: 2em;
 }
 
-#instafeed-container {
-  text-align: center;
-}
 
-#instafeed-container {
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  margin: 0 5px 0 5px ; /* top, right, bottom, left */
-  overflow: hidden;
-}
 
-.instaContain > a {
-  margin: 0 1vw 0 1vw;
-}
-.instaContain {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.instaContain > a > img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  overflow: hidden;
-}
