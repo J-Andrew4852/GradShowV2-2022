@@ -88,6 +88,20 @@ export const RocketShipIcon = ({ animate, size = "51"}) => {
 //   )
 // }
 
+export const sockLoader = ({ name, linkTo }) => {
+  if (name == 'artstation') { return <Artstation href={linkTo} /> }
+  else if (name == 'behance') { return <Behance href={linkTo} /> }
+  else if (name == 'codepen') { return <Codepen href={linkTo} /> }
+  else if (name == 'dribble') { return <Dribble href={linkTo} /> }
+  else if (name == 'facebook') { return <Facebook href={linkTo} /> }
+  else if (name == 'github') { return <Github href={linkTo} /> }
+  else if (name == 'instagram') { return <Instagram href={linkTo} /> }
+  else if (name == 'linkedin') { return <Linkedin href={linkTo} /> }
+  else if (name == 'twitter') { return <Twitter href={linkTo} /> }
+  else if (name == 'youtube') { return <Youtube href={linkTo} /> }
+  else { return <Other href={linkTo} /> }
+}
+
 export const Artstation = ({ linkTo }) => {
   return(
     <svg href={linkTo} width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">

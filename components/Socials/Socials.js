@@ -1,9 +1,9 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
-import React, { Component } from 'react';
+import React from 'react';
 
 // COMPONENT IMPORTS ==================================================================== // 
-import { Artstation, Behance, Codepen, Dribble, Facebook, Github, Instagram, Linkedin, Other, Twitter, Youtube } from '../icons/Icons'
+import { Artstation, Behance, Codepen, Dribble, Facebook, Github, Instagram, Linkedin, Twitter, Youtube, Other } from '../icons/Icons'
 
 // STYLES =============================================================================== // 
 import styles from './socials.module.css'
@@ -18,29 +18,30 @@ Description:
 - Example component to illustrate file structure.
 */
 
+// export const sockLoader = ({ name, linkTo }) => {
+//   console.log(name)
+//   if (name == 'artstation') { return <Artstation href={linkTo} /> }
+//   else if (name == 'behance') { return <Behance href={linkTo} /> }
+//   else if (name == 'codepen') { return <Codepen href={linkTo} /> }
+//   else if (name == 'dribble') { return <Dribble href={linkTo} /> }
+//   else if (name == 'facebook') { return <Facebook href={linkTo} /> }
+//   else if (name == 'github') { return <Github href={linkTo} /> }
+//   else if (name == 'instagram') { return <Instagram href={linkTo} /> }
+//   else if (name == 'linkedin') { return <Linkedin href={linkTo} /> }
+//   else if (name == 'twitter') { return <Twitter href={linkTo} /> }
+//   else if (name == 'youtube') { return <Youtube href={linkTo} /> }
+//   else { return <Other href={linkTo} /> }
+// }
+
 
 export const Socials = (data) => {
-
-Component = {
-    artstation: Artstation,
-    behance: Behance,
-    codepen: Codepen,
-    dribble: Dribble,
-    facebook: Facebook,
-    github: Github,
-    instagram: Instagram,
-    linkedin: Linkedin,
-    other: Other,
-    twitter: Twitter,
-    youtube: Youtube
-};
 
 
 // console.log(data.data.socials)
 
 var socials = data.data.socials
 
-console.log(socials)
+// console.log(socials)
 
 let sauce = []
 
@@ -87,14 +88,29 @@ socials.forEach((item) => {
   console.log(sauce)
 
   sauce.map((icon) => {
-    const TagName = this.Component[this.props.tag || icon[0]];
-    console.log(TagName)
-    console.log(icon.input)
+    var name = icon[0]
+    console.log("name   " + name)
+    var linkTo = icon.input
+    console.log(linkTo)
+    function sockLoader( name, linkTo ) {
+      if (name == 'artstation') { console.log('yee'); return  <Artstation href={linkTo} /> }
+      else if (name == 'behance') { console.log('yee'); return <Behance href={linkTo} /> }
+      else if (name == 'codepen') { console.log('yee'); return <Codepen href={linkTo} /> }
+      else if (name == 'dribble') { console.log('yee'); return <Dribble href={linkTo} /> }
+      else if (name == 'facebook') { console.log('yee'); return <Facebook href={linkTo} /> }
+      else if (name == 'github') { console.log('yee'); return <Github href={linkTo} /> }
+      else if (name == 'instagram') { console.log('yee'); return <Instagram href={linkTo} /> }
+      else if (name == 'linkedin') { console.log('yee'); return <Linkedin href={linkTo} /> }
+      else if (name == 'twitter') { console.log('yee'); return <Twitter href={linkTo} /> }
+      else if (name == 'youtube') { console.log('yee'); return <Youtube href={linkTo} /> }
+      else { console.log('naahhhhh'); return <Other href={linkTo} /> }
+    }
+    var sockComp = sockLoader( name, linkTo )
+    console.log(sockComp)
     return (
      <div className={styles.container}>
         <div>
-          {/* {TagName} */}
-          <TagName linkTo={icon.input} />
+          {sockComp}
         </div>
     </div>
     )})
