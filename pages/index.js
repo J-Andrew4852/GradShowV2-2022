@@ -94,7 +94,7 @@ export default function Home() {
       <div className={styles.cards_holder}>
 
         <div className={styles.card}>
-        <Image src={AGDbg} alt="Space" />
+        <Image src={AGDbg} alt="Space" priority/>
 
           <div className={styles.card_content}>
             <div className={styles.linetop}><hr/></div>
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
 
         <div className={styles.card}>
-        <Image src={DIGEXbg} alt="Space" />
+        <Image src={DIGEXbg} alt="Space" priority/>
 
           <div className={styles.card_content}>
             <div className={styles.linetop}><hr/></div>
@@ -152,7 +152,7 @@ export default function Home() {
         </div>
 
         <div className={styles.card}>
-        <Image src={GRFXbg} alt="Space" />
+        <Image src={GRFXbg} alt="Space" priority />
 
           <div className={styles.card_content}>
             <div className={styles.linetop}><hr/></div>
