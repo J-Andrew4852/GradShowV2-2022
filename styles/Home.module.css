@@ -113,6 +113,46 @@
   background-color: var(--light-grey);
   margin-bottom: 2em;
 }
+.number{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.number h1{
+  font-weight: 800;
+  margin: 0;
+  font-size: 3.5em;
+}
+.number span{
+  font-size: .6em;
+}
+.count hr{
+  width: 1.5em;
+}
+.count{
+  padding-right: 2%;
+  padding-bottom: 10%;
+  gap: .3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.card_footer{
+  width: 80%;
+  position: absolute;
+  top: 78%;
+  left:10%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.card_badge{
+  margin-top: 1em;
+  width: 5em;
+}
 
 /* APROVED ------------------------------------------------------------ */
 .approved{
@@ -231,12 +271,120 @@
 }
 
 
-
+/* MAJOR CARDS */
 .card_holder{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.cards_holder{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  color: white;
+  position: relative;
+  width: 30vw;
+  min-width: 320px;
+  height: auto;
+}
+.card_content{
+  padding: 15% 15% 10% 10%;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+.card_content h1{
+  text-shadow: 0 0 3px rgb(255, 255, 255);
+  padding-right: 10%;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.5em;
+  color: #FFFBF4;
+  margin: 3%;
+}
+.morepadding{
+  text-shadow: 0 0 3px rgb(255, 255, 255);
+  padding-right: 40%;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.5em;
+  color: #FFFBF4;
+  margin: 3%;
+}
+.linetop{
+  width: 65%;
+}
+.card_content h3{
+  margin: 0;
+  margin-top: 10%;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: .8em;
+  line-height: 103.6%;
+  padding-right: 30%;
+  color: #FFFFFF;
+}
+.card_content p{
+  line-height: 150%;
+  font-size: .7em;
+  width: 60%;
+  padding-right: 0%;
+}
+.agd_text:before{
+  content: "";
+  display: block;
+  width: 4.5em;
+  height: 1.5px;
+  left: -40%;
+  top: .9em;
+  position: relative;
+  background: var(--agd-yellow);
+}
+.digex_text:before{
+  content: "";
+  display: block;
+  width: 4.5em;
+  height: 1.5px;
+  left: -40%;
+  top: .9em;
+  position: relative;
+  background: var(--digex-teal);
+}
+.grfx_text:before{
+  content: "";
+  display: block;
+  width: 4.5em;
+  height: 1.5px;
+  left: -40%;
+  top: .9em;
+  position: relative;
+  background: var(--grfx-orange);
+}
+.card_content a{
+  font-weight: 700;
+  font-size: .8em;
+}
+.cards_holder{
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /* SHOWREELS ------------------------------------------------------------ */
