@@ -41,6 +41,44 @@ export const GradFolder = ({ data, onClose }) => {
 
     // VARIABLES ============================================================================== // 
 
+    var majorz = data.major
+// console.log(majorz)
+var abMajor = []
+
+majorz.forEach(() => {
+  // console.log(majorz[0])
+  if (majorz[0].match("Graphic") !== null) {
+    abMajor.push("GRFX")
+  }
+  else if (majorz[0].match("Digital") !== null) {
+    abMajor.push("DIGEX")
+  }
+  else {
+    abMajor.push("AGD")
+  }
+  // console.log(abMajor)
+  if (majorz.length == 2) {
+    // console.log(majorz[1])
+    // console.log(abMajor)
+    if (majorz[1].match("Graphic") !== null) {
+      abMajor.push("GRFX")
+    }
+    else if (majorz[1].match("Digital") !== null) {
+      abMajor.push("DIGEX")
+    }
+    else {
+      abMajor.push("AGD")
+    }
+    abMajor.splice(2, 2);
+    // console.log(abMajor)
+    // return abMajor
+  }
+  // console.log(abMajor)
+  return abMajor
+});
+
+// console.log(abMajor)
+
     // COMPONENT INIT ========================================================================= // 
     // useEffect(() => { }, []);
 
@@ -73,7 +111,7 @@ export const GradFolder = ({ data, onClose }) => {
                     <div className={styles.details}>
                         <div className={styles.heading_group}>
                             <h1 className='heading bold text-2xl'>{data.preferredName} {data.lastName}</h1>
-                            <h3 className={`regular text-reg`}>{data.major[0]} {data.major[1]}</h3>
+                            <h3 className={`regular text-reg`}>{abMajor[0]} {abMajor[1]}</h3>
                         </div>
 
                         <div className={styles.shortBio}>
