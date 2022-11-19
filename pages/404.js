@@ -1,7 +1,7 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
 // COMPONENT IMPORTS ==================================================================== // 
-import {OutlineBtn} from '../components/Buttons/Button'
+import {ErrorButton} from '../components/Buttons/Button'
 import { AlienIcon } from '../components/icons/Icons'
 
 // STYLES =============================================================================== // 
@@ -31,8 +31,8 @@ export default function NotFound() {
           <br></br>
           <br></br>
           <br></br>
-          <a href='/'>
-            <OutlineBtn text="Back to Home"/>
+          <a className={styles.errorbutton} href='/' >
+            <ErrorButton text="Back to Home"/>
           </a>
       </div>
     </div>
