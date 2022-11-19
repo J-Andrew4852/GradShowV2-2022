@@ -37,6 +37,26 @@ export const OutlineBtn = ({text, onAction, major, selected, height, linkers, li
     )
 }
 
+export const ErrorButton = ({text, onAction, major, selected, height, linkers, linkTo, external}) => {
+    // console.log(major)
+    return (
+        linkers ?
+        <a href={linkTo} target="_blank" rel="noopener noreferrer">
+            <div className={`${styles.errorbtn} ${styles[height]}`}>
+                <div tabIndex={external ? `-1` : '0'} className={selected ? `${styles.selected} ${styles.gradientBox} ${styles[major]}` : `${styles.gradientBox} ${styles[major]}`} onClick={onAction} onKeyDown={onAction}>
+                    {text}
+                </div>
+            </div>
+        </a>
+        :
+        <div className={`${styles.errorbtn} ${styles[height]}`}>
+            <div tabIndex={external ? `-1` : '0'} className={selected ? `${styles.selected} ${styles.gradientBox} ${styles[major]}` : `${styles.gradientBox} ${styles[major]}`} onClick={onAction} onKeyDown={onAction}>
+                {text}
+            </div>
+        </div>
+    )
+}
+
 export const TextBtn = ({text, linkTo, external}) => {
 
     return (

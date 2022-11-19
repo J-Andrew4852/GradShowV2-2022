@@ -101,3 +101,10 @@
     color: var(--med-grey);
     stroke: var(--med-grey);
 } */
+.errorbtn{
+    position: relative;
+    z-index: 1;
+    height: 60px;
+    display: inline-block;
+    min-width: 20%;
+}
