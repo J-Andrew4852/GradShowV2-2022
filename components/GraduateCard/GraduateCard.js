@@ -73,6 +73,8 @@ majorz.forEach(() => {
 
 // console.log(data.heroImage)
 
+console.log(data);
+
   // COMPONENT INIT ========================================================================= // 
 
   return (
@@ -103,10 +105,12 @@ majorz.forEach(() => {
 
         <header className={styles.header}>
           <div className={styles.header_subcontainer}>
-            <div className={styles.placeholder_headshot}></div>
+            <div className={styles.placeholder_headshot}>
+              <img className={styles.student_headshot} alt="Photograph of graduate" src={data.headshotURL}/>
+            </div>
             <div className={styles.student_details}>
               <h2 className="font-med2 bold subheading">{data.preferredName} {data.lastName}</h2>
-              <h3 className={`text-xs regular ${styles.reset_font}`}>{abMajor[0]} {abMajor[1]}</h3>
+              <h3 className={`text-med regular ${styles.reset_font}`}>{abMajor[0]} {abMajor[1]}</h3>
             </div>
           </div>
 
@@ -122,7 +126,7 @@ majorz.forEach(() => {
 
 
         <footer className={styles.footer}>
-          { /* replace with button styling when available */}
+          {/* PORTFOLIO BUTTON REMOVED FROM GRAD CARDS */}
           {/* <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">
             <OutlineBtn external height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
           </a> */}

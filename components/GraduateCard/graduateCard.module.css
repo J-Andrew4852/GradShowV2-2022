@@ -52,10 +52,21 @@
     position: relative;
     overflow: hidden;
 }
+
 .heroContainer .gradHeroImage{
     object-fit: cover;
+    object-position: center;
+    width: 100%;
+    /* min-height: 100%;
+    max-height: 250px; */
+    /* min-height: 300px;
+    max-height: 300px; */
+    /* object-fit: cover;
     width: 100%;
     max-height: 100%;
+    height: auto; */
+
+    aspect-ratio: 3508/2481;
 }
 
 .header {
@@ -106,9 +117,14 @@
 .placeholder_headshot {
     min-width: 50px;
     width: 50px;
-    min-height: 60px;
-    height: 100%;
-    background-color: lightgrey;
+    height: 60px;
+    border: 1px solid grey;
+    /* REMOVE THE BORDER WHEN IMAGES ARE ADDED CORRECTLY */
+}
+
+.student_headshot {
+    object-fit: cover;
+    object-position: top;
 }
 
 .placeholder_icon,
