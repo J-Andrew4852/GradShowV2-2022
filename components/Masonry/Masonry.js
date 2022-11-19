@@ -21,38 +21,43 @@ Description:
 
 export const MasonryComp = (data) => {
 
-  let images = [
-    {
-      id: 1,
-      imgSrc: '/assets/images/Griddy/Image1.jpg',
-    },
-    {
-      id: 2,
-      imgSrc: '/assets/images/Griddy/Image2.jpg',
-    },
-    {
-      id: 3,
-      imgSrc: '/assets/images/Griddy/Image3.jpg',
-    },
-    {
-      id: 4,
-      imgSrc: '/assets/images/Griddy/Image4.jpg',
-    },
-    {
-      id: 5,
-      imgSrc: '/assets/images/Griddy/Image1.jpg',
-    },
-    {
-      id: 6,
-      imgSrc: '/assets/images/Griddy/Image2.jpg',
-    },
-    // {
-    //   id: 9,
-    //   imgSrc: 'https://drive.google.com/u/2/open?usp=forms_web&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk',
-    // }
-  ]
+  // console.log(data.data.workExamples)
+
+  let images = data.data.workExamples
+
+  // let images = [
+  //   {
+  //     id: 1,
+  //     imgSrc: '/assets/images/Griddy/Image1.jpg',
+  //   },
+  //   {
+  //     id: 2,
+  //     imgSrc: '/assets/images/Griddy/Image2.jpg',
+  //   },
+  //   {
+  //     id: 3,
+  //     imgSrc: '/assets/images/Griddy/Image3.jpg',
+  //   },
+  //   {
+  //     id: 4,
+  //     imgSrc: '/assets/images/Griddy/Image4.jpg',
+  //   },
+  //   {
+  //     id: 5,
+  //     imgSrc: '/assets/images/Griddy/Image1.jpg',
+  //   },
+  //   {
+  //     id: 6,
+  //     imgSrc: '/assets/images/Griddy/Image2.jpg',
+  //   },
+  //   // {
+  //   //   id: 9,
+  //   //   imgSrc: 'https://drive.google.com/u/2/open?usp=forms_web&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk',
+  //   // }
+  // ]
 
   function getCols() {
+    console.log("images" + images.length)
     if ( images.length == 1 ) {
       return 1
     } else if ( images.length == 2) {
@@ -75,9 +80,12 @@ export const MasonryComp = (data) => {
   //   700: 1
   // };
 
-  const items = images.map( (item) => {
-    return(
-      <img src={item.imgSrc} key={item.id} />
+  console.log(images)
+
+  const items = images.map( (item, index) => {
+    {console.log(item)}
+    return (
+        <img src={item} key={index} />
     )
   })
   console.log(cols)

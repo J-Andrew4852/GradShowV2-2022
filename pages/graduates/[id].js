@@ -27,45 +27,18 @@ Description:
 TODO:
 - Update portfolio button with major and link to portfolio site
 */
-function slicer() {
-    var hero = 'https://drive.google.com/file/d/102DhDeowwOoReVS--oT2mD9MKcchvNCk/view'
-    let slicedHero = hero.slice(32, 65)
-    console.log(slicedHero)
-    let sauceHero = `https://drive.google.com/uc?export=view&id=${slicedHero}`
-    console.log(sauceHero)
-    return sauceHero
-}
-var sauceHero = slicer()
-
-var social1 = 'https://twitter.com/JamesADigital'
-var social2 = 'https://github.com/J-Andrew4852'
-var social3 = 'https://www.instagram.com/james.andrew4852/'
-var social4 = 'https://badverynotgoodlink'
-
-var socials = [social1, social2, social3, social4]
-
-socials.forEach(linkToIcon)
-
-function linkToIcon(item) {
-    if (item.match("twitter") !== null) {
-        console.log("selected twitter")
-    }
-    else if (item.match("github") !== null) {
-        console.log("selected github")
-    }
-    else if (item.match("instagram") !== null) {
-        console.log("selected instagram")
-    }
-    else {
-        console.log("selected global")
-    }
-    // console.log(item.match("twitter"));
-    // console.log(item.match("github"));
-    // console.log(item.match("instagram"));
-}
+// function slicer() {
+//     var hero = 'https://drive.google.com/file/d/102DhDeowwOoReVS--oT2mD9MKcchvNCk/view'
+//     let slicedHero = hero.slice(32, 65)
+//     console.log(slicedHero)
+//     let sauceHero = `https://drive.google.com/uc?export=view&id=${slicedHero}`
+//     console.log(sauceHero)
+//     return sauceHero
+// }
+// var sauceHero = slicer()
 
 
-// console.log(social1.search(regexT), );
+
 
 export default function GraduatemDetail({ graduate, data }) {
     
@@ -86,6 +59,7 @@ export default function GraduatemDetail({ graduate, data }) {
 
                     <div className={styles.graduate_photo}>
                         <Image src={gradImage} alt="Graduate Image" layout={'fill'} objectFit="cover" width={783} height={1175}/>
+                        {/* <img src={graduate.headshotURL} alt="Graduate Image" /> */}
                     </div>
                     
                     <div className={styles.graduate_photo_small}>
@@ -124,7 +98,7 @@ export default function GraduatemDetail({ graduate, data }) {
                         {/* <div className={styles.gradHero}>
                             <Image src={sauceHero} layout='fill' objectFit='contain' />
                         </div> */}
-                        <MasonryComp/>
+                        <MasonryComp key={graduate._id} data={graduate}/>
                     </div>
                 </div>
 

@@ -73,7 +73,7 @@ majorz.forEach(() => {
 
 // console.log(data.heroImage)
 
-console.log(data);
+// console.log(data);
 
   // COMPONENT INIT ========================================================================= // 
 
@@ -106,7 +106,7 @@ console.log(data);
         <header className={styles.header}>
           <div className={styles.header_subcontainer}>
             <div className={styles.placeholder_headshot}>
-              <img className={styles.student_headshot} alt="Photograph of graduate" src={data.headshotURL}/>
+              {/* <img className={styles.student_headshot} alt="Photograph of graduate" src={data.headshotURL}/> */}
             </div>
             <div className={styles.student_details}>
               <h2 className="font-med2 bold subheading">{data.preferredName} {data.lastName}</h2>
