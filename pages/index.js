@@ -9,6 +9,8 @@ import animationShowreel from '../public/assets/images/Showreel1.png'
 import AGD from '../public/assets/images/Home/AGD-CARD.png'
 import DD from '../public/assets/images/Home/DIGEX-CARD.png'
 import GD from '../public/assets/images/Home/GRAPHIC-DESIGN-CARD.png'
+import AGDbg from '../public/assets/images/Home/CardComponents/AGDbg.png'
+import AGDbadge from '../public/assets/images/Home/CardComponents/AGDbadge.png'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
@@ -70,51 +72,97 @@ export default function Home() {
       </div>
 
       {/* A GLIMPSE INTO OUR SPACE */}
-      <section className={styles.into_our_space}>
-        <div className={styles.section_heading}>
-            <div className={styles.elements}>
-              <h2>A GLIMPSE</h2>
-              <h1>INTO OUR SPACE</h1>
-          </div>
-        </div>
-
-        <div className={styles.card_holder}>
-          <a href="">
-            <Image src={AGD} alt="Animation and Game Design Card" />
-          </a>
-          <a href="">
-            <Image src={DD} alt="Digital Design Card" />
-          </a>
-          <a href="">
-            <Image src={GD} alt="Graphic Design Card" />
-          </a>
-        </div>
-      </section>
       
-      <div className={styles.card_holder}>
+      <div className={styles.cards_holder}>
+
         <div className={styles.card}>
-          <hr/>
-          <h1>ANIMATION</h1>
-          <h1>& GAME</h1>
-          <h1>DESIGN</h1>
+        <Image src={AGDbg} alt="Space" />
 
-          <h2></h2>
-          <p></p>
-          <a>[see more]</a>
-        </div>
+          <div className={styles.card_content}>
+            <div className={styles.linetop}><hr/></div>
+            <h1>ANIMATION</h1>
+            <h1>& GAME</h1>
+            <h2 className={styles.morepadding}>DESIGN</h2>
 
-        <div className={styles.card_footer}>
+            <h3>agd_mission_2022</h3>
+            <p>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
+            <a href="">[see more]</a>
+          </div>
+
+          <div className={styles.card_footer}>
 
           <div className={styles.number}>
             <div className={styles.count}>
-              <hr/><p>count</p>
+              <hr/><span>count</span>
             </div>
             <h1>29</h1>
           </div>
 
-          <div className={styles.badge}></div>
+          <div className={styles.card_badge}><Image  src={AGDbadge} alt="AGD Badge" /></div>
           
         </div>
+
+        </div>
+
+        <div className={styles.card}>
+        <Image src={AGDbg} alt="Space" />
+
+          <div className={styles.card_content}>
+            <div className={styles.linetop}><hr/></div>
+            <h2 className={styles.morepadding}>DIGITAL</h2>
+            <h1>DESIGN</h1>
+            {/* <h2 className={styles.morepadding}>DESIGN</h2> */}
+
+            <h3>agd_mission_2022</h3>
+            <p>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
+            <a href="">[see more]</a>
+          </div>
+          
+          <div className={styles.card_footer}>
+
+          <div className={styles.number}>
+            <div className={styles.count}>
+              <hr/><span>count</span>
+            </div>
+            <h1>29</h1>
+          </div>
+
+          <div className={styles.card_badge}><Image  src={AGDbadge} alt="AGD Badge" /></div>
+          
+        </div>
+
+        </div>
+
+        <div className={styles.card}>
+        <Image src={AGDbg} alt="Space" />
+
+          <div className={styles.card_content}>
+            <div className={styles.linetop}><hr/></div>
+            <h1>ANIMATION</h1>
+            <h1>& GAME</h1>
+            <h2 className={styles.morepadding}>DESIGN</h2>
+
+            <h3>agd_mission_2022</h3>
+            <p>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
+            <a href="">[see more]</a>
+          </div>
+          
+          <div className={styles.card_footer}>
+
+          <div className={styles.number}>
+            <div className={styles.count}>
+              <hr/><span>count</span>
+            </div>
+            <h1>29</h1>
+          </div>
+
+          <div className={styles.card_badge}><Image  src={AGDbadge} alt="AGD Badge" /></div>
+          
+        </div>
+
+        </div>
+
+        
       </div>
 
 
