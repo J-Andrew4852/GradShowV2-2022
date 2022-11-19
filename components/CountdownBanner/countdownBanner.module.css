@@ -84,7 +84,7 @@
     text-decoration: underline;
   }
   
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .banner_wrapper{
     position: unset;
   }

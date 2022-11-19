@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Avenir";
-  src: url("/public/fonts/avenir_ff/AvenirLTStd-Black.otf");
+  src: url("/public/fonts/avenir_ff/AvenirLTStd-Black.otf"), format(OpenType font format);
   }
 
 :root {
