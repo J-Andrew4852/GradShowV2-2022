@@ -73,11 +73,11 @@ export default function Home() {
       {/* APPROVED IMAGE */}
       <div className={styles.approved}>
           <div className={styles.mapDiagram}>
-            <Image src={Map} alt="Map Diagram"/>
+            <Image src={Map} alt="Map Diagram" width={700} height={700}/>
           </div>
           <div className={styles.aboutInfo}>
             <Image src={aboutDetails} alt="About details"/>
-            <p>More mission details &nbsp;&nbsp;→</p>
+            <a href={'/about'} >More mission details &nbsp;&nbsp;→ </a>
           </div>
       </div>
 
@@ -115,10 +115,8 @@ export default function Home() {
             </div>
             <h1>29</h1>
           </div>
-
-          <div className={styles.card_badge}><Image  src={AGDbadge} alt="AGD Badge" /></div>
-          
-        </div>
+        <div className={styles.card_badge}><Image  src={AGDbadge} alt="AGD Badge" /></div>   
+      </div>
 
         </div>
 
@@ -129,24 +127,20 @@ export default function Home() {
             <div className={styles.linetop}><hr/></div>
             <h2 className={styles.morepadding}>DIGITAL</h2>
             <h1>DESIGN</h1>
-            {/* <h2 className={styles.morepadding}>DESIGN</h2> */}
-
+            <h2 className={styles.morepadding}></h2>
+            <h2 className={styles.morepadding}></h2>
             <h3>digex_mission_2022</h3>
             <p className={styles.digex_text}>Our Digex [digital experience and interaction design] mission is to deploy user-centred gadgets that ensure a smooth journey for all.</p>
             <a href="">[see more]</a>
           </div>
-          
           <div className={styles.card_footer}>
-
           <div className={styles.number}>
             <div className={styles.count}>
               <hr/><span>count</span>
             </div>
             <h1>14</h1>
           </div>
-
-          <div className={styles.card_badge}><Image  src={DIGEXbadge} alt="AGD Badge" /></div>
-          
+          <div className={styles.card_badge}><Image  src={DIGEXbadge} alt="AGD Badge" /></div>  
         </div>
 
         </div>
@@ -158,10 +152,10 @@ export default function Home() {
             <div className={styles.linetop}><hr/></div>
             <h2 className={styles.morepadding}>GRAPHIC</h2>
             <h1>DESIGN</h1>
-            {/* <h2 className={styles.morepadding}>DESIGN</h2> */}
-
+            <h2 className={styles.morepadding}></h2>
+            <h2 className={styles.morepadding}></h2>
             <h3>grfx_mission_2022</h3>
-            <p className={styles.grfx_text}>Our Grfx [graphic design] mission is to prepare design proposals that are out of this world!</p>
+            <p className={styles.grfx_text}>Our Grfx [graphic design] mission is to prepare design proposals that are out of this world.</p>
             <a href="">[see more]</a>
           </div>
           
