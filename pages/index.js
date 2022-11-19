@@ -8,6 +8,12 @@ import animationShowreel from '../public/assets/images/Showreel1.png'
 import AGD from '../public/assets/images/Home/AGD-CARD.png'
 import DD from '../public/assets/images/Home/DIGEX-CARD.png'
 import GD from '../public/assets/images/Home/GRAPHIC-DESIGN-CARD.png'
+import AGDbg from '../public/assets/images/Home/CardComponents/AGDbg.png'
+import AGDbadge from '../public/assets/images/Home/CardComponents/AGDbadge.png'
+import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.png'
+import GRFXbadge from '../public/assets/images/Home/CardComponents/grfx.png'
+import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.png'
+import DIGEXbadge from '../public/assets/images/Home/CardComponents/digex.png'
 import Map from '../public/assets/images/Home/mapDiagram.svg'
 import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
 import { TextBtn } from '../components/Buttons/Button'
@@ -26,7 +32,7 @@ import react from 'react'
 
 /* 
 Name: Home page
-Collaborators: Logan Trundle, James Andrew
+Collaborators: Logan Trundle, James Andrew, James Kang, Salma Jarrar
 
 Description: 
 - Introduce the grad show (theme, what it is, graduates, etc)
@@ -83,19 +89,99 @@ export default function Home() {
               <h1 className={`black text-7xl`}>INTO OUR SPACE</h1>
           </div>
         </div>
-
-        <div className={styles.card_holder}>
-          <a href="">
-            <Image src={AGD} alt="Animation and Game Design Card"/>
-          </a>
-          <a href="">
-            <Image src={DD} alt="Digital Design Card" />
-          </a>
-          <a href="">
-            <Image src={GD} alt="Graphic Design Card" />
-          </a>
-        </div>
       </section>
+
+      <div className={styles.cards_holder}>
+
+        <div className={styles.card}>
+        <Image src={AGDbg} alt="Space" />
+
+          <div className={styles.card_content}>
+            <div className={styles.linetop}><hr/></div>
+            <h1>ANIMATION</h1>
+            <h1>& GAME</h1>
+            <h2 className={styles.morepadding}>DESIGN</h2>
+
+            <h3>agd_mission_2022</h3>
+            <p className={styles.agd_text}>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
+            <a href="">[see more]</a>
+          </div>
+
+          <div className={styles.card_footer}>
+
+          <div className={styles.number}>
+            <div className={styles.count}>
+              <hr/><span>count</span>
+            </div>
+            <h1>29</h1>
+          </div>
+
+          <div className={styles.card_badge}><Image  src={AGDbadge} alt="AGD Badge" /></div>
+          
+        </div>
+
+        </div>
+
+        <div className={styles.card}>
+        <Image src={DIGEXbg} alt="Space" />
+
+          <div className={styles.card_content}>
+            <div className={styles.linetop}><hr/></div>
+            <h2 className={styles.morepadding}>DIGITAL</h2>
+            <h1>DESIGN</h1>
+            {/* <h2 className={styles.morepadding}>DESIGN</h2> */}
+
+            <h3>digex_mission_2022</h3>
+            <p className={styles.digex_text}>Our Digex [digital experience and interaction design] mission is to deploy user-centred gadgets that ensure a smooth journey for all.</p>
+            <a href="">[see more]</a>
+          </div>
+          
+          <div className={styles.card_footer}>
+
+          <div className={styles.number}>
+            <div className={styles.count}>
+              <hr/><span>count</span>
+            </div>
+            <h1>14</h1>
+          </div>
+
+          <div className={styles.card_badge}><Image  src={DIGEXbadge} alt="AGD Badge" /></div>
+          
+        </div>
+
+        </div>
+
+        <div className={styles.card}>
+        <Image src={GRFXbg} alt="Space" />
+
+          <div className={styles.card_content}>
+            <div className={styles.linetop}><hr/></div>
+            <h2 className={styles.morepadding}>GRAPHIC</h2>
+            <h1>DESIGN</h1>
+            {/* <h2 className={styles.morepadding}>DESIGN</h2> */}
+
+            <h3>grfx_mission_2022</h3>
+            <p className={styles.grfx_text}>Our Grfx [graphic design] mission is to prepare design proposals that are out of this world!</p>
+            <a href="">[see more]</a>
+          </div>
+          
+          <div className={styles.card_footer}>
+
+          <div className={styles.number}>
+            <div className={styles.count}>
+              <hr/><span>count</span>
+            </div>
+            <h1>43</h1>
+          </div>
+
+          <div className={styles.card_badge}><Image  src={GRFXbadge} alt="GRFX Badge" /></div>
+          
+        </div>
+
+        </div>
+
+        
+      </div>
       
 
 
