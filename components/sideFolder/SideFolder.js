@@ -42,7 +42,20 @@ export const GradFolder = ({ data, onClose }) => {
     // VARIABLES ============================================================================== // 
 
     // COMPONENT INIT ========================================================================= // 
-    useEffect(() => { }, []);
+    // useEffect(() => { }, []);
+
+    function slicer() {
+        var hero = 'https://drive.google.com/file/d/102DhDeowwOoReVS--oT2mD9MKcchvNCk/view'
+        let slicedHero = hero.slice(32, 65)
+        console.log(slicedHero)
+        let sauceHero = `https://drive.google.com/uc?export=view&id=${slicedHero}`
+        console.log(sauceHero)
+        return sauceHero
+    }
+
+    var sauceHero = slicer()
+
+
     // RENDER ================================================================================= // 
     return (
         <div className={styles.container}>
@@ -54,7 +67,7 @@ export const GradFolder = ({ data, onClose }) => {
                 <div className={styles.graduateContent}>
 
                     <div className={styles.graduate_photo}>
-                        <Image className={styles.graduateImage} src={gradImage} alt={`Headshot photo of ${data.preferredName} ${data.lastName}`} width={783} height={1175} layout="responsive" placeholder="blur" blurDataURL={gradImage} />
+                        <Image className={styles.graduateImage} src={gradImage} alt={`Headshot photo of ${data.preferredName} ${data.lastName}`} width={783} height={1175} layout="fill" objectFit="cover" placeholder="blur" blurDataURL={gradImage} />
                     </div>
 
                     <div className={styles.details}>
@@ -63,11 +76,13 @@ export const GradFolder = ({ data, onClose }) => {
                             <h3 className={`regular text-reg`}>{data.major[0]} {data.major[1]}</h3>
                         </div>
 
-                        <div className={styles.shortBio}>{data.bio}</div>
+                        <div className={styles.shortBio}>
+                            {data.shortBio}
+                        </div>
 
                         <div className={styles.linksBar}>
-                            <OutlineBtn external text="portfolio" height="thin" major={data.major[0].toLowerCase()}/>
-                            <TextBtn text='Expand' linkTo={`/graduates/${data._id}`}/>
+                            <OutlineBtn external text="view" height="thin" major={data.major[0].toLowerCase()}/>
+                            {/* <TextBtn text='Expand' linkTo={`/graduates/${data._id}`} external/> */}
                         </div>
                     </div>
 
@@ -87,8 +102,8 @@ export const GradFolder = ({ data, onClose }) => {
                 </div>
 
 
-                <div className={styles.graduateImageGrid}>
-                    <div className={styles.graduateImages}></div>
+                <div className={styles.sidebar_gradHero}>
+                    <Image src={sauceHero} layout='fill' objectFit='cover' />
                 </div>
 
             </div>

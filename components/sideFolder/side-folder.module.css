@@ -1,23 +1,17 @@
 .container {
     max-width: 600px;
-    min-width: 400px;
-    width: 100%;
-    height: 100vh;
-    /* height: 100%; */
-    display: flex;
+    min-width: 520px;
+    width: calc(30vw - 3em);
+    height: calc(100vh - var(--nav-height));
     position: sticky;
-    right: 0;
+    display: flex;
+    flex-direction: column;
     top: var(--nav-height);
     z-index: 5;
     border-left: 1.5px solid var(--off-black);
-    border-right: 1.5px solid var(--off-black);
+    /* border-right: 1.5px solid var(--off-black); */
     background-color: var(--off-white);
-}
-
-.folderContent {
-    background-color: var(--off-white);
-    width: 100%;
-    height: 100%;
+    margin-left: 3em;
 }
 
 .closeArrow {
@@ -32,40 +26,52 @@
 }
 
 /* GRADUATE CONTENT ===================================== */
-/* This section here might work better as a grid layout ?  */
 .graduateContent {
-    display: flex;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    /* grid-template-rows: max-content; */
     width: 100%;
-    padding-inline: 3em;
-    padding-block: 2em;
-    justify-content: space-between;
-    gap: 30px;
-    align-items: center;
+    padding-left: calc(3em + 10px);
+    padding-top: calc(3em + 10px);
+    /* min-height: 40%; */
+    /* max-height: 46vh; */
+    align-content: center;
 }
 
 .details {
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 300px;
-    height: 250px;
+    display: grid;
+    align-content: stretch;
+    padding-left: 30px;
+    gap: 15px;
+    width: 100%;
 }
 
 .shortBio {
-    margin-top: -100px;
+    min-height: 180px;
+    width: 100%;
 }
+
+.details h1 {
+    font-size: 2.2em;
+    padding-top: 5px;
+}
+
+.details h3 {
+    line-height: 1.5em;
+    font-size: 0.8em;
+}
+
 
 /* GRADUATE PHOTO ===================================== */
 .graduate_photo {
-    max-width: 200px;
-    width: 100%;
-    height: 100%;
     position: relative;
+    height: 100%;
 }
 
 /* GRADUATE DETAILS ===================================== */
 .linksBar {
+    align-self: end;
+
     width: 100%;
     display: flex;
     align-items: center;
@@ -80,7 +86,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 3em;
+    padding-left: calc(3em + 10px);
+    margin-top: 1.5em;
 }
 
 .icon {
@@ -94,36 +101,20 @@
 .graduateImageGrid {
     width: 100%;
     height: 100%;
-    padding: 2em 3em;
-    padding-bottom: 2em;
+
 }
+
 .graduateImages {
     background-color: var(--off-black);
     height: 450px;
     width: 100%;
 }
 
-
-@media (max-width: 1300px) {
-    .sideFolder {
-        display: none;
-    }
-
-    .graduate_photo {
-        display: none;
-    }
-
-    .details {
-        width: 100%;
-    }
-
-    .graduateContent, .details {
-        min-height: 250px;
-    }
-
-    .shortBio {
-        margin-top: -30px;
-    }
+.sidebar_gradHero {
+    margin: 1.5em 0 1.5em calc(3em + 10px) ;
+    position: relative;
+    height: 300px;
+    max-height: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -131,7 +122,40 @@
         display: none;
     }
 }
-@media (max-height: 650px) {
+
+@media (max-height: 1000px) {
+    .graduateContent {
+        padding-top: 3vh;
+    }
+
+    .shortBio {
+        font-size: 0.8em;
+        min-height: 150px;
+    }
+
+    .socialsBar {
+        margin-top: 2vh;
+    }
+
+    .graduateImageGrid {
+        margin: 2vh 0 ;
+    }
+}
+
+@media (max-height: 850px) {
+    .graduateContent {
+        padding-top: 1em;
+        height: 40%;
+    }
+    .sidebar_gradHero {
+        margin-top: 2vh;
+    }
+    .shortBio {
+        min-height: 60px;
+    }
+}
+
+@media (max-height: 700px) {
     .container {
         display: none;
     }

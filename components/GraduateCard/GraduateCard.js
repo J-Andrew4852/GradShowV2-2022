@@ -43,19 +43,17 @@ export const GraduateCard = ({ data, list, handleClick }) => {
             <div className={styles.placeholder_headshot}></div>
             <div className={styles.student_details}>
               <h2 className="font-med2 bold subheading">{data.preferredName} {data.lastName}</h2>
-              <h3 className={`text-xs regular ${styles.reset_font}`}>{data.major[0]} {data.major[1]}</h3>
+              <h3 className={`text-xs regular ${styles.reset_font}`}>{data.major[0]}<br/> {data.major[1]}</h3>
             </div>
           </div>
       </a>
 
           <div className={styles.rightGroup}>
             <div className={styles.icons}>
-              <SidebarIcon  onClick={() => handleClick(data)} />
-              <Star />
+              <SidebarIcon onClick={() => handleClick(data)} />
+              {/* <Star /> */}
             </div>
-            <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">
-              <OutlineBtn height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
-            </a>
+            <TextBtn text='view' linkTo={`/graduates/${data._id}`}/>
           </div>
 
         </article>
@@ -67,25 +65,25 @@ export const GraduateCard = ({ data, list, handleClick }) => {
             <div className={styles.placeholder_headshot}></div>
             <div className={styles.student_details}>
               <h2 className="font-med2 bold subheading">{data.preferredName} {data.lastName}</h2>
-              <h3 className={`text-xs regular ${styles.reset_font}`}>{data.major[0]} {data.major[1]}</h3>
+              <h3 className={`text-xs regular ${styles.reset_font}`}>{data.major[0]}<br/>  {data.major[1]}</h3>
             </div>
           </div>
 
           <div className={styles.icons}>
             <SidebarIcon onClick={() => handleClick(data)}/>
-            <Star />
+
           </div>
         </header>
-
-        <Image alt="Example of graduate's work" src={placeholder} layout="responsive" placeholder="blur" blurDataURL={placeholder}/>
+        
+        <Image alt="Example of graduate's work" src={placeholder} layout="responsive" objectFit="cover" placeholder="blur" blurDataURL={placeholder}/>
 
         <footer className={styles.footer}>
           { /* replace with button styling when available */}
-          <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">
+          {/* <a href={`http://${data.portfolioSite}/`} target="_blank" rel="noreferrer">
             <OutlineBtn external height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
-          </a>
+          </a> */}
 
-          <TextBtn text='view' linkTo={`/graduates/${data._id}`}/>
+          <OutlineBtn linkers text='view' linkTo={`/graduates/${data._id}`} height="thin" major={data.major[0].toLowerCase()} external/>
         </footer>
       </article>
   )

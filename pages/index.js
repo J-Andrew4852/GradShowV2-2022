@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
+import { version } from 'react'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import animationShowreel from '../public/assets/images/Showreel1.png'
@@ -11,9 +12,11 @@ import GD from '../public/assets/images/Home/GRAPHIC-DESIGN-CARD.png'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
+import { IGFeed } from '../components/IGFeed/IGFeed'
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
+import react from 'react'
 
 // OVERVIEW ============================================================================= // 
 
@@ -22,7 +25,7 @@ import styles from '../styles/Home.module.css'
 
 /* 
 Name: Home page
-Collaborators: Logan Trundle, 
+Collaborators: Logan Trundle, James Andrew
 
 Description: 
 - Introduce the grad show (theme, what it is, graduates, etc)
@@ -30,7 +33,6 @@ Description:
 - Show showreels and tutor comments
 - Show recent social media posts
 */
-
 
 export default function Home() {
 
@@ -120,7 +122,9 @@ export default function Home() {
 
         {/* INSTAGRAM POSTS ~ HARD CODED (CAN BE LIVE UPDATED ANYWAY) */}
         <div className={styles.social_images}>
-          <div id="instafeed-container" className={styles.instaContain}></div>
+          {/* <div id="instafeed-container" className={styles.instaContain}></div> */}
+          {/* <Instagram/> */}
+          <IGFeed />
         </div>
       </section>
 

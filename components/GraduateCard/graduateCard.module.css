@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.listContainer .student_details {
+    padding-top: 5px;
+}
+
 .listContainer:hover {
     width: 97%;
 }
@@ -25,7 +29,7 @@
 
 .rightGroup {
     display: flex;
-    gap: 50px;
+    gap: 30px;
 }
 
 .rightGroup .icons {
@@ -38,7 +42,8 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 60px 250px 50px;
+    grid-template-rows: max-content max-content 30px;
+    /* grid-template-rows: 60px 250px 50px; */
     gap: 15px;
     padding: 10px;
 }
@@ -63,12 +68,25 @@
     justify-content: space-between;
 }
 
+.footer a {
+    min-width: 100%;
+}
+
 .icons {
     justify-self: end;
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: flex-start;
+    padding-top: 3px;
+}
+
+.rightGroup .icons {
     align-items: center;
+}
+
+.icons svg:first-of-type {
+    margin-top: 2px;
 }
 
 .icons * {
@@ -76,7 +94,9 @@
 }
 
 .placeholder_headshot {
+    min-width: 50px;
     width: 50px;
+    min-height: 60px;
     height: 100%;
     background-color: lightgrey;
 }
@@ -95,31 +115,35 @@
     margin-left: 15px;
 }
 
+.student_details h3 {
+    margin-top: 5px;
+    line-height: 1.2em;
+}
+
 .reset_font {
     margin: 0;
 }
 
-@media only screen and (max-width: 1346px) {
-    .cardContainer {
-        grid-template-rows: 60px clamp(25vw, 10vw, 360px) 50px;
-    }
+.sidebarOnCard {
+    background-color: red;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1100px) {
     .icons > *:first-child {
         display: none;
     }
 }
 
-@media only screen and (max-width: 885px) {
-    .cardContainer {
-        grid-template-rows: 60px clamp(53vw, 10vw, 325px) 50px;
-    }
-
-}
-
-@media only screen and (max-height: 650px) {
+@media only screen and (max-height: 700px) {
     .icons > *:first-child {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .rightGroup {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
     }
 }

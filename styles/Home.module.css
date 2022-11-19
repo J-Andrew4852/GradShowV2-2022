@@ -283,49 +283,8 @@
 }
 
 .social_images {
-  /* background-color: var(--light-grey); */
-  width: 65%;
-  height: 10%;
-  margin: auto;
-  /* margin-top: 48px; */
-}
-
-#instafeed-container {
-  text-align: center;
-}
-
-#instafeed-container {
-  object-fit: contain;
-  margin: 0 5px 0 5px ; /* top, right, bottom, left */
-  overflow: hidden;
-}
-
-.instaContain > a {
-  margin: 0 .5vw 0 0vw;
-}
-.instaContain {
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: left;
+  margin-top: 2em;
 }
 
-.instaContain > a > img {
-  width: clamp(5.5rem, 20vw, 48rem);
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  overflow: hidden;
-}
-.acknowledgement{
-  padding: 10% 0 25% 0;
-  width: 56%;
-  text-align: center;
-  margin: auto;
-}
 
-@media (max-width: 900px) {
-  /* INTO OUR SPACE */
-.section_heading{
-  padding: 0% 0% 0% 0vw;
-}
-}

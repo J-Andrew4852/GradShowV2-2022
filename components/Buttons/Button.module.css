@@ -6,9 +6,9 @@
 .outlinebtn {
     position: relative;
     z-index: 1;
-    height: 50px;
+    height: 60px;
     display: inline-block;
-    min-width: 100px;
+    min-width: 100%;
 } 
 
 .outlinebtn.thin {
