@@ -11,6 +11,10 @@ import DD from '../public/assets/images/Home/DIGEX-CARD.png'
 import GD from '../public/assets/images/Home/GRAPHIC-DESIGN-CARD.png'
 import AGDbg from '../public/assets/images/Home/CardComponents/AGDbg.png'
 import AGDbadge from '../public/assets/images/Home/CardComponents/AGDbadge.png'
+import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.png'
+import GRFXbadge from '../public/assets/images/Home/CardComponents/grfx.png'
+import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.png'
+import DIGEXbadge from '../public/assets/images/Home/CardComponents/digex.png'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
@@ -85,7 +89,7 @@ export default function Home() {
             <h2 className={styles.morepadding}>DESIGN</h2>
 
             <h3>agd_mission_2022</h3>
-            <p>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
+            <p className={styles.agd_text}>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
             <a href="">[see more]</a>
           </div>
 
@@ -105,7 +109,7 @@ export default function Home() {
         </div>
 
         <div className={styles.card}>
-        <Image src={AGDbg} alt="Space" />
+        <Image src={DIGEXbg} alt="Space" />
 
           <div className={styles.card_content}>
             <div className={styles.linetop}><hr/></div>
@@ -113,8 +117,8 @@ export default function Home() {
             <h1>DESIGN</h1>
             {/* <h2 className={styles.morepadding}>DESIGN</h2> */}
 
-            <h3>agd_mission_2022</h3>
-            <p>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
+            <h3>digex_mission_2022</h3>
+            <p className={styles.digex_text}>Our Digex [digital experience and interaction design] mission is to deploy user-centred gadgets that ensure a smooth journey for all.</p>
             <a href="">[see more]</a>
           </div>
           
@@ -124,26 +128,26 @@ export default function Home() {
             <div className={styles.count}>
               <hr/><span>count</span>
             </div>
-            <h1>29</h1>
+            <h1>14</h1>
           </div>
 
-          <div className={styles.card_badge}><Image  src={AGDbadge} alt="AGD Badge" /></div>
+          <div className={styles.card_badge}><Image  src={DIGEXbadge} alt="AGD Badge" /></div>
           
         </div>
 
         </div>
 
         <div className={styles.card}>
-        <Image src={AGDbg} alt="Space" />
+        <Image src={GRFXbg} alt="Space" />
 
           <div className={styles.card_content}>
             <div className={styles.linetop}><hr/></div>
-            <h1>ANIMATION</h1>
-            <h1>& GAME</h1>
-            <h2 className={styles.morepadding}>DESIGN</h2>
+            <h2 className={styles.morepadding}>GRAPHIC</h2>
+            <h1>DESIGN</h1>
+            {/* <h2 className={styles.morepadding}>DESIGN</h2> */}
 
-            <h3>agd_mission_2022</h3>
-            <p>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
+            <h3>grfx_mission_2022</h3>
+            <p className={styles.grfx_text}>Our Grfx [graphic design] mission is to prepare design proposals that are out of this world!</p>
             <a href="">[see more]</a>
           </div>
           
@@ -153,10 +157,10 @@ export default function Home() {
             <div className={styles.count}>
               <hr/><span>count</span>
             </div>
-            <h1>29</h1>
+            <h1>43</h1>
           </div>
 
-          <div className={styles.card_badge}><Image  src={AGDbadge} alt="AGD Badge" /></div>
+          <div className={styles.card_badge}><Image  src={GRFXbadge} alt="GRFX Badge" /></div>
           
         </div>
 

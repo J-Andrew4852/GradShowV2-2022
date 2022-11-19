@@ -3,6 +3,16 @@
   src: url("/public/fonts/avenir_ff/AvenirLTStd-Black.otf");
   }
 
+::-moz-selection { /* Code for Firefox */
+  color: rgb(255, 255, 255);
+  background: var(--main-green);
+}
+  
+::selection {
+  color: rgb(255, 255, 255);
+  background: var(--main-green);
+}
+
 :root {
   /* formatting */
   --nav-height: 70px;
