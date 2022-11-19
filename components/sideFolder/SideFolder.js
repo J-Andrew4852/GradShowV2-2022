@@ -82,16 +82,16 @@ majorz.forEach(() => {
     // COMPONENT INIT ========================================================================= // 
     // useEffect(() => { }, []);
 
-    function slicer() {
-        var hero = 'https://drive.google.com/file/d/102DhDeowwOoReVS--oT2mD9MKcchvNCk/view'
-        let slicedHero = hero.slice(32, 65)
-        console.log(slicedHero)
-        let sauceHero = `https://drive.google.com/uc?export=view&id=${slicedHero}`
-        console.log(sauceHero)
-        return sauceHero
-    }
+    // function slicer() {
+    //     var hero = 'https://drive.google.com/file/d/102DhDeowwOoReVS--oT2mD9MKcchvNCk/view'
+    //     let slicedHero = hero.slice(32, 65)
+    //     console.log(slicedHero)
+    //     let sauceHero = `https://drive.google.com/uc?export=view&id=${slicedHero}`
+    //     console.log(sauceHero)
+    //     return sauceHero
+    // }
 
-    var sauceHero = slicer()
+    // var sauceHero = slicer()
 
 
     // RENDER ================================================================================= // 
@@ -141,7 +141,8 @@ majorz.forEach(() => {
 
 
                 <div className={styles.sidebar_gradHero}>
-                    <Image src={sauceHero} layout='fill' objectFit='cover' />
+                    <img className={styles.gradHeroImage} alt="Example of graduate's work" src={data.heroImage}/>
+                    {/* <Image src={data.heroImage} layout='fill' objectFit='cover' /> */}
                 </div>
 
             </div>
