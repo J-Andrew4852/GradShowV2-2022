@@ -71,6 +71,7 @@ majorz.forEach(() => {
 
 // console.log(abMajor)
 
+// console.log(data.heroImage)
 
   // COMPONENT INIT ========================================================================= // 
 
@@ -114,8 +115,11 @@ majorz.forEach(() => {
 
           </div>
         </header>
-        
-        <Image alt="Example of graduate's work" src={placeholder} layout="responsive" objectFit="cover" placeholder="blur" blurDataURL={placeholder}/>
+        <div className={styles.heroContainer}>
+          <img className={styles.gradHeroImage} alt="Example of graduate's work" src={data.heroImage}/>
+          {/* <Image alt="Example of graduate's work" src={data.heroImage} layout="fill" objectFit="cover" placeholder="blur" blurDataURL={placeholder} priority/> */}
+        </div>
+
 
         <footer className={styles.footer}>
           { /* replace with button styling when available */}

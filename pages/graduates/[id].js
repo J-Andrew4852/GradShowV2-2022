@@ -117,9 +117,13 @@ export default function GraduatemDetail({ graduate, data }) {
 
                 <div className={styles.graduateImageGrid}>
                     <div className={styles.graduateImages}>
-                        <div className={styles.gradHero}>
-                            <Image src={sauceHero} layout='fill' objectFit='contain' />
+                        <div className={styles.heroContainer}>
+                            <img className={styles.gradHeroImage} alt="Example of graduate's work" src={graduate.heroImage}/>
+                            {/* <Image alt="Example of graduate's work" src={data.heroImage} layout="fill" objectFit="cover" placeholder="blur" blurDataURL={placeholder} priority/> */}
                         </div>
+                        {/* <div className={styles.gradHero}>
+                            <Image src={sauceHero} layout='fill' objectFit='contain' />
+                        </div> */}
                         <MasonryComp/>
                     </div>
                 </div>
