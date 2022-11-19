@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 // COMPONENT IMPORTS ==================================================================== // 
 import { GraduateCard } from '../../components/GraduateCard/GraduateCard'
 import { GradFolder } from '../../components/sideFolder/SideFolder'
+import { motion, AnimatePresence } from 'framer-motion'
 
 // STYLES =============================================================================== // 
 import styles from '../../styles/Graduates.module.css'
@@ -75,10 +76,10 @@ export default function Graduates({ graduates }) {
 
         <select onChange={(e) => { setSelectedMajor(e.target.value) }} name="majors" id="majors"
         className={`
-          ${selectedMajor === 'All Graduates' ? `${styles.allGraduates}` : "" }
-          ${selectedMajor === 'Digital Experience and Interaction Design' ? `${styles.digexGraduates}` : "" }
-          ${selectedMajor === 'Animation and Game Design' ? `${styles.agdGraduates}` : "" }
-          ${selectedMajor === 'Graphic Design' ? `${styles.grfxGraduates}` : "" }
+          ${selectedMajor === 'All Graduates' ? 'active' : "" }
+          ${selectedMajor === 'Digital Experience and Interaction Design' ? 'active' : "" }
+          ${selectedMajor === 'Animation and Game Design' ? 'active' : "" }
+          ${selectedMajor === 'Graphic Design' ? 'active' : "" }
         `}
         >
           
@@ -138,19 +139,30 @@ export default function Graduates({ graduates }) {
       <section className={styles.gradsSection}>
         <div className={clicked ? `${styles.sidebarOn}` : `${styles.sidebarOff}`}>
 
-          <div className={listView ? `${styles.graduate_list}` : `${styles.graduate_grid}`}>
+          <motion.div
+
+          layout
+          className={listView ? `${styles.graduate_list}` : `${styles.graduate_grid}`}>
             
+            <AnimatePresence>
             {filtered.map((graduate) => (
-                <div key={graduate._id}>
+                <motion.div
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1 }}
+                layout
+                key={graduate._id}>
                   <GraduateCard handleClick={() => {
                     if (selectedGraduate?._id !== graduate._id) {
                     openGradFolder(graduate);
                   } else {
                     closeGradFolder();
                   }}} key={graduate._id} data={graduate} list={listView}/>
-                </div>
+                </motion.div>
               ))}
-          </div>
+            </AnimatePresence>
+          </motion.div>
 
         {selectedGraduate && <GradFolder data={selectedGraduate} onClose={closeGradFolder} />}
         </div>

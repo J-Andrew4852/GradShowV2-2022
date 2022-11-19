@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { OutlineBtn, TextBtn } from "../Buttons/Button";
 import { Sidebar, SidebarIcon, Star } from "../icons/Icons";
+// import { motion } from "framer-motion";
 
 // COMPONENT IMPORTS ==================================================================== // 
 import placeholder from './../../public/assets/images/sarah_phonemockup.png'
@@ -102,7 +103,7 @@ majorz.forEach(() => {
         </article>
       :
       <article className={styles.cardContainer}>
-
+        
         <header className={styles.header}>
           <div className={styles.header_subcontainer}>
             <div className={styles.placeholder_headshot}>
