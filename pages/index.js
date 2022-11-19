@@ -6,9 +6,9 @@ import { version } from 'react'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import animationShowreel from '../public/assets/images/Showreel1.png'
-import agdBadge from '../public/assets/images/Badges/agd_badge.png'
-import digexBadge from '../public/assets/images/Badges/digex_badge.png'
-import grfxBadge from '../public/assets/images/Badges/grfx_badge.png'
+import AGD from '../public/assets/images/Home/AGD-CARD.png'
+import DD from '../public/assets/images/Home/DIGEX-CARD.png'
+import GD from '../public/assets/images/Home/GRAPHIC-DESIGN-CARD.png'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
@@ -68,74 +68,72 @@ export default function Home() {
         <div className={styles.approved_image}></div>
         <p>More mission details &nbsp;&nbsp;→</p>
       </div>
+
+      {/* A GLIMPSE INTO OUR SPACE */}
+      <section className={styles.into_our_space}>
+        <div className={styles.section_heading}>
+            <div className={styles.elements}>
+              <h2>A GLIMPSE</h2>
+              <h1>INTO OUR SPACE</h1>
+          </div>
+        </div>
+
+        <div className={styles.card_holder}>
+          <a href="">
+            <Image src={AGD} alt="Animation and Game Design Card" />
+          </a>
+          <a href="">
+            <Image src={DD} alt="Digital Design Card" />
+          </a>
+          <a href="">
+            <Image src={GD} alt="Graphic Design Card" />
+          </a>
+        </div>
+      </section>
       
 
 
       {/* SHOWREELS */}
       <section className={styles.showreels}>
-        <h3 className='text-4xl heading center-align'>Showreels</h3>
-
         <div className={styles.showreels_subcontainer}>
-
-          <div className={styles.showreel_videos}>
-            <Image src={animationShowreel} alt="Showreel for Animation Major" />
-          </div>
-
           <div className={styles.showreels_sidebar}>
             <div className={styles.showreel_buttons}>
               <button className={styles.section2_button}>Button</button>
               <button className={styles.section2_button}>Button</button>
               <button className={styles.section2_button}>Button</button>
             </div>
+          </div>
 
-            <div className={styles.coordinator_text}>
-              <div className={styles.coordinator}>
-                <p className='text-large bold'>Jonathan Pillai</p>
-                <p className='text-med caption'>Animation and Game <br />Design Coordinator</p>
-              </div>
-              <p className='text-reg'>Course Coordinator comment goes here. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus ullamcorper ligula ac odio tincidunt, sodales aliquet dui mollis. Duis sodales tempor nibh. Nullam ullamcorper mi in tortor venenatis ornare.</p>
-            </div>
+          <div className={styles.showreel_videos}>
+            <Image src={animationShowreel} alt="Showreel for Animation Major" />
           </div>
         </div>
-
-
-        {/* GRADUATES */}
-      </section>
-      <section className={styles.graduates}>
-        <h3 className='text-4xl heading center-align'>Graduates</h3>
-
-        <div className={styles.graduates_subcontainer}>
-
-          <div className={styles.major_circle}>
-            <Image src={digexBadge} alt="Badge insgnia for the Digital Experience major" />
-          </div>
-
-          <div className={styles.major_circle}>
-            <Image src={agdBadge} alt="Badge insgnia for the Animation Game Design major" />
-          </div>
-          <div className={styles.major_circle}>
-            <Image src={grfxBadge} alt="Badge insgnia for the Graphic Design major" />
-          </div>
-
-        </div>
-
-        {/* TODO: create button component and replace here */}
-        <button className='center-align'>View All Graduates</button>
       </section>
 
 
       {/* SOCIALS */}
       <section className={styles.socials}>
-      <h3 className='text-4xl heading center-align'>See more on our social media</h3>
-      <h5 className='text-med2 regular center-align'>@curtindesign</h5>
+        <div className={styles.section_heading}>
+            <div className={styles.elements}>
+              <h2>GAZE THROUGH OUR INSTAGRAM</h2>
+              <h1>@designatcurtin</h1>
+          </div>
+        </div>
 
+        {/* INSTAGRAM POSTS ~ HARD CODED (CAN BE LIVE UPDATED ANYWAY) */}
         <div className={styles.social_images}>
           {/* <div id="instafeed-container" className={styles.instaContain}></div> */}
           {/* <Instagram/> */}
           <IGFeed />
         </div>
       </section>
-    </div>
 
+      <div className={styles.creditsContainer}>
+            <div className={`${styles.creditsSubContainer} ${styles.acknowledgements}`}></div>
+      </div>
+
+      <p className={styles.acknowledgement}>We would like to acknowledge the Whadjuk Noongar people whose land we are standing on and recognise the strength, resilience and capacity of the Noongar people where Curtin University is situated</p>
+
+    </div>
   )
 }

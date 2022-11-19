@@ -4,17 +4,18 @@
   margin-inline: auto;
   width: 100%;
   font-size: 16px;
+  overflow: hidden;
 }
 
 /* HERO ------------------------------------------------------------ */
 .hero {
-  min-height: calc(100vh - var(--nav-height));
+  min-height: calc(80vh - var(--nav-height));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 100vh;
+  height: 83vh;
   overflow: hidden;
 }
 
@@ -45,8 +46,8 @@
   font-family: 'Space Mono';
   font-style: normal;
   font-weight: 400;
-  font-size: 100%;
-  line-height: 21px;
+  font-size: clamp(.7rem, -0.875rem + 1.5vw, 2.5rem);
+  line-height: 1.4em;
   color: #FFFBF4;
 }
 .glare{
@@ -70,25 +71,25 @@
 .marker1{
   background: url('../public/assets/images/Home/marker.png');
   background-size: cover;
-  height: 80vh;
-  width: 20px;
+  height: 70vh;
+  width: 10px;
 }
 .marker2{
   background: url('../public/assets/images/Home/marker.png');
   background-size: cover;
-  height: 80vh;
-  width: 20px;
+  height: 70vh;
+  width: 10px;
   transform: rotate(180deg);
 }
 .title{
   position: absolute;
   z-index: 1;
   background: url('../public/assets/images/Home/title.png');
-  width: 100%;
-  height: 100%;
-  background-size: 40%;
-  left: 15%;
-  top: 600px;
+  width: 70%;
+  height: 70%;
+  bottom: 0;
+  background-position:35% 80%;
+  background-size: 42%;
   background-repeat: no-repeat;
 }
 .title_blurred{
@@ -97,11 +98,11 @@
   position: absolute;
   z-index: 1;
   background: url('../public/assets/images/Home/title.png');
-  width: 100%;
-  height: 100%;
-  background-size: 40%;
-  left: 15%;
-  top: 600px;
+  width: 70%;
+  height: 70%;
+  bottom: 0;
+  background-position:35% 80%;
+  background-size: 42%;
   background-repeat: no-repeat;
 }
 .countdown {
@@ -114,33 +115,74 @@
 
 /* APROVED ------------------------------------------------------------ */
 .approved{
+
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 15%;
+  padding-top: 15%;
 }
 .approved p{
+  font-size: clamp(1rem, -0.875rem + 1vw, 2.5rem);
   text-decoration: underline;
   position: relative;
-  top: -100px;
   margin-left: 43%;
 }
 .approved_image{
-  border: solid red 3px;
   background: url('../public/assets/images/Home/approved.png');
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 70vh;
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+/* INTO OUR SPACE */
+.section_heading{
+  padding: 0% 10% 0% 17vw;
+}
+.elements{
+  height: auto;
+}
+.elements h2{
+  line-height: 100%;
+  position: relative;
+  top: 35px;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.135em;
+  color: #606C37;
+}
+.elements h1{
+  line-height: 90%;
+  word-wrap: break-word;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 100px;
+  font-size: clamp(4.5rem, 30px, 5.5rem);
+  /* identical to box height */
+  
+  letter-spacing: -0.05em;
+  
+  color: #606C37;
+}
+.card_holder{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* SHOWREELS ------------------------------------------------------------ */
 .showreels {
+  padding: 20% 0% 20% 0%;
   padding-inline: 4em;
 }
 
@@ -153,6 +195,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 4em;
 }
 
@@ -243,6 +286,5 @@
   width: 100%;
   margin-top: 2em;
 }
-
 
 
