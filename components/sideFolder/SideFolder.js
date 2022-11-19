@@ -42,7 +42,20 @@ export const GradFolder = ({ data, onClose }) => {
     // VARIABLES ============================================================================== // 
 
     // COMPONENT INIT ========================================================================= // 
-    useEffect(() => { }, []);
+    // useEffect(() => { }, []);
+
+    function slicer() {
+        var hero = 'https://drive.google.com/file/d/102DhDeowwOoReVS--oT2mD9MKcchvNCk/view'
+        let slicedHero = hero.slice(32, 65)
+        console.log(slicedHero)
+        let sauceHero = `https://drive.google.com/uc?export=view&id=${slicedHero}`
+        console.log(sauceHero)
+        return sauceHero
+    }
+
+    var sauceHero = slicer()
+
+
     // RENDER ================================================================================= // 
     return (
         <div className={styles.container}>
@@ -64,13 +77,12 @@ export const GradFolder = ({ data, onClose }) => {
                         </div>
 
                         <div className={styles.shortBio}>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                            {/* {data.bio} */}
+                            {data.shortBio}
                         </div>
 
                         <div className={styles.linksBar}>
-                            <OutlineBtn external text="portfolio" height="thin" major={data.major[0].toLowerCase()}/>
-                            <TextBtn text='Expand' linkTo={`/graduates/${data._id}`} external/>
+                            <OutlineBtn external text="view" height="thin" major={data.major[0].toLowerCase()}/>
+                            {/* <TextBtn text='Expand' linkTo={`/graduates/${data._id}`} external/> */}
                         </div>
                     </div>
 
@@ -90,8 +102,8 @@ export const GradFolder = ({ data, onClose }) => {
                 </div>
 
 
-                <div className={styles.graduateImageGrid}>
-                    <div className={styles.graduateImages}></div>
+                <div className={styles.sidebar_gradHero}>
+                    <Image src={sauceHero} layout='fill' objectFit='cover' />
                 </div>
 
             </div>

@@ -44,7 +44,6 @@ var social4 = 'https://badverynotgoodlink'
 
 var socials = [social1, social2, social3, social4]
 
-
 socials.forEach(linkToIcon)
 
 function linkToIcon(item) {
@@ -70,6 +69,8 @@ function linkToIcon(item) {
 
 export default function GraduatemDetail({ graduate, data }) {
     
+    // console.log(graduate)
+
     return (
         <div className={styles.graduatePageContainer}>
             <Head>
@@ -96,12 +97,12 @@ export default function GraduatemDetail({ graduate, data }) {
                             <Image src={gradPatch} alt="Graduate Major Patch" layout="responsive" width={225} height={227}/>
                         </div>
                         <h1 className={`${styles.graduate_name} heading bold text-2xl `} >{graduate.preferredName} {graduate.lastName}</h1>
-                        <h3 className={`${styles.graduate_major} regular text-reg`}>{graduate.major[0]} {graduate.major[1]}</h3>
-                        <div className={`${styles.graduate_bio} subheading bold text-med`}>{graduate.bio}extra words because i need this to take up more space lol words because i  need this to  lol words</div>
+                        <h3 className={`${styles.graduate_major} regular text-reg`}>{graduate.major[0]}<br/> {graduate.major[1]}</h3>
+                        <div className={`${styles.graduate_bio} subheading bold text-med`}>{graduate.shortBio}</div>
                     </div>
 
                     <div className={styles.graduate_details}>
-                        <div className={styles.graduate_description}>after a short career in mechanical engineering I came to the realisation that what I truly loved about physics was the beauty of fluid, dynamic motion. It’s part of the reason I’ve been obsessed with birds all my life, and the reason I finally decided to follow my passion for animating. Having studied motion graphics, 3D animation and even dabbled in stop-motion, my particular passion is still based in 2D hand drawn animation. I love the creative freedom and insanity of using unrealistic lines, gestural shapes and tactile mediums to elicit authentic emotional responses. My dream going forward is to learn from and work with other animators and creators to tell wild and passionate stories of small things. My favourite projects are those where art, music and science meet, and people of multiple disciplines come together more  lines, gestural shapes and tactile mediums to elicit.lines, gestural shapes and tactile mediums </div>
+                        <div className={styles.graduate_description}>{graduate.longBio}</div>
                         <div className={styles.graduate_links}>
                             <div className={styles.socialLinks}>
                                 <Socials key={graduate._id} data={graduate}/>
