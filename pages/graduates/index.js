@@ -26,6 +26,8 @@ export default function Graduates({ graduates }) {
   const [selectedGraduate, setSelectedGraduate] = useState(null);
   const [clicked, setClicked] = useState(false);
   const [listView, setListView] = useState(false)
+  const [alpSelects, setAlpSelects] = useState('Random')
+  const [filtered, setFiltered] = useState([])
 
   function openGradFolder(graduate) {
     setSelectedGraduate(graduate);
@@ -36,6 +38,23 @@ export default function Graduates({ graduates }) {
     setSelectedGraduate(null);
     setClicked(false);
   }
+
+  useEffect(() => {
+    if (selectedMajor === 'All Graduates') {
+      // console.log('working')
+      setFiltered(graduates);
+      return;
+    }
+    const filtered = graduates.filter((graduate) => 
+      graduate.major.includes(selectedMajor)
+    )
+    setFiltered(filtered)
+  }, [selectedMajor])
+
+  console.log(filtered)
+
+  // console.log(alpSelects)
+  // console.log(selectedMajor)
 
   // console.log(graduates);
 
@@ -54,10 +73,18 @@ export default function Graduates({ graduates }) {
           <h1 className='heading text-4xl black'>{selectedMajor}</h1>
         </div>
 
-        <select onChange={(e) => { setSelectedMajor(e.target.value) }} name="majors" id="majors">
+        <select onChange={(e) => { setSelectedMajor(e.target.value) }} name="majors" id="majors"
+        className={`
+          ${selectedMajor === 'All Graduates' ? `${styles.allGraduates}` : "" }
+          ${selectedMajor === 'Digital Experience and Interaction Design' ? `${styles.digexGraduates}` : "" }
+          ${selectedMajor === 'Animation and Game Design' ? `${styles.agdGraduates}` : "" }
+          ${selectedMajor === 'Graphic Design' ? `${styles.grfxGraduates}` : "" }
+        `}
+        >
+          
           <option value="All Graduates">All Graduates</option>
-          <option value="Digital Experience & Interaction Design">DIGEX</option>
-          <option value="Animation & Game Design">AGD</option>
+          <option value="Digital Experience and Interaction Design">DIGEX</option>
+          <option value="Animation and Game Design">AGD</option>
           <option value="Graphic Design">GRFX</option>
         </select>
       </section>
@@ -73,16 +100,16 @@ export default function Graduates({ graduates }) {
           <div className={styles.filters}>
             <input type='text' label='search' name='search' placeholder='Search Graduates...' />
 
-            <select name="majors" id="majors">
+            <select name="alphabet" id="alphabet" value={alpSelects} onChange={e=>setAlpSelects(e.target.value)}>
               <option value="random">Random</option>
               <option value="a-z">Alphabetical (A-Z)</option>
               <option value="z-a">Alphabetical (Z-A)</option>
             </select>
 
-            <select name="majors" id="majors">
+            <select name="majors" id="majors" value={selectedMajor} onChange={e=>setSelectedMajor(e.target.value)}>
               <option value="All Graduates">All Graduates</option>
-              <option value="Digital Experience & Interaction Design">DIGEX</option>
-              <option value="Animation & Game Design">AGD</option>
+              <option value="Digital Experience and Interaction Design">DIGEX</option>
+              <option value="Animation and Game Design">AGD</option>
               <option value="Graphic Design">GRFX</option>
             </select>
           </div>
@@ -112,7 +139,8 @@ export default function Graduates({ graduates }) {
         <div className={clicked ? `${styles.sidebarOn}` : `${styles.sidebarOff}`}>
 
           <div className={listView ? `${styles.graduate_list}` : `${styles.graduate_grid}`}>
-            {graduates.map((graduate) => (
+            
+            {filtered.map((graduate) => (
                 <div key={graduate._id}>
                   <GraduateCard handleClick={() => {
                     if (selectedGraduate?._id !== graduate._id) {
@@ -134,7 +162,8 @@ export default function Graduates({ graduates }) {
 
 export async function getStaticProps() {
   const res = await fetch('https://gradshow-backend-production.up.railway.app/students')
-  const graduates = await res.json()
+  const data = await res.json()
+  const graduates = data
 
   return {
     props: {
