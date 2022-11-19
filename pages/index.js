@@ -91,6 +91,31 @@ export default function Home() {
         </div>
       </section>
       
+      <div className={styles.card_holder}>
+        <div className={styles.card}>
+          <hr/>
+          <h1>ANIMATION</h1>
+          <h1>& GAME</h1>
+          <h1>DESIGN</h1>
+
+          <h2></h2>
+          <p></p>
+          <a>[see more]</a>
+        </div>
+
+        <div className={styles.card_footer}>
+
+          <div className={styles.number}>
+            <div className={styles.count}>
+              <hr/><p>count</p>
+            </div>
+            <h1>29</h1>
+          </div>
+
+          <div className={styles.badge}></div>
+          
+        </div>
+      </div>
 
 
       {/* SHOWREELS */}
