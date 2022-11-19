@@ -46,20 +46,21 @@
   font-family: 'Space Mono';
   font-style: normal;
   font-weight: 400;
-  font-size: clamp(.7rem, -0.875rem + 1.5vw, 2.5rem);
+  font-size: clamp(.7rem, -0.875rem + 1.25vw, 2.5rem);
   line-height: 1.4em;
   color: #FFFBF4;
 }
-.glare{
+
+/* .glare{
   position: absolute;
   width: 10%;
   height: 15%;
   left: 45%;
   top: 460px;
-
   background: rgba(255, 240, 185, 0.42);
   filter: blur(48px);
-}
+} */
+
 .markers{
   margin: auto;
   width: 80%;
@@ -115,64 +116,122 @@
 
 /* APROVED ------------------------------------------------------------ */
 .approved{
-
-  width: 100vw;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding-bottom: 15%;
-  padding-top: 15%;
+  flex-direction: row;
+  gap: 5em;
+  padding: 20em 5em;
 }
+
 .approved p{
   font-size: clamp(1rem, -0.875rem + 1vw, 2.5rem);
   text-decoration: underline;
   position: relative;
-  margin-left: 43%;
-}
-.approved_image{
-  background: url('../public/assets/images/Home/approved.png');
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center;
+  text-align: right;
 }
 
+.aboutInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 3.5em;
+}
+
+
+@media (max-width:1200px){
+  .approved{
+    gap: 2em;
+  }
+}
+
+@media (max-width:950px){
+  .approved{
+    flex-direction: column-reverse;
+    gap: 5em;
+    padding: 10em 2em;
+  }
+}
+
+
+@media (max-width:450px){
+  .mapDiagram{
+    display: none;
+  }
+}
+
+
 /* INTO OUR SPACE */
+
 .section_heading{
-  padding: 0% 10% 0% 17vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5em; 
 }
+
 .elements{
-  height: auto;
+  text-align: left;
 }
+
 .elements h2{
-  line-height: 100%;
   position: relative;
+  word-wrap: break-word;
   top: 35px;
   font-family: 'Space Mono';
   font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
   letter-spacing: 0.135em;
-  color: #606C37;
+  color: var(--main-green);
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-bottom: 2em;
+
 }
 .elements h1{
-  line-height: 90%;
   word-wrap: break-word;
   font-family: 'Avenir';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 100px;
-  font-size: clamp(4.5rem, 30px, 5.5rem);
   /* identical to box height */
-  
-  letter-spacing: -0.05em;
-  
-  color: #606C37;
+  color: var(--main-green);
+  line-height: 1em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
+
+@media (max-width: 1000px){
+  .elements h2{
+    font-size: 1.4rem;
+  }
+  .elements h1{
+    font-size: 5em
+  }
+}
+
+@media (max-width: 730px){
+  .elements h2{
+    font-size: 1rem;
+  }
+  .elements h1{
+    font-size: 3em
+  }
+}
+
+@media (max-width: 430px){
+  .section_heading{
+    margin-inline: .5em; 
+  }
+
+  .elements h2{
+    font-size: .9rem;
+    margin-bottom: 2.5em;
+  }
+
+  .elements h1{
+    font-size: 2.5em;
+  }
+}
+
+
+
 .card_holder{
   width: 100%;
   display: flex;
@@ -235,46 +294,10 @@
 
 }
 
-.major_circle {
-  width: 270px;
-  height: 270px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 400px;
-  position: relative;
-  z-index: 1;
-}
-
-.major_circle::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  border: 1.5px solid var(--off-black);
-  background-color: var(--off-white);
-
-  border-radius: 400px;
-  z-index: -1;
-}
-
-.major_circle::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 400px;
-  background: var(--digex-gradient);
-  left: -15px;
-  bottom: -15px;
-  z-index: -1;
-}
 
 /* SOCIALS ------------------------------------------------------------ */
 .socials {
-  padding: 8em 4em;
+  padding: 5em 4em;
 }
 
 .socials h5 {
@@ -287,4 +310,18 @@
   margin-top: 2em;
 }
 
+
+.creditsContainer {
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  padding-block: 5em;
+  padding-inline: 3em;
+}
+
+.creditsContainer p {
+  margin: 0 auto;
+  max-width: 650px;
+  color: var(--dark-green);
+}
 
