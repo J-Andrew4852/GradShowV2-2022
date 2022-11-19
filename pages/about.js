@@ -45,7 +45,7 @@ export default function About() {
 
           <div className={`${styles.aboutTitle} color-green`}>
             <h2 className={`regular text-xl`}>THE MISSION</h2>
-            <h1 className={`bold text-7xl`}>MAKING HISTORY</h1>
+            <h1 className={`black text-7xl`}>MAKING HISTORY</h1>
             <span className={`regular text-9xl`}>01</span>
           </div>
 
@@ -63,7 +63,7 @@ export default function About() {
 
         <div className={`${styles.aboutTitle} color-green`}>
             <h2 className={`regular text-xl`}>WHAT MAKES US</h2>
-            <h1 className={`bold text-7xl`}>WHO WE ARE</h1>
+            <h1 className={`black text-7xl`}>WHO WE ARE</h1>
             <span className={`regular text-9xl`}>02</span>
         </div>
 
@@ -102,7 +102,7 @@ export default function About() {
       <section className={styles.frontline}>
         <div className={`${styles.aboutTitle} color-green`}>
             <h2 className={`regular text-xl`}>THE CREW</h2>
-            <h1 className={`bold text-7xl`}>ON THE FRONT<p/>LINES</h1>
+            <h1 className={`black text-7xl`}>ON THE FRONT<p/>LINES</h1>
             <span className={`regular text-9xl`}>03</span>
         </div>
 
@@ -290,7 +290,7 @@ export default function About() {
         
           <div className={`${styles.aboutTitle} color-green`}>
             <h2 className={`regular text-xl`}>THE CREW</h2>
-            <h1 className={`bold text-7xl`}>BEHIND THE SCREENS</h1>
+            <h1 className={`black text-7xl`}>BEHIND THE SCREENS</h1>
             <span className={`regular text-9xl`}>04</span>
           </div>  
           

@@ -8,6 +8,8 @@ import animationShowreel from '../public/assets/images/Showreel1.png'
 import AGD from '../public/assets/images/Home/AGD-CARD.png'
 import DD from '../public/assets/images/Home/DIGEX-CARD.png'
 import GD from '../public/assets/images/Home/GRAPHIC-DESIGN-CARD.png'
+import Map from '../public/assets/images/Home/mapDiagram.svg'
+import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
@@ -64,22 +66,27 @@ export default function Home() {
   
       {/* APPROVED IMAGE */}
       <div className={styles.approved}>
-        <div className={styles.approved_image}></div>
-        <p>More mission details &nbsp;&nbsp;→</p>
+          <div className={styles.mapDiagram}>
+            <Image src={Map} alt="Map Diagram"/>
+          </div>
+          <div className={styles.aboutInfo}>
+            <Image src={aboutDetails} alt="About details"/>
+            <p>More mission details &nbsp;&nbsp;→</p>
+          </div>
       </div>
 
       {/* A GLIMPSE INTO OUR SPACE */}
       <section className={styles.into_our_space}>
         <div className={styles.section_heading}>
             <div className={styles.elements}>
-              <h2>A GLIMPSE</h2>
-              <h1>INTO OUR SPACE</h1>
+              <h2 className={`regular text-xl`}>A GLIMPSE</h2>
+              <h1 className={`black text-7xl`}>INTO OUR SPACE</h1>
           </div>
         </div>
 
         <div className={styles.card_holder}>
           <a href="">
-            <Image src={AGD} alt="Animation and Game Design Card" />
+            <Image src={AGD} alt="Animation and Game Design Card"/>
           </a>
           <a href="">
             <Image src={DD} alt="Digital Design Card" />
@@ -114,8 +121,8 @@ export default function Home() {
       <section className={styles.socials}>
         <div className={styles.section_heading}>
             <div className={styles.elements}>
-              <h2>GAZE THROUGH OUR INSTAGRAM</h2>
-              <h1>@designatcurtin</h1>
+              <h2 className={`regular text-xl`}>GAZE THROUGH OUR INSTAGRAM</h2>
+              <h1 className={`black text-7xl`}>@designatcurtin</h1>
           </div>
         </div>
 
@@ -127,11 +134,11 @@ export default function Home() {
         </div>
       </section>
 
-      <div className={styles.creditsContainer}>
-            <div className={`${styles.creditsSubContainer} ${styles.acknowledgements}`}></div>
+      <div className={styles.creditsContainer}> 
+          <p className={`text-reg body-copy`}>We would like to acknowledge the Whadjuk Noongar people whose land we are standing on and recognise the strength, resilience and capacity of the Noongar people where Curtin University is situated</p> 
       </div>
 
-      <p className={styles.acknowledgement}>We would like to acknowledge the Whadjuk Noongar people whose land we are standing on and recognise the strength, resilience and capacity of the Noongar people where Curtin University is situated</p>
+
 
     </div>
   )
