@@ -43,7 +43,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
             <div className={styles.placeholder_headshot}></div>
             <div className={styles.student_details}>
               <h2 className="font-med2 bold subheading">{data.preferredName} {data.lastName}</h2>
-              <h3 className={`text-xs regular ${styles.reset_font}`}>{data.major[0]} {data.major[1]}</h3>
+              <h3 className={`text-xs regular ${styles.reset_font}`}>{data.major[0]}<br/> {data.major[1]}</h3>
             </div>
           </div>
       </a>
@@ -65,7 +65,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
             <div className={styles.placeholder_headshot}></div>
             <div className={styles.student_details}>
               <h2 className="font-med2 bold subheading">{data.preferredName} {data.lastName}</h2>
-              <h3 className={`text-xs regular ${styles.reset_font}`}>{data.major[0]} {data.major[1]}</h3>
+              <h3 className={`text-xs regular ${styles.reset_font}`}>{data.major[0]}<br/>  {data.major[1]}</h3>
             </div>
           </div>
 
@@ -83,7 +83,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
             <OutlineBtn external height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
           </a> */}
 
-<OutlineBtn linkers text='view' linkTo={`/graduates/${data._id}`} height="thin" major={data.major[0].toLowerCase()} external/>
+          <OutlineBtn linkers text='view' linkTo={`/graduates/${data._id}`} height="thin" major={data.major[0].toLowerCase()} external/>
         </footer>
       </article>
   )

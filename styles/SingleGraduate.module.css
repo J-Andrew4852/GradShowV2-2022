@@ -20,6 +20,7 @@
 .graduate_photo {
     grid-area: 1 / 1 / -1 / 2 ;
     position: relative;
+    min-height: 500px;
 }
 
 .graduate_photo_small {
@@ -33,7 +34,7 @@
 
 .graduate_major_patch {
     grid-row: span 2;
-    width: 90px;
+    width: 100px;
     margin-right: 2em;
 }
 
@@ -47,7 +48,6 @@
 
 .graduate_bio {
     grid-area: 3 / 1 / 4 / -1 ;
-    /* margin: 20px 0 50px 0; */
     margin: 2em 0 3em 0 ;
 }
 
@@ -88,7 +88,8 @@
 .graduateImageGrid {
     height: auto;
     width: 100%;
-    padding: 10vh 8vw 10vh 8vw;
+    padding: 50px 100px 0 100px;
+    margin-bottom: 100px;
 }
 
 .graduateImages {
@@ -117,6 +118,11 @@
         grid-template-rows: 350px repeat(2, max-content);
         row-gap: 50px;
         padding: 20px 50px 0 50px ;
+        margin-bottom: 50px;
+    }
+
+    .graduateImageGrid {
+        padding: 20px 50px 0 50px ;
     }
 
     .graduate_photo { display: none; }
@@ -128,7 +134,7 @@
     }
 
     .graduate_photo_small img {
-        object-position: top;
+        object-position: 0 20%;
     }
 
     .graduate_title {

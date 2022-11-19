@@ -37,6 +37,8 @@ export default function Graduates({ graduates }) {
     setClicked(false);
   }
 
+  // console.log(graduates);
+
   return (
     <div className={styles.container}>
       <Head>
