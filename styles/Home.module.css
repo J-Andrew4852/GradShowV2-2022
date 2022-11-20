@@ -518,6 +518,11 @@
 
 
 /* SHOWREELS ------------------------------------------------------------ */
+.showreel_videos{
+    width: 57vw;
+    height: 57vh;
+    margin: auto;
+}
 .showreels {
   /* padding: 20% 0% 20% 0%; */
   padding-inline: 4em;
@@ -529,8 +534,6 @@
 }
 
 .showreels_subcontainer {
-  border: solid red 3px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
