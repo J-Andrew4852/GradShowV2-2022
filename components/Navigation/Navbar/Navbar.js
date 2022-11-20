@@ -26,8 +26,23 @@ Description:
 
 export const Navbar = () => {
   const router = useRouter();
-  const [hamburgerState, setHamburgerState] = useState(false)
+  // const [hamburgerState, setHamburgerState] = useState(false)
+  const [ clicked, setClicked ] = useState('false');
 
+  const handleClick = () => {
+      // const menu =  document.querySelector(".mobile_nav_options");
+      // const hamburger = document.querySelector(".hamburger_container");
+
+      clicked ? setClicked('hidden') : setClicked ('');
+
+  //     if(menu.classList.contains("hidden")) {
+  //         mobile_nav_options.style.display ="none" ;
+  //     } else {
+  //         mobile_nav_options.style.display ="block" ;
+  //     }
+  }
+
+  
   return (
     <nav className={styles.container}>
       <div className={`text-med ${styles.nav_elements}`}>   
@@ -37,9 +52,21 @@ export const Navbar = () => {
           {/* </a> */}
         </Link>
         
-        <Hamburger/>
+        <Hamburger onClick={ handleClick } />
 
         <div className={styles.nav_options}>
+          <Link href={'/'}>
+            <a className={router.pathname === '/' ? `link active` : `link`}>Home</a>
+          </Link>
+          <Link href={'/about'}>
+            <a className={router.pathname.startsWith('/about') ? `link active` : `link`}>About</a>
+          </Link>
+          <Link href={'/graduates'}>
+            <a className={router.pathname.startsWith('/graduates') ? `link active` : `link`}>Graduates</a>
+          </Link>
+        </div>
+
+        <div className={styles.mobile_nav_options}>
           <Link href={'/'}>
             <a className={router.pathname === '/' ? `link active` : `link`}>Home</a>
           </Link>

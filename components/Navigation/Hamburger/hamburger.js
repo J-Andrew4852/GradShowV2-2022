@@ -1,5 +1,5 @@
 // IMPORTS ============================================================================== // 
-
+import { useState } from 'react';
 // COMPONENT IMPORTS ==================================================================== // 
 
 // STYLES =============================================================================== // 
@@ -16,8 +16,10 @@ export const Hamburger = () => {
     
     return (
     <div className={styles.container}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className={styles.hamburger_container}>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
   )}

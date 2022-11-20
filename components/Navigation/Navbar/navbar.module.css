@@ -32,7 +32,7 @@
     gap: 60px;
 }
 
-.hamburger {
+.hidden {
     display: none;
 }
 
@@ -48,6 +48,7 @@
     .nav_options {
         display: none;
     }
+    
     .mobile_nav_options {
         display: flex;
         position: fixed;
