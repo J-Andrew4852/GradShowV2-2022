@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 // COMPONENT IMPORTS ==================================================================== // 
 import { GraduateCard } from '../../components/GraduateCard/GraduateCard'
 import { GradFolder } from '../../components/sideFolder/SideFolder'
-import { motion, AnimatePresence } from 'framer-motion'
 
 // STYLES =============================================================================== // 
 import styles from '../../styles/Graduates.module.css'
@@ -139,30 +138,19 @@ export default function Graduates({ graduates }) {
       <section className={styles.gradsSection}>
         <div className={clicked ? `${styles.sidebarOn}` : `${styles.sidebarOff}`}>
 
-          <motion.div
-
-          layout
-          className={listView ? `${styles.graduate_list}` : `${styles.graduate_grid}`}>
+          <div className={listView ? `${styles.graduate_list}` : `${styles.graduate_grid}`}>
             
-            <AnimatePresence>
             {filtered.map((graduate) => (
-                <motion.div
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                layout
-                key={graduate._id}>
+                <div key={graduate._id}>
                   <GraduateCard handleClick={() => {
                     if (selectedGraduate?._id !== graduate._id) {
                     openGradFolder(graduate);
                   } else {
                     closeGradFolder();
                   }}} key={graduate._id} data={graduate} list={listView}/>
-                </motion.div>
+                </div>
               ))}
-            </AnimatePresence>
-          </motion.div>
+          </div>
 
         {selectedGraduate && <GradFolder data={selectedGraduate} onClose={closeGradFolder} />}
         </div>

@@ -15,6 +15,7 @@ import { Socials } from '../../components/Socials/Socials'
 // STYLES =============================================================================== // 
 import styles from '../../styles/SingleGraduate.module.css'
 import { useEffect, useState } from 'react'
+import App from 'next/app'
 
 // OVERVIEW ============================================================================= // 
 /* 
@@ -49,11 +50,13 @@ export default function GraduatemDetail({ graduate, data }) {
     // }, []);
 
     // const fetchHeadshot = async () => {
-    //     const data = await fetch(`https://gradshow-backend-production.up.railway.app/public/images/${graduate.headshotURL}`);
-    //     const headshotLink = await data.json();
-    //     setHeadshot(headshot.results)
-    //     console.log(headshotLink)
+    //     const data = await fetch(`https://gradshow-backend-production.up.railway.app`);
+    //     const apiBase = await data.json();
+    //     setHeadshot(apiBase)
+    //     console.log(apiBase)
     // }
+
+    // console.log(`${App.apiBase}/public/images/${graduate.headshotURL}.jpg`)
 
     return (
         <div className={styles.graduatePageContainer}>
