@@ -24,6 +24,7 @@ import { IGFeed } from '../components/IGFeed/IGFeed'
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
 import react from 'react'
+import VideoCarousel from '../components/VideoCarousel/VideoCarousel'
 
 // OVERVIEW ============================================================================= // 
 
@@ -184,15 +185,16 @@ export default function Home() {
         <div className={styles.showreels_subcontainer}>
           <div className={styles.showreels_sidebar}>
             <div className={styles.showreel_buttons}>
-              <button className={styles.section2_button}>Button</button>
-              <button className={styles.section2_button}>Button</button>
-              <button className={styles.section2_button}>Button</button>
+            <OutlineBtn major= "grfx" text="GRFX"/>
+            <OutlineBtn major= "agd" text="AGD"/>
+            <OutlineBtn major= "digex" text="DIGEX"/>
             </div>
           </div>
 
           <div className={styles.showreel_videos}>
             <Image src={animationShowreel} alt="Showreel for Animation Major" />
           </div>
+          <VideoCarousel/>
         </div>
       </section>
 

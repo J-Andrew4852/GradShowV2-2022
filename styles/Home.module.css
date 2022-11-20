@@ -529,6 +529,8 @@
 }
 
 .showreels_subcontainer {
+  border: solid red 3px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -544,8 +546,12 @@
 }
 
 .showreel_buttons {
+  width: 80%;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5em
 }
 
 .coordinator_text {
