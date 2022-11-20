@@ -98,9 +98,9 @@ export default function GraduatemDetail({ graduate, data }) {
     return abMajor
     });
 
-    if ( abMajor[0] = 'DIGEX' ) {
+    if ( abMajor[0] === 'DIGEX' ) {
         var gradPatch = digexGradPatch
-    } else if ( abMajor[0] = 'AGD' ) {
+    } else if ( abMajor[0] === 'AGD' ) {
         var gradPatch = agdGradPatch
     } else {
         var gradPatch = grfxGradPatch
