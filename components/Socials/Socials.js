@@ -85,13 +85,13 @@ socials.forEach((item) => {
     return sauce
 });
   
-  console.log(sauce)
+  // console.log(sauce)
 
   sauce.map((icon) => {
     var name = icon[0]
-    console.log("name   " + name)
+    // console.log("name   " + name)
     var linkTo = icon.input
-    console.log(linkTo)
+    // console.log(linkTo)
     function sockLoader( name, linkTo ) {
       if (name == 'artstation') { console.log('yee'); return  <Artstation href={linkTo} /> }
       else if (name == 'behance') { console.log('yee'); return <Behance href={linkTo} /> }
@@ -106,7 +106,7 @@ socials.forEach((item) => {
       else { console.log('naahhhhh'); return <Other href={linkTo} /> }
     }
     var sockComp = sockLoader( name, linkTo )
-    console.log(sockComp)
+    // console.log(sockComp)
     return (
      <div className={styles.container}>
         <div>

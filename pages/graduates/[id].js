@@ -58,6 +58,8 @@ export default function GraduatemDetail({ graduate, data }) {
 
     // console.log(`${App.apiBase}/public/images/${graduate.headshotURL}.jpg`)
 
+    // console.log(headshots)
+
     return (
         <div className={styles.graduatePageContainer}>
             <Head>
@@ -124,15 +126,15 @@ export async function getStaticPaths() {
     const res = await fetch('https://gradshow-backend-production.up.railway.app/students')
     const graduates = await res.json()
 
+
     const paths = graduates.map((graduate) => ({
         params: { id: graduate._id.toString() },
     }))
     return { paths, fallback: false }
 }
 
-
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://gradshow-backend-production.up.railway.app/students/${params.id}`)
+    var res = await fetch(`https://gradshow-backend-production.up.railway.app/students/${params.id}`)
     const graduate = await res.json()
     return { props: { graduate } }
 }
