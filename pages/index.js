@@ -59,8 +59,8 @@ export default function Home() {
           <div className={styles.title_blurred} />
           
             <div className={styles.markers}>
-                  <div className={styles.marker}><div className={`${styles.arrow} ${styles.arrow_left}`} /></div>
-                  <div className={styles.marker}><div className={`${styles.arrow} ${styles.arrow_right}`} /></div>
+                  <div className={styles.marker}></div>
+                  <div className={styles.marker}></div>
             </div>    
         </div>
       </section>
