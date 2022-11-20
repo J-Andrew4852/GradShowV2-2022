@@ -41,7 +41,7 @@ TODO:
 
 
 
-export default function GraduatemDetail({ graduate, data }) {
+export default function GraduatemDetail({ graduate, data }) { 
 
     // const [headshot, setHeadshot] = useState()
 
@@ -91,7 +91,7 @@ export default function GraduatemDetail({ graduate, data }) {
                         <div className={styles.graduate_description}>{graduate.longBio}</div>
                         <div className={styles.graduate_links}>
                             <div className={styles.socialLinks}>
-                                <Socials key={graduate._id} data={graduate}/>
+                                <Socials key={graduate._id} data={graduate} />
                             </div>
                             { /* UPDATE BUTTON WITH MAJOR INFORMATION AND LINK TO PORTFOLIO SITE */}
                             <div className={styles.portfolio_link}>

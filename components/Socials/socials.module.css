@@ -1,0 +1,8 @@
+.socialIcons {
+    margin: 0 auto 0 auto;
+}
+.iContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 2em 0 2em;
+}
