@@ -3,17 +3,13 @@
     margin: 0 auto;
 }
 
-.arrow {
-    margin-top: 50px;
-    margin-left: 47px;
-}
-
 .graduate_content {
     display: grid;
     grid-template-columns: 37.5% 57.5%;
     grid-template-rows: max-content 1fr;
     column-gap: 5%;
     padding: 0 100px 0 100px ;
+    margin: 100px 0 50px 0;
     color: var(--off-black);
 }
 

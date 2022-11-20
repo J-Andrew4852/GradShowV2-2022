@@ -157,7 +157,7 @@ a {
   position: absolute;
   width: 0%;
   height: 1px;
-  bottom: 0px;
+  bottom: -5px;
   left: 0;
   background-color: var(--dark-green);
   transition: width 0.4s ease;
@@ -168,7 +168,7 @@ a {
   position: absolute;
   width: 100%;
   height: 1px;
-  bottom: 0px;
+  bottom: -5px;
   left: 0;
   background-color: var(--dark-green);
   transition: width 0.4s ease;
@@ -185,7 +185,7 @@ a {
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: 0px;
+  bottom: -5px;
   left: 0;
   background-color: var(--main-green);
 }

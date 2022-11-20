@@ -7,7 +7,6 @@ import { Sidebar, SidebarIcon, Star } from "../icons/Icons";
 // import { motion } from "framer-motion";
 
 // COMPONENT IMPORTS ==================================================================== // 
-import placeholder from './../../public/assets/images/sarah_phonemockup.png'
 
 // STYLES =============================================================================== // 
 import styles from './graduateCard.module.css'

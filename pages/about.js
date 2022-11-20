@@ -10,6 +10,8 @@ import space from '../public/assets/images/About/space.png'
 import team from '../public/assets/images/About/team.png'
 import crew from '../public/assets/images/About/crew.png'
 import supplies from '../public/assets/images/About/supplies.png'
+import creditgraphic from '../public/assets/images/About/credits_graphic.jpg'
+import creditimage from '../public/assets/images/About/credits_image.png'
 import { committeesData, acknowledgementsData } from '../Utils/creditsData'
 
 // COMPONENT IMPORTS ==================================================================== // 
@@ -331,6 +333,13 @@ export default function About() {
 
             <div></div>
 
+            {/* Behind the screens image */}
+            
+            <div className={styles.credit_positioning}>
+              <div className={styles.credit_image}>
+              <Image src={creditimage} layout={'fill'} objectFit={'contain'} alt="Graphic of an old computer with exhibition space written on the screen" />
+              </div>
+            </div>
               
           </div>
         </div>
