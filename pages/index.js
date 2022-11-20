@@ -194,7 +194,7 @@ export default function Home() {
           <div className={styles.showreel_videos}>
             <Image src={animationShowreel} alt="Showreel for Animation Major" />
           </div>
-          <VideoCarousel/>
+          {/* <VideoCarousel/> */}
         </div>
       </section>
 
