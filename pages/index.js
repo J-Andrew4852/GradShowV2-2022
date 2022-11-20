@@ -5,11 +5,11 @@ import Script from 'next/script'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import animationShowreel from '../public/assets/images/Showreel1.png'
-import AGDbg from '../public/assets/images/Home/CardComponents/AGDbg.png'
+import AGDbg from '../public/assets/images/Home/CardComponents/agdbg.jpg'
 import AGDbadge from '../public/assets/images/Badges/agd_patch.png'
-import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.png'
+import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.jpg'
 import GRFXbadge from '../public/assets/images/Badges/grfx_patch.png'
-import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.png'
+import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.jpg'
 import DIGEXbadge from '../public/assets/images/Badges/digex_patch.png'
 import Map from '../public/assets/images/Home/mapDiagram.svg'
 import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
@@ -78,6 +78,7 @@ export default function Home() {
           </div>
       </div>
 
+
       {/* A GLIMPSE INTO OUR SPACE */}
       <section className={styles.into_our_space}>
         <div className={styles.section_heading}>
@@ -90,90 +91,95 @@ export default function Home() {
 
       <div className={styles.cards_holder}>
 
+        {/* DIGEX CARD */}
         <div className={styles.card}>
-        <Image src={AGDbg} alt="Space" priority/>
-
+          <div className={styles.cardbg_container}>
+            <Image src={AGDbg} layout={'fill'} objectFit={'cover'} alt="Space" priority/>
+          </div>
           <div className={styles.card_content}>
-            <div className={styles.linetop}><hr/></div>
-            <h1>ANIMATION</h1>
-            <h1>& GAME</h1>
-            <h2 className={styles.morepadding}>DESIGN</h2>
-
-            <h3>agd_mission_2022</h3>
-            <p className={styles.agd_text}>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
-            <a href="">[see more]</a>
-          </div>
-
-          <div className={styles.card_footer}>
-
-          <div className={styles.number}>
-            <div className={styles.count}>
-              <hr/><span>count</span>
+            <header>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext} text-3xl`}>ANIMATION</p>
+              <p className={`${styles.card_largetext} text-3xl`}>& GAME</p>
+              <p className={`${styles.card_largetext} text-3xl`}>DESIGN</p>
+            </header>
+            <div className={styles.card_details}>
+              <p className={styles.card_subtitle}>agd_mission_2022</p>
+              <p className={`${styles.major_text} ${styles.major_agd}`}>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
+              <a href="">[see more]</a>
             </div>
-            <h1>29</h1>
+            <footer>
+              <div className={styles.number}>
+                <div className={styles.number_subtitle}>
+                  <hr/><span>count</span>
+                </div>
+                <p className={`${styles.card_largetext} text-5xl`}>29</p>
+              </div>
+              <div className={styles.card_badge}><Image src={AGDbadge} alt="AGD Badge" /></div>  
+            </footer>
           </div>
-        <div className={styles.card_badge}><Image  src={AGDbadge} alt="AGD Badge" /></div>   
-      </div>
-
         </div>
 
+        {/* DIGEX CARD */}
         <div className={styles.card}>
-        <Image src={DIGEXbg} alt="Space" priority/>
-
+          <div className={styles.cardbg_container}>
+            <Image src={DIGEXbg} layout={'fill'} objectFit={'cover'} alt="Space" priority/>
+          </div>
           <div className={styles.card_content}>
-            <div className={styles.linetop}><hr/></div>
-            <h2 className={styles.morepadding}>DIGITAL</h2>
-            <h1>DESIGN</h1>
-            <h2 className={styles.morepadding}></h2>
-            <h2 className={styles.morepadding}></h2>
-            <h3>digex_mission_2022</h3>
-            <p className={styles.digex_text}>Our Digex [digital experience and interaction design] mission is to deploy user-centred gadgets that ensure a smooth journey for all.</p>
-            <a href="">[see more]</a>
-          </div>
-          <div className={styles.card_footer}>
-          <div className={styles.number}>
-            <div className={styles.count}>
-              <hr/><span>count</span>
+            <header>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext} text-3xl`}>DIGITAL</p>
+              <p className={`${styles.card_largetext} text-3xl`}>DESIGN</p>
+              <p></p>
+            </header>
+            <div className={styles.card_details}>
+              <p className={styles.card_subtitle}>digex_mission_2022</p>
+              <p className={`${styles.major_text} ${styles.major_digex}`}>Our Digex [digital experience and interaction design] mission is to deploy user-centred gadgets that ensure a smooth journey for all.</p>
+              <a href="">[see more]</a>
             </div>
-            <h1>14</h1>
+            <footer>
+              <div className={styles.number}>
+                <div className={styles.number_subtitle}>
+                  <hr/><span>count</span>
+                </div>
+                <p className={`${styles.card_largetext} text-5xl`}>14</p>
+              </div>
+              <div className={styles.card_badge}><Image  src={DIGEXbadge} alt="DIGEX Badge" /></div>  
+            </footer>
           </div>
-          <div className={styles.card_badge}><Image  src={DIGEXbadge} alt="AGD Badge" /></div>  
         </div>
 
-        </div>
-
+        {/* GRFX CARD */}
         <div className={styles.card}>
-        <Image src={GRFXbg} alt="Space" priority />
-
+          <div className={styles.cardbg_container}>
+            <Image src={GRFXbg} layout={'fill'} objectFit={'cover'} alt="Space" priority/>
+          </div>
           <div className={styles.card_content}>
-            <div className={styles.linetop}><hr/></div>
-            <h2 className={styles.morepadding}>GRAPHIC</h2>
-            <h1>DESIGN</h1>
-            <h2 className={styles.morepadding}></h2>
-            <h2 className={styles.morepadding}></h2>
-            <h3>grfx_mission_2022</h3>
-            <p className={styles.grfx_text}>Our Grfx [graphic design] mission is to prepare design proposals that are out of this world.</p>
-            <a href="">[see more]</a>
-          </div>
-          
-          <div className={styles.card_footer}>
-
-          <div className={styles.number}>
-            <div className={styles.count}>
-              <hr/><span>count</span>
+            <header>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext} text-3xl`}>GRAPHIC</p>
+              <p className={`${styles.card_largetext} text-3xl`}>DESIGN</p>
+              <p></p>
+            </header>
+            <div className={styles.card_details}>
+              <p className={styles.card_subtitle}>grfx_mission_2022</p>
+              <p className={`${styles.major_text} ${styles.major_grfx}`}>Our Grfx [graphic design] mission is to prepare design proposals that are out of this world.</p>
+              <a href="">[see more]</a>
             </div>
-            <h1>43</h1>
+            <footer>
+              <div className={styles.number}>
+                <div className={styles.number_subtitle}>
+                  <hr/><span>count</span>
+                </div>
+                <p className={`${styles.card_largetext} text-5xl`}>43</p>
+              </div>
+              <div className={`${styles.card_badge} ${styles.grfx_badge}`}><Image src={GRFXbadge} alt="GRFX Badge" /></div>  
+            </footer>
           </div>
-
-          <div className={`${styles.card_badge} ${styles.grfx_badge} `}><Image src={GRFXbadge} alt="GRFX Badge" /></div>
         </div>
 
-        </div>
-
-        
       </div>
       
-
 
       {/* SHOWREELS */}
       <section className={styles.showreels}>

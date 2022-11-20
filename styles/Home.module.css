@@ -92,7 +92,6 @@
   background-repeat: no-repeat;
   height: 15px;
   width: 20px;
-
 }
 
 .arrow_left {
@@ -175,7 +174,7 @@
   justify-content: center;
   flex-direction: row;
 }
-
+/* 
 .card_footer {
   width: 80%;
   height: 100px;
@@ -186,16 +185,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-}
-
-.card_badge {
-  margin-top: 1em;
-  width: 5em;
-}
-
-.grfx_badge {
-  width: 6em;
-}
+} */
 
 
 /* APPROVED ------------------------------------------------------------ */
@@ -348,131 +338,188 @@
 
 
 /* MAJOR CARDS ----------------------------------------- */
-.card_holder{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .cards_holder{
+  margin: 0 auto;
+  max-width: var(--max-width);
   width: 100%;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 33.33%);
   justify-content: center;
 }
-.card{
+
+.card {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
   color: white;
   position: relative;
-  max-width: 480px;
-  min-width: 320px;
-  height: auto;
-}
-.card_content{
-  padding: 15% 15% 10% 10%;
+
   width: 100%;
+  height: auto;
+  max-height: 700px;
+}
+
+.card_content {
+  padding: 15% 10% 10% 10%;
+  height: 100%;
   z-index: 2;
   position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
-  align-items:flex-end;
-  justify-content: center;
   flex-direction: column;
-  text-align: left;
+  justify-content: space-between;
 }
-.card_content h1{
+
+.card_content a{
+  font-weight: 700;
+  font-size: .8em;
+}
+
+.card_largetext {
   text-shadow: 0 0 3px rgb(255, 255, 255);
-  padding-right: 10%;
   font-family: 'Avenir';
   font-style: normal;
   font-weight: 800;
-  font-size: 2.5em;
   color: #FFFBF4;
-  margin: 3%;
+  line-height: 1.1em;
 }
-.morepadding{
-  text-shadow: 0 0 3px rgb(255, 255, 255);
-  padding-right: 40%;
+
+.card header {
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card .linetop {
+  position: relative;
+  width: 75%;
+  align-self: flex-end;
+  margin-bottom: 0.7em;
+  
+  border-width: 0;
+  color: #FFFBF4;
+  border-style:solid;
+}
+
+.card header p:first-of-type {
+  align-self: flex-start;
+}
+
+.card header p {
+  width: 75%;
+  align-self: flex-end;
+}
+
+.card header p:last-of-type {
+  align-self: flex-start;
+}
+
+.card header p {
+  margin: 0;
+  padding: 0;
+}
+
+.card_details {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.card_details a {
+  align-self: flex-end;
+}
+
+.major_text {
+  padding-left: 5%;
+  line-height: 1.7em;
+  font-size: .8em;
+  width: 75%;
+  align-self: flex-end;
+}
+
+.major_text:before{
+  content: "";
+  display: block;
+  width: 4.5em;
+  height: 2px;
+  left: -35%;
+  top: .9em;
+  position: relative;
+}
+
+.major_digex:before {
+  content: "";
+  background: var(--digex-teal);
+}
+
+.major_grfx:before {
+  content: "";
+  background: var(--grfx-orange);
+}
+
+.major_agd:before {
+  content: "";
+  background: var(--agd-yellow);
+}
+
+.cardbg_container {
+  position: relative;
+  height: 650px;
+}
+
+.card footer {
+  align-self: flex-end;
+  margin: 0;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .number p {
   font-family: 'Avenir';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 2.5em;
-  color: #FFFBF4;
-  margin: 3%;
+  font-weight: 900;
+  letter-spacing: -5px;
+  padding: 0;
+  margin: 0;
 }
 
-.linetop{
-  width: 65%;
+.number_subtitle {
+  width: 100%;
+  gap: .3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.linetop hr{
+.number_subtitle hr {
+  width: 35px;
   border-width: .5px;
   color: #FFFBF4;
   border-style:solid;
 }
-.card_content h3{
-  margin: 0;
-  margin-top: 10%;
+
+.card_badge {
+  margin-top: 1em;
+  width: 5em;
+}
+
+.grfx_badge {
+  width: 6em;
+}
+
+.card_subtitle {
   font-family: 'Space Mono';
   font-style: normal;
   font-weight: 700;
   font-size: .8em;
   line-height: 103.6%;
-  padding-right: 30%;
-  color: #FFFFFF;
-}
-.card_content p{
-  line-height: 150%;
-  font-size: .9em;
-  width: 60%;
-  padding-right: 0%;
+  text-align: center;
 }
 
-.agd_text:before{
-  content: "";
-  display: block;
-  width: 4.5em;
-  height: 1.5px;
-  left: -40%;
-  top: .9em;
-  position: relative;
-  background: var(--agd-yellow);
-}
-.digex_text:before{
-  content: "";
-  display: block;
-  width: 4.5em;
-  height: 1.5px;
-  left: -40%;
-  top: .9em;
-  position: relative;
-  background: var(--digex-teal);
-}
-.grfx_text:before{
-  content: "";
-  display: block;
-  width: 4.5em;
-  height: 1.5px;
-  left: -40%;
-  top: .9em;
-  position: relative;
-  background: var(--grfx-orange);
-}
-.card_content a{
-  font-weight: 700;
-  font-size: .8em;
-}
-.cards_holder{
-  gap: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 
 @media (max-width:400px){
-  .card_content p{
+  /* .card_content p{
     font-size: .8em;
   }
 
@@ -493,11 +540,11 @@
 
   .card_badge{
     width: 4.5em;
-  }
+  } */
 }
 
 @media (max-width:365px){
-  .number span{
+  /* .number span{
     font-size: .6em;
   }
 
@@ -537,7 +584,7 @@
 
   .morepadding{
     padding-right: 30%;
-  }
+  } */
 }
 
 

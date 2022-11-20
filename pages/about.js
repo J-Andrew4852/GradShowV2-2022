@@ -337,7 +337,7 @@ export default function About() {
             
             <div className={styles.credit_positioning}>
               <div className={styles.credit_image}>
-              <Image src={creditimage} layout={'fill'} objectFit={'contain'} alt="Graphic of an old computer with exhibition space written on the screen" />
+                <Image src={creditimage} layout={'fill'} objectFit={'contain'} alt="Graphic of an old computer with exhibition space written on the screen" />
               </div>
             </div>
               
