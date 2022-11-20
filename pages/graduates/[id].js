@@ -71,9 +71,9 @@ export default function GraduatemDetail({ graduate, data }) {
                     <div className={styles.graduate_photoContainer}>
                         <img className={styles.graduate_photo} src={graduate.headshotURL} alt="Graduate Image" />
                     </div>
-                    <div className={styles.graduate_photo_small}>
+                    {/* <div className={styles.graduate_photo_small}>
                         <Image src={gradImage} alt="Graduate Image" layout={'fill'} objectFit="cover" width={167} height={250}/>
-                    </div>
+                    </div> */}
 
                     <div className={styles.graduate_title}>
                         <div className={styles.graduate_major_patch}>

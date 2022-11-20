@@ -104,7 +104,7 @@ majorz.forEach(() => {
         <header className={styles.header}>
           <div className={styles.header_subcontainer}>
             {/* <img className={styles.student_headshot} alt="Photograph of graduate" src="https://2022gradshow.s3.ap-southeast-1.amazonaws.com/Grad+Show+Website+Student+Information+Form+(File+responses)/Edited_Headshots_2022/alishba_tausif-DIGEX.jpg"/> */}
-            <img className={styles.student_headshot} alt="Photograph of graduate" src={data.headshotURL}/>
+            <img className={styles.student_headshot} alt="" src={data.headshotURL}/>
             <div className={styles.student_details}>
               <h2 className="font-med2 bold subheading">{data.preferredName} {data.lastName}</h2>
               <h3 className={`text-med regular ${styles.reset_font}`}>{abMajor[0]} {abMajor[1]}</h3>
