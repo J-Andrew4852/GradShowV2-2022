@@ -349,7 +349,6 @@
 
 .card {
   display: grid;
-  grid-template-rows: repeat(3, max-content);
   color: white;
   position: relative;
 
@@ -382,14 +381,18 @@
   line-height: 1.1em;
 }
 
-.card header {
+.card_desktop {
   padding-left: 5%;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.card .linetop {
+.card_mobile {
+  display: none;
+}
+
+.linetop {
   position: relative;
   width: 75%;
   align-self: flex-end;
@@ -415,7 +418,6 @@
 
 .card header p {
   margin: 0;
-  padding: 0;
 }
 
 .card_details {
@@ -469,7 +471,6 @@
 .card footer {
   align-self: flex-end;
   margin: 0;
-
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -478,8 +479,7 @@
 .card .number p {
   font-family: 'Avenir';
   font-weight: 900;
-  letter-spacing: -5px;
-  padding: 0;
+  letter-spacing: -2px;
   margin: 0;
 }
 
@@ -517,74 +517,80 @@
   text-align: center;
 }
 
-
-@media (max-width:400px){
-  /* .card_content p{
-    font-size: .8em;
+@media (max-width:1100px){
+  .card_largetext {
+    font-size: 2.5em;
   }
 
-  .number span{
-    font-size: .6em;
+  .major_text:before{
+    width: 3em;
+    left: -35%;
   }
-
-  .count hr{
-    width: 25px;
-  }
-  .number h1{
-    font-size: 3.3em;
-  }
-
-  .card_footer{
-    top: 78%;
-  }
-
-  .card_badge{
-    width: 4.5em;
-  } */
 }
 
-@media (max-width:365px){
-  /* .number span{
-    font-size: .6em;
+@media (max-width:1000px){
+
+  .cards_holder {
+    grid-template-columns: 1fr;
   }
 
-  .count hr{
-    width: 20px;
-  }
-
-  .number h1{
-    font-size: 3em;
-  }
-
-  .card_badge{
+  .card_desktop {
     display: none;
   }
 
-  .agd_text:before{
-    height: 1.5px;
-    left: -50%;
-  }
-  .digex_text:before{
-    height: 1.5px;
-    left: -50%;
-  }
-  .grfx_text:before{
-    height: 1.5px;
-    left: -50%;
+  .card_mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
-  .card_content h1{
-    text-align: center;
-    font-size: 2em;
+  .card header p {
+    width: 100%;
   }
 
-  .card_content h2{
-    font-size: 2em;
+  header .card_largetext{
+    font-size: 2.5em;
   }
 
-  .morepadding{
-    padding-right: 30%;
-  } */
+  .linetop {
+    width: 100%;
+  }
+
+  .card_content {
+    padding: 5% 10% 3% 10%;
+    height: 100%;
+    width: 100%;
+  }
+
+  .cardbg_container {
+    height: 450px;
+    width: 100vw;
+  }
+
+  .major_text:before{
+    width: 35%;
+    left: -43%;
+  }
+
+  footer .card_largetext {
+    font-size: 3em;
+  }
+
+  .number_subtitle hr {
+    width: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .cardbg_container {
+    height: 500px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cardbg_container {
+    height: 550px;
+  }
 }
 
 

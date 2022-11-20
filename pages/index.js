@@ -97,11 +97,15 @@ export default function Home() {
             <Image src={AGDbg} layout={'fill'} objectFit={'cover'} alt="Space" priority/>
           </div>
           <div className={styles.card_content}>
-            <header>
+            <header className={styles.card_desktop}>
               <div className={styles.linetop}><hr/></div>
               <p className={`${styles.card_largetext} text-3xl`}>ANIMATION</p>
               <p className={`${styles.card_largetext} text-3xl`}>& GAME</p>
               <p className={`${styles.card_largetext} text-3xl`}>DESIGN</p>
+            </header>
+            <header className={styles.card_mobile}>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext}`}>ANIMATION & GAME DESIGN</p>
             </header>
             <div className={styles.card_details}>
               <p className={styles.card_subtitle}>agd_mission_2022</p>
@@ -126,11 +130,15 @@ export default function Home() {
             <Image src={DIGEXbg} layout={'fill'} objectFit={'cover'} alt="Space" priority/>
           </div>
           <div className={styles.card_content}>
-            <header>
+            <header className={styles.card_desktop}>
               <div className={styles.linetop}><hr/></div>
               <p className={`${styles.card_largetext} text-3xl`}>DIGITAL</p>
               <p className={`${styles.card_largetext} text-3xl`}>DESIGN</p>
               <p></p>
+            </header>
+            <header className={styles.card_mobile}>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext}`}>DIGITAL DESIGN</p>
             </header>
             <div className={styles.card_details}>
               <p className={styles.card_subtitle}>digex_mission_2022</p>
@@ -155,11 +163,15 @@ export default function Home() {
             <Image src={GRFXbg} layout={'fill'} objectFit={'cover'} alt="Space" priority/>
           </div>
           <div className={styles.card_content}>
-            <header>
+            <header className={styles.card_desktop}>
               <div className={styles.linetop}><hr/></div>
               <p className={`${styles.card_largetext} text-3xl`}>GRAPHIC</p>
               <p className={`${styles.card_largetext} text-3xl`}>DESIGN</p>
               <p></p>
+            </header>
+            <header className={styles.card_mobile}>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext}`}>GRAPHIC DESIGN</p>
             </header>
             <div className={styles.card_details}>
               <p className={styles.card_subtitle}>grfx_mission_2022</p>
