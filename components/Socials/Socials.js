@@ -64,9 +64,9 @@ socials.forEach((item) => {
       sauce.push(item.match("youtube"))
     }
     else {
-        sauce.push(item.match("other"))
+        sauce.push(item.match("h"))
     }
-    return sauce
+    return;
 })
   
   // var name = icon[0]

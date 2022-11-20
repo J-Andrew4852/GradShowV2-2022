@@ -5,7 +5,9 @@ import Image from 'next/image'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import gradImage from '../../public/assets/images/graduate_image_placeholder.JPG'
-import gradPatch from '../../public/assets/images/Badges/digex_patch.png'
+import digexGradPatch from '../../public/assets/images/Badges/digex_patch.png'
+import agdGradPatch from '../../public/assets/images/Badges/agd_patch.png'
+import grfxGradPatch from '../../public/assets/images/Badges/grfx_patch.png'
 import { OutlineBtn } from "../../components/Buttons/Button";
 import { Arrow } from "../../components/icons/Icons";
 import { MasonryComp } from '../../components/Masonry/Masonry'
@@ -60,6 +62,50 @@ export default function GraduatemDetail({ graduate, data }) {
 
     // console.log(headshots)
 
+    var majorz = graduate.major
+    // console.log(majorz)
+    var abMajor = []
+
+    majorz.forEach(() => {
+    // console.log(majorz[0])
+    if (majorz[0].match("Graphic") !== null) {
+        abMajor.push("GRFX")
+    }
+    else if (majorz[0].match("Digital") !== null) {
+        abMajor.push("DIGEX")
+    }
+    else {
+        abMajor.push("AGD")
+    }
+    // console.log(abMajor)
+    if (majorz.length == 2) {
+        // console.log(majorz[1])
+        // console.log(abMajor)
+        if (majorz[1].match("Graphic") !== null) {
+        abMajor.push("GRFX")
+        }
+        else if (majorz[1].match("Digital") !== null) {
+        abMajor.push("DIGEX")
+        }
+        else {
+        abMajor.push("AGD")
+        }
+        abMajor.splice(2, 2);
+        // console.log(abMajor)
+        // return abMajor
+    }
+    // console.log(abMajor)
+    return abMajor
+    });
+
+    if ( abMajor[0] = 'DIGEX' ) {
+        var gradPatch = digexGradPatch
+    } else if ( abMajor[0] = 'AGD' ) {
+        var gradPatch = agdGradPatch
+    } else {
+        var gradPatch = grfxGradPatch
+    }
+
     return (
         <div className={styles.graduatePageContainer}>
             <Head>
@@ -77,7 +123,7 @@ export default function GraduatemDetail({ graduate, data }) {
 
                     <div className={styles.graduate_title}>
                         <div className={styles.graduate_major_patch}>
-                            <Image src={gradPatch} alt="Graduate Major Patch" layout="responsive" width={225} height={227}/>
+                            <Image src={gradPatch} alt="Graduate Major Patch" layout="responsive" width={225} height={227} priority/>
                         </div>
                         <h1 className={`${styles.graduate_name} heading bold text-2xl `} >{graduate.preferredName} {graduate.lastName}</h1>
                         <h3 className={`${styles.graduate_major} regular text-reg`}>{graduate.major[0]}<br/> {graduate.major[1]}</h3>

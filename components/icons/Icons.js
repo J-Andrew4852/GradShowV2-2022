@@ -109,7 +109,7 @@ export const SockLoader = ({ name, linkTo }) => {
   else if (name == 'linkedin') { return <Linkedin linkTo={linkTo} size={'50'} /> }
   else if (name == 'twitter') { return <Twitter linkTo={linkTo} size={'50'} /> }
   else if (name == 'youtube') { return <Youtube linkTo={linkTo} size={'50'} /> }
-  else { return <Other href={linkTo} size={'50'} /> } 
+  else { return <Other linkTo={linkTo} size={'50'} /> } 
 }
 
 export const Artstation = ({ linkTo, size }) => {

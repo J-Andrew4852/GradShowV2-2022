@@ -26,7 +26,6 @@ export default function Graduates({ graduates }) {
   const [selectedGraduate, setSelectedGraduate] = useState(null);
   const [clicked, setClicked] = useState(false);
   const [listView, setListView] = useState(false)
-  const [alpSelects, setAlpSelects] = useState('Random')
   const [filtered, setFiltered] = useState([])
   const [search, setSearch] =useState('')
 
