@@ -12,24 +12,42 @@
 }
 
 .container img{
-    width: 300px;
+    width: 350px;
 }
 
-@media (max-width: 1200px){
-    .container img{
-        width: 20vw;
+@media (max-width: 1200px) {
+    .container img {
+        width: 300px;
     }
 }
 
-@media (max-width: 480px){
+@media (max-width: 1000px){
+    .container img{
+        width: 250px;
+    }
+}
+
+@media (max-width: 850px){
+    .container img{
+        width: 200px;
+    }
+}
+
+@media (max-width: 700px){
+
+    .container div {
+        display: flex;
+        flex-direction: column;
+    }
 
     .container img{
-        width:15vw;
+        width: 100%;
         margin-right: 0;
     }
 
     .container div {
         margin-right: 0;
+        gap: 2em;
     }
 }
 
