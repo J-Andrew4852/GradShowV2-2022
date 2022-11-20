@@ -188,7 +188,7 @@ export default function Graduates({ graduates }) {
             
             {filtered.filter((graduate) => {
               const combinedName = graduate.preferredName + ' ' + graduate.lastName; 
-              console.log(combinedName)
+              // console.log(combinedName)
               return search.toLowerCase() === '' 
               ? graduate 
               : combinedName.toLowerCase().includes(search)

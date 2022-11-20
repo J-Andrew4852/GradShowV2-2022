@@ -131,7 +131,7 @@ majorz.forEach(() => {
             <OutlineBtn external height="thin" text='Portfolio' major={data.major[0].toLowerCase()} />
           </a> */}
 
-          <OutlineBtn linkers text='view' linkTo={`/graduates/${data._id}`} height="thin" major={data.major[0].toLowerCase()} external/>
+          <OutlineBtn linkers text='view' linkTo={`/graduates/${data._id}`} height="thin" abmajor={`${abMajor[0].toString()}`} external/> {console.log(abMajor[0])}
         </footer>
       </article>
   )

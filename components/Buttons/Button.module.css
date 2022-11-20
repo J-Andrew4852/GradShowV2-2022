@@ -15,15 +15,15 @@
     height: 35px;
 }
 
-.digex.gradientBox::after {
+.DIGEX.gradientBox::after {
     background: var(--digex-gradient);
 }
 
-.agd.gradientBox::after {
-    background: var(--agd-gradient);
+.AGD.gradientBox::after {
+    background: var(--agd-gradient); 
 }
 
-.grfx.gradientBox::after {
+.GRFX.gradientBox::after {
     background: var(--grfx-gradient);
 }
 
