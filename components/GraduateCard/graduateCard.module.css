@@ -114,15 +114,9 @@
     cursor: pointer;
 }
 
-.placeholder_headshot {
-    min-width: 50px;
+.student_headshot {
     width: 50px;
     height: 60px;
-    border: 1px solid grey;
-    /* REMOVE THE BORDER WHEN IMAGES ARE ADDED CORRECTLY */
-}
-
-.student_headshot {
     object-fit: cover;
     object-position: top;
 }

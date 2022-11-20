@@ -63,9 +63,18 @@
 
 
 /* GRADUATE PHOTO ===================================== */
-.graduate_photo {
+
+.graduate_photoContainer {
+    grid-column: 1 / 2 ;
     position: relative;
     height: 100%;
+    width: 100%;
+}
+
+.graduate_photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* GRADUATE DETAILS ===================================== */

@@ -13,10 +13,17 @@
     color: var(--off-black);
 }
 
-.graduate_photo {
+.graduate_photoContainer {
     grid-area: 1 / 1 / -1 / 2 ;
     position: relative;
-    min-height: 550px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.graduate_photoContainer img {
+    height: 100%;
 }
 
 .graduate_photo_small {
