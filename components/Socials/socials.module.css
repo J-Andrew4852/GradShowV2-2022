@@ -1,15 +1,12 @@
-.socialIcons {
-    margin: 0 auto 0 auto;
-}
 
 .socialIcons svg{
     width: 1.5em;
 }
 
 
-
 .iContainer {
     display: flex;
     flex-wrap: nowrap;
-    padding: 0 2em 0 2em;
+    justify-content: space-around;
+
 }

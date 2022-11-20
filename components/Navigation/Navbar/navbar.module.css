@@ -49,7 +49,7 @@
         display: none;
     }
     
-    .mobile_nav_options {
+    /* .mobile_nav_options {
         display: flex;
         position: fixed;
         background-color: var(--off-white);
@@ -66,7 +66,7 @@
 
     .mobile_nav_options.hidden {
         display: none;
-    }
+    } */
 }
 
 @media (max-width: 600px) {
