@@ -40,8 +40,8 @@ socials.forEach((item) => {
     else if (item.match("codepen") !== null) {
       sauce.push(item.match("codepen"))
     }
-    else if (item.match("dribble") !== null) {
-      sauce.push(item.match("dribble"))
+    else if (item.match("dribbble") !== null) {
+      sauce.push(item.match("dribbble"))
     }
     else if (item.match("facebook") !== null) {
       sauce.push(item.match("facebook"))
@@ -75,10 +75,9 @@ socials.forEach((item) => {
   // // console.log(linkTo)
   // var sockComp = sockLoader( name, linkTo )
   // // console.log(sockComp)
-  // console.log(sauce)
+  console.log(sauce)
 
-  const icons = sauce.map( (item, index) => {
-    console.log(item.input)
+  const icons = sauce.map( (item) => {
     return (
       <div className={styles.socialIcons}>
         <SockLoader name={item[0]} linkTo={item.input} size />

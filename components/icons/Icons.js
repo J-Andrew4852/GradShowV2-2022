@@ -102,7 +102,7 @@ export const SockLoader = ({ name, linkTo }) => {
   if (name == 'artstation') { return <Artstation linkTo={linkTo} size={'50'} /> }
   else if (name == 'behance') { return <Behance linkTo={linkTo} size={'50'} /> }
   else if (name == 'codepen') { return <Codepen linkTo={linkTo} size={'50'} /> }
-  else if (name == 'dribble') { return <Dribble linkTo={linkTo} size={'50'} /> }
+  else if (name == 'dribbble') { return <Dribbble linkTo={linkTo} size={'50'} /> }
   else if (name == 'facebook') { return <Facebook linkTo={linkTo} size={'50'} /> }
   else if (name == 'github') { return <Github linkTo={linkTo} size={'50'} /> }
   else if (name == 'instagram') { return <Instagram linkTo={linkTo} size={'50'} /> }
@@ -218,7 +218,7 @@ export const Codepen = ({ linkTo, size }) => {
     </a>
   )
 }
-export const Dribble = ({ linkTo, size }) => {
+export const Dribbble = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
