@@ -2,10 +2,12 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import Image from 'next/image'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import { SelectedDropdown } from '../SelectedDropdown/SelectedDropdown';
 import { Hamburger } from '../Hamburger/Hamburger';
+import logo from './../../../public/assets/images/nav-logo.svg';
 
 // STYLES =============================================================================== // 
 import styles from './navbar.module.css'
@@ -30,9 +32,9 @@ export const Navbar = () => {
     <nav className={styles.container}>
       <div className={`text-med ${styles.nav_elements}`}>   
         <Link href={'/'} className={styles.logo}>
-          <a>
-            Exhibiton Space
-          </a>
+          {/* <a> */}
+            <Image src={logo} alt="Exhibition Space logo"/>
+          {/* </a> */}
         </Link>
         
         <Hamburger/>
