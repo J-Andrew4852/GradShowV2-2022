@@ -351,7 +351,6 @@
   display: grid;
   color: white;
   position: relative;
-
   width: 100%;
   height: auto;
   max-height: 700px;
@@ -397,7 +396,6 @@
   width: 75%;
   align-self: flex-end;
   margin-bottom: 0.7em;
-  
   border-width: 0;
   color: #FFFBF4;
   border-style:solid;
@@ -531,7 +529,12 @@
 @media (max-width:1000px){
 
   .cards_holder {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: .05em;
+    width: 85%;
+    overflow: hidden;
+
   }
 
   .card_desktop {
@@ -579,6 +582,7 @@
   .number_subtitle hr {
     width: 20px;
   }
+
 }
 
 @media (max-width: 750px) {

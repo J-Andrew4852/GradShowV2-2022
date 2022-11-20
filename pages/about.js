@@ -183,8 +183,8 @@ export default function About() {
                 <li>Salma Jarrar</li>
                 <li>Logan Trundle</li>
                 <li>Cheyenne Toh</li>
-                <li>Alishba Tausif</li>
                 <li>Kate MacKenzie</li>
+                <li>Alishba Tausif</li>
                 <li>Nadifa Aziza</li>
                 <li>Melina Lim</li>
                 <li>Valentina Cendales</li>
@@ -198,8 +198,9 @@ export default function About() {
                 <li>Logan Trundle</li>
                 <li>Rachael Moriconi</li>
                 <li>James Kang</li>
-                <li>Jade Mitchell</li>
                 <li>Salma Jarrar</li>
+                <li>Jade Mitchell</li>
+                
                 
                 <p>Backend Developers</p>
                 <li>Anthony Robinson</li>
@@ -254,31 +255,32 @@ export default function About() {
                 <li>Macgregor Lawson</li>
                 <li>Campbell McCracken</li>
                 <li>Max Wright</li>
+                <li>James Green</li>
+                <li>Jeremy Ho</li>
+                <li>James Powell</li>
+                <li>Angelo B.N. Gregorio</li>
+                <li>Scarlett Coley</li>
                 <li>Xavier Goh</li>
                 <li>Rizky Hefriadi</li>
                 <li>Taylor Ingvarson</li>
-                <li>Jeremy Ho</li>
-                <li>James Powell</li>
                 <li>Zoey Tan</li>
                 <li>Ori Elek</li>
-                <li>James Green</li>
-                <li>Scarlett Coley</li>
                 <li>Rebecca Gibson</li>
-                <li>Angelo B.N. Gregorio</li>
                 <li>Todd Huckle</li>
                 <li>Steven White-Smith</li>
 
                 <p>Riggers</p>
-                <li>Campbell McCracken</li>
                 <li>Hayley Zeller</li>
-
-                <p>Sound Designers</p>
-                <li>Macgregor Lawson</li>
+                <li>Campbell McCracken</li>
 
                 <p>Texture Artists</p>
                 <li>Steven White-Smith</li>
                 <li>Melanie Tan</li>
                 <li>Hayley Zeller</li>
+                <li>Todd Huckle</li>
+
+                <p>Sound Designers</p>
+                <li>Macgregor Lawson</li>
               </ul>
             </div>
         </div>
@@ -304,8 +306,8 @@ export default function About() {
                 <p>Coordinators</p>
                 <li>Harriet Perryer - DigEx</li>
                 <li>Jonathan Pillai - AGD</li>
-                <li>Lee Ingram - GRFX</li>
                 <li>Dan Mckeating - GRFX</li>
+                <li>Lee Ingram - GRFX</li>
               </ul>
 
               <ul>

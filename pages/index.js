@@ -5,11 +5,11 @@ import Script from 'next/script'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import animationShowreel from '../public/assets/images/Showreel1.png'
-import AGDbg from '../public/assets/images/Home/CardComponents/agdbg.jpg'
+import AGDbg from '../public/assets/images/Home/CardComponents/agdbg.png'
 import AGDbadge from '../public/assets/images/Badges/agd_patch.png'
-import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.jpg'
+import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.png'
 import GRFXbadge from '../public/assets/images/Badges/grfx_patch.png'
-import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.jpg'
+import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.png'
 import DIGEXbadge from '../public/assets/images/Badges/digex_patch.png'
 import Map from '../public/assets/images/Home/mapDiagram.svg'
 import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
@@ -29,7 +29,7 @@ import react from 'react'
 
 /* 
 Name: Home page
-Collaborators: Logan Trundle, James Andrew, James Kang, Salma Jarrar
+Collaborators: Logan Trundle, James Andrew, Rachael Moriconi, James Kang, Salma Jarrar
 
 Description: 
 - Introduce the grad show (theme, what it is, graduates, etc)
