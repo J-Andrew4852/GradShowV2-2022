@@ -57,7 +57,7 @@ export const MasonryComp = (data) => {
   // ]
 
   function getCols() {
-    console.log("images" + images.length)
+    // console.log("images" + images.length)
     if ( images.length == 1 ) {
       return 1
     } else if ( images.length == 2) {

@@ -5,15 +5,12 @@ import Script from 'next/script'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import animationShowreel from '../public/assets/images/Showreel1.png'
-import AGD from '../public/assets/images/Home/AGD-CARD.png'
-import DD from '../public/assets/images/Home/DIGEX-CARD.png'
-import GD from '../public/assets/images/Home/GRAPHIC-DESIGN-CARD.png'
 import AGDbg from '../public/assets/images/Home/CardComponents/AGDbg.png'
-import AGDbadge from '../public/assets/images/Home/CardComponents/AGDbadge.png'
+import AGDbadge from '../public/assets/images/Badges/agd_patch.png'
 import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.png'
-import GRFXbadge from '../public/assets/images/Home/CardComponents/grfx.png'
+import GRFXbadge from '../public/assets/images/Badges/grfx_patch.png'
 import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.png'
-import DIGEXbadge from '../public/assets/images/Home/CardComponents/digex.png'
+import DIGEXbadge from '../public/assets/images/Badges/digex_patch.png'
 import Map from '../public/assets/images/Home/mapDiagram.svg'
 import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
 import { TextBtn } from '../components/Buttons/Button'
@@ -62,8 +59,8 @@ export default function Home() {
           <div className={styles.title_blurred} />
           
             <div className={styles.markers}>
-                  <div className={styles.marker1}><div className={styles.arrow1} /></div>
-                  <div className={styles.marker2}><div className={styles.arrow1} /></div>
+                  <div className={styles.marker}><div className={`${styles.arrow} ${styles.arrow_left}`} /></div>
+                  <div className={styles.marker}><div className={`${styles.arrow} ${styles.arrow_right}`} /></div>
             </div>    
         </div>
       </section>
@@ -168,8 +165,7 @@ export default function Home() {
             <h1>43</h1>
           </div>
 
-          <div className={styles.card_badge}><Image  src={GRFXbadge} alt="GRFX Badge" /></div>
-          
+          <div className={`${styles.card_badge} ${styles.grfx_badge} `}><Image src={GRFXbadge} alt="GRFX Badge" /></div>
         </div>
 
         </div>

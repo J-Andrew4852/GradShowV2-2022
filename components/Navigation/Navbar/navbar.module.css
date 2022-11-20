@@ -22,8 +22,13 @@
     justify-content: space-between;
 }
 
+.nav_elements img {
+    cursor: pointer;
+}
+
 .nav_options {
     display: flex;
+    align-items: center;
     gap: 60px;
 }
 

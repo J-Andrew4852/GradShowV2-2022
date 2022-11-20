@@ -7,7 +7,7 @@ import Image from 'next/image'
 import gradImage from '../../public/assets/images/graduate_image_placeholder.JPG'
 import gradPatch from '../../public/assets/images/Badges/digex_patch.png'
 import { OutlineBtn } from "../../components/Buttons/Button";
-import { Star, Arrow } from "../../components/icons/Icons";
+import { Arrow } from "../../components/icons/Icons";
 import { MasonryComp } from '../../components/Masonry/Masonry'
 import { Socials } from '../../components/Socials/Socials'
 // import gradHero from 'https://drive.google.com/uc?export=view&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk'
@@ -58,16 +58,14 @@ export default function GraduatemDetail({ graduate, data }) {
 
     // console.log(`${App.apiBase}/public/images/${graduate.headshotURL}.jpg`)
 
+    // console.log(headshots)
+
     return (
         <div className={styles.graduatePageContainer}>
             <Head>
                 <title>{graduate.preferredName} {graduate.lastName} || Exhibition Space</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <div className={styles.arrow}>
-                <Arrow size={22} direction="left"/>
-            </div>
 
                 <section className={styles.graduate_content}>
 
@@ -124,15 +122,15 @@ export async function getStaticPaths() {
     const res = await fetch('https://gradshow-backend-production.up.railway.app/students')
     const graduates = await res.json()
 
+
     const paths = graduates.map((graduate) => ({
         params: { id: graduate._id.toString() },
     }))
     return { paths, fallback: false }
 }
 
-
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://gradshow-backend-production.up.railway.app/students/${params.id}`)
+    var res = await fetch(`https://gradshow-backend-production.up.railway.app/students/${params.id}`)
     const graduate = await res.json()
     return { props: { graduate } }
 }
