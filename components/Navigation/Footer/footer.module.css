@@ -44,6 +44,10 @@
     margin-block-start: 0px;
 }
 
+.night_info a:hover {
+    text-decoration: underline;
+  }
+
 @media (max-width: 900px) {
     .prev_gradshows {
         gap: 10px;
