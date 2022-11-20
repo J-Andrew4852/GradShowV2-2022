@@ -80,10 +80,10 @@ export const MasonryComp = (data) => {
   //   700: 1
   // };
 
-  console.log(images)
+  // console.log(images)
 
   const items = images.map( (item, index) => {
-    {console.log(item)}
+    // {console.log(item)}
     return (
         <img src={item} key={index} />
     )

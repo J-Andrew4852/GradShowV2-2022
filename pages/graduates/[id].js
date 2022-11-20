@@ -14,6 +14,7 @@ import { Socials } from '../../components/Socials/Socials'
 
 // STYLES =============================================================================== // 
 import styles from '../../styles/SingleGraduate.module.css'
+import { useEffect, useState } from 'react'
 
 // OVERVIEW ============================================================================= // 
 /* 
@@ -39,10 +40,20 @@ TODO:
 
 
 
-
 export default function GraduatemDetail({ graduate, data }) {
-    
-    // console.log(graduate)
+
+    // const [headshot, setHeadshot] = useState()
+
+    // useEffect(() => {
+    //     fetchHeadshot();
+    // }, []);
+
+    // const fetchHeadshot = async () => {
+    //     const data = await fetch(`https://gradshow-backend-production.up.railway.app/public/images/${graduate.headshotURL}`);
+    //     const headshotLink = await data.json();
+    //     setHeadshot(headshot.results)
+    //     console.log(headshotLink)
+    // }
 
     return (
         <div className={styles.graduatePageContainer}>
@@ -121,4 +132,4 @@ export async function getStaticProps({ params }) {
     const res = await fetch(`https://gradshow-backend-production.up.railway.app/students/${params.id}`)
     const graduate = await res.json()
     return { props: { graduate } }
-}7
+}
