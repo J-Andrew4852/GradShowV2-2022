@@ -42,42 +42,42 @@ export const GradFolder = ({ data, onClose }) => {
     // VARIABLES ============================================================================== // 
 
     var majorz = data.major
-// console.log(majorz)
-var abMajor = []
+    // console.log(majorz)
+    var abMajor = []
 
-majorz.forEach(() => {
-  // console.log(majorz[0])
-  if (majorz[0].match("Graphic") !== null) {
-    abMajor.push("GRFX")
-  }
-  else if (majorz[0].match("Digital") !== null) {
-    abMajor.push("DIGEX")
-  }
-  else {
-    abMajor.push("AGD")
-  }
-  // console.log(abMajor)
-  if (majorz.length == 2) {
-    // console.log(majorz[1])
-    // console.log(abMajor)
-    if (majorz[1].match("Graphic") !== null) {
-      abMajor.push("GRFX")
+    majorz.forEach(() => {
+    // console.log(majorz[0])
+    if (majorz[0].match("Graphic") !== null) {
+        abMajor.push("GRFX")
     }
-    else if (majorz[1].match("Digital") !== null) {
-      abMajor.push("DIGEX")
+    else if (majorz[0].match("Digital") !== null) {
+        abMajor.push("DIGEX")
     }
     else {
-      abMajor.push("AGD")
+        abMajor.push("AGD")
     }
-    abMajor.splice(2, 2);
     // console.log(abMajor)
-    // return abMajor
-  }
-  // console.log(abMajor)
-  return abMajor
-});
+    if (majorz.length == 2) {
+        // console.log(majorz[1])
+        // console.log(abMajor)
+        if (majorz[1].match("Graphic") !== null) {
+        abMajor.push("GRFX")
+        }
+        else if (majorz[1].match("Digital") !== null) {
+        abMajor.push("DIGEX")
+        }
+        else {
+        abMajor.push("AGD")
+        }
+        abMajor.splice(2, 2);
+        // console.log(abMajor)
+        // return abMajor
+    }
+    // console.log(abMajor)
+    return abMajor
+    });
 
-// console.log(abMajor)
+    // console.log(abMajor)
 
     // COMPONENT INIT ========================================================================= // 
     // useEffect(() => { }, []);
@@ -104,8 +104,8 @@ majorz.forEach(() => {
             </div>
                 <div className={styles.graduateContent}>
 
-                    <div className={styles.graduate_photo}>
-                        <Image className={styles.graduateImage} src={gradImage} alt={`Headshot photo of ${data.preferredName} ${data.lastName}`} width={783} height={1175} layout="fill" objectFit="cover" placeholder="blur" blurDataURL={gradImage} />
+                    <div className={styles.graduate_photoContainer}>
+                        <img className={styles.graduate_photo} src={data.headshotURL} alt="Graduate Image" />
                     </div>
 
                     <div className={styles.details}>
