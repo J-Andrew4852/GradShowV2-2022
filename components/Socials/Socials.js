@@ -63,8 +63,11 @@ socials.forEach((item) => {
     else if (item.match("youtube") !== null) {
       sauce.push(item.match("youtube"))
     }
+    else if ((item.match("h"))) {
+      sauce.push((item.match("h")))
+    }
     else {
-        sauce.push(item.match("h"))
+        return;
     }
     return;
 })
