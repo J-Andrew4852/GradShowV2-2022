@@ -191,7 +191,7 @@ export default function Graduates({ graduates }) {
           <div className={styles.filters}>
             <input type='text' label='search' name='search' onChange={(e) =>setSearch(e.target.value.toLowerCase())} placeholder='Search Graduates...' />
  
-            <select name="majors" id="majors" value={selectedMajor} onChange={e=>setSelectedMajor(e.target.value)}>
+            <select name="majors" id="majors" value={selectedMajor} onChange={(e)=> { setSelectedMajor(e.target.value)}}>
               <option value="All Graduates">All Graduates</option>
               <option value="Digital Experience and Interaction Design">DIGEX</option>
               <option value="Animation and Game Design">AGD</option>
