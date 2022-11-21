@@ -200,9 +200,9 @@ export default function Home() {
           <div className={styles.showreels_sidebar}>
             <div className={styles.showreel_buttons}>
 
-            <OutlineBtn major="grfx" text="GRFX" onClick=""/>
+            {/* <OutlineBtn major="grfx" text="GRFX" onClick=""/>
             <OutlineBtn major="agd" text="AGD" onClick=""/>
-            <OutlineBtn major="digex" text="DIGEX" onClick=""/>
+            <OutlineBtn major="digex" text="DIGEX" onClick=""/> */}
             </div>
           </div>
 
