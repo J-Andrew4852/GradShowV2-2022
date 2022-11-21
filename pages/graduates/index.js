@@ -1,6 +1,6 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import { GraduateCard } from '../../components/GraduateCard/GraduateCard'
@@ -112,6 +112,32 @@ export default function Graduates({ graduates }) {
 
   // console.log(graduates);
 
+
+  // REELS MUST BE FORMATTED LIKE THIS:
+  // https://www.youtube.com/embed/REPLACEMEWITHID?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}
+  const GRFXreel = "https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=0&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const AGDreel = "https://www.youtube.com/embed/pbNs7tAUFkk";
+  const DIGEXreel = "https://www.youtube.com/embed/GBUAez6w5ec";
+
+  // const refIframe = useRef(null);
+  const [iframSrc, setIframeUrl] = useState(DIGEXreel);
+
+  const watchGRFX = () => {
+    setIframeUrl(
+      `${GRFXreel}` + "?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}"
+    );
+  };
+  const watchAGD = () => {
+    setIframeUrl(
+      `${AGDreel}` + "?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}"
+    );
+  };
+  const watchDIGEX = () => {
+    setIframeUrl(
+      `${DIGEXreel}`
+    );
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -119,6 +145,15 @@ export default function Graduates({ graduates }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* <button type="button" onClick={watchGRFX}>
+        GRFX
+      </button>
+      <button type="button" onClick={watchAGD}>
+        AGD
+      </button>
+      <button type="button" onClick={watchDIGEX}>
+        DIGEX
+      </button> */}
 
       {/* HEADING SECTION */}
       <section className={`${styles.hero} center-align `}>
@@ -127,11 +162,11 @@ export default function Graduates({ graduates }) {
           <h1 className='heading text-4xl black'>{selectedMajor}</h1>
         </div>
 
-        <select onChange={(e) => { setSelectedMajor(e.target.value) }} value={selectedMajor} name="majors" id="majors"> 
+        <select onSubmit={this.handleSubmit} onChange={(e) => { setSelectedMajor(e.target.value) }} value={selectedMajor} name="majors" id="majors"> 
           <option value="All Graduates">All Graduates</option>
-          <option value="Digital Experience and Interaction Design">DIGEX</option>
-          <option value="Animation and Game Design">AGD</option>
-          <option value="Graphic Design">GRFX</option>
+          <option value="Digital Experience and Interaction Design" onClick={watchDIGEX}>DIGEX</option>
+          <option value="Animation and Game Design" onClick={watchAGD}>AGD</option>
+          <option value="Graphic Design" onClick={watchGRFX}>GRFX</option>
         </select>
       </section>
 
@@ -142,7 +177,7 @@ export default function Graduates({ graduates }) {
           url="https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1&playlist=RVn8FhiryKA" loop="1" frameBorder="0" allowFullScreen position="relative"
           width="100%" height="100%" /> */}
           <Iframe
-          url="https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1&playlist=RVn8FhiryKA" loop="1" frameBorder="0" allowFullScreen position="relative"
+          url={iframSrc} loop="1" frameBorder="0" allowFullScreen position="relative"
           width="100%" height="100%" />
       </div>
 
