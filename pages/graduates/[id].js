@@ -155,7 +155,6 @@ export default function GraduatemDetail({ graduate, data }) {
                         <MasonryComp key={graduate._id} data={graduate}/>
                     </div>
                 </div>
-
         </div>
     )
 }
