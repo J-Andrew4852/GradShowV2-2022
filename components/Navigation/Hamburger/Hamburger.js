@@ -1,26 +1,25 @@
 // IMPORTS ============================================================================== // 
-import Head from 'next/head'
-
+import { useState } from 'react';
 // COMPONENT IMPORTS ==================================================================== // 
 
 // STYLES =============================================================================== // 
-import styles from './example-component.module.css'
+import styles from './hamburger.module.css'
 
 // OVERVIEW ============================================================================= // 
 /* 
-Name: Example component
+Name: Hamburger
 Author: Logan Trundle
 Collaborators: 
-
-Description: 
-- Example component to illustrate file structure.
 */
 
-export const ExampleComponent = ({name}) => {
-  return (
-    <div className={styles.container}>
-        <p>Example Component</p>
-        <p>Hello {name}</p>
-    </div>
-  )
-}
+
+export const Hamburger = () => {
+    return (
+        <div className={styles.container}>
+            <div className={styles.hamburger_container}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+  )}
