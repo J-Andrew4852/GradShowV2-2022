@@ -12,6 +12,7 @@
     padding: 0 100px 0 100px ;
     margin: 50px 0 50px 0;
     color: var(--off-black);
+    min-height: 50em;
 }
 
 .graduate_photoContainer {
@@ -207,4 +208,12 @@
     .portfolio_link {
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .graduate_content {
+        padding: 20px 30px 0 30px ;
+    }
+
 }
