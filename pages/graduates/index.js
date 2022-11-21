@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 // COMPONENT IMPORTS ==================================================================== // 
 import { GraduateCard } from '../../components/GraduateCard/GraduateCard'
 import { GradFolder } from '../../components/sideFolder/SideFolder'
+import Iframe from 'react-iframe'
 
 // STYLES =============================================================================== // 
 import styles from '../../styles/Graduates.module.css'
@@ -136,7 +137,14 @@ export default function Graduates({ graduates }) {
 
 
       {/* SHOWREEL */}
-      <div className={styles.gradShowreel}></div>
+      <div className={styles.gradShowreel}>
+      {/* <Iframe
+          url="https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1&playlist=RVn8FhiryKA" loop="1" frameBorder="0" allowFullScreen position="relative"
+          width="100%" height="100%" /> */}
+          <Iframe
+          url="https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1&playlist=RVn8FhiryKA" loop="1" frameBorder="0" allowFullScreen position="relative"
+          width="100%" height="100%" />
+      </div>
 
       {/* FILTER BAR */}
       <div className={styles.filterBar}>
