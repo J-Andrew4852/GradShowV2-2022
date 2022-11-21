@@ -1,5 +1,7 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
+import Link from 'next/link'
+
 // COMPONENT IMPORTS ==================================================================== // 
 import {ErrorButton} from '../components/Buttons/Button'
 import { AlienIcon } from '../components/icons/Icons'
@@ -26,14 +28,14 @@ export default function NotFound() {
       <div className={styles.container404}>
           <h1>404</h1>
           <AlienIcon />
-          <h2>uh oh.<br></br>You've landed on alien grounds</h2>
+          <h2>uh oh.<br></br>You&apos;ve landed on alien grounds</h2>
           <h3>This page either does not exist or<br></br> has not yet been discovered</h3>
           <br></br>
           <br></br>
           <br></br>
-          <a className={styles.errorbutton} href='/' >
+          <Link className={styles.errorbutton} href='/' >
             <ErrorButton text="Back to Home"/>
-          </a>
+          </Link>
       </div>
     </div>
   )
