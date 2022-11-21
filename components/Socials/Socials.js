@@ -78,11 +78,11 @@ socials.forEach((item) => {
   // // console.log(linkTo)
   // var sockComp = sockLoader( name, linkTo )
   // // console.log(sockComp)
-  // console.log(sauce)
+  console.log(sauce)
 
   const icons = sauce.map( (item) => {
     return (
-      <div className={styles.socialIcons}>
+      <div className={styles.socialIcons} key={item[0]}>
         <SockLoader key={data.data._id} name={item[0]} linkTo={item.input} size />
       </div>
       

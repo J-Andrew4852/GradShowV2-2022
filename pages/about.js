@@ -331,7 +331,7 @@ export default function About() {
                 <li>Lauren Gatto</li>
                 <li>Diala Majrouh</li>
                 <li>Benjamin Sixsmith</li>
-                <li>Annie O'Halloran</li>
+                <li>Annie O&apos;Halloran</li>
                 <li>Miguel Calimpon</li>
                 <li>Tamara Barron</li>
                 <li>Heidi Kay Sze Choo</li>

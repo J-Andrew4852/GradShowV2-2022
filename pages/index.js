@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState, useRef } from 'react'
 import Script from 'next/script'
+import Link from 'next/link'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import Iframe from 'react-iframe'
@@ -22,7 +23,6 @@ import { IGFeed } from '../components/IGFeed/IGFeed'
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
-import react from 'react'
 
 // OVERVIEW ============================================================================= // 
 
@@ -130,7 +130,7 @@ export default function Home() {
             <div className={styles.card_details}>
               <p className={styles.card_subtitle}>agd_mission_2022</p>
               <p className={`${styles.major_text} ${styles.major_agd}`}>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
-              <a href="/graduates#filter">[see more]</a>
+              <Link href="/graduates#filter">[see more]</Link>
             </div>
             <footer>
               <div className={styles.number}>
@@ -163,7 +163,7 @@ export default function Home() {
             <div className={styles.card_details}>
               <p className={styles.card_subtitle}>digex_mission_2022</p>
               <p className={`${styles.major_text} ${styles.major_digex}`}>Our Digex [digital experience and interaction design] mission is to deploy user-centred gadgets that ensure a smooth journey for all.</p>
-              <a href="/graduates#filter">[see more]</a>
+              <Link href="/graduates#filter">[see more]</Link>
             </div>
             <footer>
               <div className={styles.number}>
@@ -196,7 +196,7 @@ export default function Home() {
             <div className={styles.card_details}>
               <p className={styles.card_subtitle}>grfx_mission_2022</p>
               <p className={`${styles.major_text} ${styles.major_grfx}`}>Our Grfx [graphic design] mission is to prepare design proposals that are out of this world.</p>
-              <a href="/graduates#filter">[see more]</a>
+              <Link href="/graduates#filter">[see more]</Link>
             </div>
             <footer>
               <div className={styles.number}>

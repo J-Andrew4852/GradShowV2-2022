@@ -230,7 +230,7 @@ export const Other = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_1467_225)">
+        <g clipPath="url(#clip0_1467_225)">
         <path d="M19.5555 4.88892V7.33336H17.1111V4.88892H14.6666V7.33336H12.2222V9.7778H14.6666V12.2222H17.1111H19.5555V14.6667V17.1089H21.9999V14.6667V12.2222V9.7778V7.33336V4.88892H19.5555Z" fill="#283618"/>
         <path d="M19.5558 2.44446H17.1113V4.8889H19.5558V2.44446Z" fill="#283618"/>
         <path d="M19.5558 17.1089H17.1113V19.5533H19.5558V17.1089Z" fill="#283618"/>
