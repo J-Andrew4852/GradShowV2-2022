@@ -22,8 +22,10 @@
 
 }
 
-.graduate_photoContainer img {
+.graduate_photo {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .graduate_photo_small {
@@ -74,17 +76,10 @@
     width: 100%;
 }
 
-.placeholder_social {
-    height: 20px;
-    width: 20px;    
-    background-color: black;
-}
-
 .socialLinks {
     height: 2em;
     width: 100%;
 }
-
 
 
 /* ============= Image Grid ============= */
@@ -134,16 +129,25 @@
         padding: 20px 50px 0 50px ;
     }
 
-    .graduate_photo { display: none; }
+    .graduate_photoContainer { display: none; }
 
     .graduate_photo_small { 
         grid-area: 1 / 1 / 2 / 2 ; 
         display: block;
         position: relative;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .graduate_photo_small .graduate_photo {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     .graduate_photo_small img {
-        object-position: 0 20%;
+        object-position: 0 40%;
     }
 
     .graduate_title {

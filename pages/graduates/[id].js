@@ -7,7 +7,6 @@ import Image from 'next/image'
 import gradImage from '../../public/assets/images/graduate_image_placeholder.JPG'
 import gradPatch from '../../public/assets/images/Badges/digex_patch.png'
 import { OutlineBtn } from "../../components/Buttons/Button";
-import { Arrow } from "../../components/icons/Icons";
 import { MasonryComp } from '../../components/Masonry/Masonry'
 import { Socials } from '../../components/Socials/Socials'
 // import gradHero from 'https://drive.google.com/uc?export=view&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk'
@@ -72,7 +71,7 @@ export default function GraduatemDetail({ graduate, data }) {
                         <img className={styles.graduate_photo} src={graduate.headshotURL} alt="Graduate Image" />
                     </div>
                     <div className={styles.graduate_photo_small}>
-                        <Image src={gradImage} alt="Graduate Image" layout={'fill'} objectFit="cover" width={167} height={250}/>
+                        <img className={styles.graduate_photo} src={graduate.headshotURL} alt="Graduate Image" />
                     </div>
 
                     <div className={styles.graduate_title}>
