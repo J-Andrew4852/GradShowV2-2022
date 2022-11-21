@@ -58,6 +58,10 @@ a {
   box-sizing: border-box;
 }
 
+img, svg{
+  vertical-align: unset;
+}
+
 
 /* FONT STYLING ======================================================================== */
 .heading, .subheading {

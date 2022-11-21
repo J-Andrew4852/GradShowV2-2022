@@ -6,7 +6,7 @@
     position: sticky;
     display: flex;
     flex-direction: column;
-    top: var(--nav-height);
+    top: 0;
     z-index: 5;
     border-left: 1.5px solid var(--off-black);
     /* border-right: 1.5px solid var(--off-black); */
@@ -19,7 +19,7 @@
     cursor: pointer;
     transform: translate(-50%);
     top: 1em;
-    background-color: white;
+    background-color: var(--off-white);
     padding: 0.5em;
     border-radius: 100px;
     outline: 1px solid var(--off-black);

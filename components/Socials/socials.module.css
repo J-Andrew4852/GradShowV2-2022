@@ -4,9 +4,10 @@
 }
 
 .iContainer {
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    /* justify-content: space-evenly; */
+    justify-content: space-around;
 }
 
 .iContainer div {
