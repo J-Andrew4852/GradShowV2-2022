@@ -18,7 +18,6 @@ import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
-import { IGFeed } from '../components/IGFeed/IGFeed'
 
 
 // STYLES =============================================================================== // 
