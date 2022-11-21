@@ -9,7 +9,6 @@ import digexGradPatch from '../../public/assets/images/Badges/digex_patch.png'
 import agdGradPatch from '../../public/assets/images/Badges/agd_patch.png'
 import grfxGradPatch from '../../public/assets/images/Badges/grfx_patch.png'
 import { OutlineBtn } from "../../components/Buttons/Button";
-import { Arrow } from "../../components/icons/Icons";
 import { MasonryComp } from '../../components/Masonry/Masonry'
 import { Socials } from '../../components/Socials/Socials'
 // import gradHero from 'https://drive.google.com/uc?export=view&id=102DhDeowwOoReVS--oT2mD9MKcchvNCk'
@@ -117,9 +116,9 @@ export default function GraduatemDetail({ graduate, data }) {
                     <div className={styles.graduate_photoContainer}>
                         <img className={styles.graduate_photo} src={graduate.headshotURL} alt="Graduate Image" />
                     </div>
-                    {/* <div className={styles.graduate_photo_small}>
-                        <Image src={gradImage} alt="Graduate Image" layout={'fill'} objectFit="cover" width={167} height={250}/>
-                    </div> */}
+                    <div className={styles.graduate_photo_small}>
+                        <img className={styles.graduate_photo} src={graduate.headshotURL} alt="Graduate Image" />
+                    </div>
 
                     <div className={styles.graduate_title}>
                         <div className={styles.graduate_major_patch}>

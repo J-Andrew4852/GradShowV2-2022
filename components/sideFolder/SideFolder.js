@@ -8,6 +8,8 @@ import Link from "next/link";
 // COMPONENT IMPORTS ========================================================================= // 
 import { OutlineBtn, TextBtn } from "../Buttons/Button";
 import { Arrow } from "../icons/Icons";
+import { Socials } from '../../components/Socials/Socials';
+
 
 // STYLES ==================================================================================== // 
 import styles from './side-folder.module.css'
@@ -37,7 +39,7 @@ This component is the side folder that pops out when a graduateCard element is c
 */
 
 
-export const GradFolder = ({ data, onClose }) => {
+export const GradFolder = ({ graduate, data, onClose }) => {
 
     // VARIABLES ============================================================================== // 
 
@@ -119,6 +121,11 @@ export const GradFolder = ({ data, onClose }) => {
                         </div>
 
                         <div className={styles.linksBar}>
+                            {/* CANNOT READ PROPERTIES OF UNDEFINED (READING "_id") */}
+                            {/* <div className={styles.socialLinks}>
+                                <Socials key={graduate._id} data={graduate} />
+                            </div> */}
+
                             <OutlineBtn external text="view" height="thin" major={data.major[0].toLowerCase()}/>
                             {/* <TextBtn text='Expand' linkTo={`/graduates/${data._id}`} external/> */}
                         </div>

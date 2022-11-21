@@ -69,9 +69,10 @@
     position: relative;
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
-.graduate_photo img {
+.graduate_photo {
     height: 100%;
     width: 100%;
     object-fit: cover;
