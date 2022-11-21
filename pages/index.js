@@ -235,7 +235,7 @@ export default function Home() {
 
 
       {/* SOCIALS */}
-      <section className={styles.socials}>
+      {/* <section className={styles.socials}>
         <div className={styles.section_heading}>
             <div className={styles.elements}>
               <h2 className={`regular text-xl`}>GAZE THROUGH OUR INSTAGRAM</h2>
@@ -243,13 +243,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* INSTAGRAM POSTS ~ HARD CODED (CAN BE LIVE UPDATED ANYWAY) */}
         <div className={styles.social_images}>
-          {/* <div id="instafeed-container" className={styles.instaContain}></div> */}
-          {/* <Instagram/> */}
           <IGFeed />
         </div>
-      </section>
+      </section> */}
 
       <div className={styles.creditsContainer}> 
           <p className={`text-reg body-copy`}>We would like to acknowledge the Whadjuk Noongar people whose land we are standing on and recognise the strength, resilience and capacity of the Noongar people where Curtin University is situated</p> 
