@@ -625,7 +625,6 @@
 }
 
 .showreels_sidebar {
-  max-width: 345px;
   display: flex;
   flex-direction: column;
 }
@@ -638,6 +637,8 @@
   justify-content: center;
   gap: 1.5em
 }
+
+
 @media (max-width: 750px) {
   .showreels {
     padding: 20% 0% 20% 0%;

@@ -326,6 +326,7 @@ export default function About() {
             <div>
               <ul>
                 <h4>Volunteers</h4>
+                <li>Coda Owens</li>
                 <li>John Simpson</li>
                 <li>Lauren Gatto</li>
                 <li>Diala Majrouh</li>
@@ -335,7 +336,7 @@ export default function About() {
                 <li>Tamara Barron</li>
                 <li>Heidi Kay Sze Choo</li>
                 <li>Tannisa Hermansyah</li>
-                <li>Isa Thanyathip Limpanyalers</li>
+                <li>Isa T. Limpanyalers</li>
               </ul>
             </div>
 
