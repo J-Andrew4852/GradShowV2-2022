@@ -81,6 +81,7 @@
 /* GRADUATE DETAILS ===================================== */
 .linksBar {
     align-self: end;
+
     width: 100%;
     display: flex;
     align-items: center;
@@ -95,6 +96,7 @@
     height: auto;
     width: 100%;
 }
+
 
 
 /* SOCIALS BAR ===================================== */
