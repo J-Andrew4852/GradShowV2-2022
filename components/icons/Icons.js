@@ -116,7 +116,7 @@ export const Artstation = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 24 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M13.1,0h-2.5v2.5h2.5V0z M3.2,17.4H0.7v2.5h2.5V17.4z M5.6,19.9H3.2v2.5h2.5V19.9z M5.6,17.4H3.2v2.5h2.5V17.4z
+        <path className="st0" d="M13.1,0h-2.5v2.5h2.5V0z M3.2,17.4H0.7v2.5h2.5V17.4z M5.6,19.9H3.2v2.5h2.5V19.9z M5.6,17.4H3.2v2.5h2.5V17.4z
           M8.1,17.4H5.6v2.5h2.5V17.4z M10.6,17.4H8.1v2.5h2.5V17.4z M13.1,17.4h-2.5v2.5h2.5V17.4z M8.1,19.9H5.6v2.5h2.5V19.9z M10.6,19.9
           H8.1v2.5h2.5V19.9z M13.1,19.9h-2.5v2.5h2.5V19.9z M15.6,19.9h-2.5v2.5h2.5V19.9z M15.6,0h-2.5v2.5h2.5V0z M15.6,2.5h-2.5V5h2.5V2.5
           z M18.1,5h-2.5v2.5h2.5V5z M18.1,2.5h-2.5V5h2.5V2.5z M15.6,5h-2.5v2.5h2.5V5z M20.6,7.4h-2.5v2.5h2.5V7.4z M18.1,7.5h-2.5v2.5h2.5
@@ -133,7 +133,7 @@ export const Behance = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 30 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M10.3,5.6h2.4V3.2h-2.4H7.9H5.5v2.4h2.4H10.3z M12.7,12.7v2.4v2.4v2.4H15v-2.4v-2.4v-2.4H12.7z M7.9,17.4H5.5
+        <path className="st0" d="M10.3,5.6h2.4V3.2h-2.4H7.9H5.5v2.4h2.4H10.3z M12.7,12.7v2.4v2.4v2.4H15v-2.4v-2.4v-2.4H12.7z M7.9,17.4H5.5
           v2.4h2.4h2.4h2.4v-2.4h-2.4H7.9z M3.1,13v-0.3h2.4h2.4h2.4v-2.4h2.4V7.9V5.6V3.2h-2.4v2.4v2.4v2.4H7.9H5.5H3.1V9.5V7.9V5.6V3.2H0.8
           v2.4v2.4v2.4V13v3.4v3.4h2.4v-3.4V13z M24.5,5.7h2.5V3.2h-2.5H22h-2.5v2.5H22H24.5z M24.5,9.9H27l0-2.5h-2.5H22h-2.5v2.5H22H24.5z
           M22,17.3l-2.5,0v2.5H22h2.5H27v-2.5h-2.5H22z M27,9.9L27,9.9l-0.1,2.4l-1.9,0l-0.6,0l-2.5,0l-0.7,0l-1.7,0v0V9.9h-2.5l0,2.5v2.5
@@ -146,7 +146,7 @@ export const Codepen = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 24 25" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M3.7,10H1.2v2.4h2.4V10z M3.7,7.6H1.2V10h2.4V7.6z M6.1,5.2H3.7v2.4h2.4V5.2z M8.6,2.7H6.1v2.4h2.4V2.7z
+        <path className="st0" d="M3.7,10H1.2v2.4h2.4V10z M3.7,7.6H1.2V10h2.4V7.6z M6.1,5.2H3.7v2.4h2.4V5.2z M8.6,2.7H6.1v2.4h2.4V2.7z
         M11,0.3H8.6v2.4H11V0.3z M13.4,0.3H11v2.4h2.4V0.3z M3.7,12.5H1.2v2.4h2.4V12.5z M3.7,14.9H1.2v2.4h2.4V14.9z M6.1,17.4H3.7v2.4
         h2.4V17.4z M8.6,19.9H6.1v2.4h2.4V19.9z M11,22.3H8.6v2.4H11V22.3z M13.4,2.7h-2.4v2.4h2.4V2.7z M13.4,5.2h-2.4v2.4h2.4V5.2z
         M13.4,7.6h-2.4V10h2.4V7.6z M11,10.1H8.5v2.4H11V10.1z M15.9,10h-2.4v2.4h2.4V10z M13.4,22.3H11v2.4h2.4V22.3z M13.4,19.9H11v2.4
@@ -162,7 +162,7 @@ export const Dribbble = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 22" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M11.2,2.9L9,3.3l0.4,2.2l2.2-0.4L11.2,2.9z M15.3,13.7l-2.2,0.4l0.4,2.2l2.2-0.4L15.3,13.7z M13.4,16.3
+        <path className="st0" d="M11.2,2.9L9,3.3l0.4,2.2l2.2-0.4L11.2,2.9z M15.3,13.7l-2.2,0.4l0.4,2.2l2.2-0.4L15.3,13.7z M13.4,16.3
         l-2.2,0.4l0.4,2.2l2.2-0.4L13.4,16.3z M13.8,4.8l-2.2,0.4L12,7.4L14.2,7L13.8,4.8z M14.6,9.2l-2.2,0.4l0.4,2.2l2.2-0.4L14.6,9.2z
         M14.9,11.5l-2.2,0.4l0.4,2.2l2.2-0.4L14.9,11.5z M6.3,15.1l-2.2,0.4l0.4,2.2l2.2-0.4L6.3,15.1z M19.8,13l-2.2,0.4l0.4,2.2l2.2-0.4
         L19.8,13z M8.2,12.6L6,12.9l0.4,2.2l2.2-0.4L8.2,12.6z M10.4,12.2l-2.2,0.4l0.4,2.2l2.2-0.4L10.4,12.2z M12.7,11.8l-2.2,0.4l0.4,2.2
@@ -182,7 +182,7 @@ export const Facebook = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M17.4,11.5h-3.2H11H7.8v2.3H11h3.2h3.2V11.5z M12.4,11.5V9.2V6.9V4.6h-2.3v2.3v2.3v2.3H12.4z M15.7,6.9h1.7V4.6
+        <path className="st0" d="M17.4,11.5h-3.2H11H7.8v2.3H11h3.2h3.2V11.5z M12.4,11.5V9.2V6.9V4.6h-2.3v2.3v2.3v2.3H12.4z M15.7,6.9h1.7V4.6
         h-1.7h-1.7h-1.7v2.3h1.7H15.7z M12.4,4.6h-2.3v6.9v9.2h2.3V4.6z M17.4,6.9h-2.2v2.2h2.2V6.9z M19.9,22.2v-2.5h2.5c0,0,0,0,0,0V2.5
         l-2.5,0V0H2.7v2.5H0.2v17.3h2.5v2.5 M19.9,19.7H2.7V2.5h17.3V19.7z"/>
       </svg>
@@ -193,7 +193,7 @@ export const Github = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 22 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M10,14H8v2h2V14z M10,16H8v2h2V16z M12,16h-2v2h2V16z M14,16h-2v2h2V16z M10,18H8v2h2V18z M8,16H6v2h2V16z
+        <path className="st0" d="M10,14H8v2h2V14z M10,16H8v2h2V16z M12,16h-2v2h2V16z M14,16h-2v2h2V16z M10,18H8v2h2V18z M8,16H6v2h2V16z
         M6,14H4v2h2V14z M12,18h-2v2h2V18z M14,18h-2v2h2V18z M14,14h-2v2h2V14z M12,14h-2v2h2V14z M8,12H6v2h2V12z M10,12H8v2h2V12z
         M12,12h-2v2h2V12z M14,12h-2v2h2V12z M16,12h-2v2h2V12z M8,10H6v2h2V10z M10,10H8v2h2V10z M12,10h-2v2h2V10z M14,10h-2v2h2V10z
         M16,10h-2v2h2V10z M8,8H6v2h2V8z M10,8H8v2h2V8z M8,6H6v2h2V6z M12,8h-2v2h2V8z M14,8h-2v2h2V8z M16,8h-2v2h2V8z M16,6h-2v2h2V6z
@@ -207,7 +207,7 @@ export const Instagram = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M20.3,22.4v-2.5h2.5c0,0,0,0,0,0V2.5l-2.5,0V0H2.9v2.5H0.4v17.4h2.5v2.5 M20.3,19.9H2.9V2.5h17.4V19.9z
+        <path className="st0" d="M20.3,22.4v-2.5h2.5c0,0,0,0,0,0V2.5l-2.5,0V0H2.9v2.5H0.4v17.4h2.5v2.5 M20.3,19.9H2.9V2.5h17.4V19.9z
         M18.9,4.5h-2.5V7h2.5V4.5z M14.1,8.7v2.5v2.4h-2.5H9.1v-2.4V8.7h2.5H14.1V6.3h-2.5H9.1v2.5H6.6v2.5v2.5h2.5v2.4h2.5h2.5v-2.4h2.5
         v-2.5V8.7H14.1z"/>
       </svg>
@@ -218,7 +218,7 @@ export const Linkedin = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M20.1,22.5v-2.4h2.5c0,0,0,0,0,0V2.9l-2.5,0V0.5H2.9v2.4H0.4v17.1h2.5v2.4 M20.1,20.1H2.9V2.9h17.3V20.1z
+        <path className="st0" d="M20.1,22.5v-2.4h2.5c0,0,0,0,0,0V2.9l-2.5,0V0.5H2.9v2.4H0.4v17.1h2.5v2.4 M20.1,20.1H2.9V2.9h17.3V20.1z
         M7.8,5.4H5.3v2.4h2.5V5.4z M7.8,10.3H5.3v2.4h2.5V10.3z M15.2,10.3h-2.5v2.4h2.5V10.3z M17.7,10.3h-2.5v2.4h2.5V10.3z M17.7,12.7
         h-2.5v2.4h2.5V12.7z M17.7,15.2h-2.5v2.4h2.5V15.2z M7.8,12.7H5.3v2.4h2.5V12.7z M7.8,15.2H5.3v2.4h2.5V15.2z M12.7,10.3h-2.5v2.4
         h2.5V10.3z M12.7,12.7h-2.5v2.4h2.5V12.7z M12.7,15.2h-2.5v2.4h2.5V15.2z"/>
@@ -254,7 +254,7 @@ export const Twitter = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M7.8,7.4H5.3v2.5h2.5V7.4z M17.7,14.8h-2.5v2.5h2.5V14.8z M15.2,17.3h-2.5v2.5h2.5V17.3z M15.3,14.8h-2.5v2.5
+        <path className="st0" d="M7.8,7.4H5.3v2.5h2.5V7.4z M17.7,14.8h-2.5v2.5h2.5V14.8z M15.2,17.3h-2.5v2.5h2.5V17.3z M15.3,14.8h-2.5v2.5
         h2.5V14.8z M15.3,12.3h-2.5v2.5h2.5V12.3z M17.7,12.3h-2.5v2.5h2.5V12.3z M12.7,19.8h-2.5v2.5h2.5V19.8z M7.8,19.8H5.3v2.5h2.5V19.8
         z M10.3,19.8H7.8v2.5h2.5V19.8z M5.4,2.5H2.9V5h2.5V2.5z M12.7,17.3h-2.5v2.5h2.5V17.3z M12.8,14.8h-2.5v2.5h2.5V14.8z M12.8,12.3
         h-2.5v2.5h2.5V12.3z M10.3,17.3H7.8v2.5h2.5V17.3z M10.3,14.8H7.8v2.5h2.5V14.8z M10.3,12.3H7.8v2.5h2.5V12.3z M5.4,4.9H2.9v2.5h2.5
@@ -273,7 +273,7 @@ export const Youtube = ({ linkTo, size }) => {
   return(
     <a href={linkTo} target="_blank" rel="noopener noreferrer">
       <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 24 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M21,5.5L21,3l-2.6,0l-2.6,0l-2.6,0l-2.6,0L8.2,3L5.6,3L3.1,3h0v2.4H0.5l0,2.4l0,2.4l0,2.4l0,2.4l0,2.4v0h2.6V20
+        <path className="st0" d="M21,5.5L21,3l-2.6,0l-2.6,0l-2.6,0l-2.6,0L8.2,3L5.6,3L3.1,3h0v2.4H0.5l0,2.4l0,2.4l0,2.4l0,2.4l0,2.4v0h2.6V20
         h0l2.6,0l2.6,0l2.6,0l2.6,0l2.6,0l2.6,0l2.6,0l0-2.4l2.6,0l0-2.4l0-2.4l0-2.4l0-2.4l0-2.4L21,5.5L21,5.5z M15.8,12.7h-2.6v2.4h-2.6
         V7.9h2.6v2.4h2.6V12.7z"/>
       </svg>

@@ -25,7 +25,7 @@ export const Socials = (data) => {
 
 var socials = data.data.socials;
 
-console.log(data.data)
+// console.log(data.data)
 
 let sauce = [];
 
@@ -83,7 +83,7 @@ socials.forEach((item) => {
   const icons = sauce.map( (item) => {
     return (
       <div className={styles.socialIcons}>
-        <SockLoader name={item[0]} linkTo={item.input} size />
+        <SockLoader key={data.data._id} name={item[0]} linkTo={item.input} size />
       </div>
       
     )
