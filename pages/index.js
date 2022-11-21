@@ -1,15 +1,16 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect, useState, useRef } from 'react'
 import Script from 'next/script'
 
 // COMPONENT IMPORTS ==================================================================== // 
-import animationShowreel from '../public/assets/images/Showreel1.png'
-import AGDbg from '../public/assets/images/Home/CardComponents/agdbg.png'
+import Iframe from 'react-iframe'
+import AGDbg from '../public/assets/images/Home/CardComponents/agdbg.jpg'
 import AGDbadge from '../public/assets/images/Badges/agd_patch.png'
-import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.png'
+import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.jpg'
 import GRFXbadge from '../public/assets/images/Badges/grfx_patch.png'
-import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.png'
+import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.jpg'
 import DIGEXbadge from '../public/assets/images/Badges/digex_patch.png'
 import Map from '../public/assets/images/Home/mapDiagram.svg'
 import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
@@ -17,7 +18,6 @@ import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
 import { IGFeed } from '../components/IGFeed/IGFeed'
-import VideoCarousel from '../components/VideoCarousel/VideoCarousel'
 
 
 // STYLES =============================================================================== // 
@@ -41,6 +41,20 @@ Description:
 */
 
 export default function Home() {
+  const GRFXreel = "https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const AGDreel = "https://www.youtube.com/embed/pbNs7tAUFkk?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const DIGEXreel = "https://www.youtube.com/embed/GBUAez6w5ec?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const [iframSrc, setIframeUrl] = useState(DIGEXreel);
+
+  const watchGRFX = () => {
+    setIframeUrl(`${GRFXreel}`);
+  };
+  const watchAGD = () => {
+    setIframeUrl(`${AGDreel}`);
+  };
+  const watchDIGEX = () => {
+    setIframeUrl(`${DIGEXreel}`);
+  };
 
   return (
     <div className={styles.container}>
@@ -199,17 +213,16 @@ export default function Home() {
         <div className={styles.showreels_subcontainer}>
           <div className={styles.showreels_sidebar}>
             <div className={styles.showreel_buttons}>
-
-            {/* <OutlineBtn major="grfx" text="GRFX" onClick=""/>
-            <OutlineBtn major="agd" text="AGD" onClick=""/>
-            <OutlineBtn major="digex" text="DIGEX" onClick=""/> */}
+                <OutlineBtn major="grfx" text="GRFX" onAction={watchGRFX}/>
+                <OutlineBtn major="agd" text="AGD" onAction={watchAGD}/>
+                <OutlineBtn major="digex" text="DIGEX" onAction={watchDIGEX}/>
             </div>
           </div>
 
           <div className={styles.showreel_videos}>
-          
-          <VideoCarousel width='100%'
-          height='100%' />
+            <Iframe
+            url={iframSrc} loop="1" frameBorder="0" allowFullScreen position="relative" playsInline
+            width="100%" height="100%" />
           </div>
         </div>
 

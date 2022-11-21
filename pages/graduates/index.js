@@ -1,10 +1,11 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import { GraduateCard } from '../../components/GraduateCard/GraduateCard'
 import { GradFolder } from '../../components/sideFolder/SideFolder'
+import Iframe from 'react-iframe'
 
 // STYLES =============================================================================== // 
 import styles from '../../styles/Graduates.module.css'
@@ -12,7 +13,7 @@ import styles from '../../styles/Graduates.module.css'
 // OVERVIEW ============================================================================= // 
 /* 
 Name: Graduates main page
-Collaborators: Logan Trundle, James Andrew, Rachael Moriconi
+Collaborators: Logan Trundle, James Andrew, Rachael Moriconi, James Kang
 
 Description: 
 - List out all graduates 
@@ -22,12 +23,18 @@ Description:
 */ 
 
 export default function Graduates({ graduates }) {
-  const [selectedMajor, setSelectedMajor] = useState('All Graduates')
+  const [selectedMajor, setSelectedMajor] = useState('All Graduates');
   const [selectedGraduate, setSelectedGraduate] = useState(null);
   const [clicked, setClicked] = useState(false);
   const [listView, setListView] = useState(false)
   const [filtered, setFiltered] = useState([])
   const [search, setSearch] =useState('')
+
+  const GRFXreel = "https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const AGDreel = "https://www.youtube.com/embed/pbNs7tAUFkk?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const DIGEXreel = "https://www.youtube.com/embed/GBUAez6w5ec?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const [iframSrc, setIframeUrl] = useState(DIGEXreel);
+
 
   function openGradFolder(graduate) {
     setSelectedGraduate(graduate);
@@ -61,6 +68,15 @@ export default function Graduates({ graduates }) {
       filtered[j] = k;
     }
     setFiltered(filtered)
+    if (selectedMajor === 'Animation and Game Design') {
+      setIframeUrl(`${AGDreel}`);
+      return;
+    } else if (selectedMajor === 'Graphic Design') {
+      setIframeUrl(`${GRFXreel}`);
+      return;
+    } else { // Digital Experience and Interaction Design
+      setIframeUrl(`${DIGEXreel}`);
+    }
   },  [selectedMajor])
 
   // console.log(filtered)
@@ -111,6 +127,21 @@ export default function Graduates({ graduates }) {
 
   // console.log(graduates);
 
+
+  // REELS MUST BE FORMATTED LIKE THIS:
+  // https://www.youtube.com/embed/REPLACEMEWITHID?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}
+  // const refIframe = useRef(null);
+
+  // const watchGRFX = () => {
+  //   setIframeUrl(`${GRFXreel}`);
+  // };
+  // const watchAGD = () => {
+  //   setIframeUrl(`${AGDreel}`);
+  // };
+  // const watchDIGEX = () => {
+  //   setIframeUrl(`${DIGEXreel}`);
+  // };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -118,6 +149,15 @@ export default function Graduates({ graduates }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* <button type="button" onClick={watchGRFX}>
+        GRFX
+      </button>
+      <button type="button" onClick={watchAGD}>
+        AGD
+      </button>
+      <button type="button" onClick={watchDIGEX}>
+        DIGEX
+      </button> */}
 
       {/* HEADING SECTION */}
       <section className={`${styles.hero} center-align `}>
@@ -128,15 +168,22 @@ export default function Graduates({ graduates }) {
 
         <select onChange={(e) => { setSelectedMajor(e.target.value) }} value={selectedMajor} name="majors" id="majors"> 
           <option value="All Graduates">All Graduates</option>
-          <option value="Digital Experience and Interaction Design">DIGEX</option>
-          <option value="Animation and Game Design">AGD</option>
-          <option value="Graphic Design">GRFX</option>
+          <option value="Digital Experience and Interaction Design" >DIGEX</option>
+          <option value="Animation and Game Design" >AGD</option>
+          <option value="Graphic Design" >GRFX</option>
         </select>
       </section>
 
 
       {/* SHOWREEL */}
-      <div className={styles.gradShowreel}></div>
+      <div className={styles.gradShowreel}>
+      {/* <Iframe
+          url="https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1&playlist=RVn8FhiryKA" loop="1" frameBorder="0" allowFullScreen position="relative"
+          width="100%" height="100%" /> */}
+          <Iframe
+          url={iframSrc} loop="1" frameBorder="0" allowFullScreen position="relative" playsInline
+          width="100%" height="100%" />
+      </div>
 
       {/* FILTER BAR */}
       <div className={styles.filterBar}>
@@ -145,7 +192,7 @@ export default function Graduates({ graduates }) {
           <div className={styles.filters}>
             <input type='text' label='search' name='search' onChange={(e) =>setSearch(e.target.value.toLowerCase())} placeholder='Search Graduates...' />
  
-            <select name="majors" id="majors" value={selectedMajor} onChange={e=>setSelectedMajor(e.target.value)}>
+            <select name="majors" id="majors" value={selectedMajor} onChange={(e)=> { setSelectedMajor(e.target.value)}}>
               <option value="All Graduates">All Graduates</option>
               <option value="Digital Experience and Interaction Design">DIGEX</option>
               <option value="Animation and Game Design">AGD</option>
