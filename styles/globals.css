@@ -45,7 +45,7 @@ body {
   font-family: "Space Mono", monospace;
   font-size: 16px;
   font-weight: 400;
-  color: var(--dark-green);
+  color: var(--dark-green) !important;;
   line-height: 150%;
 }
 
@@ -63,7 +63,7 @@ a {
 .heading, .subheading {
   font-family: 'Avenir', serif;
   line-height: 100%;
-  color: var(--main-green);
+  color: var(--main-green) !important;;
   margin: 0;
 }
 
@@ -159,7 +159,7 @@ a {
   height: 1px;
   bottom: 0px;
   left: 0;
-  background-color: var(--dark-green);
+  background-color: var(--dark-green) !important;;
   transition: width 0.4s ease;
 }
 
@@ -170,12 +170,12 @@ a {
   height: 1px;
   bottom: 0px;
   left: 0;
-  background-color: var(--dark-green);
+  background-color: var(--dark-green) !important;;
   transition: width 0.4s ease;
 }
 
 .link.active {
-  color: var(--main-green);
+  color: var(--main-green) !important;;
   position: relative;
   font-weight: 700;
 }
@@ -187,7 +187,7 @@ a {
   height: 2px;
   bottom: 0px;
   left: 0;
-  background-color: var(--main-green);
+  background-color: var(--main-green) ;
 }
 
 /* INPUTS STYLING ======================================================================== */

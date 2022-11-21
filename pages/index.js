@@ -20,7 +20,7 @@ import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
 import { IGFeed } from '../components/IGFeed/IGFeed'
-// import VideoCarousel from '../components/VideoCarousel/VideoCarousel'
+import VideoCarousel from '../components/VideoCarousel/VideoCarousel'
 
 
 // STYLES =============================================================================== // 
@@ -193,8 +193,8 @@ export default function Home() {
 
           <div className={styles.showreel_videos}>
           
-          {/* <VideoCarousel width='100%'
-          height='100%' /> */}
+          <VideoCarousel width='100%'
+          height='100%' />
           </div>
         </div>
 
