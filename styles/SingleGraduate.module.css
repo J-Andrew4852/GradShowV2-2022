@@ -26,7 +26,20 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out;
 }
+/* .altImg {
+    opacity: 0;
+} */
+.graduate_photoContainer:hover .frontImg {
+    opacity: 0;
+    cursor: pointer;
+}
+/* .graduate_photoContainer:hover .altImg {
+    opacity: 1;
+    cursor: pointer;
+} */
 
 .graduate_photo_small {
     display: none;
@@ -45,9 +58,9 @@
     margin-right: 2em;
 }
 
-.graduate_major_patch img {
-    
-}
+/* .graduate_major_patch img {
+
+} */
 
 .graduate_name {
     grid-area: 1 / 2 / 2 / -2 ;
