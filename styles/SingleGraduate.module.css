@@ -1,6 +1,7 @@
 .graduatePageContainer {
     max-width: var(--max-width);
     margin: 0 auto;
+    margin-top: 100px;
 }
 
 .graduate_content {
@@ -9,7 +10,7 @@
     grid-template-rows: max-content 1fr;
     column-gap: 5%;
     padding: 0 100px 0 100px ;
-    margin: 100px 0 50px 0;
+    margin: 50px 0 50px 0;
     color: var(--off-black);
 }
 
@@ -117,11 +118,10 @@
 
 @media only screen and (max-width: 900px) {
 
-    .arrow {
-        margin-top: 20px;
-        margin-left: 28px;
+    .graduatePageContainer {
+        margin-top: 50px;
     }
-
+    
     .graduate_content {
         grid-template-columns: 1fr;
         grid-template-rows: 350px repeat(2, max-content);

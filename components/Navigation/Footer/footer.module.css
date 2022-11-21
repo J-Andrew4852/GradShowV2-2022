@@ -23,6 +23,12 @@
 .curtin_logo {
     width: 166px;
     height: 30px;
+    transition: 0.4s ease-out;
+
+}
+
+.curtin_logo:hover {
+    opacity: 0.7;
 }
 
 .prev_gradshows {

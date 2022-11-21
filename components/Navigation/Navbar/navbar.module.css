@@ -1,4 +1,8 @@
 .container {
+    /* width: 100%; */
+}
+
+.navcontainer {
     width: 100%;
     height: var(--nav-height);    
     font-size: 16px;
@@ -8,9 +12,10 @@
     top: 0;
     left: 0;
     position: sticky;
-    z-index: 20;
     border-bottom: 1.5px solid var(--off-black);
     background-color: var(--off-white);
+    z-index: 20;
+    position: fixed;
 }
 
 .nav_elements {
@@ -23,6 +28,11 @@
 
 .nav_elements img {
     cursor: pointer;
+    transition: 0.4s ease-out;
+}
+
+.nav_elements img:hover {
+    opacity: 0.7;
 }
 
 .nav_options {
@@ -31,13 +41,10 @@
     gap: 60px;
 }
 
-.hidden {
-    display: none;
-}
-
 .mobile_nav_options {
     display: none;
 }
+
 .crossTainer {
     display: none;
 }
@@ -48,15 +55,17 @@
     }
     .crossTainer {
         display: unset;
+        animation: showcross 1s;
+    }
+
+    @keyframes showcross {
+        from {opacity: 0}
+        to {opacity: 1}
     }
 
     .nav_options {
         display: none;
     }
-
-    /* .container {
-        border-bottom: none;
-    } */
     
     .mobile_nav_options {
         display: flex;
@@ -72,6 +81,13 @@
         gap: 30px;
         font-size: 1.5rem;
         border-bottom: 1.5px solid var(--off-black);
+        animation: show 1s;
+        z-index: 5;
+    }
+
+    @keyframes show {
+        from {top: -270px}
+        to {top: 70px}
     }
 
     .hammy {
@@ -81,11 +97,10 @@
     .crossTainer {
         cursor: pointer;
     }
-
 }
 
 @media (max-width: 600px) {
-    .container {
+    .navcontainer {
         padding-inline: 2em;
     }
 }
