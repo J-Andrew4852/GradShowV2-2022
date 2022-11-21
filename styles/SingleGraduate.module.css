@@ -1,7 +1,6 @@
 .graduatePageContainer {
     max-width: var(--max-width);
     margin: 0 auto;
-    margin-top: 100px;
 }
 
 .graduate_content {
@@ -10,7 +9,7 @@
     grid-template-rows: max-content 1fr;
     column-gap: 5%;
     padding: 0 100px 0 100px ;
-    margin: 50px 0 50px 0;
+    margin: 100px 0 50px 0;
     color: var(--off-black);
 }
 
@@ -22,10 +21,11 @@
     object-fit: cover;
 }
 
-.graduate_photo {
-    height: 100%;
-    width: 100%;
+.graduate_photoContainer > img {
     object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    
 }
 
 .graduate_photo_small {
@@ -38,15 +38,9 @@
 }
 
 .graduate_major_patch {
-    position: relative;
     grid-row: span 2;
     width: 100px;
-    height: 100px;
     margin-right: 2em;
-}
-
-.graduate_major_patch img {
-    
 }
 
 .graduate_name {
@@ -63,10 +57,7 @@
 }
 
 .graduate_details {
-    /* align-self: end; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-self: end;
 }
 
 .graduate_description {
@@ -79,14 +70,23 @@
 
 .graduate_links {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    /* flex-wrap: wrap; */
     width: 100%;
+}
+
+.placeholder_social {
+    height: 20px;
+    width: 20px;    
+    background-color: black;
 }
 
 .socialLinks {
     height: auto;
     width: 100%;
 }
+
 
 
 /* ============= Image Grid ============= */
@@ -98,6 +98,7 @@
 }
 
 .graduateImages {
+    /* background-color: var(--off-black); */
     height: 100%;
     width: 100%;
 }
@@ -118,10 +119,11 @@
 
 @media only screen and (max-width: 900px) {
 
-    .graduatePageContainer {
-        margin-top: 50px;
+    .arrow {
+        margin-top: 20px;
+        margin-left: 28px;
     }
-    
+
     .graduate_content {
         grid-template-columns: 1fr;
         grid-template-rows: 350px repeat(2, max-content);
@@ -134,25 +136,16 @@
         padding: 20px 50px 0 50px ;
     }
 
-    .graduate_photoContainer { display: none; }
+    .graduate_photo { display: none; }
 
     .graduate_photo_small { 
         grid-area: 1 / 1 / 2 / 2 ; 
         display: block;
         position: relative;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .graduate_photo_small .graduate_photo {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
     }
 
     .graduate_photo_small img {
-        object-position: 0 40%;
+        object-position: 0 20%;
     }
 
     .graduate_title {

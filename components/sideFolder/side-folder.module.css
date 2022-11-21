@@ -81,12 +81,16 @@
 /* GRADUATE DETAILS ===================================== */
 .linksBar {
     align-self: end;
-
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+.linksBar a{
+    min-width: 100%;
+}
+
 
 
 /* SOCIALS BAR ===================================== */
