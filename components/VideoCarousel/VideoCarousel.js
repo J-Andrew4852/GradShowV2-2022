@@ -2,9 +2,7 @@ import React from 'react'
 import styles from './videocarousel.module.css'
 import { Carousel } from 'react-bootstrap'
 import ReactPlayer from 'react-player'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import dynamic from 'next/dynamic'
-
 
 const VideoCarousel = () => {
   const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
