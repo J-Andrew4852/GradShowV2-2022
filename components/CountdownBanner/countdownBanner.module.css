@@ -4,7 +4,7 @@
     color: var(--off-white);
     padding-inline: 4em;
     position: sticky;
-    top: var(--nav-height);
+    top: 0;
     z-index: 4;
   }
   
@@ -84,7 +84,7 @@
     text-decoration: underline;
   }
   
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .banner_wrapper{
     position: unset;
   }

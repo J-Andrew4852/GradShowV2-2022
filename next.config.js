@@ -4,4 +4,15 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '2022gradshow.s3.ap-southeast-1.amazonaws.com',
+        // port: '',
+        // pathname: '',
+      },
+    ],
+  },
+}

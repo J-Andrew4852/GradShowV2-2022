@@ -1,0 +1,21 @@
+.container404{
+    padding: 10vh 0;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 1.5;
+    color: var(--dark-green);  
+}
+.container404 h1{
+    font-size: 50pt;
+}
+.container404 h2{
+    font-size: 25pt;
+}
+.container404 h3{
+    font-weight: 100;
+    font-size: 16pt;
+}
+.errorbutton{
+    width: 30%;
+}

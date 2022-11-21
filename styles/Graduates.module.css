@@ -2,6 +2,7 @@
 .container section {
     max-width: var(--max-width);
     margin-inline: auto;
+    /* margin-top: var(--nav-height); */
     width: 100%;
     font-size: 16px;
 }
@@ -15,6 +16,12 @@
     padding-inline: 2em;
     gap: 30px;
     padding-block: 2em;
+    text-transform: uppercase;
+}
+
+.hero h3{
+    letter-spacing: .135em;
+    color: var(--main-green);
 }
 
 /* SHOWREEL SECTION ------------------------------------------------------------ */
@@ -22,26 +29,27 @@
     width: 100%;
     max-height: 80vh;
     aspect-ratio: 16/9;
-    background-color: var(--off-black);
+    /* background-color: var(--off-black); */
 }
 
 /* FILTER BAR ------------------------------------------------------------ */
 .filterBar {
     /* position: sticky; */
     /* top: var(--nav-height); */
-    background-color: white;
-    border-bottom: 1.5px solid var(--off-black);
+    background-color: var(--off-white);
+    border-bottom: 1.5px solid var(--dark-green);
     width: 100%;
     z-index: 10;
 }
+
 
 .filterBar .filterBar_subContainer {
     padding-inline: 3em;
     padding-block: 0.5em;
     margin-inline: auto;
-    max-width: 1800px;
+    max-width: 1500px;
     width: 100%;
-
+    min-height: 5em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,6 +58,12 @@
 
 .filters * {
     margin-right: 15px;
+}
+
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .layoutBar {
@@ -62,42 +76,52 @@
     cursor: pointer;
 }
 
+
+
 /* GRADUATE SECTION ------------------------------------------------------------ */
-section.gradsSection {
+
+.sidebarOn {
+    /* margin-inline: -3em; */
+    /* padding-left: calc(3em - 10px);
+    padding-right: calc(3em - 10px); */
     max-width: 1800px;
-    position: relative;
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: auto max-content;
+}
+
+.sidebarOff {
+    /* margin-inline: -3em; */
+    /* padding-inline: calc(3em - 10px); */
+    max-width: 1800px;
+    width: 100%;
 }
 
 .graduate_grid {
-    width: 100%;
+    margin-top: 3em;
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
-    gap: 40px 50px ;
-    padding: 5em 3em;  
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2em ;
+    margin-bottom: 50px;
 }
 
 .graduate_list {
     width: 100%;
-    max-width: var(--max-width);
     margin-inline: auto;
     display: flex;
     flex-direction: column;
-    padding: 3em;
+    padding: 3em 0;
 }
 
-.sidebarOff {
-    width: 100%;
-}
+/* HIDES SIDEBAR -------------------------------- */
 
-.sidebarOn {
-    width: 55%;
-}
+@media (max-width: 1500px) {
+    .sidebarOn {
+        padding-inline: calc(3em - 10px);
+    }
 
-@media only screen and (max-width: 900px) {
-    .graduatesMainFolder {
-        width: 100%;
+    .sidebarOff {
+        padding-inline: calc(3em - 10px);
     }
 }
 
@@ -107,8 +131,37 @@ section.gradsSection {
     }
 }
 
-@media (max-height: 650px) {
+@media (max-height: 700px) {
     .sidebarOn {
         width: 100%;
     }
+}
+
+@media (max-width: 600px) {
+    .filterBar .filterBar_subContainer {
+        padding-inline: 2em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters{
+        justify-content: center;
+    }
+
+    .filters select{
+        min-width: 100%;
+    }
+
+    .filters input{
+        min-width: 100%;
+    }
+
+    .sidebarOn, .sidebarOff {
+        padding-inline: 1em ;
+    }
+
+    .graduate_grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
 }

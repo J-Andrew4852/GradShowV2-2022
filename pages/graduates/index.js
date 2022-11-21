@@ -1,10 +1,11 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import { GraduateCard } from '../../components/GraduateCard/GraduateCard'
 import { GradFolder } from '../../components/sideFolder/SideFolder'
+import Iframe from 'react-iframe'
 
 // STYLES =============================================================================== // 
 import styles from '../../styles/Graduates.module.css'
@@ -12,20 +13,28 @@ import styles from '../../styles/Graduates.module.css'
 // OVERVIEW ============================================================================= // 
 /* 
 Name: Graduates main page
-Collaborators: Logan Trundle, James Andrew, Rachael Moriconi
+Collaborators: Logan Trundle, James Andrew, Rachael Moriconi, James Kang
 
 Description: 
 - List out all graduates 
 - Link to individual graduates page
 - Create side peek of graduate
 - Showcase showreels of each major
-*/
+*/ 
 
 export default function Graduates({ graduates }) {
-  const [selectedMajor, setSelectedMajor] = useState('All Graduates')
+  const [selectedMajor, setSelectedMajor] = useState('All Graduates');
   const [selectedGraduate, setSelectedGraduate] = useState(null);
   const [clicked, setClicked] = useState(false);
   const [listView, setListView] = useState(false)
+  const [filtered, setFiltered] = useState([])
+  const [search, setSearch] = useState('')
+
+  const GRFXreel = "https://www.youtube.com/embed/K-eaJdDmlz8?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const AGDreel = "https://www.youtube.com/embed/orLB-DWTNss?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const DIGEXreel = "https://www.youtube.com/embed/FvJ6eNRz828?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const [iframSrc, setIframeUrl] = useState(DIGEXreel);
+
 
   function openGradFolder(graduate) {
     setSelectedGraduate(graduate);
@@ -37,50 +46,158 @@ export default function Graduates({ graduates }) {
     setClicked(false);
   }
 
+  useEffect(() => {
+    if (selectedMajor === 'All Graduates') {
+      // console.log('working')
+      for (let i = graduates.length -1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i+1));
+        let k = graduates[i];
+        graduates[i] = graduates[j];
+        graduates[j] = k;
+      }
+      setFiltered(graduates);
+      return;
+    }
+    const filtered = graduates.filter((graduate) => 
+      graduate.major.includes(selectedMajor)
+    )
+    for (let i = filtered.length -1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i+1));
+      let k = filtered[i];
+      filtered[i] = filtered[j];
+      filtered[j] = k;
+    }
+    setFiltered(filtered)
+    if (selectedMajor === 'Animation and Game Design') {
+      setIframeUrl(`${AGDreel}`);
+      return;
+    } else if (selectedMajor === 'Graphic Design') {
+      setIframeUrl(`${GRFXreel}`);
+      return;
+    } else { // Digital Experience and Interaction Design
+      setIframeUrl(`${DIGEXreel}`);
+    }
+  },  [selectedMajor])
+
+
+
+  // console.log(filtered)
+
+  // useEffect(() => {
+  //   if (alpSelects === 'random') {
+  //     console.log(alpSelects)
+  //     console.log(filtered)
+  //     for (let i = filtered.length -1; i > 0; i--) {
+  //       let j = Math.floor(Math.random() * (i+1));
+  //       let k = filtered[i];
+  //       filtered[i] = filtered[j];
+  //       filtered[j] = k;
+  //     }
+  //     setSorted(filtered);
+  //     console.log(filtered)
+  //     return;
+  //   } else {
+  //     console.log(alpSelects)
+  //     filtered.sort(( a, b ) => {
+  //       const nameA = a.preferredName.toUpperCase(); 
+  //       const nameB = b.preferredName.toUpperCase();
+  //       console.log(nameA)
+  //       if (nameA < nameB) {
+  //         return -1;
+  //       }
+  //       if (nameA > nameB) {
+  //         return 1;
+  //       }
+  //       return 0;
+  //     });
+  //     if (alpSelects === 'z-a') {
+  //       console.log(alpSelects)
+  //       filtered.slice().reverse();
+  //       console.log(filtered)
+  //       setSorted(filtered);
+  //       return;
+  //     } 
+  //     setSorted(filtered);
+  //     return;
+  //   }
+  // },  [filtered, alpSelects, selectedMajor])
+
+  // console.log(sorted)
+
+  // console.log(alpSelects)
+  console.log(selectedMajor)
+
+  // console.log(graduates);
+
+
+  // REELS MUST BE FORMATTED LIKE THIS:
+  // https://www.youtube.com/embed/REPLACEMEWITHID?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}
+  // const refIframe = useRef(null);
+
+  // const watchGRFX = () => {
+  //   setIframeUrl(`${GRFXreel}`);
+  // };
+  // const watchAGD = () => {
+  //   setIframeUrl(`${AGDreel}`);
+  // };
+  // const watchDIGEX = () => {
+  //   setIframeUrl(`${DIGEXreel}`);
+  // };
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='GradShow'>
       <Head>
         <title>Graduates || Exhibition Space</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* <button type="button" onClick={watchGRFX}>
+        GRFX
+      </button>
+      <button type="button" onClick={watchAGD}>
+        AGD
+      </button>
+      <button type="button" onClick={watchDIGEX}>
+        DIGEX
+      </button> */}
 
       {/* HEADING SECTION */}
       <section className={`${styles.hero} center-align `}>
         <div className={styles.heading_group}>
-          <h3 className={`regular text-med2`}>viewing:</h3>
-          <h1 className='heading bold text-4xl'>{selectedMajor}</h1>
+          <h3 className={`regular text-reg`}>GRADUATES</h3>
+          <h1 className='heading text-4xl black'>{selectedMajor}</h1>
         </div>
 
-        <select onChange={(e) => { setSelectedMajor(e.target.value) }} name="majors" id="majors">
+        <select onChange={(e) => { setSelectedMajor(e.target.value) }} value={selectedMajor} name="majors" id="majors"> 
           <option value="All Graduates">All Graduates</option>
-          <option value="Digital Experience & Interaction Design">DIGEX</option>
-          <option value="Animation & Game Design">AGD</option>
-          <option value="Graphic Design">GRFX</option>
+          <option value="Digital Experience and Interaction Design" >DIGEX</option>
+          <option value="Animation and Game Design" >AGD</option>
+          <option value="Graphic Design" >GRFX</option>
         </select>
       </section>
 
 
       {/* SHOWREEL */}
-      <div className={styles.gradShowreel}></div>
+      <div className={styles.gradShowreel}>
+      {/* <Iframe
+          url="https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1&playlist=RVn8FhiryKA" loop="1" frameBorder="0" allowFullScreen position="relative"
+          width="100%" height="100%" /> */}
+          <Iframe
+          url={iframSrc} loop="1" frameBorder="0" allowFullScreen position="relative" playsInline
+          width="100%" height="100%" />
+      </div>
 
       {/* FILTER BAR */}
-      <div className={styles.filterBar}>
+      <div className={styles.filterBar} id="filter">
         <div className={styles.filterBar_subContainer}>
 
           <div className={styles.filters}>
-            <input type='text' label='search' name='search' placeholder='Search Graduates...' />
-
-            <select name="majors" id="majors">
-              <option value="random">Random</option>
-              <option value="a-z">Alphabetical (A-Z)</option>
-              <option value="z-a">Alphabetical (Z-A)</option>
-            </select>
-
-            <select name="majors" id="majors">
+            <input type='text' label='search' name='search' onChange={(e) =>setSearch(e.target.value.toLowerCase())} placeholder='Search Graduates...' />
+ 
+            <select name="majors" id="majors" value={selectedMajor} onChange={(e)=> { setSelectedMajor(e.target.value)}}>
               <option value="All Graduates">All Graduates</option>
-              <option value="Digital Experience & Interaction Design">DIGEX</option>
-              <option value="Animation & Game Design">AGD</option>
+              <option value="Digital Experience and Interaction Design">DIGEX</option>
+              <option value="Animation and Game Design">AGD</option>
               <option value="Graphic Design">GRFX</option>
             </select>
           </div>
@@ -110,7 +227,14 @@ export default function Graduates({ graduates }) {
         <div className={clicked ? `${styles.sidebarOn}` : `${styles.sidebarOff}`}>
 
           <div className={listView ? `${styles.graduate_list}` : `${styles.graduate_grid}`}>
-            {graduates.map((graduate) => (
+            
+            {filtered.filter((graduate) => {
+              const combinedName = graduate.preferredName + ' ' + graduate.lastName; 
+              // console.log(combinedName)
+              return search.toLowerCase() === '' 
+              ? graduate 
+              : combinedName.toLowerCase().includes(search)
+            }).map((graduate) => (
                 <div key={graduate._id}>
                   <GraduateCard handleClick={() => {
                     if (selectedGraduate?._id !== graduate._id) {
@@ -122,8 +246,8 @@ export default function Graduates({ graduates }) {
               ))}
           </div>
 
-        </div>
         {selectedGraduate && <GradFolder data={selectedGraduate} onClose={closeGradFolder} />}
+        </div>
       </section>
 
     </div>
@@ -132,7 +256,8 @@ export default function Graduates({ graduates }) {
 
 export async function getStaticProps() {
   const res = await fetch('https://gradshow-backend-production.up.railway.app/students')
-  const graduates = await res.json()
+  const data = await res.json()
+  const graduates = data
 
   return {
     props: {

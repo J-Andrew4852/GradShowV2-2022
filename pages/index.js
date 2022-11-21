@@ -1,23 +1,37 @@
 // IMPORTS ============================================================================== // 
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect, useState, useRef } from 'react'
+import Script from 'next/script'
 
 // COMPONENT IMPORTS ==================================================================== // 
-import animationShowreel from '../public/assets/images/Showreel1.png'
-import agdBadge from '../public/assets/images/Badges/agd_badge.png'
-import digexBadge from '../public/assets/images/Badges/digex_badge.png'
-import grfxBadge from '../public/assets/images/Badges/grfx_badge.png'
+import Iframe from 'react-iframe'
+import AGDbg from '../public/assets/images/Home/CardComponents/agdbg.jpg'
+import AGDbadge from '../public/assets/images/Badges/agd_patch.png'
+import GRFXbg from '../public/assets/images/Home/CardComponents/grfxbg.jpg'
+import GRFXbadge from '../public/assets/images/Badges/grfx_patch.png'
+import DIGEXbg from '../public/assets/images/Home/CardComponents/digexbg.jpg'
+import DIGEXbadge from '../public/assets/images/Badges/digex_patch.png'
+import Map from '../public/assets/images/Home/mapDiagram.svg'
+import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
+import { IGFeed } from '../components/IGFeed/IGFeed'
+
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
+import react from 'react'
 
 // OVERVIEW ============================================================================= // 
+
+// SCRIPTS ============================================================================= // 
+
+
 /* 
 Name: Home page
-Collaborators: Logan Trundle, 
+Collaborators: Logan Trundle, James Andrew, Rachael Moriconi, James Kang, Salma Jarrar
 
 Description: 
 - Introduce the grad show (theme, what it is, graduates, etc)
@@ -27,104 +41,222 @@ Description:
 */
 
 export default function Home() {
+  const GRFXreel = "https://www.youtube.com/embed/K-eaJdDmlz8?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const AGDreel = "https://www.youtube.com/embed/orLB-DWTNss?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const DIGEXreel = "https://www.youtube.com/embed/FvJ6eNRz828?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const [iframSrc, setIframeUrl] = useState(DIGEXreel);
+  const [selectedMajor, setSelectedMajor] = useState('All Graduates');
+
+  const watchGRFX = () => {
+    setSelectedMajor('Graphic Design');
+    setIframeUrl(`${GRFXreel}`);
+  };
+  const watchAGD = () => {
+    setSelectedMajor('Animation and Game Design');
+    setIframeUrl(`${AGDreel}`);
+  };
+  const watchDIGEX = () => {
+    setSelectedMajor('Digital Experience and Interaction Design');
+    setIframeUrl(`${DIGEXreel}`);
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='GradShow'>
       <Head>
         <title>Exhibition Space || 2022 Curtin Grad Show</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       {/* HERO */}
-      <section className={`${styles.hero} center-align `}>
-        <div className={styles.heading_group}>
-          <h3 className={`regular ${styles.hero_subtitle}`}>2022 Curtin Design Showcase</h3>
-
-          {/* TODO: replace with logo svg when it has been created */}
-          <div className={`${styles.hero_title}`}>
-            <h1 className='heading bold'>Exhibition <span className='italic regular'>Space</span></h1>
+      <section className={`${styles.hero}`}>
+        <div className={styles.space}>
+          <div className={styles.glare} />
+          <div className={styles.hero_text}>
+            <p>ES22 | B-DES - AGD, DIGEX, GRFX<br/>
+            MANAGING AGENT: CURTIN UNIVERSITY</p>
           </div>
-        </div>
-
-        <div className={styles.hero_info}>
-          <div className={styles.countdown}></div>
-          <p className='text-med'>25.09.2022 | 16:00 - 20:00</p>
-          <p className='text-med body-copy'>Building 202, Curtin University</p>
+          <div className={styles.title} />
+          <div className={styles.title_blurred} />
+          
+            <div className={styles.markers}>
+                  <div className={styles.marker}></div>
+                  <div className={styles.marker}></div>
+            </div>    
         </div>
       </section>
 
       <CountdownBanner />
   
-      {/* ABOUT */}
-      <section className={styles.about}>
-        <div className={`${styles.about_subcontainer} body-copy text-reg right-align `}>
-          <p className={`${styles.section2_text} left-align`}>Brief Introduction about the gradshow goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper ligula ac odio tincidunt, sodales aliquet dui mollis. Duis sodales tempor nibh. Nullam ullamcorper mi in tortor venenatis ornare. </p>
-          <button className={styles.section2_button}>Button</button>
+      {/* APPROVED IMAGE */}
+      <div className={styles.approved}>
+          <div className={styles.mapDiagram}>
+            <Image src={Map} alt="Map Diagram" width={700} height={700}/>
+          </div>
+          <div className={styles.aboutInfo}>
+            <Image src={aboutDetails} alt="About details"/>
+            <a href={'/about'} >More mission details &nbsp;&nbsp;→ </a>
+          </div>
+      </div>
+
+
+      {/* A GLIMPSE INTO OUR SPACE */}
+      <section className={styles.into_our_space}>
+        <div className={styles.section_heading}>
+            <div className={styles.elements}>
+              <h2 className={`regular text-xl`}>A GLIMPSE</h2>
+              <h1 className={`black text-7xl`}>INTO OUR SPACE</h1>
+          </div>
         </div>
       </section>
 
+      <div className={styles.cards_holder}>
 
+        {/* DIGEX CARD */}
+        <div className={styles.card}>
+          <div className={styles.cardbg_container}>
+            <Image src={AGDbg} layout={'fill'} objectFit={'cover'} alt="Space" priority/>
+          </div>
+          <div className={styles.card_content}>
+            <header className={styles.card_desktop}>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext} text-3xl`}>ANIMATION</p>
+              <p className={`${styles.card_largetext} text-3xl`}>& GAME</p>
+              <p className={`${styles.card_largetext} text-3xl`}>DESIGN</p>
+            </header>
+            <header className={styles.card_mobile}>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext}`}>ANIMATION & GAME DESIGN</p>
+            </header>
+            <div className={styles.card_details}>
+              <p className={styles.card_subtitle}>agd_mission_2022</p>
+              <p className={`${styles.major_text} ${styles.major_agd}`}>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
+              <a href="/graduates#filter">[see more]</a>
+            </div>
+            <footer>
+              <div className={styles.number}>
+                <div className={styles.number_subtitle}>
+                  <hr/><span>count</span>
+                </div>
+                <p className={`${styles.card_largetext} text-5xl`}>29</p>
+              </div>
+              <div className={styles.card_badge}><Image src={AGDbadge} alt="AGD Badge" /></div>  
+            </footer>
+          </div>
+        </div>
+
+        {/* DIGEX CARD */}
+        <div className={styles.card}>
+          <div className={styles.cardbg_container}>
+            <Image src={DIGEXbg} layout={'fill'} objectFit={'cover'} alt="Space" priority/>
+          </div>
+          <div className={styles.card_content}>
+            <header className={styles.card_desktop}>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext} text-3xl`}>DIGITAL</p>
+              <p className={`${styles.card_largetext} text-3xl`}>DESIGN</p>
+              <p></p>
+            </header>
+            <header className={styles.card_mobile}>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext}`}>DIGITAL DESIGN</p>
+            </header>
+            <div className={styles.card_details}>
+              <p className={styles.card_subtitle}>digex_mission_2022</p>
+              <p className={`${styles.major_text} ${styles.major_digex}`}>Our Digex [digital experience and interaction design] mission is to deploy user-centred gadgets that ensure a smooth journey for all.</p>
+              <a href="/graduates#filter">[see more]</a>
+            </div>
+            <footer>
+              <div className={styles.number}>
+                <div className={styles.number_subtitle}>
+                  <hr/><span>count</span>
+                </div>
+                <p className={`${styles.card_largetext} text-5xl`}>14</p>
+              </div>
+              <div className={styles.card_badge}><Image  src={DIGEXbadge} alt="DIGEX Badge" /></div>  
+            </footer>
+          </div>
+        </div>
+
+        {/* GRFX CARD */}
+        <div className={styles.card}>
+          <div className={styles.cardbg_container}>
+            <Image src={GRFXbg} layout={'fill'} objectFit={'cover'} alt="Space" priority/>
+          </div>
+          <div className={styles.card_content}>
+            <header className={styles.card_desktop}>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext} text-3xl`}>GRAPHIC</p>
+              <p className={`${styles.card_largetext} text-3xl`}>DESIGN</p>
+              <p></p>
+            </header>
+            <header className={styles.card_mobile}>
+              <div className={styles.linetop}><hr/></div>
+              <p className={`${styles.card_largetext}`}>GRAPHIC DESIGN</p>
+            </header>
+            <div className={styles.card_details}>
+              <p className={styles.card_subtitle}>grfx_mission_2022</p>
+              <p className={`${styles.major_text} ${styles.major_grfx}`}>Our Grfx [graphic design] mission is to prepare design proposals that are out of this world.</p>
+              <a href="/graduates#filter">[see more]</a>
+            </div>
+            <footer>
+              <div className={styles.number}>
+                <div className={styles.number_subtitle}>
+                  <hr/><span>count</span>
+                </div>
+                <p className={`${styles.card_largetext} text-5xl`}>43</p>
+              </div>
+              <div className={`${styles.card_badge} ${styles.grfx_badge}`}><Image src={GRFXbadge} alt="GRFX Badge" /></div>  
+            </footer>
+          </div>
+        </div>
+
+      </div>
+      
       {/* SHOWREELS */}
       <section className={styles.showreels}>
-        <h3 className='text-4xl heading center-align'>Showreels</h3>
-
         <div className={styles.showreels_subcontainer}>
-
-          <div className={styles.showreel_videos}>
-            <Image src={animationShowreel} alt="Showreel for Animation Major" />
-          </div>
-
           <div className={styles.showreels_sidebar}>
             <div className={styles.showreel_buttons}>
-              <button className={styles.section2_button}>Button</button>
-              <button className={styles.section2_button}>Button</button>
-              <button className={styles.section2_button}>Button</button>
+                <OutlineBtn abmajor="GRFX" text="GRFX" onAction={watchGRFX}/>
+                <OutlineBtn abmajor="AGD" text="AGD" onAction={watchAGD}/>
+                <OutlineBtn abmajor="DIGEX" text="DIGEX" onAction={watchDIGEX}/>
             </div>
+          </div>
 
-            <div className={styles.coordinator_text}>
-              <div className={styles.coordinator}>
-                <p className='text-large bold'>Jonathan Pillai</p>
-                <p className='text-med caption'>Animation and Game <br />Design Coordinator</p>
-              </div>
-              <p className='text-reg'>Course Coordinator comment goes here. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus ullamcorper ligula ac odio tincidunt, sodales aliquet dui mollis. Duis sodales tempor nibh. Nullam ullamcorper mi in tortor venenatis ornare.</p>
-            </div>
+          <div className={styles.showreel_videos}>
+            <Iframe
+            url={iframSrc} loop="1" frameBorder="0" allowFullScreen position="relative" playsInline
+            width="100%" height="100%" />
           </div>
         </div>
 
-
-        {/* GRADUATES */}
       </section>
-      <section className={styles.graduates}>
-        <h3 className='text-4xl heading center-align'>Graduates</h3>
-
-        <div className={styles.graduates_subcontainer}>
-
-          <div className={styles.major_circle}>
-            <Image src={digexBadge} alt="Badge insgnia for the Digital Experience major" />
-          </div>
-
-          <div className={styles.major_circle}>
-            <Image src={agdBadge} alt="Badge insgnia for the Animation Game Design major" />
-          </div>
-          <div className={styles.major_circle}>
-            <Image src={grfxBadge} alt="Badge insgnia for the Graphic Design major" />
-          </div>
-
-        </div>
-
-        {/* TODO: create button component and replace here */}
-        <button className='center-align'>View All Graduates</button>
-      </section>
+      
 
 
       {/* SOCIALS */}
       <section className={styles.socials}>
-      <h3 className='text-4xl heading center-align'>See more on our social media</h3>
-      <h5 className='text-med2 regular center-align'>@curtindesign</h5>
+        <div className={styles.section_heading}>
+            <div className={styles.elements}>
+              <h2 className={`regular text-xl`}>GAZE THROUGH OUR INSTAGRAM</h2>
+              <h1 className={`black text-7xl`}>@designatcurtin</h1>
+          </div>
+        </div>
 
-
+        {/* INSTAGRAM POSTS ~ HARD CODED (CAN BE LIVE UPDATED ANYWAY) */}
         <div className={styles.social_images}>
+          {/* <div id="instafeed-container" className={styles.instaContain}></div> */}
+          {/* <Instagram/> */}
+          <IGFeed />
         </div>
       </section>
+
+      <div className={styles.creditsContainer}> 
+          <p className={`text-reg body-copy`}>We would like to acknowledge the Whadjuk Noongar people whose land we are standing on and recognise the strength, resilience and capacity of the Noongar people where Curtin University is situated</p> 
+      </div>
+
+
+
     </div>
   )
 }

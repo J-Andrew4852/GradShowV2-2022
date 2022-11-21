@@ -6,24 +6,24 @@
 .outlinebtn {
     position: relative;
     z-index: 1;
-    height: 50px;
+    height: 60px;
     display: inline-block;
-    min-width: 100px;
+    min-width: 100%;
 } 
 
 .outlinebtn.thin {
     height: 35px;
 }
 
-.digex.gradientBox::after {
+.DIGEX.gradientBox::after {
     background: var(--digex-gradient);
 }
 
-.agd.gradientBox::after {
-    background: var(--agd-gradient);
+.AGD.gradientBox::after {
+    background: var(--agd-gradient); 
 }
 
-.grfx.gradientBox::after {
+.GRFX.gradientBox::after {
     background: var(--grfx-gradient);
 }
 
@@ -101,3 +101,10 @@
     color: var(--med-grey);
     stroke: var(--med-grey);
 } */
+.errorbtn{
+    position: relative;
+    z-index: 1;
+    height: 60px;
+    display: inline-block;
+    min-width: 20%;
+}

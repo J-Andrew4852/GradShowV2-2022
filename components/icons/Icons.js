@@ -79,3 +79,204 @@ export const RocketShipIcon = ({ animate, size = "51"}) => {
 
   )
 }
+
+export const AlienIcon = () =>{
+  return(
+    <svg width="55" height="50" viewBox="0 0 78 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M68.8889 34.4445V43.0555H60.2778V34.4445H68.8889V25.8333H60.2778V8.61115H51.6667V0H25.8333V8.61115H17.2222V25.8333H8.6111V34.4445H17.2222V43.0555H8.6111V34.4445H0V51.6667H17.2222V60.2778H25.8333V51.6667H34.4445V68.8889H43.0555V51.6667H51.6667V60.2778H60.2778V51.6667H77.5V34.4445H68.8889ZM25.8333 17.2222H34.4445V8.61115H43.0555V17.2222H51.6667V25.8333H25.8333V17.2222ZM25.8333 43.0555V34.4445H34.4445V43.0555H25.8333ZM43.0555 43.0555V34.4445H51.6667V43.0555H43.0555Z" fill="var(--dark-green)"/>
+      <path d="M68.8894 60.2698H60.2783V68.8809H68.8894V60.2698Z" fill="var(--dark-green)"/>
+      <path d="M17.2225 60.2698H8.61133V68.8809H17.2225V60.2698Z" fill="var(--dark-green)"/>
+    </svg>
+  )
+}
+
+// Socials Icons ========================================================
+
+// export const other = ({ linkTo }) => {
+//   return(
+
+//   )
+// }
+
+export const SockLoader = ({ name, linkTo }) => {
+  if (name == 'artstation') { return <Artstation linkTo={linkTo} size={'50'} /> }
+  else if (name == 'behance') { return <Behance linkTo={linkTo} size={'50'} /> }
+  else if (name == 'codepen') { return <Codepen linkTo={linkTo} size={'50'} /> }
+  else if (name == 'dribbble') { return <Dribbble linkTo={linkTo} size={'50'} /> }
+  else if (name == 'facebook') { return <Facebook linkTo={linkTo} size={'50'} /> }
+  else if (name == 'github') { return <Github linkTo={linkTo} size={'50'} /> }
+  else if (name == 'instagram') { return <Instagram linkTo={linkTo} size={'50'} /> }
+  else if (name == 'linkedin') { return <Linkedin linkTo={linkTo} size={'50'} /> }
+  else if (name == 'twitter') { return <Twitter linkTo={linkTo} size={'50'} /> }
+  else if (name == 'youtube') { return <Youtube linkTo={linkTo} size={'50'} /> }
+  else { return <Other linkTo={linkTo} size={'50'} /> } 
+}
+
+export const Artstation = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 24 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M13.1,0h-2.5v2.5h2.5V0z M3.2,17.4H0.7v2.5h2.5V17.4z M5.6,19.9H3.2v2.5h2.5V19.9z M5.6,17.4H3.2v2.5h2.5V17.4z
+          M8.1,17.4H5.6v2.5h2.5V17.4z M10.6,17.4H8.1v2.5h2.5V17.4z M13.1,17.4h-2.5v2.5h2.5V17.4z M8.1,19.9H5.6v2.5h2.5V19.9z M10.6,19.9
+          H8.1v2.5h2.5V19.9z M13.1,19.9h-2.5v2.5h2.5V19.9z M15.6,19.9h-2.5v2.5h2.5V19.9z M15.6,0h-2.5v2.5h2.5V0z M15.6,2.5h-2.5V5h2.5V2.5
+          z M18.1,5h-2.5v2.5h2.5V5z M18.1,2.5h-2.5V5h2.5V2.5z M15.6,5h-2.5v2.5h2.5V5z M20.6,7.4h-2.5v2.5h2.5V7.4z M18.1,7.5h-2.5v2.5h2.5
+          V7.5z M23.1,12.4h-2.5v2.5h2.5V12.4z M20.6,12.4h-2.5v2.5h2.5V12.4z M23.1,14.9h-2.5v2.5h2.5V14.9z M20.6,17.3h-2.5v2.5h2.5V17.3z
+          M20.6,14.9h-2.5v2.5h2.5V14.9z M20.6,9.9h-2.5v2.5h2.5V9.9z M18.1,9.9h-2.5v2.5h2.5V9.9z M8.1,7.5H5.6v2.5h2.5V7.5z M3.2,9.9H0.7
+          v2.5h2.5V9.9z M5.6,9.9H3.2v2.5h2.5V9.9z M10.6,9.9H8.1v2.5h2.5V9.9z M8.1,9.9H5.6v2.5h2.5V9.9z M3.2,12.4H0.7v2.5h2.5V12.4z
+          M5.6,12.4H3.2v2.5h2.5V12.4z M10.6,12.4H8.1v2.5h2.5V12.4z M8.1,12.4H5.6v2.5h2.5V12.4z M13.1,9.9h-2.5v2.5h2.5V9.9z M13.1,12.4
+          h-2.5v2.5h2.5V12.4z M10.6,7.5H8.1v2.5h2.5V7.5z M8.1,5H5.6v2.5h2.5V5z M5.6,7.5H3.2v2.5h2.5V7.5z"/>
+        </svg>
+    </a>
+  )
+}
+export const Behance = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 30 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M10.3,5.6h2.4V3.2h-2.4H7.9H5.5v2.4h2.4H10.3z M12.7,12.7v2.4v2.4v2.4H15v-2.4v-2.4v-2.4H12.7z M7.9,17.4H5.5
+          v2.4h2.4h2.4h2.4v-2.4h-2.4H7.9z M3.1,13v-0.3h2.4h2.4h2.4v-2.4h2.4V7.9V5.6V3.2h-2.4v2.4v2.4v2.4H7.9H5.5H3.1V9.5V7.9V5.6V3.2H0.8
+          v2.4v2.4v2.4V13v3.4v3.4h2.4v-3.4V13z M24.5,5.7h2.5V3.2h-2.5H22h-2.5v2.5H22H24.5z M24.5,9.9H27l0-2.5h-2.5H22h-2.5v2.5H22H24.5z
+          M22,17.3l-2.5,0v2.5H22h2.5H27v-2.5h-2.5H22z M27,9.9L27,9.9l-0.1,2.4l-1.9,0l-0.6,0l-2.5,0l-0.7,0l-1.7,0v0V9.9h-2.5l0,2.5v2.5
+          v2.5h2.5v-2.4l1.8,0l0.7,0l2.5,0l0.6,0l1.9,0l0-2.4l2.5,0l0-2.5L27,9.9z"/>
+      </svg>
+    </a>
+  )
+}
+export const Codepen = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 24 25" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M3.7,10H1.2v2.4h2.4V10z M3.7,7.6H1.2V10h2.4V7.6z M6.1,5.2H3.7v2.4h2.4V5.2z M8.6,2.7H6.1v2.4h2.4V2.7z
+        M11,0.3H8.6v2.4H11V0.3z M13.4,0.3H11v2.4h2.4V0.3z M3.7,12.5H1.2v2.4h2.4V12.5z M3.7,14.9H1.2v2.4h2.4V14.9z M6.1,17.4H3.7v2.4
+        h2.4V17.4z M8.6,19.9H6.1v2.4h2.4V19.9z M11,22.3H8.6v2.4H11V22.3z M13.4,2.7h-2.4v2.4h2.4V2.7z M13.4,5.2h-2.4v2.4h2.4V5.2z
+        M13.4,7.6h-2.4V10h2.4V7.6z M11,10.1H8.5v2.4H11V10.1z M15.9,10h-2.4v2.4h2.4V10z M13.4,22.3H11v2.4h2.4V22.3z M13.4,19.9H11v2.4
+        h2.4V19.9z M13.4,17.4H11v2.4h2.4V17.4z M23.2,12.5h-2.4v2.4h2.4V12.5z M23.2,10h-2.4v2.4h2.4V10z M15.9,15h-2.4v2.4h2.4V15z
+        M18.3,12.5h-2.4V15h2.4V12.5z M20.8,10h-2.4v2.4h2.4V10z M23.2,7.6h-2.4V10h2.4V7.6z M20.7,5.2h-2.4v2.4h2.4V5.2z M18.3,2.7h-2.4
+        v2.4h2.4V2.7z M15.8,0.3h-2.4v2.4h2.4V0.3z M15.9,22.3h-2.4v2.4h2.4V22.3z M18.4,19.9h-2.4v2.4h2.4V19.9z M20.8,17.4h-2.4v2.4h2.4
+        V17.4z M23.2,14.9h-2.4v2.4h2.4V14.9z M11,15H8.5v2.4H11V15z M8.5,12.5H6.1v2.4h2.4V12.5z M6.1,10H3.7v2.4h2.4V10z"/>
+      </svg>
+    </a>
+  )
+}
+export const Dribbble = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 22" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M11.2,2.9L9,3.3l0.4,2.2l2.2-0.4L11.2,2.9z M15.3,13.7l-2.2,0.4l0.4,2.2l2.2-0.4L15.3,13.7z M13.4,16.3
+        l-2.2,0.4l0.4,2.2l2.2-0.4L13.4,16.3z M13.8,4.8l-2.2,0.4L12,7.4L14.2,7L13.8,4.8z M14.6,9.2l-2.2,0.4l0.4,2.2l2.2-0.4L14.6,9.2z
+        M14.9,11.5l-2.2,0.4l0.4,2.2l2.2-0.4L14.9,11.5z M6.3,15.1l-2.2,0.4l0.4,2.2l2.2-0.4L6.3,15.1z M19.8,13l-2.2,0.4l0.4,2.2l2.2-0.4
+        L19.8,13z M8.2,12.6L6,12.9l0.4,2.2l2.2-0.4L8.2,12.6z M10.4,12.2l-2.2,0.4l0.4,2.2l2.2-0.4L10.4,12.2z M12.7,11.8l-2.2,0.4l0.4,2.2
+        l2.2-0.4L12.7,11.8z M17.2,11.1l-2.2,0.4l0.4,2.2l2.2-0.4L17.2,11.1z M18.3,4.1l-2.2,0.4l0.4,2.2l2.2-0.4L18.3,4.1z M7.5,8.1
+        L5.2,8.5l0.4,2.2l2.2-0.4L7.5,8.1z M4.9,6.3L2.6,6.6L3,8.8l2.2-0.4L4.9,6.3z M16.4,6.7L14.2,7l0.4,2.2l2.2-0.4L16.4,6.7z M14.2,7
+        L12,7.4l0.4,2.2l2.2-0.4L14.2,7z M12,7.4L9.7,7.8l0.4,2.2l2.2-0.4L12,7.4z M9.7,7.8L7.5,8.1l0.4,2.2l2.2-0.4L9.7,7.8z M18.3,4.1
+        l0.4,2.2l0.7,4.4l0.4,2.2l0.4,2.2l2.2-0.4L22,12.6l-0.4-2.2l-0.4-2.2l-0.4-2.2l-0.4-2.2L18.3,4.1z M17.9,1.9l-2.2,0.4l0.4,2.2
+        l2.2-0.4L17.9,1.9z M20.1,15.2l-2.2,0.4l0.4,2.2l2.2-0.4L20.1,15.2z M13.8,18.5l-2.2,0.4l-2.2,0.4l-2.2,0.4l0.4,2.2l2.2-0.4l2.2-0.4
+        l2.2-0.4l2.2-0.4l2.2-0.4l-0.4-2.2L16,18.1L13.8,18.5z M15.3,0L4.1,1.8L4.5,4l11.2-1.8L15.3,0z M4.5,4L2.3,4.4l0.4,2.2l2.2-0.4
+        L4.5,4z M6.7,17.4l-2.2,0.4l0.4,2.2l2.2-0.4L6.7,17.4z M3.7,13.3l-0.4-2.2L3,8.8L2.6,6.6L0.4,7l0.4,2.2l0.4,2.2l0.4,2.2l0.4,2.2
+        l0.4,2.2l2.2-0.4l-0.4-2.2L3.7,13.3z"/>
+      </svg>
+    </a>
+  )
+}
+export const Facebook = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M17.4,11.5h-3.2H11H7.8v2.3H11h3.2h3.2V11.5z M12.4,11.5V9.2V6.9V4.6h-2.3v2.3v2.3v2.3H12.4z M15.7,6.9h1.7V4.6
+        h-1.7h-1.7h-1.7v2.3h1.7H15.7z M12.4,4.6h-2.3v6.9v9.2h2.3V4.6z M17.4,6.9h-2.2v2.2h2.2V6.9z M19.9,22.2v-2.5h2.5c0,0,0,0,0,0V2.5
+        l-2.5,0V0H2.7v2.5H0.2v17.3h2.5v2.5 M19.9,19.7H2.7V2.5h17.3V19.7z"/>
+      </svg>
+    </a>
+  )
+}
+export const Github = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 22 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M10,14H8v2h2V14z M10,16H8v2h2V16z M12,16h-2v2h2V16z M14,16h-2v2h2V16z M10,18H8v2h2V18z M8,16H6v2h2V16z
+        M6,14H4v2h2V14z M12,18h-2v2h2V18z M14,18h-2v2h2V18z M14,14h-2v2h2V14z M12,14h-2v2h2V14z M8,12H6v2h2V12z M10,12H8v2h2V12z
+        M12,12h-2v2h2V12z M14,12h-2v2h2V12z M16,12h-2v2h2V12z M8,10H6v2h2V10z M10,10H8v2h2V10z M12,10h-2v2h2V10z M14,10h-2v2h2V10z
+        M16,10h-2v2h2V10z M8,8H6v2h2V8z M10,8H8v2h2V8z M8,6H6v2h2V6z M12,8h-2v2h2V8z M14,8h-2v2h2V8z M16,8h-2v2h2V8z M16,6h-2v2h2V6z
+        M20,6v2v4v2v2h2v-2v-2v-2V8V6H20z M20,4h-2v2h2V4z M18,2h-2v2h2V2z M18,18h-2v2h2V18z M20,16h-2v2h2V16z M12,20h-2H8H6v2h2h2h2h2h2
+        v-2h-2H12z M16,0H6v2h10V0z M4,4H2v2h2V4z M6,2H4v2h2V2z M4,16H2v2h2V16z M6,18H4v2h2V18z M2,12v-2V8V6H0v2v2v2v2v2h2v-2V12z"/>
+      </svg>
+    </a>
+  )
+}
+export const Instagram = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M20.3,22.4v-2.5h2.5c0,0,0,0,0,0V2.5l-2.5,0V0H2.9v2.5H0.4v17.4h2.5v2.5 M20.3,19.9H2.9V2.5h17.4V19.9z
+        M18.9,4.5h-2.5V7h2.5V4.5z M14.1,8.7v2.5v2.4h-2.5H9.1v-2.4V8.7h2.5H14.1V6.3h-2.5H9.1v2.5H6.6v2.5v2.5h2.5v2.4h2.5h2.5v-2.4h2.5
+        v-2.5V8.7H14.1z"/>
+      </svg>
+    </a>
+  )
+}
+export const Linkedin = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M20.1,22.5v-2.4h2.5c0,0,0,0,0,0V2.9l-2.5,0V0.5H2.9v2.4H0.4v17.1h2.5v2.4 M20.1,20.1H2.9V2.9h17.3V20.1z
+        M7.8,5.4H5.3v2.4h2.5V5.4z M7.8,10.3H5.3v2.4h2.5V10.3z M15.2,10.3h-2.5v2.4h2.5V10.3z M17.7,10.3h-2.5v2.4h2.5V10.3z M17.7,12.7
+        h-2.5v2.4h2.5V12.7z M17.7,15.2h-2.5v2.4h2.5V15.2z M7.8,12.7H5.3v2.4h2.5V12.7z M7.8,15.2H5.3v2.4h2.5V15.2z M12.7,10.3h-2.5v2.4
+        h2.5V10.3z M12.7,12.7h-2.5v2.4h2.5V12.7z M12.7,15.2h-2.5v2.4h2.5V15.2z"/>
+      </svg>
+    </a>
+  )
+}
+export const Other = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_1467_225)">
+        <path d="M19.5555 4.88892V7.33336H17.1111V4.88892H14.6666V7.33336H12.2222V9.7778H14.6666V12.2222H17.1111H19.5555V14.6667V17.1089H21.9999V14.6667V12.2222V9.7778V7.33336V4.88892H19.5555Z" fill="#283618"/>
+        <path d="M19.5558 2.44446H17.1113V4.8889H19.5558V2.44446Z" fill="#283618"/>
+        <path d="M19.5558 17.1089H17.1113V19.5533H19.5558V17.1089Z" fill="#283618"/>
+        <path d="M12.222 19.5555H9.77756H7.33312H4.88867V22H7.33312H9.77756H12.222H14.6665H17.1109V19.5555H14.6665H12.222Z" fill="#283618"/>
+        <path d="M7.33312 4.88889H4.88867V7.33333V9.77778H7.33312V7.33333H9.77756V4.88889V2.44444H12.222H14.6665H17.1109V0H14.6665H12.222H9.77756H7.33312H4.88867V2.44444H7.33312V4.88889Z" fill="#283618"/>
+        <path d="M7.33312 14.6666V17.1088H9.77756V14.6666V12.2222H7.33312H4.88867V14.6666H7.33312Z" fill="#283618"/>
+        <path d="M4.88878 2.44446H2.44434V4.8889H4.88878V2.44446Z" fill="#283618"/>
+        <path d="M4.88878 17.1089H2.44434V19.5533H4.88878V17.1089Z" fill="#283618"/>
+        <path d="M2.44444 12.2222H4.88889V9.7778H2.44444V7.33336V4.88892H0V7.33336V9.7778V12.2222V14.6667V17.1089H2.44444V14.6667V12.2222Z" fill="#283618"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_1467_225">
+        <rect width="22" height="22" fill="white"/>
+        </clipPath>
+        </defs>
+      </svg>
+    </a>
+  )
+}
+export const Twitter = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 23 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M7.8,7.4H5.3v2.5h2.5V7.4z M17.7,14.8h-2.5v2.5h2.5V14.8z M15.2,17.3h-2.5v2.5h2.5V17.3z M15.3,14.8h-2.5v2.5
+        h2.5V14.8z M15.3,12.3h-2.5v2.5h2.5V12.3z M17.7,12.3h-2.5v2.5h2.5V12.3z M12.7,19.8h-2.5v2.5h2.5V19.8z M7.8,19.8H5.3v2.5h2.5V19.8
+        z M10.3,19.8H7.8v2.5h2.5V19.8z M5.4,2.5H2.9V5h2.5V2.5z M12.7,17.3h-2.5v2.5h2.5V17.3z M12.8,14.8h-2.5v2.5h2.5V14.8z M12.8,12.3
+        h-2.5v2.5h2.5V12.3z M10.3,17.3H7.8v2.5h2.5V17.3z M10.3,14.8H7.8v2.5h2.5V14.8z M10.3,12.3H7.8v2.5h2.5V12.3z M5.4,4.9H2.9v2.5h2.5
+        V4.9z M12.8,7.4h-2.5v2.5h2.5V7.4z M17.7,7.4h-2.5v2.5h2.5V7.4z M15.3,7.4h-2.5v2.5h2.5V7.4z M15.2,4.9h-2.5v2.5h2.5V4.9z M12.7,4.9
+        h-2.5v2.5h2.5V4.9z M20.2,12.3h-2.5v2.5h2.5V12.3z M17.7,4.9h-2.5v2.5h2.5V4.9z M20.2,4.9h-2.5v2.5h2.5V4.9z M10.3,9.9H7.8v2.5h2.5
+        V9.9z M15.2,2.4h-2.5v2.5h2.5V2.4z M2.9,0H0.4v2.5h2.5V0z M17.7,2.4h-2.5v2.5h2.5V2.4z M22.7,4.9h-2.5v2.5h2.5V4.9z M20.2,2.4h-2.5
+        v2.5h2.5V2.4z M10.3,7.4H7.8v2.5h2.5V7.4z M20.2,7.4h-2.5v2.5h2.5V7.4z M20.2,14.8h-2.5v2.5h2.5V14.8z M7.8,4.9H5.3v2.5h2.5V4.9z
+        M7.8,9.9H5.3v2.5h2.5V9.9z M5.4,7.4H2.9v2.5h2.5V7.4z M17.7,17.3h-2.5v2.5h2.5V17.3z M5.4,9.9H2.9v2.5h2.5V9.9z M7.8,12.3H5.3v2.5
+        h2.5V12.3z M12.8,9.9h-2.5v2.5h2.5V9.9z M15.3,9.9h-2.5v2.5h2.5V9.9z M17.7,9.9h-2.5v2.5h2.5V9.9z M20.2,9.9h-2.5v2.5h2.5V9.9z
+        M2.9,2.5H0.4V5h2.5V2.5z M2.9,4.9H0.4v2.5h2.5V4.9z"/>
+      </svg>
+    </a>
+  )
+}
+export const Youtube = ({ linkTo, size }) => {
+  return(
+    <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <svg width={`${size}px`} height={`${size}px`} viewBox="0 0 24 23" fill="#283618" xmlns="http://www.w3.org/2000/svg">
+        <path className="st0" d="M21,5.5L21,3l-2.6,0l-2.6,0l-2.6,0l-2.6,0L8.2,3L5.6,3L3.1,3h0v2.4H0.5l0,2.4l0,2.4l0,2.4l0,2.4l0,2.4v0h2.6V20
+        h0l2.6,0l2.6,0l2.6,0l2.6,0l2.6,0l2.6,0l2.6,0l0-2.4l2.6,0l0-2.4l0-2.4l0-2.4l0-2.4l0-2.4L21,5.5L21,5.5z M15.8,12.7h-2.6v2.4h-2.6
+        V7.9h2.6v2.4h2.6V12.7z"/>
+      </svg>
+    </a>
+  )
+}
