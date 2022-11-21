@@ -234,18 +234,21 @@ export default function Home() {
 
 
       {/* SOCIALS */}
-      {/* <section className={styles.socials}>
+      <section className={styles.socials}>
         <div className={styles.section_heading}>
             <div className={styles.elements}>
               <h2 className={`regular text-xl`}>GAZE THROUGH OUR INSTAGRAM</h2>
-              <h1 className={`black text-7xl`}>@designatcurtin</h1>
+              <a  href='https://www.instagram.com/designatcurtin/' target="_blank" rel="noreferrer" className='link'>
+                  <h1 className={`black text-7xl`}>@designatcurtin</h1>
+              </a>
+              
           </div>
         </div>
-
+{/* 
         <div className={styles.social_images}>
           <IGFeed />
-        </div>
-      </section> */}
+        </div> */}
+      </section>
 
       <div className={styles.creditsContainer}> 
           <p className={`text-reg body-copy`}>We would like to acknowledge the Whadjuk Noongar people whose land we are standing on and recognise the strength, resilience and capacity of the Noongar people where Curtin University is situated</p> 
