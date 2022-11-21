@@ -19,7 +19,7 @@ Description:
 - Link to individual graduates page
 - Create side peek of graduate
 - Showcase showreels of each major
-*/
+*/ 
 
 export default function Graduates({ graduates }) {
   const [selectedMajor, setSelectedMajor] = useState('All Graduates')

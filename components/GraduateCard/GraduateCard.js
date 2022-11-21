@@ -71,7 +71,7 @@ majorz.forEach(() => {
 
 // console.log(abMajor)
 
-// console.log(data.heroImage)
+// console.log(data.heroImage) 
 
   // COMPONENT INIT ========================================================================= // 
 

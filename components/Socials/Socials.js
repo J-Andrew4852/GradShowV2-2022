@@ -78,7 +78,7 @@ socials.forEach((item) => {
   // // console.log(linkTo)
   // var sockComp = sockLoader( name, linkTo )
   // // console.log(sockComp)
-  console.log(sauce)
+  // console.log(sauce)
 
   const icons = sauce.map( (item) => {
     return (
