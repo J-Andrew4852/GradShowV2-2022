@@ -213,9 +213,9 @@ export default function Home() {
         <div className={styles.showreels_subcontainer}>
           <div className={styles.showreels_sidebar}>
             <div className={styles.showreel_buttons}>
-                <OutlineBtn major="grfx" text="GRFX" onAction={watchGRFX}/>
-                <OutlineBtn major="agd" text="AGD" onAction={watchAGD}/>
-                <OutlineBtn major="digex" text="DIGEX" onAction={watchDIGEX}/>
+                <OutlineBtn abmajor="GRFX" text="GRFX" onAction={watchGRFX}/>
+                <OutlineBtn abmajor="AGD" text="AGD" onAction={watchAGD}/>
+                <OutlineBtn abmajor="DIGEX" text="DIGEX" onAction={watchDIGEX}/>
             </div>
           </div>
 
