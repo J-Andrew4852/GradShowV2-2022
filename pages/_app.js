@@ -2,6 +2,7 @@ import { Layout } from '../components/Layout/Layout'
 import '../styles/globals.css'
 import Script from 'next/script'
 import Head from 'next/head'
+import { useState } from 'react'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       <meta name="theme-color" content="#fffbf4"/>
     </Head>
     <Layout>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
     </Layout>
     </>
   )

@@ -45,14 +45,18 @@ export default function Home() {
   const AGDreel = "https://www.youtube.com/embed/orLB-DWTNss?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
   const DIGEXreel = "https://www.youtube.com/embed/FvJ6eNRz828?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
   const [iframSrc, setIframeUrl] = useState(DIGEXreel);
+  const [selectedMajor, setSelectedMajor] = useState('All Graduates');
 
   const watchGRFX = () => {
+    setSelectedMajor('Graphic Design');
     setIframeUrl(`${GRFXreel}`);
   };
   const watchAGD = () => {
+    setSelectedMajor('Animation and Game Design');
     setIframeUrl(`${AGDreel}`);
   };
   const watchDIGEX = () => {
+    setSelectedMajor('Digital Experience and Interaction Design');
     setIframeUrl(`${DIGEXreel}`);
   };
 
@@ -213,9 +217,9 @@ export default function Home() {
         <div className={styles.showreels_subcontainer}>
           <div className={styles.showreels_sidebar}>
             <div className={styles.showreel_buttons}>
-                <OutlineBtn abmajor="GRFX" text="GRFX" onAction={watchGRFX}/>
-                <OutlineBtn abmajor="AGD" text="AGD" onAction={watchAGD}/>
-                <OutlineBtn abmajor="DIGEX" text="DIGEX" onAction={watchDIGEX}/>
+                <OutlineBtn linkTo={'/graduates#filter'} abmajor="GRFX" text="GRFX" onAction={watchGRFX}/>
+                <OutlineBtn linkTo={'/graduates#filter'} abmajor="AGD" text="AGD" onAction={watchAGD}/>
+                <OutlineBtn linkTo={'/graduates#filter'} abmajor="DIGEX" text="DIGEX" onAction={watchDIGEX}/>
             </div>
           </div>
 

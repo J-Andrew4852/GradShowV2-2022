@@ -28,7 +28,7 @@ export default function Graduates({ graduates }) {
   const [clicked, setClicked] = useState(false);
   const [listView, setListView] = useState(false)
   const [filtered, setFiltered] = useState([])
-  const [search, setSearch] =useState('')
+  const [search, setSearch] = useState('')
 
   const GRFXreel = "https://www.youtube.com/embed/K-eaJdDmlz8?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
   const AGDreel = "https://www.youtube.com/embed/orLB-DWTNss?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
@@ -79,6 +79,8 @@ export default function Graduates({ graduates }) {
     }
   },  [selectedMajor])
 
+
+
   // console.log(filtered)
 
   // useEffect(() => {
@@ -123,7 +125,7 @@ export default function Graduates({ graduates }) {
   // console.log(sorted)
 
   // console.log(alpSelects)
-  // console.log(selectedMajor)
+  console.log(selectedMajor)
 
   // console.log(graduates);
 
@@ -186,7 +188,7 @@ export default function Graduates({ graduates }) {
       </div>
 
       {/* FILTER BAR */}
-      <div className={styles.filterBar}>
+      <div className={styles.filterBar} id="filter">
         <div className={styles.filterBar_subContainer}>
 
           <div className={styles.filters}>
