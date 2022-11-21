@@ -122,7 +122,8 @@ export default function GraduatemDetail({ graduate, data }) {
                         <img className={`${styles.graduate_photo} ${styles.frontImg}`} src={graduate.headshotURL}/>
                     </div>
                     <div className={styles.graduate_photo_small}>
-                        <img className={styles.graduate_photo} src={graduate.headshotURL} alt="Graduate Image" />
+                        <img className={`${styles.graduate_photo} ${styles.altImg}`} src={graduate.altImage} />
+                        <img className={`${styles.graduate_photo} ${styles.frontImg}`} src={graduate.headshotURL}/>
                     </div>
 
                     <div className={styles.graduate_title}>
