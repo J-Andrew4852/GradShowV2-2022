@@ -124,7 +124,7 @@ export default function GraduatemDetail({ graduate, data }) {
                         <div className={styles.graduate_major_patch}>
                             <Image src={gradPatch} alt="Graduate Major Patch" layout="fill" objectFit="contain" width={225} height={227} priority/>
                         </div>
-                        <h1 className={`${styles.graduate_name} heading bold text-2xl `} >{graduate.preferredName} {graduate.lastName}</h1>
+                        <h1 className={`${styles.graduate_name} subheading black text-2xl `} >{graduate.preferredName} {graduate.lastName}</h1>
                         <h3 className={`${styles.graduate_major} regular text-reg`}>{graduate.major[0]}<br/> {graduate.major[1]}</h3>
                         <div className={`${styles.graduate_bio} subheading bold text-med`}>{graduate.shortBio}</div>
                     </div>
@@ -133,7 +133,7 @@ export default function GraduatemDetail({ graduate, data }) {
                         <div className={styles.graduate_description}>{graduate.longBio}</div>
                         <div className={styles.graduate_links}>
                             <div className={styles.socialLinks}>
-                                <Socials key={graduate._id} data={graduate} />
+                                <Socials className={styles.socialFlex} key={graduate._id} data={graduate} />
                             </div>
                             { /* UPDATE BUTTON WITH MAJOR INFORMATION AND LINK TO PORTFOLIO SITE */}
                             <div className={styles.portfolio_link}>

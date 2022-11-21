@@ -60,6 +60,7 @@
 .graduate_bio {
     grid-area: 3 / 1 / 4 / -1 ;
     margin: 2em 0 3em 0 ;
+    line-height: 150%;
 }
 
 .graduate_details {
@@ -87,6 +88,13 @@
     height: auto;
     width: 100%;
 }
+
+.socialLinks > div{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2%;
+}
+
 
 
 /* ============= Image Grid ============= */

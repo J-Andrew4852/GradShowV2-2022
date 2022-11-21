@@ -112,7 +112,7 @@ export const GradFolder = ({ graduate, data, onClose }) => {
 
                     <div className={styles.details}>
                         <div className={styles.heading_group}>
-                            <h1 className='heading bold text-2xl'>{data.preferredName} {data.lastName}</h1>
+                            <h1 className='subheading bold text-2xl'>{data.preferredName} {data.lastName}</h1>
                             <h3 className={`regular text-reg`}>{abMajor[0]} {abMajor[1]}</h3>
                         </div>
 

@@ -388,10 +388,14 @@
   width: 75%;
   align-self: flex-end;
   margin-bottom: 0.7em;
-  border-width: 0;
   color: #FFFBF4;
-  border-style:solid;
 }
+
+.linetop hr {
+  border-style:solid;
+  border-width: .5px;
+}
+
 
 .card header p:first-of-type {
   align-self: flex-start;

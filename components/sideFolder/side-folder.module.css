@@ -107,7 +107,7 @@
     justify-content: space-between;
     align-items: center;
     padding-left: calc(3em + 10px);
-    margin-top: 1.5em;
+    margin: 2em 0;
 }
 
 .icon {
