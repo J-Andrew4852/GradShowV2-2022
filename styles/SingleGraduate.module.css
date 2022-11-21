@@ -21,11 +21,10 @@
     object-fit: cover;
 }
 
-.graduate_photoContainer > img {
-    object-fit: cover;
+.graduate_photo {
+    height: 100%;
     width: 100%;
-    max-height: 100%;
-    
+    object-fit: cover;
 }
 
 .graduate_photo_small {
@@ -38,9 +37,15 @@
 }
 
 .graduate_major_patch {
+    position: relative;
     grid-row: span 2;
     width: 100px;
+    height: 100px;
     margin-right: 2em;
+}
+
+.graduate_major_patch img {
+    
 }
 
 .graduate_name {
@@ -57,7 +62,10 @@
 }
 
 .graduate_details {
-    align-self: end;
+    /* align-self: end; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .graduate_description {
@@ -70,23 +78,14 @@
 
 .graduate_links {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    /* flex-wrap: wrap; */
     width: 100%;
-}
-
-.placeholder_social {
-    height: 20px;
-    width: 20px;    
-    background-color: black;
 }
 
 .socialLinks {
     height: auto;
     width: 100%;
 }
-
 
 
 /* ============= Image Grid ============= */
@@ -98,7 +97,6 @@
 }
 
 .graduateImages {
-    /* background-color: var(--off-black); */
     height: 100%;
     width: 100%;
 }
@@ -136,16 +134,25 @@
         padding: 20px 50px 0 50px ;
     }
 
-    .graduate_photo { display: none; }
+    .graduate_photoContainer { display: none; }
 
     .graduate_photo_small { 
         grid-area: 1 / 1 / 2 / 2 ; 
         display: block;
         position: relative;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .graduate_photo_small .graduate_photo {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     .graduate_photo_small img {
-        object-position: 0 20%;
+        object-position: 0 40%;
     }
 
     .graduate_title {
@@ -163,6 +170,9 @@
 }
 
 @media only screen and (max-width: 900px) {
+
+
+
 
 
 }
