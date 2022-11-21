@@ -54,7 +54,7 @@ export const Navbar = () => {
     <nav className={styles.container}>
       <div className={styles.navcontainer}>
         <div className={`text-med ${styles.nav_elements}`}>   
-          <Link href={'/'} className={styles.logo}>
+          <Link href={'/#GradShow'} className={styles.logo}>
             {/* <a> */}
               <Image src={logo} alt="Exhibition Space logo"/>
             {/* </a> */}
@@ -69,26 +69,26 @@ export const Navbar = () => {
           </div>
 
           <div className={styles.nav_options}>
-            <Link href={'/'}>
+            <Link href={'/#GradShow'}>
               <a className={router.pathname === '/' ? `link active` : `link`}>Home</a>
             </Link>
-            <Link href={'/about'}>
+            <Link href={'/about#GradShow'}>
               <a className={router.pathname.startsWith('/about') ? `link active` : `link`}>About</a>
             </Link>
-            <Link href={'/graduates'}>
+            <Link href={'/graduates#GradShow'}>
               <a className={router.pathname.startsWith('/graduates') ? `link active` : `link`}>Graduates</a>
             </Link>
           </div>
         </div>
       </div>
       <div className={styles.mobile_nav_options}>
-          <Link href={'/'}>
+          <Link href={'/#GradShow'}>
             <a className={router.pathname === '/' ? `link active` : `link`}>Home</a>
           </Link>
-          <Link href={'/about'}>
+          <Link href={'/about#GradShow'}>
             <a className={router.pathname.startsWith('/about') ? `link active` : `link`}>About</a>
           </Link>
-          <Link href={'/graduates'}>
+          <Link href={'/graduates#GradShow'}>
             <a className={router.pathname.startsWith('/graduates') ? `link active` : `link`}>Graduates</a>
           </Link>
         </div>
@@ -98,7 +98,7 @@ export const Navbar = () => {
     <nav className={styles.container}>
       <div className={styles.navcontainer}>
         <div className={`text-med ${styles.nav_elements}`}>   
-          <Link href={'/'} className={styles.logo}>
+          <Link href={'/#GradShow'} className={styles.logo}>
             {/* <a> */}
               <Image src={logo} alt="Exhibition Space logo"/>
             {/* </a> */}
@@ -108,13 +108,13 @@ export const Navbar = () => {
             <Hamburger />
           </div>
           <div className={styles.nav_options}>
-            <Link href={'/'}>
+            <Link href={'/#GradShow'}>
               <a className={router.pathname === '/' ? `link active` : `link`}>Home</a>
             </Link>
-            <Link href={'/about'}>
+            <Link href={'/about#GradShow'}>
               <a className={router.pathname.startsWith('/about') ? `link active` : `link`}>About</a>
             </Link>
-            <Link href={'/graduates'}>
+            <Link href={'/graduates#GradShow'}>
               <a className={router.pathname.startsWith('/graduates') ? `link active` : `link`}>Graduates</a>
             </Link>
           </div>

@@ -34,7 +34,7 @@ Description:
 
 export default function About() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='GradShow'>
       <Head>
         <title>About || Exhibition Space</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

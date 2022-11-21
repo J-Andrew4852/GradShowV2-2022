@@ -145,7 +145,7 @@ export default function Graduates({ graduates }) {
   // };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='GradShow'>
       <Head>
         <title>Graduates || Exhibition Space</title>
         <link rel="icon" href="/favicon.ico" />

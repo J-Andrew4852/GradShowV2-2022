@@ -110,7 +110,7 @@ export default function GraduatemDetail({ graduate, data }) {
     // console.log(altHeadshot)
 
     return (
-        <div className={styles.graduatePageContainer}>
+        <div className={styles.graduatePageContainer} id='GradShow'>
             <Head>
                 <title>{graduate.preferredName} {graduate.lastName} || Exhibition Space</title>
                 <link rel="icon" href="/favicon.ico" />
