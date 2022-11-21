@@ -4,7 +4,7 @@
     color: var(--off-white);
     padding-inline: 4em;
     position: sticky;
-    top: var(--nav-height);
+    top: 0;
     z-index: 4;
   }
   
