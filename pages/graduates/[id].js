@@ -6,8 +6,8 @@ import Image from 'next/image'
 // COMPONENT IMPORTS ==================================================================== // 
 import gradImage from '../../public/assets/images/graduate_image_placeholder.JPG'
 import digexGradPatch from '../../public/assets/images/Badges/digex_patch.png'
-import agdGradPatch from '../../public/assets/images/Badges/agd_patch.png'
-import grfxGradPatch from '../../public/assets/images/Badges/grfx_patch.png'
+import agdGradPatch from '../../public/assets/images/Badges/agd_patchsquare.png'
+import grfxGradPatch from '../../public/assets/images/Badges/grfx_patchsquare.png'
 import { OutlineBtn } from "../../components/Buttons/Button";
 import { MasonryComp } from '../../components/Masonry/Masonry'
 import { Socials } from '../../components/Socials/Socials'
@@ -122,7 +122,7 @@ export default function GraduatemDetail({ graduate, data }) {
 
                     <div className={styles.graduate_title}>
                         <div className={styles.graduate_major_patch}>
-                            <Image src={gradPatch} alt="Graduate Major Patch" layout="responsive" width={225} height={227} priority/>
+                            <Image src={gradPatch} alt="Graduate Major Patch" layout="fill" objectFit="contain" width={225} height={227} priority/>
                         </div>
                         <h1 className={`${styles.graduate_name} heading bold text-2xl `} >{graduate.preferredName} {graduate.lastName}</h1>
                         <h3 className={`${styles.graduate_major} regular text-reg`}>{graduate.major[0]}<br/> {graduate.major[1]}</h3>

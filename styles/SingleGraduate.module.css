@@ -37,9 +37,15 @@
 }
 
 .graduate_major_patch {
+    position: relative;
     grid-row: span 2;
     width: 100px;
+    height: 100px;
     margin-right: 2em;
+}
+
+.graduate_major_patch img {
+    
 }
 
 .graduate_name {
@@ -56,7 +62,10 @@
 }
 
 .graduate_details {
-    align-self: end;
+    /* align-self: end; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .graduate_description {
@@ -69,9 +78,7 @@
 
 .graduate_links {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    /* flex-wrap: wrap; */
     width: 100%;
 }
 
@@ -90,7 +97,6 @@
 }
 
 .graduateImages {
-    /* background-color: var(--off-black); */
     height: 100%;
     width: 100%;
 }
