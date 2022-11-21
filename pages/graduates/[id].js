@@ -105,8 +105,8 @@ export default function GraduatemDetail({ graduate, data }) {
         var gradPatch = grfxGradPatch
     }
 
-    var sliceHeadshot = graduate.headshotURL.slice( 0, -4 )
-    var altHeadshot = sliceHeadshot.concat("-alt.jpg")
+    // var sliceHeadshot = graduate.headshotURL.slice( 0, -4 )
+    // var altHeadshot = sliceHeadshot.concat("-alt.jpg")
     // console.log(altHeadshot)
 
     return (
@@ -118,7 +118,7 @@ export default function GraduatemDetail({ graduate, data }) {
 
                 <section className={styles.graduate_content}>
                     <div className={styles.graduate_photoContainer}>
-                        <img className={`${styles.graduate_photo} ${styles.altImg}`} src={altHeadshot} />
+                        <img className={`${styles.graduate_photo} ${styles.altImg}`} src={graduate.altImage} />
                         <img className={`${styles.graduate_photo} ${styles.frontImg}`} src={graduate.headshotURL}/>
                     </div>
                     <div className={styles.graduate_photo_small}>
