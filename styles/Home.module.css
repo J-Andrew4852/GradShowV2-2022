@@ -263,7 +263,7 @@
 }
 
 .elements{
-  text-align: left;
+  text-align: center;
 }
 
 .elements h2{
@@ -679,6 +679,19 @@
 
 
 /* SOCIALS ------------------------------------------------------------ */
+.elements a:hover::after{
+  width: 0;
+}
+
+.elements a{
+  transition: .2s opacity ease-in-out;
+}
+
+.elements a:hover{
+  opacity: .7;
+}
+
+
 .socials {
   padding: 5em 4em;
 }
