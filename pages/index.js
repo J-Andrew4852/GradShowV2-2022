@@ -130,7 +130,7 @@ export default function Home() {
             <div className={styles.card_details}>
               <p className={styles.card_subtitle}>agd_mission_2022</p>
               <p className={`${styles.major_text} ${styles.major_agd}`}>Our Agd [animation & game design] mission is to transport us to new dimensions with a curated collection of stellar animation work.</p>
-              <a href="">[see more]</a>
+              <a href="/graduates#filter">[see more]</a>
             </div>
             <footer>
               <div className={styles.number}>
@@ -163,7 +163,7 @@ export default function Home() {
             <div className={styles.card_details}>
               <p className={styles.card_subtitle}>digex_mission_2022</p>
               <p className={`${styles.major_text} ${styles.major_digex}`}>Our Digex [digital experience and interaction design] mission is to deploy user-centred gadgets that ensure a smooth journey for all.</p>
-              <a href="">[see more]</a>
+              <a href="/graduates#filter">[see more]</a>
             </div>
             <footer>
               <div className={styles.number}>
@@ -196,7 +196,7 @@ export default function Home() {
             <div className={styles.card_details}>
               <p className={styles.card_subtitle}>grfx_mission_2022</p>
               <p className={`${styles.major_text} ${styles.major_grfx}`}>Our Grfx [graphic design] mission is to prepare design proposals that are out of this world.</p>
-              <a href="">[see more]</a>
+              <a href="/graduates#filter">[see more]</a>
             </div>
             <footer>
               <div className={styles.number}>
@@ -217,9 +217,9 @@ export default function Home() {
         <div className={styles.showreels_subcontainer}>
           <div className={styles.showreels_sidebar}>
             <div className={styles.showreel_buttons}>
-                <OutlineBtn linkTo={'/graduates#filter'} abmajor="GRFX" text="GRFX" onAction={watchGRFX}/>
-                <OutlineBtn linkTo={'/graduates#filter'} abmajor="AGD" text="AGD" onAction={watchAGD}/>
-                <OutlineBtn linkTo={'/graduates#filter'} abmajor="DIGEX" text="DIGEX" onAction={watchDIGEX}/>
+                <OutlineBtn abmajor="GRFX" text="GRFX" onAction={watchGRFX}/>
+                <OutlineBtn abmajor="AGD" text="AGD" onAction={watchAGD}/>
+                <OutlineBtn abmajor="DIGEX" text="DIGEX" onAction={watchDIGEX}/>
             </div>
           </div>
 

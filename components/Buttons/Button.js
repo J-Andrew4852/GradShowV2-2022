@@ -29,13 +29,11 @@ export const OutlineBtn = ({text, onAction, abmajor, selected, height, linkers, 
             </div>
         </a>
         :
-        <a href={linkTo}>
             <div className={`${styles.outlinebtn} ${styles[height]}`}>
                 <div tabIndex={external ? `-1` : '0'} className={selected ? `${styles.selected} ${styles.gradientBox} ${styles[abmajor]}` : `${styles.gradientBox} ${styles[abmajor]}`} onClick={onAction} onKeyDown={onAction}>
                     {text}
                 </div>
             </div>
-        </a>
     )
 }
 
