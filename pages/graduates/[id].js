@@ -127,7 +127,7 @@ export default function GraduatemDetail({ graduate, data }) {
 
                     <div className={styles.graduate_title}>
                         <div className={styles.graduate_major_patch}>
-                            <Image src={gradPatch} alt="Graduate Major Patch" layout="fill" objectFit="contain" width={225} height={227} priority/>
+                            <Image src={gradPatch} alt="Graduate Major Patch" layout="fill" objectFit="contain" priority/>
                         </div>
                         <h1 className={`${styles.graduate_name} subheading black text-2xl `} >{graduate.preferredName} {graduate.lastName}</h1>
                         <h3 className={`${styles.graduate_major} regular text-reg`}>{graduate.major[0]}<br/> {graduate.major[1]}</h3>
