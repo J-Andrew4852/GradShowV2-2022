@@ -137,7 +137,7 @@ export default function GraduatemDetail({ graduate, data }) {
                             </div>
                             { /* UPDATE BUTTON WITH MAJOR INFORMATION AND LINK TO PORTFOLIO SITE */}
                             <div className={styles.portfolio_link}>
-                                <OutlineBtn external height="thin" text='Portfolio'/>
+                                <OutlineBtn external height="thin" text='Portfolio' linkTo={graduate.portfolioLink} linkers/>
                             </div>
                         </div>
                     </div>
