@@ -29,11 +29,12 @@ export default function Graduates({ graduates }) {
   const [listView, setListView] = useState(false)
   const [filtered, setFiltered] = useState([])
   const [search, setSearch] =useState('')
-  const [iframSrc, setIframeUrl] = useState(DIGEXreel);
 
   const GRFXreel = "https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=0&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
-  const AGDreel = "https://www.youtube.com/embed/pbNs7tAUFkk";
-  const DIGEXreel = "https://www.youtube.com/embed/GBUAez6w5ec";
+  const AGDreel = "https://www.youtube.com/embed/pbNs7tAUFkk?autoplay=1&mute=0&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const DIGEXreel = "https://www.youtube.com/embed/GBUAez6w5ec?autoplay=1&mute=0&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const [iframSrc, setIframeUrl] = useState(DIGEXreel);
+
 
   function openGradFolder(graduate) {
     setSelectedGraduate(graduate);
