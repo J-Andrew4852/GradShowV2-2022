@@ -13,7 +13,7 @@ import styles from '../../styles/Graduates.module.css'
 // OVERVIEW ============================================================================= // 
 /* 
 Name: Graduates main page
-Collaborators: Logan Trundle, James Andrew, Rachael Moriconi
+Collaborators: Logan Trundle, James Andrew, Rachael Moriconi, James Kang
 
 Description: 
 - List out all graduates 
@@ -30,9 +30,9 @@ export default function Graduates({ graduates }) {
   const [filtered, setFiltered] = useState([])
   const [search, setSearch] =useState('')
 
-  const GRFXreel = "https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=0&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
-  const AGDreel = "https://www.youtube.com/embed/pbNs7tAUFkk?autoplay=1&mute=0&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
-  const DIGEXreel = "https://www.youtube.com/embed/GBUAez6w5ec?autoplay=1&mute=0&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const GRFXreel = "https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const AGDreel = "https://www.youtube.com/embed/pbNs7tAUFkk?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const DIGEXreel = "https://www.youtube.com/embed/GBUAez6w5ec?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
   const [iframSrc, setIframeUrl] = useState(DIGEXreel);
 
 
@@ -68,13 +68,13 @@ export default function Graduates({ graduates }) {
       filtered[j] = k;
     }
     setFiltered(filtered)
-    if (selectedMajor === 'Graphic Design') {
-      setIframeUrl(`${GRFXreel}`);
-      return;
-    } else if (selectedMajor === 'Graphic Design') {
+    if (selectedMajor === 'Animation and Game Design') {
       setIframeUrl(`${AGDreel}`);
       return;
-    } else {
+    } else if (selectedMajor === 'Graphic Design') {
+      setIframeUrl(`${GRFXreel}`);
+      return;
+    } else { // Digital Experience and Interaction Design
       setIframeUrl(`${DIGEXreel}`);
     }
   },  [selectedMajor])
@@ -181,7 +181,7 @@ export default function Graduates({ graduates }) {
           url="https://www.youtube.com/embed/RVn8FhiryKA?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1&playlist=RVn8FhiryKA" loop="1" frameBorder="0" allowFullScreen position="relative"
           width="100%" height="100%" /> */}
           <Iframe
-          url={iframSrc} loop="1" frameBorder="0" allowFullScreen position="relative"
+          url={iframSrc} loop="1" frameBorder="0" allowFullScreen position="relative" playsInline
           width="100%" height="100%" />
       </div>
 

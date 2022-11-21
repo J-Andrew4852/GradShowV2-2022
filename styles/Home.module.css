@@ -523,7 +523,7 @@
   .cards_holder {
     display: flex;
     flex-direction: column;
-    gap: .05em;
+    gap: .1em;
     overflow: hidden;
     align-items: center;
   }
@@ -602,7 +602,7 @@
     margin: auto;
 }
 .showreels {
-  /* padding: 20% 0% 20% 0%; */
+  padding: 10% 0% 8% 0%;
   padding-inline: 4em;
   margin-block: 10%;
 }
@@ -627,12 +627,24 @@
 }
 
 .showreel_buttons {
-  width: 80%;
+  width: 18vw;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 1.5em
+}
+@media (max-width: 750px) {
+  .showreels {
+    padding: 20% 0% 20% 0%;
+  }
+  .showreel_buttons {
+    width: 42%;
+  }
+  .showreel_videos{
+    width: 100%;
+    padding: 5%;
+}
 }
 
 .coordinator_text {
