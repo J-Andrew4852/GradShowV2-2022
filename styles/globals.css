@@ -146,6 +146,13 @@ a {
   color: var(--main-green)
 }
 
+h4{
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 150%;
+}
 
 /* LINK STYLING ======================================================================== */
 .link {
@@ -170,12 +177,12 @@ a {
   height: 1px;
   bottom: -3px;
   left: 0;
-  background-color: var(--dark-green) !important;;
+  background-color: var(--dark-green);
   transition: width 0.4s ease;
 }
 
 .link.active {
-  color: var(--main-green) !important;;
+  color: var(--main-green) ;
   position: relative;
   font-weight: 700;
 }

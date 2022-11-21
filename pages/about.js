@@ -53,7 +53,7 @@ export default function About() {
 
           <div className={styles.forward}>
             <p className={`text-small`}><strong>FOREWORD</strong></p>
-            <p>We are over the moon to present to you <em>Exhibition Space</em> – a semester-long operation that our team of space cadets have been tirelessly working on. Meet us at Curtin Design Headquarters: Building 202, Curtin University on <strong>25.11.2022</strong> to witness an extraordinary display of work from our Animation and Game Design, Digital Design, and Graphic Design teams. Join us on our launch day to celebrate our ground-breaking expedition. </p>
+            <p>We are over the moon to present to you <em>Exhibition Space</em> – a semester-long mission that our team of space cadets have been tirelessly working on. Meet us at Curtin Design Headquarters: Building 202, Curtin University on <strong>25.11.2022</strong> to witness an extraordinary display of work from our Animation and Game Design, Digital Design, and Graphic Design teams. Join us on our launch day to celebrate the ground-breaking expedition. </p>
           <div className={styles.about_signature}><Image src={signature} className={styles.signature} alt="2022 Design Graduates Signature" /></div>
           </div>
           
@@ -73,18 +73,18 @@ export default function About() {
 
             <div className={styles.whoweare_text}>
               <div className={styles.whoweare_first}>
-                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={sparkle} alt="Sparkle" /></div><h1>First Value</h1></div>
-                <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={sparkle} alt="Sparkle" /></div><h4>Be Authentic</h4></div>
+                <p>We value authenticity and being able to express ourselves in a way that is true to us. We appreciate everybody for who they are and what they do.</p>
               </div>
 
               <div className={styles.whoweare_second}>
-                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={eye} alt="Eye" /></div><h1>Second Value</h1></div>
-                <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={eye} alt="Eye" /></div><h4>Show Dedication</h4></div>
+                <p>Our achievements are only made possible through our dedication and commitment to produce exceptional work. We value the drive to learn and adapt. </p>
               </div>
 
               <div className={styles.whoweare_third}>
-                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={world} alt="World" /></div><h1>Third Value</h1></div>
-                <p>Something relevant about our second value or whatever. Something sophisticated and smart sounding. Another sentence of sounding smart</p>
+                <div className={styles.whoweare_heading}><div className={styles.whoweare_icon}><Image src={world} alt="World" /></div><h4>Have Fun</h4></div>
+                <p>The foundation behind everything we do is having a love of design, and we believe creating a fun environment will help us thrive in our design.</p>
               </div>
             </div>
 
@@ -129,7 +129,7 @@ export default function About() {
           {/* ---COLUMN1--- */}
           <div>
             <ul>
-                <h1>Brand Identity</h1>
+                <h4>Brand Identity</h4>
                 <li>Anabel Cressie</li>
                 <li>Lilybelle Tarr</li>
                 <li>Thomas Earnshaw</li>
@@ -137,7 +137,7 @@ export default function About() {
               </ul>
 
               <ul>
-                <h1>Website Leads</h1>
+                <h4>Website Leads</h4>
                 <li>Logan Trundle</li>
                 <li>Anthony Robinson</li>
                 <li>James Andrew</li>
@@ -146,7 +146,7 @@ export default function About() {
               </ul>
 
               <ul>
-                <h1>Showreel Leads</h1>
+                <h4>Showreel Leads</h4>
                 <li>Macgregor Lawson</li>
                 <li>Campbell McCracken</li>
                 <li>Max Wright</li>
@@ -154,7 +154,7 @@ export default function About() {
               </ul>
 
               <ul>
-                <h1>Social Media</h1>
+                <h4>Social Media</h4>
                 <p>Content Strategists</p>
                 <li>Thomas Earnshaw</li>
                 <li>Rein Aspinall</li>
@@ -166,7 +166,7 @@ export default function About() {
               </ul>
 
               <ul>
-                <h1>Photography</h1>
+                <h4>Photography</h4>
                 <p>Creative Director</p>
                 <li>Rein Aspinall</li>
 
@@ -179,7 +179,7 @@ export default function About() {
            {/* ---COLUMN2--- */}
           <div>
           <ul>
-                <h1>Website Design</h1>
+                <h4>Website Design</h4>
                 <li>Salma Jarrar</li>
                 <li>Logan Trundle</li>
                 <li>Cheyenne Toh</li>
@@ -192,7 +192,7 @@ export default function About() {
               </ul>
 
             <ul>
-                <h1>Website Development</h1>
+                <h4>Website Development</h4>
                 <p>Frontend Developers</p>
                 <li>James Andrew</li>
                 <li>Logan Trundle</li>
@@ -209,7 +209,7 @@ export default function About() {
               </ul>
             
               <ul>
-                <h1>Showreel Compositing</h1>
+                <h4>Showreel Compositing</h4>
 
                 <p>3D Animators</p>
                 <li>Campbell McCracken</li>
@@ -224,6 +224,7 @@ export default function About() {
 
                 <p>Motion Graphics</p>
                 <li>Taylor Ingvarson</li>
+                <li>Max Wright</li>
 
                 <p>Editors</p>
                 <li>Rebecca Gibson</li>
@@ -236,7 +237,7 @@ export default function About() {
              {/* ---COLUMN3--- */}
             <div className={styles.credits_flex}>
             <ul>
-                <h1>Showreel 2D Development</h1>
+                <h4>Showreel 2D Development</h4>
                 <li>Flynn Denby</li>
                 <li>Lewis Fuller Hill</li>
                 <li>Rein Aspinall</li>
@@ -249,7 +250,7 @@ export default function About() {
               </ul>
             
               <ul>
-                <h1>Showreel 3D Development</h1>
+                <h4>Showreel 3D Development</h4>
 
                 <p>3D Modellers</p>
                 <li>Macgregor Lawson</li>
@@ -302,8 +303,7 @@ export default function About() {
 
             <div>
               <ul>
-                <h1>Teaching Staff</h1>
-                <p>Coordinators</p>
+                <h4>Major Coordinators</h4>
                 <li>Harriet Perryer - DigEx</li>
                 <li>Jonathan Pillai - AGD</li>
                 <li>Dan Mckeating - GRFX</li>
@@ -311,15 +311,21 @@ export default function About() {
               </ul>
 
               <ul>
-                <h1>Technicians</h1>
+                <h4>Technicians</h4>
                 <li>Ian Williams</li>
                 <li>Adrian Reeve</li>
               </ul>
+
+              <ul>
+                <h4>Mentors</h4>
+                <li>Francis Villarba</li>
+              </ul>
+              
             </div>
 
             <div>
               <ul>
-                <h1>Volunteers</h1>
+                <h4>Volunteers</h4>
                 <li>John Simpson</li>
                 <li>Lauren Gatto</li>
                 <li>Diala Majrouh</li>
