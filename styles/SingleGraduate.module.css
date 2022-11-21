@@ -166,7 +166,6 @@
     .graduate_details { 
         grid-area: 3 / 1 / 4 / -1 ;
         margin-top: 0;
-        background-color: green;
     }
 }
 
