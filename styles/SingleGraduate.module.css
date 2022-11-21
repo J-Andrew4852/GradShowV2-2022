@@ -33,7 +33,7 @@
     opacity: 0;
 } */
 .graduate_photoContainer:hover .frontImg {
-    opacity: 0;
+    opacity: 0; 
     cursor: pointer;
 }
 /* .graduate_photoContainer:hover .altImg {
@@ -170,6 +170,11 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+
+    .graduate_photo_small:hover .frontImg {
+        opacity: 0; 
+        cursor: pointer;
     }
 
     .graduate_photo_small img {

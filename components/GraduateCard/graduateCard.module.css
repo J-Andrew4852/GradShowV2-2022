@@ -46,6 +46,7 @@
     /* grid-template-rows: 60px 250px 50px; */
     gap: 15px;
     padding: 10px;
+    max-width: 50vw;
 }
 
 .heroContainer {
@@ -152,6 +153,9 @@
     .icons > *:first-child {
         display: none;
     }
+    .cardContainer {
+        max-width: 70vw;
+    }
 }
 
 @media only screen and (max-height: 700px) {
@@ -165,5 +169,8 @@
         flex-direction: column;
         align-items: flex-end;
         gap: 10px;
+    }
+    .cardContainer {
+        max-width: 100%;
     }
 }

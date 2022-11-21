@@ -107,7 +107,8 @@ export const GradFolder = ({ graduate, data, onClose }) => {
                 <div className={styles.graduateContent}>
 
                     <div className={styles.graduate_photoContainer}>
-                        <img className={styles.graduate_photo} src={data.headshotURL} alt="Graduate Image" />
+                        <img className={`${styles.graduate_photo} ${styles.altImg}`} src={data.altImage} />
+                        <img className={`${styles.graduate_photo} ${styles.frontImg}`} src={data.headshotURL}/>
                     </div>
 
                     <div className={styles.details}>

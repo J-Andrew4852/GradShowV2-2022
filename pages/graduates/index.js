@@ -130,20 +130,6 @@ export default function Graduates({ graduates }) {
   // console.log(graduates);
 
 
-  // REELS MUST BE FORMATTED LIKE THIS:
-  // https://www.youtube.com/embed/REPLACEMEWITHID?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}
-  // const refIframe = useRef(null);
-
-  // const watchGRFX = () => {
-  //   setIframeUrl(`${GRFXreel}`);
-  // };
-  // const watchAGD = () => {
-  //   setIframeUrl(`${AGDreel}`);
-  // };
-  // const watchDIGEX = () => {
-  //   setIframeUrl(`${DIGEXreel}`);
-  // };
-
   return (
     <div className={styles.container} id='GradShow'>
       <Head>
@@ -151,15 +137,6 @@ export default function Graduates({ graduates }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <button type="button" onClick={watchGRFX}>
-        GRFX
-      </button>
-      <button type="button" onClick={watchAGD}>
-        AGD
-      </button>
-      <button type="button" onClick={watchDIGEX}>
-        DIGEX
-      </button> */}
 
       {/* HEADING SECTION */}
       <section className={`${styles.hero} center-align `}>
@@ -235,7 +212,7 @@ export default function Graduates({ graduates }) {
               ? graduate 
               : combinedName.toLowerCase().includes(search)
             }).map((graduate) => (
-                <div key={graduate._id}>
+                <div className={styles.gridItem} key={graduate._id}>
                   <GraduateCard handleClick={() => {
                     if (selectedGraduate?._id !== graduate._id) {
                     openGradFolder(graduate);

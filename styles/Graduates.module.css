@@ -103,6 +103,11 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2em ;
     margin-bottom: 50px;
+    align-items: center;
+}
+.gridItem {
+    display: flex;
+    justify-content: center;
 }
 
 .graduate_list {
