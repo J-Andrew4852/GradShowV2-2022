@@ -1,0 +1,110 @@
+.outlinebtn, .textbtn {
+    cursor: pointer;
+}
+
+/* OUTLINE BUTTON ====================================================== */
+.outlinebtn {
+    position: relative;
+    z-index: 1;
+    height: 60px;
+    display: inline-block;
+    min-width: 100%;
+} 
+
+.outlinebtn.thin {
+    height: 35px;
+}
+
+.DIGEX.gradientBox::after {
+    background: var(--digex-gradient);
+}
+
+.AGD.gradientBox::after {
+    background: var(--agd-gradient); 
+}
+
+.GRFX.gradientBox::after {
+    background: var(--grfx-gradient);
+}
+
+.gradientBox {
+    height: 100%;
+    border: 1.5px solid var(--off-black);
+    background-color: var(--off-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 24px;
+}
+
+.gradientBox::after {
+    content: '';
+    position: absolute;
+    background: var(--green-gradient);
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(.47,1.64,.41,1.2);
+}
+
+.gradientBox:hover::after, .gradientBox:focus::after, .gradientBox:active::after, .gradientBox.selected::after {
+    left: -7px;
+    bottom: -10px;
+    opacity: 1;
+}
+
+.gradientBox.thin:hover::after, .gradientBox.thin:focus::after, .gradientBox.thin:active::after, .gradientBox.thin.selected::after {
+    left: -7px;
+    bottom: -5px;
+    opacity: 1;
+}
+
+/* TEXT BUTTON ====================================================== */
+.textbtn {
+    width: fit-content;
+    color: var(--off-black);
+    background-color: var(--off-white);
+    border-bottom: 1.5px solid var(--off-black);
+    padding-block: 5px;
+    margin: 0;
+    display: inline-block;
+}
+
+.textbtn * {
+    color: var(--off-black);
+    stroke: var(--off-black);
+}
+
+.textbtn:hover * {
+    color: var(--main-green);
+    stroke: var(--main-green);
+}
+
+.textbtn:hover  {
+    border-bottom: 1.5px solid var(--main-green);
+}
+
+.textbtn p {
+    display: inline;
+    margin-right: 30px;
+}
+
+/* .textbtn:visited {
+    color: var(--med-grey);
+    border-bottom: 1.5px solid var(--med-grey);
+}
+
+.textbtn:visited * {
+    color: var(--med-grey);
+    stroke: var(--med-grey);
+} */
+.errorbtn{
+    position: relative;
+    z-index: 1;
+    height: 60px;
+    display: inline-block;
+    min-width: 20%;
+}
