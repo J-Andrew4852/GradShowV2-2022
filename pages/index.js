@@ -17,6 +17,8 @@ import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
 import { IGFeed } from '../components/IGFeed/IGFeed'
+import VideoCarousel from '../components/VideoCarousel/VideoCarousel'
+
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
@@ -192,23 +194,27 @@ export default function Home() {
 
       </div>
       
-
       {/* SHOWREELS */}
       <section className={styles.showreels}>
         <div className={styles.showreels_subcontainer}>
           <div className={styles.showreels_sidebar}>
             <div className={styles.showreel_buttons}>
-              <button className={styles.section2_button}>Button</button>
-              <button className={styles.section2_button}>Button</button>
-              <button className={styles.section2_button}>Button</button>
+
+            <OutlineBtn major="grfx" text="GRFX" onClick=""/>
+            <OutlineBtn major="agd" text="AGD" onClick=""/>
+            <OutlineBtn major="digex" text="DIGEX" onClick=""/>
             </div>
           </div>
 
           <div className={styles.showreel_videos}>
-            <Image src={animationShowreel} alt="Showreel for Animation Major" />
+          
+          <VideoCarousel width='100%'
+          height='100%' />
           </div>
         </div>
+
       </section>
+      
 
 
       {/* SOCIALS */}

@@ -1,4 +1,5 @@
 import { Layout } from '../components/Layout/Layout'
+import "bootstrap/dist/css/bootstrap.css"
 import '../styles/globals.css'
 import Script from 'next/script'
 import Head from 'next/head'
