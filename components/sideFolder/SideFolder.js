@@ -133,16 +133,7 @@ export const GradFolder = ({ graduate, data, onClose }) => {
                 </div>
 
                 <div className={styles.socialsBar}>
-                    {/* {data.socials?.map(social => (
-                        <a key={social.name} href={social.link}>
-                            {social.name}
-                        </a>
-                    ))} */}
-                    <div className={styles.icon}></div>
-                    <div className={styles.icon}></div>
-                    <div className={styles.icon}></div>
-                    <div className={styles.icon}></div>
-                    <div className={styles.icon}></div>
+                    <Socials key={data._id} data={data} />
                 </div>
 
 
