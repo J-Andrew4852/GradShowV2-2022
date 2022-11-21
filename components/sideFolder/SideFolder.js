@@ -122,11 +122,10 @@ export const GradFolder = ({ graduate, data, onClose }) => {
 
                         <div className={styles.linksBar}>
                             {/* CANNOT READ PROPERTIES OF UNDEFINED (READING "_id") */}
-                            {/* <div className={styles.socialLinks}>
-                                <Socials key={graduate._id} data={graduate} />
-                            </div> */}
-
-                            <OutlineBtn external text="view" height="thin" major={data.major[0].toLowerCase()}/>
+                            <div className={styles.socialLinks}>
+                                <Socials key={data._id} data={data} />
+                            </div>
+                            <OutlineBtn linkers text='view' linkTo={`/graduates/${data._id}`} height="thin" abmajor={`${abMajor[0].toString()}`} external/>
                             {/* <TextBtn text='Expand' linkTo={`/graduates/${data._id}`} external/> */}
                         </div>
                     </div>
