@@ -174,7 +174,7 @@ h4{
   height: 1px;
   bottom: -3px;
   left: 0;
-  background-color: var(--dark-green) !important;;
+  background-color: var(--dark-green);
   transition: width 0.4s ease;
 }
 
@@ -202,7 +202,7 @@ h4{
   height: 2px;
   bottom: -3px;
   left: 0;
-  background-color: var(--main-green) ;
+  background-color: var(--main-green);
 }
 
 /* INPUTS STYLING ======================================================================== */
