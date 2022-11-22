@@ -109,7 +109,7 @@ export const CountdownBanner = () => {
       </div>
 
       <div className={styles.details_wrapper}>
-        <p className='text-med right-align'>25.11.2022 | 18:00 - 21:00</p>
+        <p className='text-med right-align'>25.11.2022 | 18:00 - 20:30</p>
         <a  href="https://link.mazemap.com/0Sto189P" target="_blank" rel="noreferrer" className='text-med right-align'>Building 202, Curtin University</a>
       </div>
       </div>
