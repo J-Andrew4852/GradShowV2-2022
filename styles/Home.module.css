@@ -125,7 +125,7 @@
   font-weight: 900;
   margin: 0;
   font-size: 3.5em;
-  font-family: 'Avenir';
+  font-family: 'Avenir', serif, 'Space Mono', monospace;
 }
 
 .number span {
@@ -280,7 +280,7 @@
 }
 .elements h1{
   word-wrap: break-word;
-  font-family: 'Avenir';
+  font-family: 'Avenir', serif, 'Space Mono', monospace;
   /* identical to box height */
   color: var(--main-green);
   line-height: 1em;
@@ -364,7 +364,7 @@
 
 .card_largetext {
   text-shadow: 0 0 3px rgb(255, 255, 255);
-  font-family: 'Avenir';
+  font-family: 'Avenir', serif, 'Space Mono', monospace;
   font-style: normal;
   font-weight: 800;
   color: #FFFBF4;
@@ -470,7 +470,7 @@
 }
 
 .card .number p {
-  font-family: 'Avenir';
+  font-family: 'Avenir', serif, 'Space Mono', monospace;
   font-weight: 900;
   letter-spacing: -2px;
   margin: 0;

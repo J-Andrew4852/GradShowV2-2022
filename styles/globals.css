@@ -66,7 +66,7 @@ img, svg{
 
 /* FONT STYLING ======================================================================== */
 .heading, .subheading {
-  font-family: 'Avenir', serif;
+  font-family: 'Avenir', serif, 'Space Mono', monospace;
   line-height: 100%;
   color: var(--main-green);
   margin: 0;
