@@ -33,8 +33,10 @@ export default function NotFound() {
           <br></br>
           <br></br>
           <br></br>
-          <Link className={styles.errorbutton} href='/' >
-            <ErrorButton text="Back to Home"/>
+          <Link href="/#GradShow">
+            <div className={styles.pointer}>
+              <ErrorButton text="Back to Home" />
+            </div>
           </Link>
       </div>
     </div>
