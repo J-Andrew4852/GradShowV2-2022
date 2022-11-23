@@ -15,7 +15,7 @@ export default function Document() {
         <link rel="stylesheet" href="/_next/static/style.css" />
         {/* <link href="/fonts/avenir_ff/style.css" rel='stylessheet' /> */}
         {/* <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet" /> */}
-        {/* <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet" /> */}
+        <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet" />
         {/* <link rel="stylesheet" href="../styles/globals.css"></link> */}
       </Head>
       <body>

@@ -1,5 +1,4 @@
 @font-face {
     font-family: "Avenir";
     src: local('Avenir'), url("/AvenirLTStd-Black.otf"), format(OpenType font format);
-    font-display: swap;
 }
