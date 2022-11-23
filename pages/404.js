@@ -24,6 +24,7 @@ export default function NotFound() {
     <div className={styles.container}>
       <Head>
         <title>Page Not Found || Exhibition Space</title>
+        <title>Exhibition Space || 2022 Curtin Grad Show</title>
       </Head>
       <div className={styles.container404}>
           <h1>404</h1>

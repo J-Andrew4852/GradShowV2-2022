@@ -63,7 +63,6 @@ export default function Home() {
     <div className={styles.container} id='GradShow'>
       <Head>
         <title>Exhibition Space || 2022 Curtin Grad Show</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       {/* HERO */}

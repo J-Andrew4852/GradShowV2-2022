@@ -38,6 +38,7 @@ export default function About() {
       <Head>
         <title>About || Exhibition Space</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Exhibition Space || 2022 Curtin Grad Show</title>
       </Head>
 
 
