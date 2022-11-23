@@ -22,7 +22,8 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@300;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet"></link>
+        {/* <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet"></link> */}
+        <link rel="stylesheet" href="../styles/globals.css"></link>
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
