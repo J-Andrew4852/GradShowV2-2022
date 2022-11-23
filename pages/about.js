@@ -20,6 +20,7 @@ import { CreditsList } from '../components/CreditsList/CreditsList'
 
 // STYLES =============================================================================== // 
 import styles from '../styles/About.module.css'
+import styles from '../styles/globals.css'
 
 // OVERVIEW ============================================================================= // 
 /* 
