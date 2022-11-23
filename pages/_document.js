@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import '../public/fonts/avenir_ff/AvenirLTStd-Black.otf'
 
 export default function Document() {
   return (
