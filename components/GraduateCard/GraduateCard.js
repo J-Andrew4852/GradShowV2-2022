@@ -96,7 +96,7 @@ majorz.forEach(() => {
               <SidebarIcon onClick={() => handleClick(data)} />
               {/* <Star /> */}
             </div>
-            <TextBtn text='view' linkTo={`/graduates/${data._id}`}/>
+            <TextBtn text='view' linkTo={`/graduates/${data._id}`} external />
           </div>
 
         </article>
