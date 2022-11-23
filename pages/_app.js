@@ -1,5 +1,5 @@
 import { Layout } from '../components/Layout/Layout'
-import '../styles/globals.css'
+// import '../styles/globals.css'
 import Script from 'next/script'
 import Head from 'next/head'
 import { useState } from 'react'
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="shortcut icon" href="../public/favicon.ico" />
-      <link rel="stylesheet" href="../styles/globals.css"></link>
+      {/* <link rel="stylesheet" href="../styles/globals.css"></link> */}
     </Head>
     <Layout>
         <Component {...pageProps} />
