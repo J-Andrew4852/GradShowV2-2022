@@ -1,5 +1,6 @@
 import { Layout } from '../components/Layout/Layout'
 import '../styles/globals.css'
+import '../public/fonts/avenir_ff/fonts.module.css'
 import Script from 'next/script'
 import Head from 'next/head'
 import { useState } from 'react'
