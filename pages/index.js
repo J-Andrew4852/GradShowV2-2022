@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useEffect, useState, useRef } from 'react'
 import Script from 'next/script'
 import Link from 'next/link'
+import '../public/fonts/avenir_ff'
 
 // COMPONENT IMPORTS ==================================================================== // 
 import Iframe from 'react-iframe'
