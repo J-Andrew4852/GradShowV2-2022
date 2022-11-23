@@ -12,7 +12,8 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@300;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></link>
-        <link href="/fonts/avenir_ff/style.css" rel='stylessheet' />
+        <link rel="stylesheet" href="/_next/static/style.css" />
+        {/* <link href="/fonts/avenir_ff/style.css" rel='stylessheet' /> */}
         {/* <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet" /> */}
         {/* <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet" /> */}
         {/* <link rel="stylesheet" href="../styles/globals.css"></link> */}
