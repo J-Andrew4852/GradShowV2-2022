@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Avenir";
+    src: local('Avenir'), url("/fonts/avenir_ff/AvenirLTStd-Black.otf"), format(OpenType font format);
+}
+
 .container section {
     max-width: var(--max-width);
     margin-inline: auto;
