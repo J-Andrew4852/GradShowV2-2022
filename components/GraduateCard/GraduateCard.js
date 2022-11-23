@@ -81,7 +81,9 @@ majorz.forEach(() => {
           <a href={`/graduates/${data._id}`} target="_blank" rel="noreferrer">
           <div className={styles.leftGroup}>
 
-            <div className={styles.placeholder_headshot}></div>
+            <div className={styles.placeholder_headshot}>
+              <img className={styles.student_headshot} alt="" src={data.headshotURL}/>
+            </div>
             <div className={styles.student_details}>
               <h2 className="font-med2 bold subheading">{data.preferredName} {data.lastName}</h2>
               <h3 className={`text-xs regular ${styles.reset_font}`}>{abMajor[0]} {abMajor[1]}</h3>
