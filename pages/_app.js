@@ -5,6 +5,7 @@ import Script from 'next/script'
 import Head from 'next/head'
 import { useState } from 'react'
 
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
