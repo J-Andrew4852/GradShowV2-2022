@@ -30,9 +30,9 @@ export default function Graduates({ graduates }) {
   const [filtered, setFiltered] = useState([])
   const [search, setSearch] = useState('')
 
-  const GRFXreel = "https://www.youtube.com/embed/2rNNPTlL3Ao?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
-  const AGDreel = "https://www.youtube.com/embed/orLB-DWTNss?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
-  const DIGEXreel = "https://www.youtube.com/embed/FvJ6eNRz828?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1}";
+  const GRFXreel = "https://www.youtube.com/embed/tRMMeEjmrtI?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
+  const AGDreel = "https://www.youtube.com/embed/yZzD8VsiKy4?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
+  const DIGEXreel = "https://www.youtube.com/embed/GndiiYdN240?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
   const [iframSrc, setIframeUrl] = useState(DIGEXreel);
 
 
