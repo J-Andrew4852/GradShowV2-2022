@@ -18,6 +18,9 @@ import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
+import { CustomForm, Mailchimp } from '../components/MailChimp/Mailchimp'
+import { GraduateCard } from '../components/GraduateCard/GraduateCard'
+
 
 
 // STYLES =============================================================================== // 
@@ -39,7 +42,50 @@ Description:
 - Show recent social media posts
 */
 
-export default function Home() {
+export default function Home({ graduates }) {
+  const digexAwards = []
+  const salmaJarrar = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65d9'
+  )
+  digexAwards.push(salmaJarrar[0])
+  const kateMackenzie = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65bd'
+  )
+  digexAwards.push(kateMackenzie[0])
+  const rachaelMoriconi = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65d4'
+  )
+  digexAwards.push(rachaelMoriconi[0])
+  const anthonyRobinson = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a659e'
+  )
+  digexAwards.push(anthonyRobinson[0])
+  // console.log(digexAwards)
+
+  const agdAwards = []
+  const stevenWS = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65dd'
+  )
+  agdAwards.push(stevenWS[0])
+  agdAwards.push(stevenWS[0])
+  const maximilianWright = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65c7'
+  )
+  agdAwards.push(maximilianWright[0])
+  const simoneWoolfitt = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65dc'
+  )
+  agdAwards.push(simoneWoolfitt[0])
+  const hayleyZeller = graduates.filter((graduate) => 
+    graduate._id === '637afda53cbf4b57860193cd'
+  )
+  agdAwards.push(hayleyZeller[0])
+  const malanieTan = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65c8'
+  )
+  agdAwards.push(malanieTan[0])
+  console.log(agdAwards)
+
   const GRFXreel = "https://www.youtube.com/embed/tRMMeEjmrtI?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
   const AGDreel = "https://www.youtube.com/embed/yZzD8VsiKy4?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
   const DIGEXreel = "https://www.youtube.com/embed/GndiiYdN240?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
@@ -83,20 +129,40 @@ export default function Home() {
         </div>
       </section>
 
-      <CountdownBanner />
+      {/* <Mailchimp /> */}
   
       {/* APPROVED IMAGE */}
-      <div className={styles.approved}>
-          <div className={styles.mapDiagram}>
+      <div className={styles.awardSection}>
+        <div className={styles.sidebarOff}>
+          <div className={styles.graduate_grid}>
+            
+            {digexAwards.map((graduate) => (
+                <div className={styles.gridItem} key={graduate._id}>
+                  <GraduateCard key={graduate._id} data={graduate} />
+                </div>
+              ))}
+          </div>
+        </div>
+          {/* <div className={styles.mapDiagram}>
             <Image src={Map} alt="Map Diagram" width={700} height={700}/>
           </div>
           <div className={styles.aboutInfo}>
             <Image src={aboutDetails} alt="About details"/>
             <a href={'/about'} >More mission details &nbsp;&nbsp;→ </a>
-          </div>
+          </div> */}
       </div>
-
-
+      <div className={styles.awardSection}>
+        <div className={styles.sidebarOff}>
+          <div className={styles.graduate_grid}>
+            
+            {agdAwards.map((graduate) => (
+                <div className={styles.gridItem} key={graduate._id}>
+                  <GraduateCard key={graduate._id} data={graduate} />
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
       {/* A GLIMPSE INTO OUR SPACE */}
       <section className={styles.into_our_space}>
         <div className={styles.section_heading}>
@@ -257,4 +323,16 @@ export default function Home() {
 
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch('https://gradshow-backend-production.up.railway.app/students')
+  const data = await res.json()
+  const graduates = data
+
+  return {
+    props: {
+      graduates,
+    },
+  }
 }

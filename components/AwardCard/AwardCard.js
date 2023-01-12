@@ -9,7 +9,7 @@ import { Sidebar, SidebarIcon, Star } from "../icons/Icons";
 // COMPONENT IMPORTS ==================================================================== // 
 
 // STYLES =============================================================================== // 
-import styles from './graduateCard.module.css'
+import styles from './awardCard.module.css'
 
 // OVERVIEW ============================================================================= // 
 
@@ -28,7 +28,7 @@ When being called it takes in a prop (data) which is a Graduate object.
 */
 
 
-export const GraduateCard = ({ data, list, handleClick }) => {
+export const AwardCard = ({ data, list, handleClick }) => {
 
   // VARIABLES ============================================================================== // 
 
@@ -36,6 +36,7 @@ export const GraduateCard = ({ data, list, handleClick }) => {
 var majorz = data.major
 // console.log(majorz)
 var abMajor = []
+
 majorz.forEach(() => {
   // console.log(majorz[0])
   if (majorz[0].match("Graphic") !== null) {

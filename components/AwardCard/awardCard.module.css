@@ -1,0 +1,176 @@
+/* GRADUATE LIST =================================================== */
+.listContainer {
+    width: 100%;
+    border-bottom: 1.5px solid var(--off-black);
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1em;
+    cursor: pointer;
+    transition: width 0.2s cubic-bezier(.47, 1.64, .41, 1.2);
+    align-items: center;
+}
+
+.listContainer .student_details {
+    padding-top: 5px;
+}
+
+.listContainer:hover {
+    width: 97%;
+}
+
+.listContainer .leftGroup {
+    display: flex;
+}
+
+.leftGroup .placeholder_headshot {
+    height: 50px;
+    width: 40px;
+}
+
+.rightGroup {
+    display: flex;
+    gap: 30px;
+}
+
+.rightGroup .icons {
+    gap: 20px;
+}
+
+
+/* GRADUATE CARD =================================================== */
+.cardContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: max-content max-content 30px;
+    /* grid-template-rows: 60px 250px 50px; */
+    gap: 15px;
+    padding: 10px;
+    max-width: 50vw;
+}
+
+.heroContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContainer .gradHeroImage{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    /* min-height: 100%;
+    max-height: 250px; */
+    /* min-height: 300px;
+    max-height: 300px; */
+    /* object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    height: auto; */
+
+    aspect-ratio: 3508/2481;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header_subcontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    grid-area: 3 / 1 / 4 / -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer a {
+    min-width: 100%;
+}
+
+.icons {
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    padding-top: 3px;
+}
+
+.rightGroup .icons {
+    align-items: center;
+}
+
+.icons svg:first-of-type {
+    margin-top: 2px;
+}
+
+.icons * {
+    cursor: pointer;
+}
+
+.student_headshot {
+    width: 50px;
+    height: 60px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.placeholder_icon,
+.placeholder_quickviewicon {
+    width: 30px;
+    height: 30px;
+    background-color: lightgrey;
+}
+
+.student_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.student_details h3 {
+    margin-top: 5px;
+    line-height: 1.2em;
+}
+
+.reset_font {
+    margin: 0;
+}
+
+.sidebarOnCard {
+    background-color: red;
+}
+
+@media only screen and (max-width: 1100px) {
+    .icons > *:first-child {
+        display: none;
+    }
+    .cardContainer {
+        max-width: 70vw;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    .icons > *:first-child {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .rightGroup {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    .cardContainer {
+        max-width: 100%;
+    }
+}
