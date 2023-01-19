@@ -132,6 +132,13 @@
 .sidebarOnCard {
     background-color: red;
 }
+.studentName {
+    font-family: 'Avenir';
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 110%;
+}
 
 @media only screen and (max-width: 1000px) {
     .cardContainer {
@@ -162,6 +169,16 @@
 }
 @media only screen and (max-width: 500px) {
     .awardTitle {
+        font-size: 0.9em;
+        line-height: 110%;
+        padding-top: 0;
+    }
+    .heroContainer {
+        max-height: 30%;
+    }
+    .studentName {
         font-size: 1em;
     }
+
 }
+

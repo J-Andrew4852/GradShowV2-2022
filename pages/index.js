@@ -160,7 +160,7 @@ export default function Home({ graduates }) {
   const nikkiSingh = graduates.filter((graduate) => 
     graduate._id === '637cf2edacdc39e2be4e83e7'
   )
-  nikkiSingh[0].awardTitle = 'GRFX 2022 Helen Lansdowne Resor Scholarship Winner';
+  nikkiSingh[0].awardTitle = 'GRFX 2022 Helen Lansdowne Resor Scholarship';
   nikkiSingh[0].awardPic = '/assets/images/Home/AwardCompanies/wunderman.png';
   grfxAwards.push(nikkiSingh[0])
   // console.log(grfxAwards)
