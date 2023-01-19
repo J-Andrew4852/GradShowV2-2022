@@ -18,10 +18,15 @@ import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
+import { CustomForm, Mailchimp } from '../components/Mailchimp/Mailchimp'
+import { GraduateCard } from '../components/GraduateCard/GraduateCard'
+import { AwardCard } from '../components/AwardCard/AwardCard'
+
 
 
 // STYLES =============================================================================== // 
 import styles from '../styles/Home.module.css'
+import { setLazyProp } from 'next/dist/server/api-utils'
 
 // OVERVIEW ============================================================================= // 
 
@@ -39,7 +44,127 @@ Description:
 - Show recent social media posts
 */
 
-export default function Home() {
+export default function Home({ graduates }) {
+
+  const digexAwards = []
+  const salmaJarrar = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65d9'
+  )
+  salmaJarrar[0].awardPic = '/assets/images/Home/AwardCompanies/humaan.svg';
+  salmaJarrar[0].awardTitle = 'DIGEX 2022 Industry Award';
+  // console.log(salmaJarrar[0])
+  digexAwards.push(salmaJarrar[0])
+  const kateMackenzie = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65bd'
+  )
+  kateMackenzie[0].awardPic = '/assets/images/Home/AwardCompanies/juicebox.svg';
+  kateMackenzie[0].awardTitle = 'DIGEX 2022 Industry Award';
+  digexAwards.push(kateMackenzie[0])
+  const rachaelMoriconi = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65d4'
+  )
+  rachaelMoriconi[0].awardPic = '/assets/images/Home/AwardCompanies/equilibrium.svg';
+  rachaelMoriconi[0].awardTitle = 'DIGEX 2022 Industry Award';
+  digexAwards.push(rachaelMoriconi[0])
+  const anthonyRobinson = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a659e'
+  )
+  anthonyRobinson[0].awardPic = '/assets/images/Home/AwardCompanies/wordofmouth.svg';
+  anthonyRobinson[0].awardTitle = 'DIGEX + GRFX 2022 Industry Award';
+  digexAwards.push(anthonyRobinson[0])
+  // console.log(digexAwards)
+
+  const agdAwards = []
+  const stevenWS = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65dd'
+  )
+  stevenWS[0].awardTitle = 'AGD 2022 Industry Award';
+  stevenWS[0].awardPic = '/assets/images/Home/AwardCompanies/lastpixel.svg';
+  // console.log(stevenWS[0])
+  agdAwards.push(stevenWS[0])
+  const stevenWSb = JSON.parse('{"_id":"63735c19e58dd3cc6e5a65dd", "altImage":"https://2022gradshow.s3.ap-southeast-1.amazonaws.com/Grad+Show+Website+Student+Information+Form+(File+responses)/Edited_Headshots_2022/steven_white-smith-AGD-alt.jpg", "awardPic":"/assets/images/Home/AwardCompanies/LAI.png", "awardTitle":"AGD 2022 Industry Award", "headshotURL":"https://2022gradshow.s3.ap-southeast-1.amazonaws.com/Grad+Show+Website+Student+Information+Form+(File+responses)/Edited_Headshots_2022/steven_white-smith-AGD.jpg", "lastName":"White-Smith", "preferredName":"Steven", "major":["Animation and Game Design", "Digital Experience and Interaction Design"]}');
+  // console.log(stevenWSb)
+  // const stevenWSb = stevenWS[0]
+  // stevenWSb._id.replace('63735c19e58dd3cc6e5a65dd', '63735c19e58dd3cc6e5a65ddb')
+  // stevenWSb.awardTitle = 'AGD 2022 Industry Award';
+  // stevenWSb.awardPic = '/assets/images/Home/AwardCompanies/LAI.png';
+  // console.log(stevenWSb)
+  agdAwards.push(stevenWSb)
+  const maximilianWright = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65c7'
+  )
+  maximilianWright[0].awardTitle = 'AGD 2022 Industry Award';
+  maximilianWright[0].awardPic = '/assets/images/Home/AwardCompanies/lastpixel.svg';
+  agdAwards.push(maximilianWright[0])
+  const simoneWoolfitt = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65dc'
+  )
+  simoneWoolfitt[0].awardTitle = 'AGD 2022 Industry Award';
+  simoneWoolfitt[0].awardPic = '/assets/images/Home/AwardCompanies/studioorange.svg';
+  agdAwards.push(simoneWoolfitt[0])
+  const hayleyZeller = graduates.filter((graduate) => 
+    graduate._id === '637afda53cbf4b57860193cd'
+  )
+  hayleyZeller[0].awardTitle = 'AGD 2022 Industry Award';
+  hayleyZeller[0].awardPic = '/assets/images/Home/AwardCompanies/viewport.svg';
+  agdAwards.push(hayleyZeller[0])
+  const melanieTan = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65c8'
+  )
+  melanieTan[0].awardTitle = 'AGD 2022 Industry Award';
+  melanieTan[0].awardPic = '/assets/images/Home/AwardCompanies/voyant.svg';
+  agdAwards.push(melanieTan[0])
+  // console.log(agdAwards)
+
+
+  const grfxAwards = []
+  const tajeSingh = graduates.filter((graduate) => 
+    graduate._id === '637cf224acdc39e2be4e83e5'
+  )
+  tajeSingh[0].awardTitle = 'GRFX 2022 Industry Award';
+  tajeSingh[0].awardPic = '/assets/images/Home/AwardCompanies/brandagency.svg';
+  grfxAwards.push(tajeSingh[0])
+  const tajeSinghb = JSON.parse('{"_id":"637cf224acdc39e2be4e83e5", "altImage":"https://2022gradshow.s3.ap-southeast-1.amazonaws.com/Grad+Show+Website+Student+Information+Form+(File+responses)/Edited_Headshots_2022/taje_singh-GRFX-alt.jpg", "awardPic":"/assets/images/Home/AwardCompanies/gesture.svg", "awardTitle":"GRFX 2022 Industry Award", "headshotURL":"https://2022gradshow.s3.ap-southeast-1.amazonaws.com/Grad+Show+Website+Student+Information+Form+(File+responses)/Edited_Headshots_2022/taje_singh-GRFX.jpg", "lastName":"Singh", "preferredName":"Taje", "major":["Graphic Design"]}');
+  // console.log(tajeSinghb)
+  grfxAwards.push(tajeSinghb)
+  const tobyOKeeffe = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65e2'
+  )
+  tobyOKeeffe[0].awardTitle = 'GRFX 2022 Industry Award';
+  tobyOKeeffe[0].awardPic = '/assets/images/Home/AwardCompanies/brandagency.svg';
+  grfxAwards.push(tobyOKeeffe[0])
+  const laurenWaddy = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65bf'
+  )
+  laurenWaddy[0].awardTitle = 'GRFX 2022 Industry Award';
+  laurenWaddy[0].awardPic = '/assets/images/Home/AwardCompanies/block.png';
+  grfxAwards.push(laurenWaddy[0])
+  const christinePham = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65a5'
+  )
+  christinePham[0].awardTitle = 'GRFX 2022 Industry Award';
+  christinePham[0].awardPic = '/assets/images/Home/AwardCompanies/agda.svg';
+  grfxAwards.push(christinePham[0])
+  const tessaStirling = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65e0'
+  )
+  tessaStirling[0].awardTitle = 'GRFX 2022 Industry Award';
+  tessaStirling[0].awardPic = '/assets/images/Home/AwardCompanies/forthepeople.png';
+  grfxAwards.push(tessaStirling[0])
+  const cooperFare = graduates.filter((graduate) => 
+    graduate._id === '63735c19e58dd3cc6e5a65a6'
+  )
+  cooperFare[0].awardTitle = 'GRFX 2022 Industry Award';
+  cooperFare[0].awardPic = '/assets/images/Home/AwardCompanies/gesture.svg';
+  grfxAwards.push(cooperFare[0])
+  const nikkiSingh = graduates.filter((graduate) => 
+    graduate._id === '637cf2edacdc39e2be4e83e7'
+  )
+  nikkiSingh[0].awardTitle = 'GRFX 2022 Helen Lansdowne Resor Scholarship Winner';
+  nikkiSingh[0].awardPic = '/assets/images/Home/AwardCompanies/wunderman.png';
+  grfxAwards.push(nikkiSingh[0])
+  // console.log(grfxAwards)
+
   const GRFXreel = "https://www.youtube.com/embed/tRMMeEjmrtI?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
   const AGDreel = "https://www.youtube.com/embed/yZzD8VsiKy4?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
   const DIGEXreel = "https://www.youtube.com/embed/GndiiYdN240?autoplay=1&mute=1&rel=0&controls=0&showinfo=0&modestbranding=1&VQ=HD1080&loop=1%7D}";
@@ -83,19 +208,62 @@ export default function Home() {
         </div>
       </section>
 
-      <CountdownBanner />
-  
-      {/* APPROVED IMAGE */}
-      <div className={styles.approved}>
-          <div className={styles.mapDiagram}>
-            <Image src={Map} alt="Map Diagram" width={700} height={700}/>
-          </div>
-          <div className={styles.aboutInfo}>
-            <Image src={aboutDetails} alt="About details"/>
-            <a href={'/about'} >More mission details &nbsp;&nbsp;→ </a>
+      <Mailchimp />
+      <div className={styles.section_heading}>
+            <div className={styles.elements}>
+              <h2 className={`regular text-xl`}>2022 GRADUATE</h2>
+              <h1 className={`black text-7xl`}>AWARD WINNERS</h1>
           </div>
       </div>
-
+      {/* APPROVED IMAGE */}
+      <div className={styles.awardContainer}>
+        <div className={`${styles.awardSection} ${styles.awardHead}`}>
+          <div className={styles.sidebarOff}>
+            <p className={`text-small ${styles.majorTitle}`}><strong>Digital Design</strong></p>
+            <div className={styles.graduate_grid}>
+              
+              {digexAwards.map((graduate) => (
+                  <div className={styles.gridItem} key={graduate._id}>
+                    <AwardCard key={graduate._id} data={graduate} />
+                  </div>
+                ))}
+            </div>
+          </div>
+            {/* <div className={styles.mapDiagram}>
+              <Image src={Map} alt="Map Diagram" width={700} height={700}/>
+            </div>
+            <div className={styles.aboutInfo}>
+              <Image src={aboutDetails} alt="About details"/>
+              <a href={'/about'} >More mission details &nbsp;&nbsp;→ </a>
+            </div> */}
+        </div>
+        <div className={styles.awardSection}>
+          <div className={styles.sidebarOff}>
+            <p className={`text-small ${styles.majorTitle}`}><strong>Animation and Game Design</strong></p>
+            <div className={styles.graduate_grid}>
+              
+              {agdAwards.map((graduate) => (
+                  <div className={styles.gridItem} key={graduate._id}>
+                    <AwardCard key={graduate._id} data={graduate} />
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
+        <div className={styles.awardSection}>
+          <div className={styles.sidebarOff}>
+            <p className={`text-small ${styles.majorTitle}`}><strong>Graphic Design</strong></p>
+            <div className={styles.graduate_grid}>
+              
+              {grfxAwards.map((graduate) => (
+                  <div className={styles.gridItem} key={graduate._id}>
+                    <AwardCard key={graduate._id} data={graduate} />
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* A GLIMPSE INTO OUR SPACE */}
       <section className={styles.into_our_space}>
@@ -257,4 +425,16 @@ export default function Home() {
 
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch('https://gradshow-backend-production.up.railway.app/students')
+  const data = await res.json()
+  const graduates = data
+
+  return {
+    props: {
+      graduates,
+    },
+  }
 }

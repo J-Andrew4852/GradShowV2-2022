@@ -1,0 +1,167 @@
+/* GRADUATE CARD =================================================== */
+.cardContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 10px;
+    max-width: 50vw;
+    aspect-ratio: 4.8 / 3;
+}
+
+.heroContainer {
+    position: relative;
+    /* overflow: hidden; */
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heroContainer .gradHeroImage{
+    /* object-fit: cover; */
+    object-position: center;
+    max-width: 80%;
+    /* height: auto; */
+}
+
+.awardTitle {
+    padding: 0.5em 0 0 0;
+    /* font-weight: 900; */
+    /* font-family: 'Avenir'; */
+    font-size: 1.2em;
+    justify-content: space-between;
+}
+.viewBtn {
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.leftSection {
+    /* overflow: hidden; */
+    width: 40%;
+    /* background-color: black; */
+    padding: 0 2em 0 0;
+    /* position: relative; */
+}
+.colourCard {
+    background-color: black;
+    height: 95%;
+    width: 100%;
+    margin: -122% 0 0 3%;
+}
+/* .DIGEX {
+    background-color: blue;
+}
+.AGD {
+    background-color: green;
+}
+.GRFX {
+    background-color: yellow;
+} */
+.DIGEX {
+    background: var(--digex-gradient);
+}
+
+.AGD {
+    background: var(--agd-gradient); 
+}
+
+.GRFX {
+    background: var(--grfx-gradient);
+}
+.headshotHolder {
+    width: 98%;
+    height: 95%;
+    margin: 0 0 -2em 0;
+    /* background-color: black; */
+    overflow: hidden;
+    position: relative;
+}
+.student_headshot {
+    /* position: absolute; */ 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* min-height: 100%;
+    max-height: 100%; */
+}
+.altImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    margin-left: -100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.headshotHolder:hover .altImage {
+    opacity: 1; 
+    cursor: pointer;
+}
+
+.placeholder_icon,
+.placeholder_quickviewicon {
+    width: 30px;
+    height: 30px;
+    background-color: lightgrey;
+}
+
+.student_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-left: 10px; */
+    padding: 1rem 0 1rem 0;
+    justify-content: space-between;
+}
+
+.student_details h3 {
+    /* margin-top: 5px; */
+    line-height: 1.2em;
+}
+
+.reset_font {
+    margin: 0;
+}
+
+.sidebarOnCard {
+    background-color: red;
+}
+
+@media only screen and (max-width: 1000px) {
+    .cardContainer {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    .icons > *:first-child {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .rightGroup {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    .cardContainer {
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .viewBtn {
+        margin-bottom: 0;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .awardTitle {
+        font-size: 1em;
+    }
+}
