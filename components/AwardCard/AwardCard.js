@@ -93,7 +93,7 @@ var cardColour = abMajor[0]
           </div>
           <div className={styles.awardTitle} >{data.awardTitle}</div>
           <div className={styles.student_details}>
-            <h2 className="font-med2 bold subheading">{data.preferredName} {data.lastName}</h2>
+            <h2 className={styles.studentName}>{data.preferredName} {data.lastName}</h2>
             {/* <h3 className={`text-med regular ${styles.reset_font}`}>{abMajor[0]} {abMajor[1]}</h3> */}
           </div>
           <div className={styles.viewBtn}>

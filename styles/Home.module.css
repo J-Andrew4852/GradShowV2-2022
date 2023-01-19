@@ -224,6 +224,17 @@
   }
 
 }
+@media (max-width: 500px) {
+
+  .sidebarOff {
+      padding-inline: 0em ;
+  }
+
+  .graduate_grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+}
 
 /* APPROVED ------------------------------------------------------------ */
 
@@ -365,9 +376,9 @@
 }
 
 @media (max-width: 450px){
-  .section_heading{
+  /* .section_heading{
     margin-inline: .5em; 
-  }
+  } */
 
   .elements h2{
     font-size: .9rem;
