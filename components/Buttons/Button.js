@@ -37,6 +37,7 @@ export const OutlineBtn = ({text, onAction, abmajor, selected, height, linkers, 
     )
 }
 
+
 export const ErrorButton = ({text, onAction, abmajor, selected, height, linkers, linkTo, external}) => {
     // console.log(abmajor)
     return (

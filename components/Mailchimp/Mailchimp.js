@@ -1,6 +1,7 @@
 // IMPORTS ============================================================================== // 
 
 // COMPONENT IMPORTS ==================================================================== // 
+import { OutlineBtn } from '../Buttons/Button';
 
 // STYLES =============================================================================== // 
 import styles from './mailchimp.module.css'
@@ -18,46 +19,50 @@ import MailchimpSubscribe from "react-mailchimp-subscribe"
 const url = "https://gmail.us17.list-manage.com/subscribe/post?u=08de5a22282e1342b3c571f92&amp;id=46c600ac0c&amp;f_id=00ca59e0f0";
 
 const CustomForm = ({ status, message, onValidated }) => {
-  let email, name;
+  let email;
   const submit = () =>
     email &&
-    name &&
+    // name &&
     email.value.indexOf("@") > -1 &&
     onValidated({
       EMAIL: email.value,
-      NAME: name.value
+      // NAME: name.value
     });
 
   return (
     <div className={styles.banner_wrapper}>
+      <div className={styles.bannerSubContainer}>
       <div  className={styles.formContainer}>
-        <input
+        {/* <input
           style={{ fontSize: "2em", padding: 5 }}
           ref={node => (name = node)}
           type="text"
           placeholder="Your name"
-        />
-        <br />
-        <input
-          style={{ fontSize: "2em", padding: 5 }}
-          ref={node => (email = node)}
-          type="email"
-          placeholder="Your email"
-        />
-        <br />
-        <button style={{ fontSize: "2em", padding: 5 }} onClick={submit}>
+        /> */}
+        <div>
+          <p className={styles.subMessage}>Subscribe to our Newsletter!</p>
+          <input
+            style={{ paddingRight: "1" + "em"}}
+            ref={node => (email = node)}
+            type="email"
+            placeholder="Your email"
+          />
+        </div>
+        <div onClick={submit} className={styles.submitBtn} >
+          <OutlineBtn text='Submit' height="thin" />
+        </div>
+        {/* <button style={{ fontSize: "2em", padding: 5 }} onClick={submit}>
           Submit
-        </button>
-        {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+        </button> */}
+      </div>
+        {status === "sending" && <div className={styles.statusMessage} >sending...</div>}
         {status === "error" && (
-          <div
-            style={{ color: "red" }}
+          <div className={styles.statusMessage}
             dangerouslySetInnerHTML={{ __html: message }}
           />
         )}
         {status === "success" && (
-          <div
-            style={{ color: "green" }}
+          <div className={styles.statusMessage}
             dangerouslySetInnerHTML={{ __html: message }}
           />
         )}

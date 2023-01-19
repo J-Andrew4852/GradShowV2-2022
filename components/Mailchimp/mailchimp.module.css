@@ -6,18 +6,65 @@
     position: sticky;
     top: 0;
     z-index: 4;
-    padding: 2em;
+    padding: 0.5em 1.5em;
+  }
+
+  .bannerSubContainer {
+    display: flex;
+    /* background-color: white; */
+  }
+  .subMessage {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    margin-top: 0;
+    min-width: 305px;
+  }
+
+
+  .statusMessage {
+    padding: 0.5em 2em 0em 2em;
+    /* background-color: white; */
+    border-radius: 1em;
+    color: white;
   }
   
   .formContainer {
-    padding: 2em;
-    background-color: white;
+    /* padding: 2em; */
+    display: flex;
+    width: 60%;
+    /* align-items: baseline; */
   }
+
+  @media (max-width: 1000px) {
+    .bannerSubContainer{
+      flex-direction: column;
+      align-items: center;
+    }
+    .formContainer {
+      flex-direction: column;
+      width: auto;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    .submitBtn {
+      margin-top: 1em;
+    }
+    .statusMessage {
+      margin-bottom: 1em;
+    }
+  }
+
   .status {
-    color: black;
-    background-color: white;
+    /* color: black; */
+    /* background-color: white; */
     padding: 1em;
     border-radius: 50%;
+  }
+
+  .submitBtn {
+    color: black;
+    padding: 1em 2em 1em 2em;
+    margin-top: 0.9em;
   }
 
   .banner_subContainer {
@@ -95,11 +142,14 @@
   .details_wrapper a:hover {
     text-decoration: underline;
   }
-  
-@media (max-width: 800px) {
+
+@media (max-width: 1000px) {
   .banner_wrapper{
     position: unset;
   }
+}
+
+@media (max-width: 800px) {
 
   .banner_subContainer {
     flex-direction: column;
