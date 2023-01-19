@@ -18,7 +18,7 @@ import aboutDetails from '../public/assets/images/Home/aboutDetails.svg'
 import { TextBtn } from '../components/Buttons/Button'
 import { OutlineBtn } from '../components/Buttons/Button'
 import { CountdownBanner } from '../components/CountdownBanner/CountdownBanner'
-import { CustomForm, Mailchimp } from '../components/MailChimp/Mailchimp'
+import { CustomForm, Mailchimp } from '../components/Mailchimp/Mailchimp'
 import { GraduateCard } from '../components/GraduateCard/GraduateCard'
 import { AwardCard } from '../components/AwardCard/AwardCard'
 
